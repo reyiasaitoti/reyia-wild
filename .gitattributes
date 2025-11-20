@@ -1,2 +1,0 @@
-Videos/*.mp4 filter=lfs diff=lfs merge=lfs -text
-Videos/lions.mp4 filter=lfs diff=lfs merge=lfs -text
