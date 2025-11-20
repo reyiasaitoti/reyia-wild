@@ -38,6 +38,43 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMobileNav(); 
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+  const heroImage = document.getElementById('heroImage');
+  const heroVideo = document.getElementById('heroVideo');
+  const heroContent = document.querySelector('.hero-content');
+
+  // Fade image to video after 2 seconds
+  setTimeout(() => {
+    heroImage.style.opacity = 0;
+    heroVideo.play();
+    setTimeout(() => {
+      heroVideo.style.opacity = 1;
+    }, 50);
+  }, 2000);
+
+  // Parallax effect for hero text
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    heroContent.style.transform = `translateY(${scrollY * 0.2}px)`; // move 20% of scroll
+  });
+});
+
+
+const ceoVideo = document.getElementById('ceoVideo');
+const soundBtn = document.getElementById('soundBtn');
+
+soundBtn.addEventListener('click', () => {
+  if (ceoVideo.muted) {
+    ceoVideo.muted = false;
+    soundBtn.textContent = "🔇 Mute";
+  } else {
+    ceoVideo.muted = true;
+    soundBtn.textContent = "🔊 Play Sound";
+  }
+});
+
+
+//#endregion
 // Auto-update footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 

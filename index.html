@@ -10,14 +10,14 @@
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://reyia-wild.vercel.app/">
-<meta property="og:title" content="Reyia Wild Safaris – Explore Kenya's Wildlife & Luxury Safari Tours">
+<meta property="og:title" content="Reyia Wild Safaris, Explore Kenya's Wildlife & Luxury Safari Tours">
 <meta property="og:description" content="Experience unforgettable Kenya safaris with Reyia Wild Safaris. From luxury game drives to family-friendly adventures, book your custom African safari today.">
 <meta property="og:image" content="https://reyia-wild.vercel.app/images/logo.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://reyia-wild.vercel.app/">
-<meta property="twitter:title" content="Reyia Wild Safaris – Explore Kenya's Wildlife & Luxury Safari Tours">
+<meta property="twitter:title" content="Reyia Wild Safaris, Explore Kenya's Wildlife & Luxury Safari Tours">
 <meta property="twitter:description" content="Experience unforgettable Kenya safaris with Reyia Wild Safaris. From luxury game drives to family-friendly adventures, book your custom African safari today.">
 <meta property="twitter:image" content="https://reyia-wild.vercel.app/images/your-main-image.jpg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -72,18 +72,26 @@
 <a href="#accommodations">Accommodations</a>
 <a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 
 <div class="mobile-actions">
 <a href="tel:+254700000000">📞 +254 700 000 000</a>
 <button class="btn-book" id="mobileBook">Book Now</button>
+
 </div>
 </div>
 
-<!-- Hero Section -->
 <section class="hero" id="home">
+  <img src="images/hero.jpg" id="heroImage" alt="Hero Image">
+
+  <video id="heroVideo" muted playsinline loop>
+    <source src="videos/lions.mp4" type="video/mp4">
+  </video>
+
   <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <h1>Explore the Wild with Reyia Wild Safaris</h1>
     <p>Unforgettable game drives, luxurious stays, and authentic African adventures.</p>
@@ -93,6 +101,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Safari Packages Section -->
 <section class="safaris" id="safaris">
@@ -159,7 +168,7 @@
       <div class="accommodation-info">
         <h3>Single Room</h3>
         <p>Perfect for solo travelers. Cozy, comfortable, and surrounded by nature’s calm.</p>
-        <span class="tag">Budget Friendly</span>
+        <a href="accomodations/single-room.html" class="see-more-btn">See More</a>
       </div>
     </div>
 
@@ -169,7 +178,7 @@
       <div class="accommodation-info">
         <h3>Double Room</h3>
         <p>Ideal for couples. Spacious interiors, warm decor, and a touch of adventure.</p>
-        <span class="tag">Popular Choice</span>
+        <a href="/accomodations/double-room.html" class="see-more-btn">See More</a>
       </div>
     </div>
 
@@ -179,7 +188,7 @@
       <div class="accommodation-info">
         <h3>Twin Room</h3>
         <p>Comfortable twin beds and a private balcony with views of the wild plains.</p>
-        <span class="tag">Great for Friends</span>
+        <a href="/accomodations/twin-room.html" class="see-more-btn">See More</a>
       </div>
     </div>
 
@@ -189,7 +198,7 @@
       <div class="accommodation-info">
         <h3>Luxury Suite</h3>
         <p>Premium experience with elegant design, private lounge, and panoramic savannah views.</p>
-        <span class="tag luxury">Luxury</span>
+        <a href="/accomodations/luxury-suite.html" class="see-more-btn">See More</a>
       </div>
     </div>
 
@@ -199,7 +208,7 @@
       <div class="accommodation-info">
         <h3>Safari Tent</h3>
         <p>Authentic safari ambiance — fall asleep to the sounds of the wilderness under the stars.</p>
-        <span class="tag nature">Close to Nature</span>
+        <a href="/accomodations/safari-tent.html" class="see-more-btn">See More</a>
       </div>
     </div>
 
@@ -209,10 +218,35 @@
       <div class="accommodation-info">
         <h3>Private Cottage</h3>
         <p>Secluded and serene — perfect for families or honeymooners seeking privacy and peace.</p>
-        <span class="tag comfort">Family Friendly</span>
+        <a href="/accomodations/private-cottage.html" class="see-more-btn">See More</a>
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<!-- CEO Section with Video -->
+<section class="ceo-video-section" id="ceo">
+  <div class="container">
+    <h2>What Our CEO Says</h2>
+    <p class="ceo-intro">Hear directly from our CEO about the Reyia Wild Safaris experience.</p>
+
+    <div class="ceo-video-card">
+      <video id="ceoVideo" muted autoplay playsinline loop>
+        <source src="videos/Intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="ceo-caption">
+        <p>"At Reyia Wild Safaris, we create unforgettable journeys where adventure meets luxury. Every safari is a promise to bring our guests closer to the wild."</p>
+        <h3>Benjamin Reyia</h3>
+        <span>CEO, Reyia Wild Safaris</span>
+      </div>
+
+      <!-- Optional sound button -->
+      <button id="soundBtn">🔊 Play Sound</button>
+    </div>
   </div>
 </section>
 
@@ -328,7 +362,7 @@
         <div class="testimonial-author">
           <img src="https://i.pravatar.cc/100?img=12" alt="Guest Photo">
           <div>
-            <h4>Sarah M.</h4>
+            <h4>James K.</h4>
             <span>United Kingdom</span>
           </div>
         </div>
@@ -342,7 +376,7 @@
         <div class="testimonial-author">
           <img src="https://i.pravatar.cc/100?img=32" alt="Guest Photo">
           <div>
-            <h4>James K.</h4>
+            <h4>Sarah M.</h4>
             <span>Canada</span>
           </div>
         </div>
