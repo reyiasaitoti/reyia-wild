@@ -1,456 +1,553 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Reyia Wild Safaris</title>
-<meta name="description" content="Experience unforgettable Kenya safaris with Reyia Wild Safaris. From luxury game drives to family-friendly adventures, book your custom African safari today.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reyia Wild Safaris — Explore Kenya's Wildlife & Luxury Safari Tours</title>
+  <meta name="description" content="Experience unforgettable Kenya safaris with Reyia Wild Safaris. From luxury game drives to family-friendly adventures, book your custom African safari today.">
+  <meta name="keywords" content="Kenya safaris, African safari, Masai Mara, game drives, safari bookings, Reyia Wild Safaris">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://reyia-wild.vercel.app/">
-<meta property="og:title" content="Reyia Wild Safaris, Explore Kenya's Wildlife & Luxury Safari Tours">
-<meta property="og:description" content="Experience unforgettable Kenya safaris with Reyia Wild Safaris. From luxury game drives to family-friendly adventures, book your custom African safari today.">
-<meta property="og:image" content="https://reyia-wild.vercel.app/images/logo.png">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://reyia-wild.vercel.app/">
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://reyia-wild.vercel.app/">
-<meta property="twitter:title" content="Reyia Wild Safaris, Explore Kenya's Wildlife & Luxury Safari Tours">
-<meta property="twitter:description" content="Experience unforgettable Kenya safaris with Reyia Wild Safaris. From luxury game drives to family-friendly adventures, book your custom African safari today.">
-<meta property="twitter:image" content="https://reyia-wild.vercel.app/images/your-main-image.jpg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css" />
+  <!-- Preload hero video (optional) & fonts -->
+  <link rel="preload" as="video" href="Videos/lions.mp4" type="video/mp4">
+  <link rel="preload" as="image" href="images/hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reyia-wild.vercel.app/">
+  <meta property="og:title" content="Reyia Wild Safaris — Explore Kenya's Wildlife">
+  <meta property="og:description" content="Unforgettable Kenya safaris: game drives, luxury lodges, photography safaris. Book your custom safari today.">
+  <meta property="og:image" content="https://reyia-wild.vercel.app/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reyia Wild Safaris — Explore Kenya's Wildlife">
+  <meta name="twitter:description" content="Unforgettable Kenya safaris: game drives, luxury lodges, photography safaris. Book your custom safari today.">
+  <meta name="twitter:image" content="https://reyia-wild.vercel.app/images/og-image.jpg">
+
+  <!-- Schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TravelAgency",
+    "name":"Reyia Wild Safaris",
+    "url":"https://reyia-wild.vercel.app/",
+    "logo":"https://reyia-wild.vercel.app/images/logo.png",
+    "telephone":"+254794928779",
+    "address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"Kenya"},
+    "sameAs":[
+      "https://www.facebook.com/olereyia.saitoti",
+      "https://www.instagram.com/its_olereyia/",
+      "https://x.com/its_olereyia"
+    ]
+  }
+  </script>
+
+  <!-- Font Awesome (deferred load) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-<header class="site-header" role="banner">
-<div class="header-inner">
-<a href="/" class="logo" aria-label="Reyia Wild Safaris home">
-  <img 
-    src="images/logo.png" 
-    alt="Reyia Wild Safaris logo" 
-    class="logo-img"
-    loading="lazy"
-  >
-</a>
 
+  <!-- SITE HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand-link" href="/" aria-label="Reyia Wild Safaris home">
+        <img src="images/logo.png" alt="Reyia Wild Safaris logo" class="logo-img" loading="eager">
+        <span class="brand-text">Reyia Wild Safaris</span>
+      </a>
 
-<nav class="primary" role="navigation" aria-label="Primary">
-<a href="#home">Home</a>
-<a href="#safaris">Safaris</a>
-<a href="#accommodations">Accommodations</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
+      <nav class="nav-primary" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#safaris">Safaris</a></li>
+          <li><a href="#accommodations">Accommodations</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
+      <div class="header-actions">
+        <a class="phone" href="tel:+254794928779" aria-label="Call Reyia Wild Safaris">📞 +254 794 928 779</a>
+        <a class="btn btn-cta" id="bookBtn" role="button" href="#contact">Book Now</a>
 
-<div class="actions">
-<a class="phone" href="tel:+254794928779" aria-label="Call Reyia Wild Safaris">📞 +254 794928779</a>
-<button class="btn-book" id="bookBtn">Book Now</button>
-<button class="hamburger" id="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-</svg>
-</button>
-</div>
-</div>
-</header>
-
-
-<div class="mobile-nav" id="mobileNav" aria-hidden="true">
-<button class="close" id="closeMobile" aria-label="Close menu">
-<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="white" stroke-width="2">
-<path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M6 18L18 6" />
-</svg>
-</button>
-
-
-<nav role="navigation" aria-label="Mobile primary">
-<a href="#home">Home</a>
-<a href="#safaris">Safaris</a>
-<a href="#accommodations">Accommodations</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-<div class="mobile-actions">
-<a href="tel:+254700000000">📞 +254 700 000 000</a>
-<button class="btn-book" id="mobileBook">Book Now</button>
-
-</div>
-</div>
-
-<section class="hero" id="home">
-  <img src="images/hero.jpg" id="heroImage" alt="Hero Image">
-
-  <video id="heroVideo" muted playsinline loop>
-    <source src="Videos/lions.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <h1>Explore the Wild with Reyia Wild Safaris</h1>
-    <p>Unforgettable game drives, luxurious stays, and authentic African adventures.</p>
-    <div class="hero-buttons">
-      <a href="#safaris" class="btn-primary">View Safaris</a>
-      <a href="#contact" class="btn-secondary">Book Now</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Safari Packages Section -->
-<section class="safaris" id="safaris">
-  <div class="section-header">
-    <h2>Our Safari Packages</h2>
-    <p>Experience the magic of Africa through unforgettable adventures tailored just for you.</p>
-  </div>
-
-  <div class="safari-grid">
-    <!-- Card 1 -->
-    <div class="safari-card">
-      <img src="images/gamedrive.jpeg" alt="Full Day Game Drive">
-      <div class="safari-info">
-        <h3>Full Day Game Drive</h3>
-        <p>Explore the savannah on a thrilling full-day safari with expert guides and wildlife sightings at every turn.</p>
-        <a href="#contact" class="btn-primary">Book Now</a>
+        <button id="hamburger" class="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu" type="button">
+          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
       </div>
     </div>
+  </header>
 
-    <!-- Card 2 -->
-    <div class="safari-card">
-      <img src="images/adventure.jpeg" alt="3-Day Wilderness Adventure">
-      <div class="safari-info">
-        <h3>3-Day Wilderness Adventure</h3>
-        <p>Immerse yourself in nature with two nights of authentic safari camping and guided morning drives.</p>
-        <a href="#contact" class="btn-primary">Book Now</a>
+  <!-- MOBILE NAV (slide-in) -->
+  <aside id="mobileNav" class="mobile-nav" aria-hidden="true" role="menu">
+    <div class="mobile-inner" role="presentation">
+      <button id="closeMobile" class="mobile-close" aria-label="Close menu" type="button">&times;</button>
+
+      <nav role="navigation" aria-label="Mobile primary">
+        <ul class="mobile-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#safaris">Safaris</a></li>
+          <li><a href="#accommodations">Accommodations</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-actions">
+        <a href="tel:+254794928779" class="mobile-phone">📞 +254 794 928 779</a>
+        <a id="mobileBook" class="btn btn-cta" href="#contact">Book Now</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
     </div>
+  </aside>
 
-    <!-- Card 3 -->
-    <div class="safari-card">
-      <img src="images/luxurysafari.jpeg" alt="Luxury Safari Experience">
-      <div class="safari-info">
-        <h3>Luxury Safari Experience</h3>
-        <p>Enjoy top-class lodges, private game drives, and gourmet meals in the heart of the wild.</p>
-        <a href="#contact" class="btn-primary">Book Now</a>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="safari-card">
-      <img src="images/photography.jpeg" alt="Photography Safari">
-      <div class="safari-info">
-        <h3>Photography Safari</h3>
-        <p>Capture stunning shots of Africa’s “Big Five” with expert photo guides and early-morning golden hours.</p>
-        <a href="#contact" class="btn-primary">Book Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Accommodations Section -->
-<section class="accommodations" id="accommodations">
-  <div class="section-header">
-    <h2>Our Accommodations</h2>
-    <p>Comfort, style, and nature — experience the wild your way with our diverse lodging options.</p>
-  </div>
-
-  <div class="accommodation-grid">
-
-    <!-- Single Room -->
-    <div class="accommodation-card">
-      <img src="images/single.jpeg" alt="Single Room">
-      <div class="accommodation-info">
-        <h3>Single Room</h3>
-        <p>Perfect for solo travelers. Cozy, comfortable, and surrounded by nature’s calm.</p>
-        <a href="accomodations/single-room.html" class="see-more-btn">See More</a>
-      </div>
-    </div>
-
-    <!-- Double Room -->
-    <div class="accommodation-card">
-      <img src="images/double.jpeg" alt="Double Room">
-      <div class="accommodation-info">
-        <h3>Double Room</h3>
-        <p>Ideal for couples. Spacious interiors, warm decor, and a touch of adventure.</p>
-        <a href="/accomodations/double-room.html" class="see-more-btn">See More</a>
-      </div>
-    </div>
-
-    <!-- Twin Room -->
-    <div class="accommodation-card">
-      <img src="images/twin.jpeg" alt="Twin Room">
-      <div class="accommodation-info">
-        <h3>Twin Room</h3>
-        <p>Comfortable twin beds and a private balcony with views of the wild plains.</p>
-        <a href="/accomodations/twin-room.html" class="see-more-btn">See More</a>
-      </div>
-    </div>
-
-    <!-- Luxury Suite -->
-    <div class="accommodation-card">
-      <img src="images/luxurytent.jpeg" alt="Luxury Suite">
-      <div class="accommodation-info">
-        <h3>Luxury Suite</h3>
-        <p>Premium experience with elegant design, private lounge, and panoramic savannah views.</p>
-        <a href="/accomodations/luxury-suite.html" class="see-more-btn">See More</a>
-      </div>
-    </div>
-
-    <!-- Safari Tent -->
-    <div class="accommodation-card">
-      <img src="images/safaritent.jpeg" alt="Safari Tent">
-      <div class="accommodation-info">
-        <h3>Safari Tent</h3>
-        <p>Authentic safari ambiance — fall asleep to the sounds of the wilderness under the stars.</p>
-        <a href="/accomodations/safari-tent.html" class="see-more-btn">See More</a>
-      </div>
-    </div>
-
-    <!-- Cottage -->
-    <div class="accommodation-card">
-      <img src="images/cottage.jpeg" alt="Private Cottage">
-      <div class="accommodation-info">
-        <h3>Private Cottage</h3>
-        <p>Secluded and serene — perfect for families or honeymooners seeking privacy and peace.</p>
-        <a href="/accomodations/private-cottage.html" class="see-more-btn">See More</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- CEO Section with Video -->
-<section class="ceo-video-section" id="ceo">
-  <div class="container">
-    <h2>What Our CEO Says</h2>
-    <p class="ceo-intro">Hear directly from our CEO about the Reyia Wild Safaris experience.</p>
-
-    <div class="ceo-video-card">
-      <video id="ceoVideo" muted autoplay playsinline loop>
-        <source src="Videos/Intro.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+  <!-- HERO -->
+  <main id="site-main">
+    <section id="home" class="hero" aria-label="Hero section with call to action">
+      <img src="images/hero.jpg" alt="Scenic view of Kenyan savannah with wildlife" class="hero-poster" loading="lazy">
+      <video id="heroVideo" class="hero-video" muted playsinline autoplay loop poster="images/hero.jpg" aria-hidden="true">
+        <source src="Videos/lions.mp4" type="video/mp4">
       </video>
 
-      <div class="ceo-caption">
-        <p>"At Reyia Wild Safaris, we create unforgettable journeys where adventure meets luxury. Every safari is a promise to bring our guests closer to the wild."</p>
-        <h3>Benjamin Reyia</h3>
-        <span>CEO, Reyia Wild Safaris</span>
-      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
 
-      <!-- Optional sound button -->
-      <button id="soundBtn">🔊 Play Sound</button>
-    </div>
-  </div>
-</section>
-
-
-<!-- Airport Pickup & Transfers Section -->
-<section class="pickup" id="pickup">
-  <div class="pickup-content">
-    <div class="pickup-text">
-      <h2>Airport Pickup & Transfers</h2>
-      <p>
-        Begin your adventure the moment you arrive. Our reliable airport pickup and drop-off services ensure a smooth transition from the runway to the wilderness. 
-        We operate from major airports and offer comfortable 4x4 safari vehicles equipped for both safety and style.
-      </p>
-      <ul>
-        <li>Available at Jomo Kenyatta & Wilson Airports</li>
-        <li>Professional English-speaking drivers</li>
-        <li>Private 4x4 Land Cruiser or Safari Van</li>
-        <li>Complimentary bottled water and Wi-Fi onboard</li>
-      </ul>
-      <a href="#contact" class="btn-primary">Book Your Transfer</a>
-    </div>
-    <div class="pickup-image">
-      <img src="images/pickup.jpeg" alt="Airport Pickup and Safari Vehicle">
-    </div>
-  </div>
-</section>
-
-<!-- Gallery Section -->
-<section class="gallery" id="gallery">
-  <div class="section-header">
-    <h2>Explore Our World</h2>
-    <p>Moments from our unforgettable safaris — the wildlife, the landscapes, and the experiences that define Reyia Wild Safaris.</p>
-  </div>
-
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="images/lion.jpg" alt="Lion on the savannah">
-    </div>
-    <div class="gallery-item">
-      <img src="images/elephant.jpeg" alt="Elephants in Amboseli">
-    </div>
-    <div class="gallery-item">
-      <img src="images/safari.jpeg" alt="Safari jeep drive through the wild">
-    </div>
-    <div class="gallery-item">
-      <img src="images/girrafe.jpeg" alt="Giraffes during sunset">
-    </div>
-    <div class="gallery-item">
-      <img src="images/luxury.jpeg" alt="Luxury lodge overlooking the plains">
-    </div>
-    <div class="gallery-item">
-      <img src="images/campfire.jpeg" alt="Guests enjoying campfire">
-    </div>
-    <div class="gallery-item">
-      <img src="images/bird.jpg" alt="Birds in flight over wetlands">
-    </div>
-    <div class="gallery-item">
-      <img src="images/zebras.jpeg" alt="Zebra herd grazing">
-    </div>
-  </div>
-</section>
-
-<!-- Contact / Booking Section -->
-<section class="contact" id="contact">
-  <div class="contact-container">
-    <div class="contact-info">
-      <h2>Get in Touch</h2>
-      <p>
-        Ready to begin your next adventure? Reach out to us to plan your perfect safari experience.  
-        Our team will respond promptly to help you with bookings, packages, and any special requests.
-      </p>
-
-      <ul class="contact-details">
-        <li><strong>Email:</strong> <a href="mailto:info@reyiawildsafaris.com">info@reyiawildsafaris.com</a></li>
-        <li><strong>Phone:</strong> <a href="tel:+254794928779">+254 794 928 779</a></li>
-        <li><strong>Location:</strong> Nairobi, Kenya</li>
-      </ul>
-    </div>
-
-    <!-- Updated form for EmailJS -->
-    <form class="contact-form" id="contact-form">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Full Name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder="Email Address" required>
-      </div>
-      <div class="form-group">
-        <input type="text" name="subject" placeholder="Subject (e.g. Safari Inquiry)">
-      </div>
-      <div class="form-group">
-        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
-        <input type="hidden" name="time" id="time">
-      </div>
-      <button type="submit" class="btn-primary">Send Message</button>
-      <p id="form-status" style="margin-top:10px; color:green;"></p>
-    </form>
-  </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="testimonials" id="testimonials">
-  <div class="testimonials-container">
-    <h2>What Our Guests Say</h2>
-    <p class="subtitle">Memories that last a lifetime — hear from those who’ve experienced the wild with us.</p>
-
-    <div class="testimonial-grid">
-      <!-- Testimonial 1 -->
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <p>“Reyia Wild Safaris exceeded our expectations! The guides were knowledgeable, the accommodations luxurious, and every day felt like a new adventure.”</p>
+      <div class="hero-content">
+        <h1>Explore the Wild with Reyia Wild Safaris</h1>
+        <p>Unforgettable game drives, luxurious stays, and authentic African adventures await you.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#safaris">View Safaris</a>
+          <a class="btn btn-outline" href="#contact">Book Now</a>
         </div>
-        <div class="testimonial-author">
-          <img src="https://i.pravatar.cc/100?img=12" alt="Guest Photo">
-          <div>
-            <h4>James K.</h4>
-            <span>United Kingdom</span>
+      </div>
+    </section>
+
+    <!-- SAFARIS -->
+    <section id="safaris" class="section safaris" aria-labelledby="safaris-heading">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="safaris-heading">Our Safari Packages</h2>
+          <p>Experience the magic of Africa through unforgettable adventures tailored just for you.</p>
+        </header>
+
+        <div class="card-grid safari-grid">
+          <!-- card (repeatable) -->
+          <article class="card safari-card">
+            <img src="images/gamedrive.jpeg" alt="Full Day Game Drive safari in the savannah" loading="lazy">
+            <div class="card-body">
+              <h3>Full Day Game Drive</h3>
+              <p>Explore the savannah on a thrilling full-day safari with expert guides and wildlife sightings at every turn. Perfect for spotting Kenya's iconic animals.</p>
+              <a class="btn btn-sm" href="#contact">Book Now</a>
+            </div>
+          </article>
+
+          <article class="card safari-card">
+            <img src="images/adventure.jpeg" alt="3-Day Wilderness Adventure camping experience" loading="lazy">
+            <div class="card-body">
+              <h3>3-Day Wilderness Adventure</h3>
+              <p>Immerse yourself in nature with two nights of authentic safari camping and guided morning drives. Experience the raw beauty of the African wilderness.</p>
+              <a class="btn btn-sm" href="#contact">Book Now</a>
+            </div>
+          </article>
+
+          <article class="card safari-card">
+            <img src="images/luxurysafari.jpeg" alt="Luxury Safari Experience with premium lodges" loading="lazy">
+            <div class="card-body">
+              <h3>Luxury Safari Experience</h3>
+              <p>Enjoy top-class lodges, private game drives, and gourmet meals in the heart of the wild. Ultimate comfort meets adventure.</p>
+              <a class="btn btn-sm" href="#contact">Book Now</a>
+            </div>
+          </article>
+
+          <article class="card safari-card">
+            <img src="images/photography.jpeg" alt="Photography Safari with professional guides" loading="lazy">
+            <div class="card-body">
+              <h3>Photography Safari</h3>
+              <p>Capture stunning shots of Africa's "Big Five" with expert photo guides and early-morning golden hours for perfect lighting.</p>
+              <a class="btn btn-sm" href="#contact">Book Now</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCOMMODATIONS -->
+    <section id="accommodations" class="section accommodations" aria-labelledby="accom-heading">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="accom-heading">Our Accommodations</h2>
+          <p>Comfort, style, and nature — experience the wild your way with our diverse lodging options.</p>
+        </header>
+
+        <div class="card-grid accommodation-grid">
+          <article class="card accommodation-card">
+            <img src="images/single.jpeg" alt="Single Room" loading="lazy">
+            <div class="card-body">
+              <h3>Single Room</h3>
+              <p>Perfect for solo travelers. Cozy, comfortable, and surrounded by nature’s calm.</p>
+              <a class="link" href="/accommodations/single-room.html">See More</a>
+            </div>
+          </article>
+
+          <article class="card accommodation-card">
+            <img src="images/double.jpeg" alt="Double Room" loading="lazy">
+            <div class="card-body">
+              <h3>Double Room</h3>
+              <p>Ideal for couples. Spacious interiors, warm decor, and a touch of adventure.</p>
+              <a class="link" href="/accommodations/double-room.html">See More</a>
+            </div>
+          </article>
+
+          <article class="card accommodation-card">
+            <img src="images/twin.jpeg" alt="Twin Room" loading="lazy">
+            <div class="card-body">
+              <h3>Twin Room</h3>
+              <p>Comfortable twin beds and a private balcony with views of the wild plains.</p>
+              <a class="link" href="/accommodations/twin-room.html">See More</a>
+            </div>
+          </article>
+
+          <article class="card accommodation-card">
+            <img src="images/luxurytent.jpeg" alt="Luxury Suite" loading="lazy">
+            <div class="card-body">
+              <h3>Luxury Suite</h3>
+              <p>Premium experience with elegant design, private lounge, and panoramic savannah views.</p>
+              <a class="link" href="/accommodations/luxury-suite.html">See More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO VIDEO -->
+    <section id="ceo" class="section ceo">
+      <div class="container">
+        <header class="section-head">
+          <h2>What Our CEO Says</h2>
+          <p>Hear directly from Benjamin Reyia about the vision behind Reyia Wild Safaris and why we're passionate about creating unforgettable experiences.</p>
+        </header>
+
+        <div class="ceo-card">
+          <div class="ceo-video-wrapper">
+            <video id="ceoVideo" muted playsinline loop preload="metadata" poster="images/ceo-poster.jpg" aria-label="CEO introduction video">
+              <source src="Videos/Intro.mp4" type="video/mp4">
+            </video>
+            <button id="soundBtn" class="sound-toggle" type="button" aria-pressed="false" aria-label="Toggle video sound">
+              <span class="sound-icon">🔊</span>
+              <span class="sound-text">Play Sound</span>
+            </button>
+          </div>
+
+          <div class="ceo-caption">
+            <div class="ceo-quote-icon">″</div>
+            <blockquote class="ceo-quote">
+              "At Reyia Wild Safaris, we create unforgettable journeys where adventure meets luxury. Every safari is a promise to bring our guests closer to the wild."
+            </blockquote>
+            <footer class="ceo-footer">
+              <div class="ceo-name">Benjamin Reyia</div>
+              <div class="ceo-title">CEO & Founder, Reyia Wild Safaris</div>
+            </footer>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Testimonial 2 -->
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <p>“The best safari experience we’ve ever had. From the airport pickup to the game drives — everything was perfectly organized and stress-free.”</p>
+    <!-- PICKUP -->
+    <section id="pickup" class="section pickup">
+      <div class="container split">
+        <div class="pickup-text">
+          <h2>Airport Pickup & Transfers</h2>
+          <p>Begin your adventure the moment you arrive. Our reliable airport pickup and drop-off services ensure a smooth transition from the runway to the wilderness.</p>
+          <ul>
+            <li>Available at Jomo Kenyatta & Wilson Airports</li>
+            <li>Professional English-speaking drivers</li>
+            <li>Private 4x4 Land Cruiser or Safari Van</li>
+            <li>Complimentary bottled water and Wi-Fi onboard</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">Book Your Transfer</a>
         </div>
-        <div class="testimonial-author">
-          <img src="https://i.pravatar.cc/100?img=32" alt="Guest Photo">
-          <div>
-            <h4>Sarah M.</h4>
-            <span>Canada</span>
-          </div>
+        <div class="pickup-image">
+          <img src="images/pickup.jpeg" alt="Airport Pickup and Safari Vehicle" loading="lazy">
         </div>
       </div>
+    </section>
+<section id="gallery" class="section gallery">
+  <div class="container">
+    <header class="section-head">
+      <h2>Explore Our World</h2>
+      <p>Moments from our unforgettable safaris — the wildlife, the landscapes, and the experiences that define Reyia Wild Safaris.</p>
+    </header>
 
-      <!-- Testimonial 3 -->
-      <div class="testimonial-card">
-        <div class="testimonial-content">
-          <p>“An unforgettable journey through Kenya’s stunning landscapes. The Reyia team truly made us feel at home in the wild.”</p>
-        </div>
-        <div class="testimonial-author">
-          <img src="https://i.pravatar.cc/100?img=45" alt="Guest Photo">
-          <div>
-            <h4>Linda W.</h4>
-            <span>Germany</span>
-          </div>
-        </div>
+    <!-- Feature Items -->
+    <div class="feature-item">
+      <div class="feature-image">
+        <img src="images/lion.jpg" alt="Lion on the savannah" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Lion on the Savannah</h3>
+        <p>Witness the majestic king of the jungle in his natural habitat. Our guided safaris offer close encounters while respecting wildlife and nature.</p>
       </div>
     </div>
+
+    <div class="feature-item reverse">
+      <div class="feature-image">
+        <img src="images/elephant.jpeg" alt="Elephants in Amboseli" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Elephants in Amboseli</h3>
+        <p>Experience the grandeur of elephants roaming freely against the backdrop of Mount Kilimanjaro — a sight that leaves visitors in awe.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-image">
+        <img src="images/safari.jpeg" alt="Safari jeep drive" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Safari Jeep Drive</h3>
+        <p>Explore the savannah in our comfortable 4x4 safari vehicles while spotting wildlife and learning from expert guides.</p>
+      </div>
+    </div>
+
+    <div class="feature-item reverse">
+      <div class="feature-image">
+        <img src="images/girrafe.jpeg" alt="Giraffes at sunset" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Giraffes at Sunset</h3>
+        <p>Capture stunning silhouettes of giraffes during golden hour, a perfect moment for photographers and nature lovers alike.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-image">
+        <img src="images/luxury.jpeg" alt="Luxury lodge overlooking the plains" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Luxury Lodge</h3>
+        <p>Stay in exclusive lodges overlooking the plains, where comfort meets the wilderness. Enjoy breathtaking views right from your room.</p>
+      </div>
+    </div>
+
+    <div class="feature-item reverse">
+      <div class="feature-image">
+        <img src="images/campfire.jpeg" alt="Guests enjoying campfire" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Campfire Experiences</h3>
+        <p>End your day under the stars with our signature campfire experience. Share stories, enjoy music, and connect with nature.</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-image">
+        <img src="images/bird.jpg" alt="Birds in flight" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Birds in Flight</h3>
+        <p>Observe the skies as hundreds of birds soar freely. Perfect for birdwatchers and photographers seeking magical moments in nature.</p>
+      </div>
+    </div>
+
+    <div class="feature-item reverse">
+      <div class="feature-image">
+        <img src="images/zebras.jpeg" alt="Zebras grazing" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Zebras Grazing</h3>
+        <p>See zebras grazing peacefully in vast landscapes. Our tours ensure you witness these animals in their natural, undisturbed environment.</p>
+      </div>
+    </div>
+    
   </div>
 </section>
 
 
-<!-- Footer Section -->
-<footer class="site-footer">
-  <div class="footer-container">
+    <!-- CONTACT / BOOKING -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <header class="section-head">
+          <h2>Get in Touch</h2>
+          <p>Ready to begin your next adventure? Reach out and we'll plan your perfect safari experience tailored just for you.</p>
+        </header>
+        
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="info-group">
+              <div class="info-icon">📧</div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <a href="mailto:info@reyiawildsafaris.com">info@reyiawildsafaris.com</a>
+              </div>
+            </div>
+            
+            <div class="info-group">
+              <div class="info-icon">📞</div>
+              <div class="info-content">
+                <h3>Phone</h3>
+                <a href="tel:+254794928779">+254 794 928 779</a>
+              </div>
+            </div>
+            
+            <div class="info-group">
+              <div class="info-icon">📍</div>
+              <div class="info-content">
+                <h3>Location</h3>
+                <p>Nairobi, Kenya</p>
+              </div>
+            </div>
+            
+            <div class="info-social">
+              <h4>Follow Us</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/olereyia.saitoti" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                <a href="https://www.instagram.com/its_olereyia/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+                <a href="https://x.com/its_olereyia" target="_blank" rel="noopener" aria-label="X (Twitter)">𝕏</a>
+              </div>
+            </div>
+          </div>
 
-    <!-- Brand Column -->
-    <div class="footer-brand">
-      <h3>Reyia Wild Safaris</h3>
-      <p>Creating unforgettable safari experiences across Africa — where adventure meets comfort and the wild calls your name.</p>
-    </div>
+        <form id="contact-form" class="contact-form" aria-label="Contact form">
+          <h3>Send us a Message</h3>
+          
+          <input type="hidden" name="time" id="time">
+          <!-- Honeypot -->
+          <label class="hidden" aria-hidden="true"><input type="text" name="botfield" tabindex="-1" autocomplete="off"></label>
 
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#safaris">Safaris</a></li>
-        <li><a href="#accommodations">Accommodations</a></li>
-        <li><a href="#pickup">Transfers</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+          <div class="form-row">
+            <label><span>Full Name</span><input type="text" name="name" placeholder="Your full name" required autocomplete="name"></label>
+            <label><span>Email Address</span><input type="email" name="email" placeholder="your@email.com" required autocomplete="email"></label>
+          </div>
 
-    <!-- Contact & Social -->
-    <div class="footer-contact">
-      <h4>Get in Touch</h4>
-      <ul>
-        <li><a href="mailto:reyiabenjamin8@gmail.com">reyiabenjamin8@gmail.com</a></li>
-        <li><a href="tel:+254794928779">+254 794 928 779</a></li>
-        <li>Nairobi, Kenya</li>
-      </ul>
-      <div class="footer-socials">
-        <a href="https://www.facebook.com/olereyia.saitoti" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/its_olereyia/?hl=en" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://x.com/its_olereyia" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <label><span>Subject</span><input type="text" name="subject" placeholder="What is this about? (optional)"></label>
+          <label><span>Message</span><textarea name="message" rows="5" placeholder="Tell us about your safari dreams..." required></textarea></label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <span id="form-status" role="status" aria-live="polite" class="form-status"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <header class="section-head">
+          <h2>What Our Guests Say</h2>
+          <p>Memories that last a lifetime — hear from those who've experienced the wild with us.</p>
+        </header>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="stars">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <blockquote class="testimonial-text">
+              "Reyia Wild Safaris exceeded our expectations! The guides were knowledgeable, the accommodations luxurious, and every day felt like a new adventure."
+            </blockquote>
+            <footer class="testimonial-footer">
+              <strong>James K.</strong>
+              <span>United Kingdom</span>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <blockquote class="testimonial-text">
+              "The best safari experience we've ever had. From the airport pickup to the game drives — everything was perfectly organized and stress-free."
+            </blockquote>
+            <footer class="testimonial-footer">
+              <strong>Sarah M.</strong>
+              <span>Canada</span>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="stars">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <blockquote class="testimonial-text">
+              "An unforgettable journey through Kenya's stunning landscapes. The Reyia team truly made us feel at home in the wild."
+            </blockquote>
+            <footer class="testimonial-footer">
+              <strong>Linda W.</strong>
+              <span>Germany</span>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <h3>Reyia Wild Safaris</h3>
+        <p>Creating unforgettable safari experiences across Africa — where adventure meets comfort and the wild calls your name.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#safaris">Safaris</a></li>
+          <li><a href="#accommodations">Accommodations</a></li>
+          <li><a href="#pickup">Transfers</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:reyiabenjamin8@gmail.com">📧 reyiabenjamin8@gmail.com</a></li>
+          <li><a href="tel:+254794928779">📞 +254 794 928 779</a></li>
+          <li>📍 Nairobi, Kenya</li>
+        </ul>
+
+        <div class="socials" aria-label="Social media links">
+          <a href="https://www.facebook.com/olereyia.saitoti" target="_blank" rel="noopener" aria-label="Facebook" title="Follow us on Facebook">f</a>
+          <a href="https://www.instagram.com/its_olereyia/" target="_blank" rel="noopener" aria-label="Instagram" title="Follow us on Instagram">📷</a>
+          <a href="https://x.com/its_olereyia" target="_blank" rel="noopener" aria-label="X (Twitter)" title="Follow us on X">𝕏</a>
+        </div>
       </div>
     </div>
 
-  </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Reyia Wild Safaris. All rights reserved.</p>
+    </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p>&copy; <span id="year"></span> Reyia Wild Safaris. All Rights Reserved.</p>
-  </div>
-</footer>
+  <!-- BACK TO TOP -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-
-<!-- Back to Top Button -->
-<button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="index.js"></script>
-
+  <!-- External scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script src="index.js" defer></script>
 </body>
 </html>

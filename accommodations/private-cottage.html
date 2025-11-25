@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Private Cottage — Reyia Wild Safaris</title>
+    <meta name="description" content="Private Cottage at Reyia Wild Safaris — secluded cottage with outdoor space.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="accomodation.css">
+  </head>
+
+  <body>
+    <header class="site-header--simple">
+      <div class="container header-simple">
+        <a href="../index.html" class="brand-link">Reyia Wild Safaris</a>
+        <nav aria-label="Primary">
+          <a href="../index.html#accommodations">Back to Accommodations</a>
+          <a href="../index.html#contact" class="btn btn-sm">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="accommodation-page">
+      <section class="accommodation-hero" aria-labelledby="room-title">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-media">
+              <img src="../images/cottage1.jpeg" alt="Private cottage view" loading="lazy">
+            </div>
+            <div class="hero-meta">
+              <h1 id="room-title">Private Cottage</h1>
+              <p class="muted">Secluded and serene — a perfect private cottage for families or couples.</p>
+              <div class="meta-row">
+                <div class="rating" aria-hidden="true">★★★★★</div>
+                <div class="price">From <strong>$220</strong>/night</div>
+              </div>
+              <div class="hero-ctas">
+                <a href="#booking" class="btn btn-primary">Reserve Now</a>
+                <a href="#gallery" class="btn btn-outline">View Gallery</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container accommodation-grid">
+        <div class="gallery-column">
+            <div class="gallery">
+              <figure class="gallery-main">
+                <img id="mainImage" src="../images/cottage.jpeg" alt="Private Cottage main view">
+                <!-- hidden thumbs provide additional sources for the gallery script -->
+                <button class="thumb sr-only" data-src="../images/campfire.jpeg" aria-hidden="true"></button>
+                <button class="thumb sr-only" data-src="../images/photography.jpeg" aria-hidden="true"></button>
+                <button class="gallery-btn prev" aria-label="Previous image">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18 L9 12 L15 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="gallery-btn next" aria-label="Next image">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6 L15 12 L9 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <figcaption class="sr-only">Private Cottage — main image</figcaption>
+              </figure>
+
+          <article class="details">
+            <h2>About this cottage</h2>
+            <p>Secluded and serene, the Private Cottage is ideal for families or honeymooners seeking privacy and peace. Enjoy a fully equipped cottage with modern amenities, cozy interiors, and a private outdoor space.</p>
+
+            <h3>What's included</h3>
+            <ul class="amenities-list">
+              <li>Free Wi-Fi</li>
+              <li>Private Cottage with Outdoor Space</li>
+              <li>Fully Equipped Kitchen</li>
+              <li>Air Conditioning / Heating</li>
+              <li>Complimentary Breakfast</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="booking-card" id="booking">
+          <div class="card">
+            <div class="card-body">
+              <h3>Book This Cottage</h3>
+              <p class="price-lead">From <strong>$220</strong>/night</p>
+
+              <form id="bookForm" action="../index.html#contact" method="get">
+                <label><span>Arrival</span><input type="date" name="arrival" required></label>
+                <label><span>Nights</span><input type="number" name="nights" min="1" value="1" required></label>
+                <label><span>Guests</span><select name="guests"><option>1</option><option>2</option><option>3</option></select></label>
+
+                <div class="actions">
+                  <button type="submit" class="btn btn-primary">Request Reservation</button>
+                  <a href="../index.html#contact" class="btn btn-outline">Contact Us</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer--simple">
+      <div class="container">
+        <p>&copy; <span id="year-alt"></span> Reyia Wild Safaris. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="accomodation.js"></script>
+    <script>document.getElementById('year-alt').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

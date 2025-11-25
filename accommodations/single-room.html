@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Single Room — Reyia Wild Safaris</title>
+    <meta name="description" content="Single Room at Reyia Wild Safaris — cozy accommodation for solo travelers with private balcony, breakfast and scenic views.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="accomodation.css">
+  </head>
+
+  <body>
+    <header class="site-header--simple">
+      <div class="container header-simple">
+        <a href="../index.html" class="brand-link">Reyia Wild Safaris</a>
+        <nav aria-label="Primary">
+          <a href="../index.html#accommodations">Back to Accommodations</a>
+          <a href="../index.html#contact" class="btn btn-sm">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="accommodation-page">
+      <section class="accommodation-hero" aria-labelledby="room-title">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-media">
+              <img src="../images/single.jpeg" alt="Single room with balcony and savannah view" loading="lazy">
+            </div>
+            <div class="hero-meta">
+              <h1 id="room-title">Single Room</h1>
+              <p class="muted">Cozy, private, and perfect for solo travelers — wake up to the sound of the wild.</p>
+              <div class="meta-row">
+                <div class="rating" aria-hidden="true">★★★★★</div>
+                <div class="price">From <strong>$120</strong>/night</div>
+              </div>
+              <div class="hero-ctas">
+                <a href="../index.html#contact" class="btn btn-primary">Reserve Now</a>
+                <a href="../index.html#gallery" class="btn btn-outline">View Gallery</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container accommodation-grid">
+        <div class="gallery-column">
+          <div class="gallery">
+            <figure class="gallery-main">
+              <img id="mainImage" src="../images/single.jpeg" alt="Single room main view">
+              <!-- hidden thumb buttons provide additional sources for the gallery script -->
+              <button class="thumb sr-only" data-src="../images/cottage.jpeg" aria-hidden="true"></button>
+              <button class="thumb sr-only" data-src="../images/luxury.jpeg" aria-hidden="true"></button>
+              <button class="gallery-btn prev" aria-label="Previous image">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18 L9 12 L15 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="gallery-btn next" aria-label="Next image">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 6 L15 12 L9 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <figcaption class="sr-only">Single Room — main image</figcaption>
+            </figure>
+
+            <!-- thumbnails removed: navigation handled via arrows -->
+          </div>
+
+          <article class="details">
+            <h2>About this room</h2>
+            <p>Our Single Room offers a comfortable bed, private balcony with sweeping views over the plains, en-suite bathroom and locally-sourced amenities. Designed for the solo traveler seeking tranquility and close wildlife encounters.</p>
+
+            <h3>What's included</h3>
+            <ul class="amenities-list">
+              <li>Private balcony with view</li>
+              <li>Daily housekeeping</li>
+              <li>Complimentary breakfast</li>
+              <li>Free Wi‑Fi</li>
+              <li>Airport transfers (on request)</li>
+            </ul>
+
+            <h3>Policies</h3>
+            <ul class="policies">
+              <li>Check-in: 2:00 PM — Check-out: 11:00 AM</li>
+              <li>Free cancellation up to 7 days before arrival</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="booking-card">
+          <div class="card">
+            <div class="card-body">
+              <h3>Book This Room</h3>
+              <p class="price-lead">From <strong>$120</strong>/night</p>
+
+              <form id="bookForm" action="../index.html#contact" method="get">
+                <label><span>Arrival</span><input type="date" name="arrival" required></label>
+                <label><span>Nights</span><input type="number" name="nights" min="1" value="1" required></label>
+                <label><span>Guests</span><select name="guests"><option>1</option><option>2</option></select></label>
+
+                <div class="actions">
+                  <button type="submit" class="btn btn-primary">Request Reservation</button>
+                  <a href="../index.html#contact" class="btn btn-outline">Contact Us</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer--simple">
+      <div class="container">
+        <p>&copy; <span id="year-alt"></span> Reyia Wild Safaris. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="accomodation.js"></script>
+    <script>
+      // set year
+      document.getElementById('year-alt').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

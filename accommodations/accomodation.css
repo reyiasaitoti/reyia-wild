@@ -1,0 +1,104 @@
+/* Accommodation page — updated layout where hero image is background and description overlays it,
+   and booking form is placed below the gallery for a focused single-room experience. */
+
+:root{
+  --max-width:1100px;
+  --container-pad:1rem;
+  --primary:#0b6b3a;
+  --accent:#d4a516;
+  --muted:#6b7280;
+  --bg-2:#ffffff;
+  --transition:200ms cubic-bezier(.2,.9,.3,1);
+}
+
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#fbfdfb,#ffffff); color:var(--text,#0b0b0b); line-height:1.55}
+a{color:inherit}
+
+/* Header (simple) */
+.site-header--simple{background:transparent;border-bottom:1px solid rgba(11,107,58,0.03)}
+.header-simple{max-width:var(--max-width);margin:0 auto;padding:.75rem var(--container-pad);display:flex;align-items:center;justify-content:space-between}
+
+/* Page container */
+.accommodation-page{max-width:var(--max-width);margin:1.5rem auto;padding:0 1rem}
+
+/* HERO — image becomes the visual background and text overlays it */
+.accommodation-hero{padding:0 0 1.25rem}
+.hero-inner{position:relative;border-radius:16px;overflow:hidden}
+.hero-media img{display:block;width:100%;height:520px;object-fit:cover}
+.hero-meta{position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:2rem; color:#fff;background:linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.45) 60%)}
+.hero-meta h1{margin:0 0 .35rem;font-size:clamp(1.5rem,3vw,2.4rem);letter-spacing:-0.01em}
+.hero-meta .muted{color:rgba(255,255,255,0.85);margin-bottom:.6rem}
+.meta-row{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
+.rating{color:var(--accent);font-weight:600}
+.price{font-weight:700;color:var(--accent)}
+.hero-ctas{display:flex;gap:.6rem}
+.hero-ctas .btn{backdrop-filter:blur(4px)}
+
+/* GRID: gallery first, booking form below it */
+.accommodation-grid{display:block;gap:1.75rem}
+.gallery-column{width:100%}
+
+/* Gallery main */
+.gallery{display:block;gap:.75rem}
+.gallery-main{border-radius:12px;overflow:hidden;box-shadow:0 18px 40px rgba(11,107,58,0.06);position:relative}
+.gallery-main img{width:100%;height:460px;object-fit:cover;display:block}
+
+/* thumbnails removed — navigation via arrows */
+
+/* Arrows overlay */
+.gallery-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.55);color:#fff;border:0;width:48px;height:48px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:1.6rem;cursor:pointer;z-index:9999;pointer-events:auto;box-shadow:0 8px 24px rgba(2,6,23,0.35);transition:transform var(--transition),background var(--transition)}
+.gallery-btn:hover{background:rgba(0,0,0,0.75);transform:translateY(-50%) scale(1.06)}
+.gallery-btn:active{transform:translateY(-50%) scale(.98)}
+.gallery-btn.prev{left:14px}
+.gallery-btn.next{right:14px}
+.gallery-btn:focus{outline:3px solid rgba(11,107,58,0.14);outline-offset:4px}
+
+/* SVG icon sizing inside arrow buttons */
+.gallery-btn svg{width:18px;height:18px;display:block;stroke:currentColor;fill:none}
+
+@media (max-width:640px){
+  .gallery-btn{width:40px;height:40px;font-size:1.3rem}
+  .gallery-main img{height:320px}
+}
+
+/* Details block below gallery */
+.details{margin-top:1rem;padding:0}
+.details h2{font-size:1.1rem;margin-bottom:.5rem;color:var(--text,#0b0b0b)}
+.details p{color:var(--muted);margin-bottom:.85rem}
+.amenities-list{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.5rem}
+.amenities-list li{position:relative;padding-left:1.25rem;color:var(--muted)}
+.amenities-list li::before{content:'•';position:absolute;left:0;color:var(--accent)}
+
+/* Booking card — placed below the gallery */
+.booking-card{width:100%;margin-top:1.75rem;display:flex;justify-content:center}
+.booking-card .card{width:100%;max-width:420px;border-radius:12px;overflow:hidden;border:1px solid rgba(11,107,58,0.06);box-shadow:0 20px 50px rgba(11,107,58,0.06)}
+.booking-card .card-body{padding:1.25rem;background:var(--bg-2)}
+.booking-card h3{margin:0 0 .35rem}
+.price-lead{color:var(--primary);font-weight:700;margin-bottom:.75rem}
+.booking-card label{display:block;margin-bottom:.6rem;font-size:.95rem;color:var(--muted)}
+.booking-card input[type="date"],.booking-card input[type="number"],.booking-card select{width:100%;padding:.65rem;border-radius:8px;border:1px solid rgba(16,24,40,0.06);background:#fff}
+.actions{display:flex;gap:.6rem;margin-top:.85rem}
+
+/* Footer */
+.site-footer--simple{padding:1.5rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive tweaks */
+@media (min-width:768px){
+  .hero-media img{height:520px}
+  .gallery-main img{height:520px}
+}
+
+@media (min-width:1024px){
+  .hero-meta{padding:3rem 2.25rem}
+  .gallery-main img{height:540px}
+}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* small helpers */
+.muted{color:var(--muted)}
+.sr-only{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
