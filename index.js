@@ -7,7 +7,6 @@ const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 const hamburger = $('#hamburger');
 const mobileNav = $('#mobileNav');
 const closeMobile = $('#closeMobile');
-const bookBtn = $('#bookBtn');
 const mobileBook = $('#mobileBook');
 const heroVideo = $('#heroVideo');
 const heroPoster = document.querySelector('.hero-poster');
@@ -46,18 +45,6 @@ if (hamburger && mobileNav && closeMobile) {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileNav(); });
 }
 
-// Booking buttons: scroll to contact or open mail
-const defaultBook = () => {
-  const contact = $('#contact');
-  if (contact) {
-    contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    closeMobileNav();
-  } else {
-    window.location.href = 'mailto:info@reyiawildsafaris.com?subject=Booking%20Inquiry';
-  }
-};
-if (bookBtn) bookBtn.addEventListener('click', defaultBook);
-if (mobileBook) mobileBook.addEventListener('click', defaultBook);
 
 // HERO video fade in (play only when available)
 document.addEventListener('DOMContentLoaded', () => {
