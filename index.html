@@ -122,10 +122,17 @@
   <!-- HERO -->
   <main id="site-main">
     <section id="home" class="hero" aria-label="Hero section">
-      <img src="images/hero.jpg" alt="Scenic view of Kenyan savannah with wildlife" class="hero-poster" loading="lazy">
-      <video id="heroVideo" class="hero-video" muted playsinline autoplay loop poster="images/hero.jpg" aria-hidden="true">
-        <source src="Videos/lions.mp4" type="video/mp4">
-      </video>
+
+      <!-- Slideshow images — crossfade -->
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide active" style="background-image:url('images/hero.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('images/lion.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('images/elephant.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('images/gamedrive.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('images/girrafe.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('images/safari.jpeg')"></div>
+      </div>
+
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="hero-content">
@@ -136,6 +143,16 @@
           <a class="btn btn-primary" href="#safaris">View Safaris</a>
           <a class="btn btn-ghost" href="#contact">Plan Your Trip</a>
         </div>
+      </div>
+
+      <!-- Slideshow dots -->
+      <div class="hero-dots" aria-label="Slideshow navigation">
+        <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
+        <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
+        <button class="hero-dot" data-index="4" aria-label="Slide 5"></button>
+        <button class="hero-dot" data-index="5" aria-label="Slide 6"></button>
       </div>
 
       <!-- Trust bar at bottom of hero -->
@@ -623,6 +640,41 @@
 
   <!-- BACK TO TOP -->
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Hero slideshow -->
+  <script>
+    (function(){
+      var slides = document.querySelectorAll('.hero-slide');
+      var dots   = document.querySelectorAll('.hero-dot');
+      var current = 0;
+      var interval = 5000;
+      var timer;
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      function next() { goTo(current + 1); }
+
+      function start() { timer = setInterval(next, interval); }
+      function stop()  { clearInterval(timer); }
+
+      // Dot clicks
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          stop();
+          goTo(parseInt(this.dataset.index));
+          start();
+        });
+      });
+
+      start();
+    })();
+  </script>
 
   <!-- Gallery scroll controls -->
   <script>
