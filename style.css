@@ -94,6 +94,7 @@ a:focus, button:focus, input:focus, textarea:focus {
   z-index: 1200;
   box-shadow: 0 2px 20px rgba(0,0,0,0.3);
   border-bottom: 1px solid rgba(255,255,255,0.12);
+  overflow: visible;
 }
 .header-inner {
   display: flex;
@@ -232,36 +233,32 @@ a:focus, button:focus, input:focus, textarea:focus {
    MOBILE NAV
    ============================================================ */
 .mobile-nav {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
   right: 0;
-  bottom: 0;
-  width: 280px;
-  max-width: 85vw;
-  background: var(--navy-dk);
-  border-left: 3px solid var(--border);
+  width: 100%;
+  max-height: 75vh;
+  overflow-y: auto;
+  background: rgba(30, 40, 55, 0.97);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
   z-index: 1400;
   display: flex;
   flex-direction: column;
   padding: 0;
-  overflow-y: auto;
-  transform: translateX(100%);
-  transition: transform var(--transition);
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
   pointer-events: none;
 }
 .mobile-nav.open {
-  transform: translateX(0);
+  opacity: 1;
+  transform: translateY(0);
   pointer-events: auto;
 }
 
-.mobile-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.1rem 1.25rem;
-  background: rgba(255,255,255,0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
+.mobile-header { display: none; }
 .mobile-brand {
   font-family: 'Playfair Display', serif;
   font-size: 0.95rem;
@@ -282,26 +279,26 @@ a:focus, button:focus, input:focus, textarea:focus {
 }
 .mobile-list a {
   display: block;
-  padding: 0.8rem 1.25rem;
-  font-weight: 700;
-  font-size: 0.85rem;
+  padding: 0.85rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.88rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.75);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   transition: all var(--transition);
 }
-.mobile-list a:hover { color: #ffffff; background: rgba(255,255,255,0.04); padding-left: 1.6rem; }
+.mobile-list a:hover { color: #ffffff; background: rgba(255,255,255,0.08); padding-left: 1.9rem; }
 
 .mobile-actions {
-  margin-top: auto;
-  padding: 1.25rem;
+  padding: 1rem 1.5rem 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  gap: 0.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
 }
-.mobile-phone { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
+.mobile-phone { color: rgba(255,255,255,0.8); font-size: 0.88rem; }
 
 /* ============================================================
    BUTTONS (global)

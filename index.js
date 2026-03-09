@@ -5,7 +5,6 @@ const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
 const hamburger    = $('#hamburger');
 const mobileNav    = $('#mobileNav');
-const closeMobile  = $('#closeMobile');
 const backToTop    = $('#backToTop');
 const form         = $('#contact-form');
 const formStatus   = $('#form-status');
@@ -29,10 +28,17 @@ function closeMobileNav() {
   if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
 }
 
-if (hamburger && mobileNav && closeMobile) {
-  hamburger.addEventListener('click', openMobile);
-  closeMobile.addEventListener('click', closeMobileNav);
+if (hamburger && mobileNav) {
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    mobileNav.classList.contains('open') ? closeMobileNav() : openMobile();
+  });
   mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
+  document.addEventListener('click', (e) => {
+    if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+      closeMobileNav();
+    }
+  });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileNav(); });
 }
 
@@ -86,18 +92,3 @@ if (window.emailjs && form) {
       });
   });
 }
-
-// FOCUS TRAP for mobile nav
-(function() {
-  const mobile = $('#mobileNav');
-  if (!mobile) return;
-  mobile.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab' && mobile.classList.contains('open')) {
-      const nodes = Array.from(mobile.querySelectorAll('a,button,input,textarea')).filter(n => n.offsetParent !== null);
-      if (!nodes.length) return;
-      const first = nodes[0], last = nodes[nodes.length - 1];
-      if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
-      else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
-    }
-  });
-})();
