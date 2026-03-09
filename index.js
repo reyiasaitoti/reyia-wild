@@ -19,14 +19,13 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 function openMobile() {
   if (!mobileNav) return;
   mobileNav.classList.add('open');
-  mobileNav.setAttribute('aria-hidden', 'false');
+  mobileNav.removeAttribute('inert');
   if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
-  // NOTE: no body overflow lock — caused page freeze on mobile
 }
 function closeMobileNav() {
   if (!mobileNav) return;
   mobileNav.classList.remove('open');
-  mobileNav.setAttribute('aria-hidden', 'true');
+  mobileNav.setAttribute('inert', '');
   if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
 }
 

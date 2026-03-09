@@ -233,19 +233,26 @@ a:focus, button:focus, input:focus, textarea:focus {
    ============================================================ */
 .mobile-nav {
   position: fixed;
-  inset: 0 0 0 100%;
-  width: 300px;
-  max-width: 85%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  max-width: 85vw;
   background: var(--navy-dk);
   border-left: 3px solid var(--border);
   z-index: 1400;
   display: flex;
   flex-direction: column;
   padding: 0;
+  overflow-y: auto;
+  transform: translateX(100%);
   transition: transform var(--transition);
+  pointer-events: none;
 }
-.mobile-nav               { transform: translateX(100%); pointer-events: none; }
-.mobile-nav.open          { transform: translateX(0);    pointer-events: auto; }
+.mobile-nav.open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
 
 .mobile-header {
   display: flex;
