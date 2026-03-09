@@ -65,9 +65,23 @@ window.addEventListener('scroll', () => {
 });
 if (backToTop) backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+// Success popup close
+const successPopup  = document.getElementById('successPopup');
+const successClose  = document.getElementById('successClose');
+function closePopup() {
+  if (!successPopup) return;
+  successPopup.classList.remove('show');
+  successPopup.setAttribute('aria-hidden', 'true');
+}
+if (successClose) successClose.addEventListener('click', closePopup);
+if (successPopup) successPopup.addEventListener('click', (e) => {
+  if (e.target === successPopup) closePopup();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePopup(); });
+
 // EMAILJS form
 if (window.emailjs && form) {
-  try { emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); } catch(e) {}
+  try { emailjs.init('ofP57XknSVvsvoCf2'); } catch(e) {}
 
   const timeInput = document.getElementById('time');
   if (timeInput) timeInput.value = new Date().toLocaleString();
@@ -80,15 +94,23 @@ if (window.emailjs && form) {
     formStatus.style.color = 'var(--muted)';
     formStatus.textContent = 'Sending...';
 
-    emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', form)
+    emailjs.sendForm('service_h3qbmx9', 'template_s4l5gle', form)
       .then(() => {
-        formStatus.style.color = 'var(--brand)';
-        formStatus.textContent = 'Thank you — your message has been sent.';
         form.reset();
+        // Show success popup
+        const popup = document.getElementById('successPopup');
+        if (popup) {
+          popup.setAttribute('aria-hidden', 'false');
+          popup.classList.add('show');
+          document.getElementById('successClose').focus();
+        }
+        if (formStatus) formStatus.textContent = '';
       }, (err) => {
         console.error('EmailJS error', err);
-        formStatus.style.color = 'red';
-        formStatus.textContent = 'Oops — something went wrong. Please try again later.';
+        if (formStatus) {
+          formStatus.style.color = 'red';
+          formStatus.textContent = 'Oops — something went wrong. Please try again later.';
+        }
       });
   });
 }
