@@ -5,32 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SaitotiMaraSafaris</title>
   <meta name="description" content="Experience unforgettable Kenya safaris with SaitotiMaraSafaris. From luxury game drives to family-friendly adventures, book your custom African safari today.">
-  <meta name="keywords" content="Kenya safaris, African safari, Masai Mara, game drives, safari bookings, Reyia Wild Safaris">
+  <meta name="keywords" content="Kenya safaris, African safari, Masai Mara, game drives, safari bookings, Saitoti Mara Safaris">
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://saitotimarasafaris.top/">
-
-  <!-- Preload hero video (optional) & fonts -->
   <link rel="preload" as="video" href="Videos/lions.mp4" type="video/mp4">
   <link rel="preload" as="image" href="images/hero.jpg">
-
-  <!-- Favicon -->
   <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saitotimarasafaris.top/">
   <meta property="og:title" content="SaitotiMaraSafaris — Explore Kenya's Wildlife">
   <meta property="og:description" content="Unforgettable Kenya safaris: game drives, luxury lodges, photography safaris. Book your custom safari today.">
   <meta property="og:image" content="https://saitotimarasafaris.top/">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SaitotiMaraSafaris — Explore Kenya's Wildlife">
   <meta name="twitter:description" content="Unforgettable Kenya safaris: game drives, luxury lodges, photography safaris. Book your custom safari today.">
   <meta name="twitter:image" content="https://saitotimarasafaris.top/">
 
-  <!-- Schema (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -48,22 +40,38 @@
   }
   </script>
 
-  <!-- Font Awesome (deferred load) -->
+  <!-- Google Fonts: Playfair Display + Lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="topbar-item">📍 Sekenani Gate, Maasai Mara, Kenya</span>
+      <span class="topbar-sep">|</span>
+      <a href="tel:+254794928779" class="topbar-item">📞 +254 794 928 779</a>
+      <span class="topbar-sep">|</span>
+      <a href="/cdn-cgi/l/email-protection#0c7e6975656d6e6962666d616562344c6b616d6560226f6361" class="topbar-item">✉ <span class="__cf_email__" data-cfemail="89fbecf0e0e8ebece7e3e8e4e0e7b1c9eee4e8e0e5a7eae6e4">[email&#160;protected]</span></a>
+    </div>
+  </div>
 
   <!-- SITE HEADER -->
   <header class="site-header" role="banner">
     <div class="header-inner">
-      <a class="brand-link" href="/" aria-label="saitotimarasafaris home">
+      <a class="brand-link" href="/" aria-label="SaitotiMaraSafaris home">
         <img src="images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="logo-img" loading="eager">
-        <span class="brand-text">SaitotiMara<br>Safaris</span>
+        <div class="brand-text-wrap">
+          <span class="brand-name">SaitotiMara</span>
+          <span class="brand-sub">SAFARIS</span>
+        </div>
       </a>
 
       <nav class="nav-primary" role="navigation" aria-label="Primary navigation">
@@ -77,7 +85,7 @@
       </nav>
 
       <div class="header-actions">
-        <a class="phone" href="tel:+254794928779" aria-label="Call saitotimarasafaris">📞 +254 794 928 779</a>
+        <a class="btn btn-header-cta" href="#contact">Book a Safari</a>
         <button id="hamburger" class="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu" type="button">
           <span class="hamburger-box"><span class="hamburger-inner"></span></span>
         </button>
@@ -85,10 +93,13 @@
     </div>
   </header>
 
-  <!-- MOBILE NAV (slide-in) -->
+  <!-- MOBILE NAV -->
   <aside id="mobileNav" class="mobile-nav" aria-hidden="true" role="menu">
     <div class="mobile-inner" role="presentation">
-      <button id="closeMobile" class="mobile-close" aria-label="Close menu" type="button">&times;</button>
+      <div class="mobile-header">
+        <span class="mobile-brand">SaitotiMara Safaris</span>
+        <button id="closeMobile" class="mobile-close" aria-label="Close menu" type="button">&times;</button>
+      </div>
 
       <nav role="navigation" aria-label="Mobile primary">
         <ul class="mobile-list">
@@ -102,28 +113,75 @@
 
       <div class="mobile-actions">
         <a href="tel:+254794928779" class="mobile-phone">📞 +254 794 928 779</a>
-        <a id="mobileBook" class="btn btn-cta" href="#contact">Book Now</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a id="mobileBook" class="btn btn-primary" href="#contact">Book Now</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
       </div>
     </div>
   </aside>
 
   <!-- HERO -->
   <main id="site-main">
-    <section id="home" class="hero" aria-label="Hero section with call to action">
+    <section id="home" class="hero" aria-label="Hero section">
       <img src="images/hero.jpg" alt="Scenic view of Kenyan savannah with wildlife" class="hero-poster" loading="lazy">
       <video id="heroVideo" class="hero-video" muted playsinline autoplay loop poster="images/hero.jpg" aria-hidden="true">
         <source src="Videos/lions.mp4" type="video/mp4">
       </video>
-
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="hero-content">
-        <h1>Explore the Wild with SaitotiMaraSafaris</h1>
-        <p>Unforgettable game drives, luxurious stays, and authentic African adventures await you.</p>
+        <span class="hero-eyebrow">Maasai Mara, Kenya</span>
+        <h1>Discover Africa's <br><em>Most Wild Places</em></h1>
+        <p>Expert-guided game drives, luxury camps, and authentic cultural encounters — deep in the heart of the Mara.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#safaris">View Safaris</a>
-          <a class="btn btn-outline" href="#contact">Book Now</a>
+          <a class="btn btn-ghost" href="#contact">Plan Your Trip</a>
+        </div>
+      </div>
+
+      <!-- Trust bar at bottom of hero -->
+      <div class="hero-trust">
+        <div class="trust-item"><span class="trust-num">500+</span><span class="trust-label">Happy Guests</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-num">10+</span><span class="trust-label">Years Experience</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-num">5★</span><span class="trust-label">Rated Safaris</span></div>
+        <div class="trust-divider"></div>
+        <div class="trust-item"><span class="trust-num">24/7</span><span class="trust-label">Support</span></div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US STRIP -->
+    <section class="why-strip">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-item">
+            <span class="why-icon">🦁</span>
+            <div>
+              <h4>Expert Local Guides</h4>
+              <p>Born & raised in the Mara — our guides know every animal trail</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-icon">🏕️</span>
+            <div>
+              <h4>Luxury to Budget</h4>
+              <p>Tailored packages from tented camps to premium lodges</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-icon">📸</span>
+            <div>
+              <h4>Photography Focused</h4>
+              <p>Golden-hour drives optimised for stunning wildlife shots</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-icon">✈️</span>
+            <div>
+              <h4>Door-to-Door Service</h4>
+              <p>Airport pickup, transfers, and full itinerary management</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -132,47 +190,62 @@
     <section id="safaris" class="section safaris" aria-labelledby="safaris-heading">
       <div class="container">
         <header class="section-head">
+          <span class="section-tag">What We Offer</span>
           <h2 id="safaris-heading">Our Safari Packages</h2>
           <p>Experience the magic of Africa through unforgettable adventures tailored just for you.</p>
         </header>
 
         <div class="card-grid safari-grid">
-          <!-- card (repeatable) -->
           <article class="card safari-card">
-            <img src="images/gamedrive.jpeg" alt="Full Day Game Drive safari in the savannah" loading="lazy">
+            <div class="card-img-wrap">
+              <img src="images/gamedrive.jpeg" alt="Full Day Game Drive" loading="lazy">
+              <span class="card-badge">Popular</span>
+            </div>
             <div class="card-body">
               <h3>Full Day Game Drive</h3>
               <p>Explore the savannah on a thrilling full-day safari with expert guides and wildlife sightings at every turn. Perfect for spotting Kenya's iconic animals.</p>
-              <a class="btn btn-sm" href="#contact">Book Now</a>
+              <a class="btn btn-sm" href="#contact">Book Now →</a>
             </div>
           </article>
 
           <article class="card safari-card">
-            <img src="images/adventure.jpeg" alt="3-Day Wilderness Adventure camping experience" loading="lazy">
+            <div class="card-img-wrap">
+              <img src="images/adventure.jpeg" alt="3-Day Wilderness Adventure" loading="lazy">
+              <span class="card-badge card-badge--gold">Best Value</span>
+            </div>
             <div class="card-body">
               <h3>3-Day Wilderness Adventure</h3>
               <p>Immerse yourself in nature with two nights of authentic safari camping and guided morning drives. Experience the raw beauty of the African wilderness.</p>
-              <a class="btn btn-sm" href="#contact">Book Now</a>
+              <a class="btn btn-sm" href="#contact">Book Now →</a>
             </div>
           </article>
 
           <article class="card safari-card">
-            <img src="images/luxurysafari.jpeg" alt="Luxury Safari Experience with premium lodges" loading="lazy">
+            <div class="card-img-wrap">
+              <img src="images/luxurysafari.jpeg" alt="Luxury Safari Experience" loading="lazy">
+              <span class="card-badge card-badge--dark">Premium</span>
+            </div>
             <div class="card-body">
               <h3>Luxury Safari Experience</h3>
               <p>Enjoy top-class lodges, private game drives, and gourmet meals in the heart of the wild. Ultimate comfort meets adventure.</p>
-              <a class="btn btn-sm" href="#contact">Book Now</a>
+              <a class="btn btn-sm" href="#contact">Book Now →</a>
             </div>
           </article>
 
           <article class="card safari-card">
-            <img src="images/photography.jpeg" alt="Photography Safari with professional guides" loading="lazy">
+            <div class="card-img-wrap">
+              <img src="images/photography.jpeg" alt="Photography Safari" loading="lazy">
+            </div>
             <div class="card-body">
               <h3>Photography Safari</h3>
               <p>Capture stunning shots of Africa's "Big Five" with expert photo guides and early-morning golden hours for perfect lighting.</p>
-              <a class="btn btn-sm" href="#contact">Book Now</a>
+              <a class="btn btn-sm" href="#contact">Book Now →</a>
             </div>
           </article>
+        </div>
+
+        <div class="section-cta-row">
+          <a class="btn btn-outline-dark" href="#contact">Enquire About Custom Packages</a>
         </div>
       </div>
     </section>
@@ -181,79 +254,88 @@
     <section id="accommodations" class="section accommodations" aria-labelledby="accom-heading">
       <div class="container">
         <header class="section-head">
+          <span class="section-tag">Where You'll Stay</span>
           <h2 id="accom-heading">Our Accommodations</h2>
           <p>Comfort, style, and nature — experience the wild your way with our diverse lodging options.</p>
         </header>
 
         <div class="card-grid accommodation-grid">
           <article class="card accommodation-card">
-            <img src="images/single.jpeg" alt="Single Room" loading="lazy">
+            <div class="card-img-wrap">
+              <img src="images/single.jpeg" alt="Single Room" loading="lazy">
+            </div>
             <div class="card-body">
               <h3>Single Room</h3>
-              <p>Perfect for solo travelers. Cozy, comfortable, and surrounded by nature’s calm.</p>
-              <a class="link" href="/accommodations/single-room.html">See More</a>
+              <p>Perfect for solo travelers. Cozy, comfortable, and surrounded by nature's calm.</p>
+              <a class="card-link" href="/accommodations/single-room.html">View Details →</a>
             </div>
           </article>
 
           <article class="card accommodation-card">
-            <img src="images/double.jpeg" alt="Double Room" loading="lazy">
+            <div class="card-img-wrap">
+              <img src="images/double.jpeg" alt="Double Room" loading="lazy">
+            </div>
             <div class="card-body">
               <h3>Double Room</h3>
               <p>Ideal for couples. Spacious interiors, warm decor, and a touch of adventure.</p>
-              <a class="link" href="/accommodations/double-room.html">See More</a>
+              <a class="card-link" href="/accommodations/double-room.html">View Details →</a>
             </div>
           </article>
 
           <article class="card accommodation-card">
-            <img src="images/twin.jpeg" alt="Twin Room" loading="lazy">
+            <div class="card-img-wrap">
+              <img src="images/twin.jpeg" alt="Twin Room" loading="lazy">
+            </div>
             <div class="card-body">
               <h3>Twin Room</h3>
               <p>Comfortable twin beds and a private balcony with views of the wild plains.</p>
-              <a class="link" href="/accommodations/twin-room.html">See More</a>
+              <a class="card-link" href="/accommodations/twin-room.html">View Details →</a>
             </div>
           </article>
 
           <article class="card accommodation-card">
-            <img src="images/luxurytent.jpeg" alt="Luxury Suite" loading="lazy">
+            <div class="card-img-wrap">
+              <img src="images/luxurytent.jpeg" alt="Luxury Suite" loading="lazy">
+              <span class="card-badge card-badge--dark">Luxury</span>
+            </div>
             <div class="card-body">
               <h3>Luxury Suite</h3>
               <p>Premium experience with elegant design, private lounge, and panoramic savannah views.</p>
-              <a class="link" href="/accommodations/luxury-suite.html">See More</a>
+              <a class="card-link" href="/accommodations/luxury-suite.html">View Details →</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CEO VIDEO -->
+    <!-- FOUNDER MESSAGE -->
     <section id="ceo" class="section ceo">
       <div class="container">
-        <header class="section-head">
-          <h2>What Our CEO Says</h2>
-          <p>Hear directly from Benjamin Reyia about the vision behind SaitotiMaraSafaris and why we're passionate about creating unforgettable experiences.</p>
-        </header>
-
         <div class="ceo-card">
-          <div class="ceo-video-wrapper">
-            <video id="ceoVideo" muted playsinline loop preload="metadata" poster="images/ceo-poster.jpg" aria-label="CEO introduction video">
-              <source src="Videos/Intro.mp4" type="video/mp4">
-            </video>
-            <button id="soundBtn" class="sound-toggle" type="button" aria-pressed="false" aria-label="Toggle video sound">
-              <span class="sound-icon">🔊</span>
-              <span class="sound-text">Play Sound</span>
-            </button>
+
+          <div class="ceo-photo-wrap">
+            <img src="images/reyia.jpeg" alt="Reyia Saitoti — Founder, SaitotiMaraSafaris" class="ceo-photo">
+            <div class="ceo-photo-badge">
+              <span>Founder</span>
+              <span class="ceo-photo-badge-name">Reyia Saitoti</span>
+            </div>
           </div>
 
           <div class="ceo-caption">
-            <div class="ceo-quote-icon">″</div>
+            <span class="section-tag section-tag--light">A Message from Our Founder</span>
+            <div class="ceo-quote-icon">&#8220;</div>
             <blockquote class="ceo-quote">
-              "At SaitotiMaraSafaris, we create unforgettable journeys where adventure meets luxury. Every safari is a promise to bring our guests closer to the wild."
+              I was born and raised in the Maasai Mara — this land is not just where I work, it is who I am. Growing up here, I learned to read the seasons, track animals before sunrise, and listen to what the wilderness has to say. That knowledge is something no classroom can teach, and it is the heart of every safari we offer.
+              <br><br>
+              When you travel with us, you are not just a guest — you are a welcome friend stepping into my home. My promise to you is simple: honesty, care, and an experience that connects you deeply to the wild places and people of the Mara. We will look after you the way the Maasai look after one another — with pride and without compromise.
             </blockquote>
             <footer class="ceo-footer">
-              <div class="ceo-name">Benjamin Reyia</div>
-              <div class="ceo-title">CEO & Founder, SaitotiMaraSafaris</div>
+              <div class="ceo-name">Reyia Saitoti</div>
+              <div class="ceo-title">Founder &amp; CEO, SaitotiMaraSafaris</div>
             </footer>
+            <a class="btn btn-primary" href="#contact" style="margin-top:1.5rem; align-self:flex-start;">Plan Your Safari &#8594;</a>
           </div>
+
         </div>
       </div>
     </section>
@@ -261,148 +343,148 @@
     <!-- PICKUP -->
     <section id="pickup" class="section pickup">
       <div class="container split">
+        <div class="pickup-image">
+          <img src="images/pickup.jpeg" alt="Airport Pickup and Safari Vehicle" loading="lazy">
+        </div>
         <div class="pickup-text">
-          <h2>Airport Pickup & Transfers</h2>
+          <span class="section-tag">Seamless Travel</span>
+          <h2>Airport Pickup &amp; Transfers</h2>
           <p>Begin your adventure the moment you arrive. Our reliable airport pickup and drop-off services ensure a smooth transition from the runway to the wilderness.</p>
-          <ul>
-            <li>Available at Jomo Kenyatta & Wilson Airports</li>
+          <ul class="check-list">
+            <li>Available at Jomo Kenyatta &amp; Wilson Airports</li>
             <li>Professional English-speaking drivers</li>
-            <li>Private 4x4 Land Cruiser or Safari Van</li>
+            <li>Private 4×4 Land Cruiser or Safari Van</li>
             <li>Complimentary bottled water and Wi-Fi onboard</li>
           </ul>
           <a class="btn btn-primary" href="#contact">Book Your Transfer</a>
         </div>
-        <div class="pickup-image">
-          <img src="images/pickup.jpeg" alt="Airport Pickup and Safari Vehicle" loading="lazy">
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-tag">In the Wild</span>
+          <h2>Explore Our World</h2>
+          <p>Moments from our unforgettable safaris — the wildlife, the landscapes, and the experiences that define SaitotiMara Safaris.</p>
+        </header>
+
+        <div class="gallery-scroll-wrap" id="galleryScroll">
+        <div class="gallery-grid">
+          <!-- Large featured item -->
+          <a href="#contact" class="gallery-item gallery-item--large">
+            <img src="images/lion.jpg" alt="Lion on the savannah" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-label">Lion on the Savannah</span>
+            </div>
+          </a>
+
+          <a href="#contact" class="gallery-item">
+            <img src="images/elephant.jpeg" alt="Elephants in Amboseli" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-label">Elephants in Amboseli</span>
+            </div>
+          </a>
+
+          <a href="#contact" class="gallery-item">
+            <img src="images/safari.jpeg" alt="Safari Jeep Drive" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-label">Safari Jeep Drive</span>
+            </div>
+          </a>
+
+          <a href="#contact" class="gallery-item">
+            <img src="images/girrafe.jpeg" alt="Giraffes at Sunset" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-label">Giraffes at Sunset</span>
+            </div>
+          </a>
+
+          <a href="#contact" class="gallery-item">
+            <img src="images/luxury.jpeg" alt="Luxury Lodge" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-label">Luxury Lodge</span>
+            </div>
+          </a>
+
+          <!-- Large featured item -->
+          <a href="#contact" class="gallery-item gallery-item--large">
+            <img src="images/campfire.jpeg" alt="Campfire Experience" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-label">Campfire Experience</span>
+            </div>
+          </a>
+
+          <a href="#contact" class="gallery-item">
+            <img src="images/bird.jpg" alt="Birds in Flight" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-label">Birds in Flight</span>
+            </div>
+          </a>
+
+          <a href="#contact" class="gallery-item">
+            <img src="images/zebras.jpeg" alt="Zebras Grazing" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-label">Zebras Grazing</span>
+            </div>
+          </a>
+        </div><!-- /.gallery-grid -->
+        </div><!-- /.gallery-scroll-wrap -->
+
+        <div class="gallery-scroll-hint">
+          <span>Scroll to explore</span>
+          <button class="gallery-arrow" id="galleryPrev" aria-label="Scroll left">&#8592;</button>
+          <button class="gallery-arrow" id="galleryNext" aria-label="Scroll right">&#8594;</button>
+        </div>
+
+        <div class="section-cta-row">
+          <a class="btn btn-outline-dark" href="#contact">Book a Safari Experience</a>
         </div>
       </div>
     </section>
-<section id="gallery" class="section gallery">
-  <div class="container">
-    <header class="section-head">
-      <h2>Explore Our World</h2>
-      <p>Moments from our unforgettable safaris — the wildlife, the landscapes, and the experiences that define Reyia Wild Safaris.</p>
-    </header>
-
-    <!-- Feature Items -->
-    <div class="feature-item">
-      <div class="feature-image">
-        <img src="images/lion.jpg" alt="Lion on the savannah" loading="lazy">
-      </div>
-      <div class="feature-text">
-        <h3>Lion on the Savannah</h3>
-        <p>Witness the majestic king of the jungle in his natural habitat. Our guided safaris offer close encounters while respecting wildlife and nature.</p>
-      </div>
-    </div>
-
-    <div class="feature-item reverse">
-      <div class="feature-image">
-        <img src="images/elephant.jpeg" alt="Elephants in Amboseli" loading="lazy">
-      </div>
-      <div class="feature-text">
-        <h3>Elephants in Amboseli</h3>
-        <p>Experience the grandeur of elephants roaming freely against the backdrop of Mount Kilimanjaro — a sight that leaves visitors in awe.</p>
-      </div>
-    </div>
-
-    <div class="feature-item">
-      <div class="feature-image">
-        <img src="images/safari.jpeg" alt="Safari jeep drive" loading="lazy">
-      </div>
-      <div class="feature-text">
-        <h3>Safari Jeep Drive</h3>
-        <p>Explore the savannah in our comfortable 4x4 safari vehicles while spotting wildlife and learning from expert guides.</p>
-      </div>
-    </div>
-
-    <div class="feature-item reverse">
-      <div class="feature-image">
-        <img src="images/girrafe.jpeg" alt="Giraffes at sunset" loading="lazy">
-      </div>
-      <div class="feature-text">
-        <h3>Giraffes at Sunset</h3>
-        <p>Capture stunning silhouettes of giraffes during golden hour, a perfect moment for photographers and nature lovers alike.</p>
-      </div>
-    </div>
-
-    <div class="feature-item">
-      <div class="feature-image">
-        <img src="images/luxury.jpeg" alt="Luxury lodge overlooking the plains" loading="lazy">
-      </div>
-      <div class="feature-text">
-        <h3>Luxury Lodge</h3>
-        <p>Stay in exclusive lodges overlooking the plains, where comfort meets the wilderness. Enjoy breathtaking views right from your room.</p>
-      </div>
-    </div>
-
-    <div class="feature-item reverse">
-      <div class="feature-image">
-        <img src="images/campfire.jpeg" alt="Guests enjoying campfire" loading="lazy">
-      </div>
-      <div class="feature-text">
-        <h3>Campfire Experiences</h3>
-        <p>End your day under the stars with our signature campfire experience. Share stories, enjoy music, and connect with nature.</p>
-      </div>
-    </div>
-
-    <div class="feature-item">
-      <div class="feature-image">
-        <img src="images/bird.jpg" alt="Birds in flight" loading="lazy">
-      </div>
-      <div class="feature-text">
-        <h3>Birds in Flight</h3>
-        <p>Observe the skies as hundreds of birds soar freely. Perfect for birdwatchers and photographers seeking magical moments in nature.</p>
-      </div>
-    </div>
-
-    <div class="feature-item reverse">
-      <div class="feature-image">
-        <img src="images/zebras.jpeg" alt="Zebras grazing" loading="lazy">
-      </div>
-      <div class="feature-text">
-        <h3>Zebras Grazing</h3>
-        <p>See zebras grazing peacefully in vast landscapes. Our tours ensure you witness these animals in their natural, undisturbed environment.</p>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
 
     <!-- CONTACT / BOOKING -->
     <section id="contact" class="section contact">
       <div class="container">
         <header class="section-head">
-          <h2>Get in Touch</h2>
-          <p>Ready to begin your next adventure? Reach out and we'll plan your perfect safari experience tailored just for you.</p>
+          <span class="section-tag">Let's Talk</span>
+          <h2>Plan Your Safari</h2>
+          <p>Ready to begin your next adventure? Reach out and we'll craft your perfect safari experience.</p>
         </header>
-        
+
         <div class="contact-container">
           <div class="contact-info">
             <div class="info-group">
               <div class="info-icon">📧</div>
               <div class="info-content">
                 <h3>Email</h3>
-                <a href="mailto:reyiabenjamin8@gmail.com">reyiabenjamin8@gmail.com</a>
+                <a href="/cdn-cgi/l/email-protection#b1c3d4c8d8d0d3d4dfdbd0dcd8df89f1d6dcd0d8dd9fd2dedc"><span class="__cf_email__" data-cfemail="0476617d6d6566616a6e65696d6a3c446369656d682a676b69">[email&#160;protected]</span></a>
               </div>
             </div>
-            
+
             <div class="info-group">
               <div class="info-icon">📞</div>
               <div class="info-content">
-                <h3>Phone</h3>
+                <h3>Phone / WhatsApp</h3>
                 <a href="tel:+254794928779">+254 794 928 779</a>
               </div>
             </div>
-            
+
             <div class="info-group">
               <div class="info-icon">📍</div>
               <div class="info-content">
                 <h3>Location</h3>
-                <p>Nairobi, Kenya</p>
+                <p>Sekenani Gate, Maasai Mara, Kenya</p>
               </div>
             </div>
-            
+
+            <div class="info-whatsapp">
+              <a class="btn btn-whatsapp-big" href="https://wa.me/254794928779" target="_blank" rel="noopener">
+                💬 Chat on WhatsApp
+              </a>
+            </div>
+
             <div class="info-social">
               <h4>Follow Us</h4>
               <div class="social-links">
@@ -413,25 +495,25 @@
             </div>
           </div>
 
-        <form id="contact-form" class="contact-form" aria-label="Contact form">
-          <h3>Send us a Message</h3>
-          
-          <input type="hidden" name="time" id="time">
-          <!-- Honeypot -->
-          <label class="hidden" aria-hidden="true"><input type="text" name="botfield" tabindex="-1" autocomplete="off"></label>
+          <form id="contact-form" class="contact-form" aria-label="Contact form">
+            <h3>Send Us a Message</h3>
 
-          <div class="form-row">
-            <label><span>Full Name</span><input type="text" name="name" placeholder="Your full name" required autocomplete="name"></label>
-            <label><span>Email Address</span><input type="email" name="email" placeholder="your@email.com" required autocomplete="email"></label>
-          </div>
+            <input type="hidden" name="time" id="time">
+            <label class="hidden" aria-hidden="true"><input type="text" name="botfield" tabindex="-1" autocomplete="off"></label>
 
-          <label><span>Subject</span><input type="text" name="subject" placeholder="What is this about? (optional)"></label>
-          <label><span>Message</span><textarea name="message" rows="5" placeholder="Tell us about your safari dreams..." required></textarea></label>
+            <div class="form-row">
+              <label><span>Full Name</span><input type="text" name="name" placeholder="Your full name" required autocomplete="name"></label>
+              <label><span>Email Address</span><input type="email" name="email" placeholder="your@email.com" required autocomplete="email"></label>
+            </div>
 
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send Message</button>
-            <span id="form-status" role="status" aria-live="polite" class="form-status"></span>
-          </div>
+            <label><span>Subject</span><input type="text" name="subject" placeholder="What is this about? (optional)"></label>
+            <label><span>Message</span><textarea name="message" rows="5" placeholder="Tell us about your safari dreams..." required></textarea></label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <span id="form-status" role="status" aria-live="polite" class="form-status"></span>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -440,21 +522,16 @@
     <section id="testimonials" class="section testimonials">
       <div class="container">
         <header class="section-head">
+          <span class="section-tag">Guest Reviews</span>
           <h2>What Our Guests Say</h2>
           <p>Memories that last a lifetime — hear from those who've experienced the wild with us.</p>
         </header>
 
         <div class="testimonial-grid">
           <article class="testimonial-card">
-            <div class="stars">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
+            <div class="stars">★★★★★</div>
             <blockquote class="testimonial-text">
-              "Reyia Wild Safaris exceeded our expectations! The guides were knowledgeable, the accommodations luxurious, and every day felt like a new adventure."
+              "SaitotiMara Safaris exceeded our expectations! The guides were knowledgeable, the accommodations luxurious, and every day felt like a new adventure."
             </blockquote>
             <footer class="testimonial-footer">
               <strong>James K.</strong>
@@ -463,15 +540,9 @@
           </article>
 
           <article class="testimonial-card">
-            <div class="stars">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
+            <div class="stars">★★★★★</div>
             <blockquote class="testimonial-text">
-              "The best safari experience we've ever had. From the airport pickup to the game drives — everything was perfectly organized and stress-free."
+              "The best safari experience we've ever had. From the airport pickup to the game drives — everything was perfectly organised and stress-free."
             </blockquote>
             <footer class="testimonial-footer">
               <strong>Sarah M.</strong>
@@ -480,15 +551,9 @@
           </article>
 
           <article class="testimonial-card">
-            <div class="stars">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
+            <div class="stars">★★★★★</div>
             <blockquote class="testimonial-text">
-              "An unforgettable journey through Kenya's stunning landscapes. The Reyia team truly made us feel at home in the wild."
+              "An unforgettable journey through Kenya's stunning landscapes. The team truly made us feel at home in the wild."
             </blockquote>
             <footer class="testimonial-footer">
               <strong>Linda W.</strong>
@@ -504,8 +569,14 @@
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner container">
       <div class="footer-brand">
-        <h3>SaitotiMaraSafaris</h3>
+        <img src="images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="footer-logo">
+        <h3>SaitotiMara<br>Safaris</h3>
         <p>Creating unforgettable safari experiences across Africa — where adventure meets comfort and the wild calls your name.</p>
+        <div class="socials" aria-label="Social media links">
+          <a href="https://www.facebook.com/olereyia.saitoti" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/its_olereyia/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://x.com/its_olereyia" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+        </div>
       </div>
 
       <nav class="footer-links" aria-label="Footer links">
@@ -520,31 +591,57 @@
         </ul>
       </nav>
 
+      <div class="footer-safaris">
+        <h4>Our Safaris</h4>
+        <ul>
+          <li><a href="#safaris">Full Day Game Drive</a></li>
+          <li><a href="#safaris">3-Day Wilderness Adventure</a></li>
+          <li><a href="#safaris">Luxury Safari Experience</a></li>
+          <li><a href="#safaris">Photography Safari</a></li>
+          <li><a href="#pickup">Airport Transfers</a></li>
+        </ul>
+      </div>
+
       <div class="footer-contact">
         <h4>Get in Touch</h4>
         <ul>
-          <li><a href="mailto:reyiabenjamin8@gmail.com">📧 reyiabenjamin8@gmail.com</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#0f7d6a76666e6d6a61656e626661374f68626e6663216c6062">✉ <span class="__cf_email__" data-cfemail="eb998e92828a898e85818a868285d3ab8c868a8287c5888486">[email&#160;protected]</span></a></li>
           <li><a href="tel:+254794928779">📞 +254 794 928 779</a></li>
-          <li>📍 Nairobi, Kenya</li>
+          <li>📍 Sekenani Gate, Maasai Mara, Kenya</li>
         </ul>
-
-        <div class="socials" aria-label="Social media links">
-          <a href="https://www.facebook.com/olereyia.saitoti" target="_blank" rel="noopener" aria-label="Facebook" title="Follow us on Facebook">f</a>
-          <a href="https://www.instagram.com/its_olereyia/" target="_blank" rel="noopener" aria-label="Instagram" title="Follow us on Instagram">📷</a>
-          <a href="https://x.com/its_olereyia" target="_blank" rel="noopener" aria-label="X (Twitter)" title="Follow us on X">𝕏</a>
-        </div>
+        <a class="btn btn-footer-cta" href="#contact">Book a Safari</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> SaitotiMaraSafaris. All rights reserved.</p>
+      <div class="footer-bottom-inner container">
+        <p>&copy; <span id="year"></span> SaitotiMaraSafaris. All rights reserved.</p>
+        <p class="footer-tagline">Proudly Maasai — Rooted in the Mara</p>
+      </div>
     </div>
   </footer>
 
   <!-- BACK TO TOP -->
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-  <!-- External scripts -->
+  <!-- Gallery scroll controls -->
+  <script>
+    (function(){
+      var wrap = document.getElementById('galleryScroll');
+      var prev = document.getElementById('galleryPrev');
+      var next = document.getElementById('galleryNext');
+      if (!wrap) return;
+      var step = 280;
+      next.addEventListener('click', function(){ wrap.scrollBy({ left: step, behavior: 'smooth' }); });
+      prev.addEventListener('click', function(){ wrap.scrollBy({ left: -step, behavior: 'smooth' }); });
+      var isDown = false, startX, scrollLeft;
+      wrap.addEventListener('mousedown', function(e){ isDown=true; startX=e.pageX-wrap.offsetLeft; scrollLeft=wrap.scrollLeft; });
+      wrap.addEventListener('mouseleave', function(){ isDown=false; });
+      wrap.addEventListener('mouseup', function(){ isDown=false; });
+      wrap.addEventListener('mousemove', function(e){ if(!isDown) return; e.preventDefault(); var x=e.pageX-wrap.offsetLeft; wrap.scrollLeft=scrollLeft-(x-startX); });
+    })();
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script src="index.js" defer></script>
 </body>

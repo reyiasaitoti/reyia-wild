@@ -1,113 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Luxury Suite — SaitotiMaraSafaris</title>
-    <meta name="description" content="Luxury Suite at SaitotiMaraSafaris — premium comfort with panoramic views.">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="accomodation.css">
-  </head>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Luxury Suite — SaitotiMaraSafaris</title>
+  <meta name="description" content="Premium luxury suite at SaitotiMaraSafaris. Panoramic savannah views and private lounge from $200 per night.">
+  <link rel="canonical" href="https://saitotimarasafaris.top/accommodations/luxury-suite.html">
+  <link rel="icon" href="../images/logo.jpeg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="room.css">
+</head>
+<body>
 
-  <body>
-    <header class="site-header--simple">
-      <div class="container header-simple">
-        <a href="../index.html" class="brand-link">SaitotiMaraSafaris</a>
-        <nav aria-label="Primary">
-          <a href="../index.html#accommodations">Back to Accommodations</a>
-          <a href="../index.html#contact" class="btn btn-sm">Contact</a>
-        </nav>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="topbar-item">📍 Sekenani Gate, Maasai Mara, Kenya</span>
+      <span class="topbar-sep">|</span>
+      <a href="tel:+254794928779" class="topbar-item">📞 +254 794 928 779</a>
+      <span class="topbar-sep">|</span>
+      <a href="mailto:reyiabenjamin8@gmail.com" class="topbar-item">✉ reyiabenjamin8@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand-link" href="/" aria-label="SaitotiMaraSafaris home">
+        <img src="../images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="logo-img" loading="eager">
+        <div class="brand-text-wrap">
+          <span class="brand-name">SaitotiMara</span>
+          <span class="brand-sub">SAFARIS</span>
+        </div>
+      </a>
+      <nav class="nav-primary" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="/#home">Home</a></li>
+          <li><a href="/#safaris">Safaris</a></li>
+          <li><a href="/#accommodations" class="nav-active">Accommodations</a></li>
+          <li><a href="/#gallery">Gallery</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn-header-cta" href="/#contact">Book a Safari</a>
+        <button id="hamburger" class="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu" type="button">
+          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main class="accommodation-page">
-      <section class="accommodation-hero" aria-labelledby="room-title">
-        <div class="container">
-          <div class="hero-inner">
-            <div class="hero-media">
-              <img src="../images/luxury1.jpeg" alt="Luxury suite view" loading="lazy">
-            </div>
-            <div class="hero-meta">
-              <h1 id="room-title">Luxury Suite</h1>
-              <p class="muted">Experience premium comfort with private lounge and sweeping views.</p>
-              <div class="meta-row">
-                <div class="rating" aria-hidden="true">★★★★★</div>
-                <div class="price">From <strong>$350</strong>/night</div>
-              </div>
-              <div class="hero-ctas">
-                <a href="#booking" class="btn btn-primary">Reserve Now</a>
-                <a href="#gallery" class="btn btn-outline">View Gallery</a>
-              </div>
+  <!-- MOBILE NAV -->
+  <aside id="mobileNav" class="mobile-nav" aria-hidden="true" role="menu">
+    <div class="mobile-inner" role="presentation">
+      <div class="mobile-header">
+        <span class="mobile-brand">SaitotiMara Safaris</span>
+        <button id="closeMobile" class="mobile-close" aria-label="Close menu" type="button">&times;</button>
+      </div>
+      <nav role="navigation" aria-label="Mobile primary">
+        <ul class="mobile-list">
+          <li><a href="/#home">Home</a></li>
+          <li><a href="/#safaris">Safaris</a></li>
+          <li><a href="/#accommodations">Accommodations</a></li>
+          <li><a href="/#gallery">Gallery</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-actions">
+        <a href="tel:+254794928779" class="mobile-phone">📞 +254 794 928 779</a>
+        <a class="btn btn-primary" href="/#contact">Book Now</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ROOM HERO -->
+    <section class="room-hero">
+      <img src="../images/luxurytent.jpeg" alt="Single Room at SaitotiMaraSafaris" class="room-hero-img">
+      <div class="room-hero-overlay"></div>
+      <div class="room-hero-content">
+        <div class="room-breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/#accommodations">Accommodations</a> <span>/</span> Single Room</div>
+        <h1>Luxury Suite</h1>
+        <p>Our finest accommodation — where the wild meets true luxury</p>
+      </div>
+    </section>
+
+    <!-- ROOM DETAIL -->
+    <section class="room-detail">
+      <div class="container room-detail-grid">
+
+        <!-- LEFT: Info -->
+        <div class="room-info">
+          <span class="section-tag">Premium Suite</span>
+          <h2>The Ultimate Mara Experience</h2>
+          <p class="room-intro">Our flagship suite is designed for guests who refuse to choose between comfort and wilderness. A king-size bed, private lounge, rainfall shower, and a panoramic deck overlooking the plains — this is the Mara at its most indulgent.</p>
+
+          <div class="room-features">
+            <h3>Room Features</h3>
+            <ul class="feature-list">
+              <li><span class="feat-icon">🛏</span> King-size bed with luxury linen</li>
+              <li><span class="feat-icon">🚿</span> En-suite with rainfall shower &amp; bath</li>
+              <li><span class="feat-icon">🌿</span> Private panoramic deck &amp; lounge</li>
+              <li><span class="feat-icon">🔒</span> Secure in-room safe</li>
+              <li><span class="feat-icon">💡</span> Solar-powered lighting</li>
+              <li><span class="feat-icon">☕</span> Tea & coffee station</li>
+              <li><span class="feat-icon">🦟</span> Mosquito net provided</li>
+              <li><span class="feat-icon">🧺</span> Daily housekeeping</li>
+            </ul>
+          </div>
+
+          <div class="room-includes">
+            <h3>What's Included</h3>
+            <div class="includes-grid">
+              <div class="include-item"><span>✓</span> Daily breakfast</div>
+              <div class="include-item"><span>✓</span> Welcome drink on arrival</div>
+              <div class="include-item"><span>✓</span> Complimentary Wi-Fi</div>
+              <div class="include-item"><span>✓</span> Evening campfire access</div>
+              <div class="include-item"><span>✓</span> Safari briefing session</div>
+              <div class="include-item"><span>✓</span> Airport transfer info</div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section class="container accommodation-grid">
-        <div class="gallery-column">
-            <div class="gallery">
-              <figure class="gallery-main">
-                <img id="mainImage" src="../images/luxury.jpeg" alt="Luxury Suite main view">
-                <!-- hidden thumbs provide additional sources for the gallery script -->
-                <button class="thumb sr-only" data-src="../images/luxurysafari.jpeg" aria-hidden="true"></button>
-                <button class="thumb sr-only" data-src="../images/luxurytent.jpeg" aria-hidden="true"></button>
-                <button class="gallery-btn prev" aria-label="Previous image">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 18 L9 12 L15 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
-                <button class="gallery-btn next" aria-label="Next image">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 6 L15 12 L9 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
-                <figcaption class="sr-only">Luxury Suite — main image</figcaption>
-              </figure>
+        <!-- RIGHT: Booking card -->
+        <aside class="room-book-card">
+          <div class="price-block">
+            <span class="price-label">From</span>
+            <span class="price-amount">$200</span>
+            <span class="price-per">per room / night</span>
+          </div>
 
-          <article class="details">
-            <h2>About this suite</h2>
-            <p>Experience premium comfort in our Luxury Suite. Featuring elegant design, a private lounge, and panoramic savannah views, this suite is perfect for those seeking indulgence and privacy during their stay.</p>
+          <div class="room-meta">
+            <div class="meta-item"><span class="meta-label">Guests</span><span class="meta-val">1–2 persons</span></div>
+            <div class="meta-item"><span class="meta-label">Bed</span><span class="meta-val">King</span></div>
+            <div class="meta-item"><span class="meta-label">Bathroom</span><span class="meta-val">En-suite</span></div>
+            <div class="meta-item"><span class="meta-label">View</span><span class="meta-val">Bush / Savannah</span></div>
+          </div>
 
-            <h3>What's included</h3>
-            <ul class="amenities-list">
-              <li>Free Wi-Fi</li>
-              <li>King-size Bed</li>
-              <li>Private Lounge</li>
-              <li>Panoramic Views</li>
-              <li>Complimentary Breakfast & Mini Bar</li>
-            </ul>
-          </article>
-        </div>
+          <a class="btn btn-primary book-btn" href="/#contact">Reserve This Room</a>
+          <a class="btn btn-whatsapp-big" href="https://wa.me/254794928779?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Luxury%20Suite" target="_blank" rel="noopener">💬 Book via WhatsApp</a>
 
-        <aside class="booking-card" id="booking">
-          <div class="card">
-            <div class="card-body">
-              <h3>Book This Suite</h3>
-              <p class="price-lead">From <strong>$350</strong>/night</p>
+          <p class="book-note">No payment required to enquire. We'll confirm availability within 24 hours.</p>
 
-              <form id="bookForm" action="../index.html#contact" method="get">
-                <label><span>Arrival</span><input type="date" name="arrival" required></label>
-                <label><span>Nights</span><input type="number" name="nights" min="1" value="1" required></label>
-                <label><span>Guests</span><select name="guests"><option>1</option><option>2</option></select></label>
-
-                <div class="actions">
-                  <button type="submit" class="btn btn-primary">Request Reservation</button>
-                  <a href="../index.html#contact" class="btn btn-outline">Contact Us</a>
-                </div>
-              </form>
-            </div>
+          <!-- Other rooms -->
+          <div class="other-rooms">
+            <h4>Other Rooms</h4>
+            <a href="single-room.html" class="other-room-link">Single Room <span>$110/night</span></a>
+            <a href="double-room.html" class="other-room-link">Double Room <span>$120/night</span></a>
+            <a href="twin-room.html" class="other-room-link">Twin Room <span>$170/night</span></a>
           </div>
         </aside>
-      </section>
-    </main>
-
-    <footer class="site-footer--simple">
-      <div class="container">
-        <p>&copy; <span id="year-alt"></span> SaitotiMaraSafaris. All rights reserved.</p>
       </div>
-    </footer>
+    </section>
 
-    <script src="accomodation.js"></script>
-    <script>document.getElementById('year-alt').textContent = new Date().getFullYear();</script>
-  </body>
+    <!-- PHOTO STRIP -->
+    <section class="room-photos">
+      <div class="container">
+        <h3>Room Gallery</h3>
+        <div class="room-photo-strip">
+          <div class="room-photo-item"><img src="../images/luxurytent.jpeg" alt="Single room interior" loading="lazy"></div>
+          <div class="room-photo-item"><img src="../images/luxury.jpeg" alt="Room view" loading="lazy"></div>
+          <div class="room-photo-item"><img src="../images/campfire.jpeg" alt="Evening campfire" loading="lazy"></div>
+          <div class="room-photo-item"><img src="../images/safari.jpeg" alt="Safari from camp" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="room-cta-band">
+      <div class="container room-cta-inner">
+        <div>
+          <h2>Ready to book your stay?</h2>
+          <p>Get in touch and we'll take care of everything — transfers, meals, and your perfect safari itinerary.</p>
+        </div>
+        <div class="room-cta-actions">
+          <a class="btn btn-primary" href="/#contact">Send an Enquiry</a>
+          <a class="btn btn-ghost" href="https://wa.me/254794928779" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <img src="../images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="footer-logo">
+        <h3>SaitotiMara<br>Safaris</h3>
+        <p>Creating unforgettable safari experiences across Africa — where adventure meets comfort and the wild calls your name.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/olereyia.saitoti" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/its_olereyia/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://x.com/its_olereyia" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/#home">Home</a></li>
+          <li><a href="/#safaris">Safaris</a></li>
+          <li><a href="/#accommodations">Accommodations</a></li>
+          <li><a href="/#gallery">Gallery</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-safaris">
+        <h4>Accommodations</h4>
+        <ul>
+          <li><a href="single-room.html">Single Room</a></li>
+          <li><a href="double-room.html">Double Room</a></li>
+          <li><a href="twin-room.html">Twin Room</a></li>
+          <li><a href="luxury-suite.html">Luxury Suite</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:reyiabenjamin8@gmail.com">✉ reyiabenjamin8@gmail.com</a></li>
+          <li><a href="tel:+254794928779">📞 +254 794 928 779</a></li>
+          <li>📍 Sekenani Gate, Maasai Mara</li>
+        </ul>
+        <a class="btn btn-footer-cta" href="/#contact">Book a Safari</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner container">
+        <p>&copy; <span id="year"></span> SaitotiMaraSafaris. All rights reserved.</p>
+        <p class="footer-tagline">Proudly Maasai — Rooted in the Mara</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var ham = document.getElementById('hamburger');
+    var nav = document.getElementById('mobileNav');
+    var close = document.getElementById('closeMobile');
+    if(ham) ham.addEventListener('click', function(){ nav.setAttribute('aria-hidden','false'); });
+    if(close) close.addEventListener('click', function(){ nav.setAttribute('aria-hidden','true'); });
+    var btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', function(){ if(btt) btt.style.display = window.scrollY > 400 ? 'grid' : 'none'; });
+  </script>
+</body>
 </html>
