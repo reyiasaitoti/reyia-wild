@@ -180,7 +180,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 .header-actions { display: flex; gap: 0.75rem; align-items: center; }
 
 .btn-header-cta {
-  display: inline-flex;
+  display: none !important;
   align-items: center;
   padding: 0.55rem 1.25rem;
   background: #ffffff;
@@ -448,13 +448,12 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 /* Dots navigation */
 .hero-dots {
-  position: absolute;
-  bottom: 5.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   z-index: 3;
   display: flex;
   gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 .hero-dot {
   width: 8px; height: 8px;
@@ -1324,6 +1323,7 @@ a:focus, button:focus, input:focus, textarea:focus {
   .topbar { display: block; }
   .nav-primary { display: block; }
   .hamburger { display: none; }
+  .btn-header-cta { display: inline-flex !important; }
 
   .header-inner { padding: 0.75rem 1.5rem; }
   .logo-img { height: 50px; width: 50px; }
