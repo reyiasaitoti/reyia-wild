@@ -244,8 +244,8 @@ a:focus, button:focus, input:focus, textarea:focus {
   padding: 0;
   transition: transform var(--transition);
 }
-.mobile-nav[aria-hidden="true"]  { transform: translateX(100%); pointer-events: none; }
-.mobile-nav[aria-hidden="false"] { transform: translateX(0); pointer-events: auto; }
+.mobile-nav               { transform: translateX(100%); pointer-events: none; }
+.mobile-nav.open          { transform: translateX(0);    pointer-events: auto; }
 
 .mobile-header {
   display: flex;
