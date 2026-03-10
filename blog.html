@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Safari Blog — Travel Tips & Wildlife Guides | SaitotiMaraSafaris</title>
+  <meta name="description" content="Expert safari travel guides, Great Migration tips, wildlife spotting advice, and Kenya destination guides from local Maasai experts at SaitotiMaraSafaris.">
+  <meta name="keywords" content="Kenya safari blog, Great Migration guide, Maasai Mara tips, Kenya wildlife, safari travel tips, Amboseli, Samburu, Lake Naivasha">
+  <link rel="canonical" href="https://saitotimarasafaris.top/blog.html">
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saitotimarasafaris.top/blog.html">
+  <meta property="og:title" content="Safari Blog — SaitotiMaraSafaris">
+  <meta property="og:description" content="Expert Kenya safari tips, wildlife guides, and destination insights from our local Maasai guides.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── Blog-specific styles ── */
+    .page-hero {
+      background: var(--navy);
+      padding: 5rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/hero.jpg') center/cover no-repeat;
+      opacity: 0.18;
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .page-hero .section-tag { color: rgba(255,255,255,0.6); }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      margin: 0.5rem 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    .page-hero p {
+      color: rgba(255,255,255,0.72);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Blog grid */
+    .blog-section { background: var(--off-white); padding: 4rem 0 5rem; }
+
+    .blog-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+      justify-content: center;
+    }
+    .cat-btn {
+      padding: 0.4rem 1.1rem;
+      border: 2px solid var(--border);
+      background: var(--white);
+      color: var(--mid);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 240ms ease;
+    }
+    .cat-btn:hover, .cat-btn.active {
+      background: var(--black);
+      border-color: var(--black);
+      color: #fff;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    /* Featured post (first) */
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(26,35,50,0.07);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition);
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .blog-card--featured {
+      grid-column: 1 / -1;
+      flex-direction: column;
+    }
+    .blog-card-img {
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .blog-card-img img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .blog-card--featured .blog-card-img img { height: 320px; }
+    .blog-card:hover .blog-card-img img { transform: scale(1.05); }
+
+    .blog-card-cat {
+      position: absolute;
+      top: 0.75rem; left: 0.75rem;
+      background: var(--black);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+    }
+    .blog-card-cat--migration { background: #2e5c3a; }
+    .blog-card-cat--wildlife  { background: #4a3728; }
+    .blog-card-cat--tips      { background: #1a3a5c; }
+    .blog-card-cat--destination { background: #4a2845; }
+
+    .blog-card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      flex: 1;
+    }
+    .blog-card-meta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .blog-card-meta span { display: flex; align-items: center; gap: 0.25rem; }
+    .blog-card-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0;
+      line-height: 1.3;
+    }
+    .blog-card--featured .blog-card-body h2 { font-size: 1.55rem; }
+    .blog-card-body p {
+      color: var(--text-md);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin: 0;
+      flex: 1;
+    }
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .blog-author {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .blog-author-avatar {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+    .blog-author-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .blog-read-link {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--black);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: gap 0.2s ease;
+    }
+    .blog-read-link:hover { gap: 0.6rem; }
+
+    /* Newsletter strip */
+    .newsletter-strip {
+      background: var(--navy);
+      padding: 3.5rem 0;
+      text-align: center;
+    }
+    .newsletter-strip h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: #fff;
+      margin: 0 0 0.5rem;
+    }
+    .newsletter-strip p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      margin: 0 0 1.5rem;
+    }
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .newsletter-form input {
+      padding: 0.85rem 1.2rem;
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      width: 100%;
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
+    .newsletter-form input:focus { outline: none; border-color: rgba(255,255,255,0.4); }
+
+    @media (min-width: 640px) {
+      .newsletter-form { flex-direction: row; }
+      .newsletter-form input { flex: 1; }
+    }
+    @media (min-width: 768px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-card--featured { flex-direction: row; }
+      .blog-card--featured .blog-card-img { flex: 0 0 48%; }
+      .blog-card--featured .blog-card-img img { height: 100%; min-height: 300px; }
+      .blog-card--featured .blog-card-body { padding: 2rem; justify-content: center; }
+      .blog-card--featured .blog-card-body h2 { font-size: 1.7rem; }
+    }
+    @media (min-width: 1024px) {
+      .blog-grid { grid-template-columns: repeat(3, 1fr); }
+      .blog-card--featured { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="topbar-item">📍 Sekenani Gate, Maasai Mara, Kenya</span>
+      <span class="topbar-sep">|</span>
+      <a href="tel:+254794928779" class="topbar-item">📞 +254 794 928 779</a>
+      <span class="topbar-sep">|</span>
+      <a href="mailto:info@saitotimarasafaris.top" class="topbar-item">✉ info@saitotimarasafaris.top</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand-link" href="/" aria-label="SaitotiMaraSafaris home">
+        <img src="images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="logo-img" loading="eager">
+        <div class="brand-text-wrap">
+          <span class="brand-name">SaitotiMara</span>
+          <span class="brand-sub">SAFARIS</span>
+        </div>
+      </a>
+      <nav class="nav-primary" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#safaris">Safaris</a></li>
+          <li><a href="/#accommodations">Accommodations</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="blog.html" aria-current="page">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-header-cta" href="/#contact">Book a Safari</a>
+        <button id="hamburger" class="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu" type="button">
+          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="mobile-nav" inert role="menu" aria-label="Mobile navigation">
+      <ul class="mobile-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#safaris">Safaris</a></li>
+        <li><a href="/#accommodations">Accommodations</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-actions">
+        <a href="tel:+254794928779" class="mobile-phone">📞 +254 794 928 779</a>
+        <a class="btn btn-primary" href="/#contact">Book Now</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <span class="section-tag">From Our Guides</span>
+      <h1>Safari Stories & Travel Guides</h1>
+      <p>Wildlife insights, destination guides, and insider tips written by our local Maasai experts who know Kenya's wilderness like no one else.</p>
+    </div>
+  </section>
+
+  <!-- BLOG SECTION -->
+  <main>
+    <section class="blog-section">
+      <div class="container">
+
+        <!-- Category filters -->
+        <div class="blog-categories">
+          <button class="cat-btn active">All Posts</button>
+          <button class="cat-btn">Great Migration</button>
+          <button class="cat-btn">Wildlife Guides</button>
+          <button class="cat-btn">Travel Tips</button>
+          <button class="cat-btn">Destinations</button>
+        </div>
+
+        <div class="blog-grid">
+
+          <!-- FEATURED POST -->
+          <article class="blog-card blog-card--featured">
+            <div class="blog-card-img">
+              <img src="images/hero.jpg" alt="Great Wildebeest Migration crossing the Mara River" loading="lazy">
+              <span class="blog-card-cat blog-card-cat--migration">Great Migration</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>📅 July 2025</span>
+                <span>⏱ 8 min read</span>
+              </div>
+              <h2>The Complete Guide to the Great Wildebeest Migration in the Maasai Mara</h2>
+              <p>Over 1.5 million wildebeest, 200,000 zebras, and 18,000 elands thunder across the Serengeti-Mara ecosystem every year in one of nature's greatest spectacles. As someone born and raised along the Mara River, I'll tell you exactly when to come, where to position yourself, and what no travel agency will tell you about witnessing the river crossings.</p>
+              <div class="blog-card-footer">
+                <div class="blog-author">
+                  <img src="images/reyia.jpeg" alt="Reyia Saitoti" class="blog-author-avatar">
+                  <span class="blog-author-name">Reyia Saitoti</span>
+                </div>
+                <a href="blog/great-migration-guide.html" class="blog-read-link">Read Guide →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 2 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="images/lion.jpg" alt="Lion pride in Maasai Mara" loading="lazy">
+              <span class="blog-card-cat blog-card-cat--wildlife">Wildlife Guide</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>📅 June 2025</span>
+                <span>⏱ 6 min read</span>
+              </div>
+              <h2>Big Five Spotting in the Maasai Mara: A Local's Insider Guide</h2>
+              <p>Lions, leopards, elephants, buffalo, and rhino — the Mara hosts all five. Learn the secret spots, best times of day, and tracking techniques our guides use to find them every single drive.</p>
+              <div class="blog-card-footer">
+                <div class="blog-author">
+                  <img src="images/reyia.jpeg" alt="Reyia Saitoti" class="blog-author-avatar">
+                  <span class="blog-author-name">Reyia Saitoti</span>
+                </div>
+                <a href="blog/big-five-spotting-guide.html" class="blog-read-link">Read Guide →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 3 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="images/elephant.jpeg" alt="Elephants at Amboseli with Mount Kilimanjaro" loading="lazy">
+              <span class="blog-card-cat blog-card-cat--destination">Destination</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>📅 May 2025</span>
+                <span>⏱ 5 min read</span>
+              </div>
+              <h2>Amboseli National Park: Elephants, Kilimanjaro & What to Expect</h2>
+              <p>Famous for its massive elephant herds and that iconic backdrop of snow-capped Kilimanjaro, Amboseli is one of Africa's most photogenic parks. Here's everything you need to plan the perfect visit.</p>
+              <div class="blog-card-footer">
+                <div class="blog-author">
+                  <img src="images/reyia.jpeg" alt="Reyia Saitoti" class="blog-author-avatar">
+                  <span class="blog-author-name">Reyia Saitoti</span>
+                </div>
+                <a href="blog/amboseli-guide.html" class="blog-read-link">Read Guide →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 4 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="images/safari.jpeg" alt="Safari vehicle at Lake Nakuru National Park" loading="lazy">
+              <span class="blog-card-cat blog-card-cat--destination">Destination</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>📅 April 2025</span>
+                <span>⏱ 5 min read</span>
+              </div>
+              <h2>Lake Nakuru & Lake Naivasha: Kenya's Rift Valley Safari Circuit</h2>
+              <p>Pink flamingos by the million, white rhinos, Rothschild's giraffes, and boat rides among hippos — the Rift Valley lakes are an unmissable add-on to any Kenya safari itinerary.</p>
+              <div class="blog-card-footer">
+                <div class="blog-author">
+                  <img src="images/reyia.jpeg" alt="Reyia Saitoti" class="blog-author-avatar">
+                  <span class="blog-author-name">Reyia Saitoti</span>
+                </div>
+                <a href="blog/rift-valley-lakes-guide.html" class="blog-read-link">Read Guide →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 5 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="images/gamedrive.jpeg" alt="Safari game drive tips" loading="lazy">
+              <span class="blog-card-cat blog-card-cat--tips">Travel Tips</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>📅 March 2025</span>
+                <span>⏱ 7 min read</span>
+              </div>
+              <h2>First Safari? 15 Essential Tips From a Maasai Guide</h2>
+              <p>What to pack, what to wear, how to behave around wildlife, when to wake up, and why you should always listen to your guide. Everything first-timers need to know before stepping into the bush.</p>
+              <div class="blog-card-footer">
+                <div class="blog-author">
+                  <img src="images/reyia.jpeg" alt="Reyia Saitoti" class="blog-author-avatar">
+                  <span class="blog-author-name">Reyia Saitoti</span>
+                </div>
+                <a href="blog/first-safari-tips.html" class="blog-read-link">Read Guide →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- POST 6 -->
+          <article class="blog-card">
+            <div class="blog-card-img">
+              <img src="images/bird.jpg" alt="Birds at Samburu National Reserve" loading="lazy">
+              <span class="blog-card-cat blog-card-cat--destination">Destination</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span>📅 February 2025</span>
+                <span>⏱ 5 min read</span>
+              </div>
+              <h2>Samburu National Reserve: Kenya's Hidden Northern Gem</h2>
+              <p>Home to the Samburu Special Five — Grevy's zebra, reticulated giraffe, Somali ostrich, gerenuk, and beisa oryx — this remote northern reserve offers a completely different Kenya safari experience.</p>
+              <div class="blog-card-footer">
+                <div class="blog-author">
+                  <img src="images/reyia.jpeg" alt="Reyia Saitoti" class="blog-author-avatar">
+                  <span class="blog-author-name">Reyia Saitoti</span>
+                </div>
+                <a href="blog/samburu-guide.html" class="blog-read-link">Read Guide →</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.blog-grid -->
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-strip">
+      <div class="container">
+        <span class="section-tag" style="color:rgba(255,255,255,0.5)">Stay Informed</span>
+        <h3>Get Safari Tips in Your Inbox</h3>
+        <p>Monthly wildlife updates, migration alerts, and exclusive travel tips from our Maasai guides.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address">
+          <a class="btn btn-primary" href="/#contact">Subscribe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <img src="images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="footer-logo">
+        <h3>SaitotiMara<br>Safaris</h3>
+        <p>Creating unforgettable safari experiences across Africa — where adventure meets comfort and the wild calls your name.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/olereyia.saitoti" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/its_olereyia/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://x.com/its_olereyia" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#safaris">Safaris</a></li>
+          <li><a href="/#accommodations">Accommodations</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-safaris">
+        <h4>Latest Posts</h4>
+        <ul>
+          <li><a href="blog/great-migration-guide.html">Great Migration Guide</a></li>
+          <li><a href="blog/big-five-spotting-guide.html">Big Five Spotting</a></li>
+          <li><a href="blog/amboseli-guide.html">Amboseli Guide</a></li>
+          <li><a href="blog/rift-valley-lakes-guide.html">Rift Valley Lakes</a></li>
+          <li><a href="blog/first-safari-tips.html">First Safari Tips</a></li>
+          <li><a href="blog/samburu-guide.html">Samburu Reserve</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:info@saitotimarasafaris.top">✉ info@saitotimarasafaris.top</a></li>
+          <li><a href="tel:+254794928779">📞 +254 794 928 779</a></li>
+          <li>📍 Sekenani Gate, Maasai Mara, Kenya</li>
+        </ul>
+        <a class="btn btn-footer-cta" href="/#contact">Book a Safari</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner container">
+        <p>&copy; 2025 SaitotiMaraSafaris. All rights reserved.</p>
+        <p class="footer-tagline">Proudly Maasai — Rooted in the Mara</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      mobileNav.inert = !open;
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    // Back to top
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => { btt.style.display = window.scrollY > 400 ? 'grid' : 'none'; });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    // Category filter (visual only)
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+    // Year
+    const y = document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

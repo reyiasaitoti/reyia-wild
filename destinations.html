@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kenya Safari Destinations | SaitotiMaraSafaris</title>
+  <meta name="description" content="Explore Kenya's top safari destinations — Maasai Mara, Amboseli, Samburu, Lake Nakuru, Lake Naivasha, Tsavo, and Nairobi National Park. Expert guides from SaitotiMaraSafaris.">
+  <meta name="keywords" content="Kenya safari destinations, Maasai Mara, Amboseli, Samburu, Lake Nakuru, Lake Naivasha, Tsavo National Park, Nairobi National Park, Kenya wildlife">
+  <link rel="canonical" href="https://saitotimarasafaris.top/destinations.html">
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── Destinations-specific styles ── */
+    .page-hero {
+      background: var(--navy);
+      padding: 5rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/girrafe.jpeg') center/cover no-repeat;
+      opacity: 0.2;
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .page-hero .section-tag { color: rgba(255,255,255,0.6); }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      margin: 0.5rem 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    .page-hero p {
+      color: rgba(255,255,255,0.72);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Destinations section */
+    .destinations-section { background: var(--white); padding: 5rem 0; }
+
+    /* Destination cards — alternating layout */
+    .destination-list { display: flex; flex-direction: column; gap: 0; }
+
+    .dest-item {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid var(--border);
+      padding: 3.5rem 0;
+    }
+    .dest-item:first-child { padding-top: 0; }
+    .dest-item:last-child { border-bottom: none; }
+
+    .dest-img-col {
+      position: relative;
+      flex-shrink: 0;
+      margin-bottom: 1.5rem;
+    }
+    .dest-img-col img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: block;
+    }
+    .dest-badge {
+      position: absolute;
+      top: 1rem; left: 1rem;
+      background: var(--black);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+    }
+    .dest-badge--top    { background: #2e5c3a; }
+    .dest-badge--rift   { background: #1a3a5c; }
+    .dest-badge--north  { background: #4a3728; }
+    .dest-badge--south  { background: #4a2845; }
+    .dest-badge--city   { background: #2c2c2c; }
+
+    .dest-text-col { flex: 1; }
+    .dest-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+    .dest-text-col h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.3rem;
+      line-height: 1.2;
+    }
+    .dest-subtitle {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .dest-text-col p {
+      color: var(--text-md);
+      font-size: 0.97rem;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Highlights grid */
+    .dest-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .dest-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-md);
+      line-height: 1.4;
+    }
+    .dest-highlight::before {
+      content: '✓';
+      color: var(--black);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+      font-size: 0.8rem;
+    }
+
+    /* Best time pill */
+    .dest-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .dest-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.35rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--mid);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: var(--off-white);
+    }
+
+    .dest-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    /* Map strip */
+    .map-strip {
+      background: var(--off-white);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .map-strip h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--navy);
+      margin: 0.5rem 0 0.75rem;
+    }
+    .map-strip p {
+      color: var(--text-md);
+      font-size: 0.95rem;
+      max-width: 540px;
+      margin: 0 auto 2rem;
+      line-height: 1.65;
+    }
+    .destinations-map {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      display: block;
+    }
+
+    /* Quick-compare table */
+    .compare-section { padding: 4rem 0 5rem; background: var(--white); }
+    .compare-table-wrap { overflow-x: auto; }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      min-width: 600px;
+    }
+    .compare-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.9rem 1rem;
+      text-align: left;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .compare-table td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-md);
+      vertical-align: top;
+    }
+    .compare-table tr:nth-child(even) td { background: var(--off-white); }
+    .compare-table tr:hover td { background: rgba(26,35,50,0.04); }
+    .compare-table td:first-child { font-weight: 700; color: var(--navy); }
+    .best-badge {
+      display: inline-block;
+      background: #2e5c3a;
+      color: #fff;
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 50px;
+      margin-left: 0.3rem;
+    }
+
+    @media (min-width: 768px) {
+      .dest-item { flex-direction: row; gap: 3.5rem; align-items: flex-start; }
+      .dest-item:nth-child(even) { flex-direction: row-reverse; }
+      .dest-img-col { flex: 0 0 42%; margin-bottom: 0; }
+      .dest-img-col img { height: 340px; }
+      .dest-highlights { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .dest-img-col { flex: 0 0 45%; }
+      .dest-img-col img { height: 380px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="topbar-item">📍 Sekenani Gate, Maasai Mara, Kenya</span>
+      <span class="topbar-sep">|</span>
+      <a href="tel:+254794928779" class="topbar-item">📞 +254 794 928 779</a>
+      <span class="topbar-sep">|</span>
+      <a href="mailto:info@saitotimarasafaris.top" class="topbar-item">✉ info@saitotimarasafaris.top</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand-link" href="/" aria-label="SaitotiMaraSafaris home">
+        <img src="images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="logo-img" loading="eager">
+        <div class="brand-text-wrap">
+          <span class="brand-name">SaitotiMara</span>
+          <span class="brand-sub">SAFARIS</span>
+        </div>
+      </a>
+      <nav class="nav-primary" role="navigation">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#safaris">Safaris</a></li>
+          <li><a href="/#accommodations">Accommodations</a></li>
+          <li><a href="destinations.html" aria-current="page">Destinations</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-header-cta" href="/#contact">Book a Safari</a>
+        <button id="hamburger" class="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu" type="button">
+          <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="mobile-nav" inert role="menu">
+      <ul class="mobile-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#safaris">Safaris</a></li>
+        <li><a href="/#accommodations">Accommodations</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-actions">
+        <a href="tel:+254794928779" class="mobile-phone">📞 +254 794 928 779</a>
+        <a class="btn btn-primary" href="/#contact">Book Now</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <span class="section-tag">Explore Kenya</span>
+      <h1>Kenya's Greatest Safari Destinations</h1>
+      <p>From the Great Rift Valley to the northern frontier — discover the parks, reserves, and wild places that make Kenya one of Africa's finest safari destinations.</p>
+    </div>
+  </section>
+
+  <main>
+    <!-- DESTINATIONS LIST -->
+    <section class="destinations-section">
+      <div class="container">
+        <div class="destination-list">
+
+          <!-- 1. MAASAI MARA -->
+          <div class="dest-item" id="maasai-mara">
+            <div class="dest-img-col">
+              <img src="images/maasaimarapark.jpg" alt="Maasai Mara National Reserve at sunrise" loading="lazy">
+              <span class="dest-badge dest-badge--top">Our Home</span>
+            </div>
+            <div class="dest-text-col">
+              <span class="dest-number">01</span>
+              <h2>Maasai Mara National Reserve</h2>
+              <span class="dest-subtitle">Narok County · Southwest Kenya</span>
+              <p>The crown jewel of Kenya's safari circuit and our home territory. The Maasai Mara is a vast, golden grassland ecosystem that borders Tanzania's Serengeti, together forming the greatest wildlife conservation area on earth. It is here that the Great Wildebeest Migration — the largest overland animal movement on the planet — plays out in dramatic river crossings from July to October.</p>
+              <p>Beyond the Migration, the Mara offers year-round Big Five game viewing, a resident lion population regarded as one of the densest in Africa, and the added richness of Maasai cultural encounters you will not find anywhere else.</p>
+              <div class="dest-meta-pills">
+                <span class="dest-pill">📅 Best: Jul–Oct (Migration)</span>
+                <span class="dest-pill">🦁 Big Five</span>
+                <span class="dest-pill">📍 270 km from Nairobi</span>
+                <span class="dest-pill">🌿 Year-round wildlife</span>
+              </div>
+              <div class="dest-highlights">
+                <span class="dest-highlight">Wildebeest river crossings</span>
+                <span class="dest-highlight">Dense lion populations</span>
+                <span class="dest-highlight">Maasai cultural visits</span>
+                <span class="dest-highlight">Leopard & cheetah sightings</span>
+                <span class="dest-highlight">Balloon safaris at dawn</span>
+                <span class="dest-highlight">Bird watching (600+ species)</span>
+              </div>
+              <div class="dest-actions">
+                <a class="btn btn-primary" href="/#contact">Book a Mara Safari</a>
+                <a class="btn-sm-outline" href="blog/great-migration-guide.html">Read Our Migration Guide →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. AMBOSELI -->
+          <div class="dest-item" id="amboseli">
+            <div class="dest-img-col">
+              <img src="images/amboselipark.jpg" alt="Elephants at Amboseli National Park with Kilimanjaro" loading="lazy">
+              <span class="dest-badge">Iconic Views</span>
+            </div>
+            <div class="dest-text-col">
+              <span class="dest-number">02</span>
+              <h2>Amboseli National Park</h2>
+              <span class="dest-subtitle">Kajiado County · Southern Kenya</span>
+              <p>Amboseli is Africa's most iconic elephant destination — home to some of the continent's largest tuskers, whose families have been studied and named over decades of conservation research. The park sits at the foot of Mount Kilimanjaro, Africa's highest peak, creating a breathtaking backdrop for photography that is simply unmatched anywhere on earth.</p>
+              <p>The swamps fed by Kilimanjaro's snowmelt attract enormous concentrations of wildlife, making game viewing here wonderfully predictable and rewarding even for first-time visitors.</p>
+              <div class="dest-meta-pills">
+                <span class="dest-pill">📅 Best: Jun–Oct, Jan–Feb</span>
+                <span class="dest-pill">🐘 Elephant paradise</span>
+                <span class="dest-pill">📍 240 km from Nairobi</span>
+                <span class="dest-pill">🏔️ Kilimanjaro backdrop</span>
+              </div>
+              <div class="dest-highlights">
+                <span class="dest-highlight">Africa's best elephant viewing</span>
+                <span class="dest-highlight">Kilimanjaro panoramas</span>
+                <span class="dest-highlight">Buffalo, lion & cheetah</span>
+                <span class="dest-highlight">Observation Hill viewpoint</span>
+                <span class="dest-highlight">Over 400 bird species</span>
+                <span class="dest-highlight">Maasai community visits</span>
+              </div>
+              <div class="dest-actions">
+                <a class="btn btn-primary" href="/#contact">Plan an Amboseli Safari</a>
+                <a class="btn-sm-outline" href="blog/amboseli-guide.html">Read Our Amboseli Guide →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. LAKE NAKURU -->
+          <div class="dest-item" id="lake-nakuru">
+            <div class="dest-img-col">
+              <img src="images/nakurupark.jpg" alt="Lake Nakuru National Park flamingos and wildlife" loading="lazy">
+              <span class="dest-badge dest-badge--rift">Rift Valley</span>
+            </div>
+            <div class="dest-text-col">
+              <span class="dest-number">03</span>
+              <h2>Lake Nakuru National Park</h2>
+              <span class="dest-subtitle">Nakuru County · Great Rift Valley</span>
+              <p>Encircling a shimmering alkaline lake in the heart of the Great Rift Valley, Lake Nakuru National Park is famous for its stunning flamingo flocks that can number in the hundreds of thousands, turning the lake's shores an otherworldly shade of pink. It is also one of Kenya's most important rhino sanctuaries, home to both black and white rhino within a fully fenced, protected area.</p>
+              <p>Add Rothschild's giraffe, lion, leopard, and over 450 bird species, and Nakuru punches well above its size for wildlife variety.</p>
+              <div class="dest-meta-pills">
+                <span class="dest-pill">📅 Best: Jun–Sep, Jan–Mar</span>
+                <span class="dest-pill">🦩 Flamingo spectacle</span>
+                <span class="dest-pill">📍 160 km from Nairobi</span>
+                <span class="dest-pill">🦏 Rhino sanctuary</span>
+              </div>
+              <div class="dest-highlights">
+                <span class="dest-highlight">Flamingo-fringed lake shores</span>
+                <span class="dest-highlight">Both black & white rhino</span>
+                <span class="dest-highlight">Rothschild's giraffe</span>
+                <span class="dest-highlight">Lion & leopard viewing</span>
+                <span class="dest-highlight">Baboon Cliff panorama</span>
+                <span class="dest-highlight">450+ bird species</span>
+              </div>
+              <div class="dest-actions">
+                <a class="btn btn-primary" href="/#contact">Book a Nakuru Safari</a>
+                <a class="btn-sm-outline" href="blog/rift-valley-lakes-guide.html">Read Our Rift Valley Guide →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. LAKE NAIVASHA -->
+          <div class="dest-item" id="lake-naivasha">
+            <div class="dest-img-col">
+              <img src="images/naivasha.jpg" alt="Lake Naivasha with hippos and birds" loading="lazy">
+              <span class="dest-badge dest-badge--rift">Rift Valley</span>
+            </div>
+            <div class="dest-text-col">
+              <span class="dest-number">04</span>
+              <h2>Lake Naivasha</h2>
+              <span class="dest-subtitle">Nakuru County · Great Rift Valley</span>
+              <p>A freshwater gem set in the floor of the Great Rift Valley, Lake Naivasha offers a different pace of safari — one that begins on the water. Boat rides among pods of hippos and towering papyrus reed beds, followed by guided walking on Crescent Island with zebras and giraffes strolling around you, make Naivasha a uniquely intimate wildlife experience.</p>
+              <p>The lake's surrounding ecosystem, including Hell's Gate National Park next door, makes it one of Kenya's most versatile day-trip or overnight destinations.</p>
+              <div class="dest-meta-pills">
+                <span class="dest-pill">📅 Best: Year-round</span>
+                <span class="dest-pill">🚣 Boat safaris</span>
+                <span class="dest-pill">📍 90 km from Nairobi</span>
+                <span class="dest-pill">🦛 Hippo watching</span>
+              </div>
+              <div class="dest-highlights">
+                <span class="dest-highlight">Boat rides among hippos</span>
+                <span class="dest-highlight">Crescent Island walking safari</span>
+                <span class="dest-highlight">Hell's Gate cycling & hiking</span>
+                <span class="dest-highlight">Fish eagles & 350+ bird species</span>
+                <span class="dest-highlight">Zebra, giraffe & buffalo</span>
+                <span class="dest-highlight">Easy day trip from Nairobi</span>
+              </div>
+              <div class="dest-actions">
+                <a class="btn btn-primary" href="/#contact">Plan a Naivasha Visit</a>
+                <a class="btn-sm-outline" href="blog/rift-valley-lakes-guide.html">Read Our Rift Valley Guide →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. SAMBURU -->
+          <div class="dest-item" id="samburu">
+            <div class="dest-img-col">
+              <img src="images/samburupark.jpg" alt="Reticulated giraffe at Samburu National Reserve" loading="lazy">
+              <span class="dest-badge dest-badge--north">Northern Kenya</span>
+            </div>
+            <div class="dest-text-col">
+              <span class="dest-number">05</span>
+              <h2>Samburu National Reserve</h2>
+              <span class="dest-subtitle">Samburu County · Northern Kenya</span>
+              <p>Far off the beaten path in Kenya's rugged northern frontier, Samburu is a landscape of dry riverbeds, doum palms, and rocky outcrops cut through by the life-giving Ewaso Nyiro River. What makes Samburu truly special is its "Samburu Special Five" — five animal species found here but nowhere else in Kenya's southern parks: Grevy's zebra, reticulated giraffe, Somali ostrich, gerenuk, and beisa oryx.</p>
+              <p>Samburu also has an outstanding lion and leopard population, and the Samburu people — closely related to the Maasai — offer rich cultural encounters.</p>
+              <div class="dest-meta-pills">
+                <span class="dest-pill">📅 Best: Jun–Sep, Jan–Feb</span>
+                <span class="dest-pill">🦒 Unique species</span>
+                <span class="dest-pill">📍 350 km from Nairobi</span>
+                <span class="dest-pill">🌵 Arid wilderness</span>
+              </div>
+              <div class="dest-highlights">
+                <span class="dest-highlight">The Samburu Special Five</span>
+                <span class="dest-highlight">Reticulated giraffe</span>
+                <span class="dest-highlight">Grevy's zebra (endangered)</span>
+                <span class="dest-highlight">Ewaso Nyiro River drives</span>
+                <span class="dest-highlight">Samburu cultural village</span>
+                <span class="dest-highlight">Exceptional leopard sightings</span>
+              </div>
+              <div class="dest-actions">
+                <a class="btn btn-primary" href="/#contact">Book a Samburu Safari</a>
+                <a class="btn-sm-outline" href="blog/samburu-guide.html">Read Our Samburu Guide →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. TSAVO -->
+          <div class="dest-item" id="tsavo">
+            <div class="dest-img-col">
+              <img src="images/tsavopark.jpg" alt="Tsavo National Park red elephants on game drive" loading="lazy">
+              <span class="dest-badge dest-badge--south">Southern Kenya</span>
+            </div>
+            <div class="dest-text-col">
+              <span class="dest-number">06</span>
+              <h2>Tsavo National Park</h2>
+              <span class="dest-subtitle">Taita-Taveta & Kilifi Counties · Southern Kenya</span>
+              <p>Kenya's largest national park — in fact one of the largest in the world — Tsavo is split into Tsavo East and Tsavo West and together covers an area larger than Wales. Known for its legendary "red elephants" (stained by the region's red laterite dust), the dramatic Lugard Falls on the Galana River, and the mysterious Shetani lava flows, Tsavo is wild, raw, and largely untamed.</p>
+              <p>Tsavo West's Mzima Springs offers a remarkable underground viewing chamber where hippos and crocodiles move through crystal-clear water right in front of you — one of Kenya's most unusual wildlife experiences.</p>
+              <div class="dest-meta-pills">
+                <span class="dest-pill">📅 Best: Jun–Oct, Jan–Mar</span>
+                <span class="dest-pill">🐘 Red elephants</span>
+                <span class="dest-pill">📍 300 km from Nairobi</span>
+                <span class="dest-pill">🌋 Vast wilderness</span>
+              </div>
+              <div class="dest-highlights">
+                <span class="dest-highlight">Kenya's largest park ecosystem</span>
+                <span class="dest-highlight">Red elephant herds</span>
+                <span class="dest-highlight">Lugard Falls on Galana River</span>
+                <span class="dest-highlight">Mzima Springs underwater</span>
+                <span class="dest-highlight">Shetani lava fields</span>
+                <span class="dest-highlight">Lion, leopard & cheetah</span>
+              </div>
+              <div class="dest-actions">
+                <a class="btn btn-primary" href="/#contact">Plan a Tsavo Safari</a>
+                <a class="btn-sm-outline" href="/#contact">Ask Our Guides →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. NAIROBI NP -->
+          <div class="dest-item" id="nairobi-np">
+            <div class="dest-img-col">
+              <img src="images/nairobipark.jpg" alt="Lion with Nairobi skyline at Nairobi National Park" loading="lazy">
+              <span class="dest-badge dest-badge--city">Urban Safari</span>
+            </div>
+            <div class="dest-text-col">
+              <span class="dest-number">07</span>
+              <h2>Nairobi National Park</h2>
+              <span class="dest-subtitle">Nairobi County · Kenya's Capital</span>
+              <p>One of the world's most extraordinary wildlife paradoxes — a national park within sight of a capital city's skyscrapers. Nairobi National Park is where lions, rhinos, buffalo, and over 400 bird species roam freely against a backdrop of Nairobi's skyline. It is the world's only national park inside a capital city, and for visitors with limited time it offers an unforgettable taste of Kenyan wildlife just minutes from the airport.</p>
+              <p>It also serves as a base for the David Sheldrick Wildlife Trust elephant orphanage and the Giraffe Centre — two of Kenya's most beloved conservation experiences.</p>
+              <div class="dest-meta-pills">
+                <span class="dest-pill">📅 Best: Year-round</span>
+                <span class="dest-pill">🦏 Black rhino</span>
+                <span class="dest-pill">📍 7 km from city centre</span>
+                <span class="dest-pill">🌆 Skyline views</span>
+              </div>
+              <div class="dest-highlights">
+                <span class="dest-highlight">Lions with city skyline</span>
+                <span class="dest-highlight">Black rhino sanctuary</span>
+                <span class="dest-highlight">David Sheldrick Elephant Orphanage</span>
+                <span class="dest-highlight">Nairobi Giraffe Centre</span>
+                <span class="dest-highlight">400+ bird species</span>
+                <span class="dest-highlight">Perfect half-day option</span>
+              </div>
+              <div class="dest-actions">
+                <a class="btn btn-primary" href="/#contact">Book a Nairobi Safari</a>
+                <a class="btn-sm-outline" href="/#contact">Combine with Mara →</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.destination-list -->
+      </div>
+    </section>
+
+    <!-- QUICK COMPARE TABLE -->
+    <section class="compare-section">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-tag">Plan Your Trip</span>
+          <h2>Quick Destination Comparison</h2>
+          <p>Use this guide to choose the right destinations for your Kenya safari itinerary.</p>
+        </header>
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Destination</th>
+                <th>Best For</th>
+                <th>Best Season</th>
+                <th>Distance from Nairobi</th>
+                <th>Duration Needed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maasai Mara <span class="best-badge">Flagship</span></td>
+                <td>Migration, Big Five, lion</td>
+                <td>Jul–Oct & year-round</td>
+                <td>270 km (5–6 hrs drive or 1 hr fly)</td>
+                <td>3–5 days minimum</td>
+              </tr>
+              <tr>
+                <td>Amboseli</td>
+                <td>Elephants, Kilimanjaro photos</td>
+                <td>Jun–Oct, Jan–Feb</td>
+                <td>240 km (4–5 hrs drive)</td>
+                <td>2–3 days</td>
+              </tr>
+              <tr>
+                <td>Lake Nakuru</td>
+                <td>Flamingos, rhino, birds</td>
+                <td>Jun–Sep, Jan–Mar</td>
+                <td>160 km (2–3 hrs drive)</td>
+                <td>1–2 days</td>
+              </tr>
+              <tr>
+                <td>Lake Naivasha</td>
+                <td>Boat safari, hippos, Hell's Gate</td>
+                <td>Year-round</td>
+                <td>90 km (1.5 hrs drive)</td>
+                <td>1 day (day trip possible)</td>
+              </tr>
+              <tr>
+                <td>Samburu</td>
+                <td>Unique northern species</td>
+                <td>Jun–Sep, Jan–Feb</td>
+                <td>350 km (5–6 hrs drive)</td>
+                <td>2–3 days</td>
+              </tr>
+              <tr>
+                <td>Tsavo (East + West)</td>
+                <td>Red elephants, vast wilderness</td>
+                <td>Jun–Oct, Jan–Mar</td>
+                <td>300 km (4–5 hrs drive)</td>
+                <td>2–4 days</td>
+              </tr>
+              <tr>
+                <td>Nairobi NP</td>
+                <td>Quick wildlife fix, stopovers</td>
+                <td>Year-round</td>
+                <td>7 km (15 mins)</td>
+                <td>Half day to 1 day</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="section-cta-row">
+          <a class="btn btn-primary" href="/#contact">Get a Custom Multi-Destination Itinerary</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <img src="images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="footer-logo">
+        <h3>SaitotiMara<br>Safaris</h3>
+        <p>Creating unforgettable safari experiences across Africa — where adventure meets comfort and the wild calls your name.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/olereyia.saitoti" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/its_olereyia/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://x.com/its_olereyia" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#safaris">Safaris</a></li>
+          <li><a href="/#accommodations">Accommodations</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-safaris">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="destinations.html#maasai-mara">Maasai Mara</a></li>
+          <li><a href="destinations.html#amboseli">Amboseli</a></li>
+          <li><a href="destinations.html#lake-nakuru">Lake Nakuru</a></li>
+          <li><a href="destinations.html#lake-naivasha">Lake Naivasha</a></li>
+          <li><a href="destinations.html#samburu">Samburu</a></li>
+          <li><a href="destinations.html#tsavo">Tsavo</a></li>
+          <li><a href="destinations.html#nairobi-np">Nairobi NP</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:info@saitotimarasafaris.top">✉ info@saitotimarasafaris.top</a></li>
+          <li><a href="tel:+254794928779">📞 +254 794 928 779</a></li>
+          <li>📍 Sekenani Gate, Maasai Mara, Kenya</li>
+        </ul>
+        <a class="btn btn-footer-cta" href="/#contact">Book a Safari</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner container">
+        <p>&copy; 2025 SaitotiMaraSafaris. All rights reserved.</p>
+        <p class="footer-tagline">Proudly Maasai — Rooted in the Mara</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      mobileNav.inert = !open;
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => { btt.style.display = window.scrollY > 400 ? 'grid' : 'none'; });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
