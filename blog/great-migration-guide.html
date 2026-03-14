@@ -15,6 +15,11 @@
   <meta property="og:description" content="A local Maasai guide's honest, insider breakdown of when, where and how to witness Kenya's greatest wildlife spectacle.">
   <meta property="og:image" content="https://saitotimarasafaris.top/images/hero.jpg">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Complete Guide to the Great Wildebeest Migration — SaitotiMaraSafaris">
+  <meta name="twitter:description" content="A local Maasai guide's honest, insider breakdown of when, where and how to witness Kenya's greatest wildlife spectacle.">
+  <meta name="twitter:image" content="https://saitotimarasafaris.top/images/hero.jpg">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,7 +39,6 @@
   <link rel="stylesheet" href="../style.css">
 
   <style>
-    /* ── Blog post specific styles ── */
     .post-hero {
       position: relative;
       height: clamp(340px, 50vh, 560px);
@@ -100,7 +104,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid rgba(255,255,255,0.4);
-      position: static; /* reset from hero img rule */
+      position: static;
     }
     .post-author-info { display: flex; flex-direction: column; }
     .post-author-name { font-size: 0.85rem; font-weight: 700; color: #fff; }
@@ -117,8 +121,6 @@
       color: rgba(255,255,255,0.6);
       font-weight: 600;
     }
-
-    /* Article layout */
     .article-wrap {
       display: grid;
       grid-template-columns: 1fr;
@@ -129,11 +131,7 @@
       padding-left: var(--pad);
       padding-right: var(--pad);
     }
-
-    /* Article body */
-    .article-body {
-      max-width: 720px;
-    }
+    .article-body { max-width: 720px; }
     .article-body h2 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.3rem, 3vw, 1.8rem);
@@ -163,8 +161,6 @@
       margin-bottom: 1.4rem;
     }
     .article-body li { margin-bottom: 0.4rem; }
-
-    /* Pull quote */
     .pull-quote {
       border-left: 4px solid var(--black);
       padding: 1.25rem 1.5rem;
@@ -180,8 +176,6 @@
       margin: 0 !important;
       line-height: 1.65 !important;
     }
-
-    /* Info box */
     .info-box {
       background: var(--navy);
       color: #fff;
@@ -204,8 +198,6 @@
       line-height: 1.7;
     }
     .info-box ul { padding-left: 1.1rem; margin: 0; }
-
-    /* Month calendar */
     .month-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -223,8 +215,6 @@
     .month-card.peak strong { color: rgba(255,255,255,0.7); }
     .month-card.good { background: #f0f5f1; border-color: #c5d9ca; }
     .month-card.off { background: var(--off-white); color: var(--muted); }
-
-    /* Article inline image */
     .article-img {
       width: 100%;
       border-radius: var(--radius);
@@ -239,11 +229,7 @@
       margin-bottom: 2rem;
       font-style: italic;
     }
-
-    /* Sidebar */
     .article-sidebar { display: none; }
-
-    /* Share + Tags */
     .article-footer {
       margin-top: 3rem;
       padding-top: 2rem;
@@ -260,8 +246,6 @@
       letter-spacing: 0.08em;
       color: var(--mid);
     }
-
-    /* Related posts */
     .related-section { background: var(--off-white); padding: 4rem 0; }
     .related-grid {
       display: grid;
@@ -269,8 +253,6 @@
       gap: 1.25rem;
       margin-top: 2rem;
     }
-
-    /* CTA strip */
     .post-cta-strip {
       background: var(--navy);
       padding: 3.5rem 0;
@@ -290,15 +272,9 @@
       line-height: 1.65;
     }
     .post-cta-buttons { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
-
     @media (min-width: 768px) {
       .article-wrap { grid-template-columns: 1fr 280px; padding-top: 4rem; }
-      .article-sidebar {
-        display: block;
-        position: sticky;
-        top: 6rem;
-        align-self: start;
-      }
+      .article-sidebar { display: block; position: sticky; top: 6rem; align-self: start; }
       .month-grid { grid-template-columns: repeat(3, 1fr); }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -306,8 +282,6 @@
       .article-wrap { grid-template-columns: 1fr 320px; }
       .related-grid { grid-template-columns: repeat(3, 1fr); }
     }
-
-    /* Sidebar card styles */
     .sidebar-card {
       background: var(--white);
       border-radius: var(--radius);
@@ -335,11 +309,20 @@
     }
     .sidebar-card ul li a:hover { color: var(--black); }
     .sidebar-card ul li a::before { content: '→'; flex-shrink: 0; }
+    .blog-preview-card { display:block; background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); border:1px solid rgba(26,35,50,0.07); transition:all var(--transition); color:inherit; text-decoration:none; }
+    .blog-preview-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+    .blog-preview-img { position:relative; overflow:hidden; }
+    .blog-preview-img img { width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.5s ease; }
+    .blog-preview-card:hover .blog-preview-img img { transform:scale(1.05); }
+    .blog-preview-cat { position:absolute; top:0.75rem; left:0.75rem; color:#fff; font-size:0.63rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; padding:0.28rem 0.75rem; border-radius:50px; }
+    .blog-preview-body { padding:1.25rem 1.4rem 1.5rem; display:flex; flex-direction:column; gap:0.45rem; }
+    .blog-preview-body h3 { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--navy); margin:0; line-height:1.3; }
+    .blog-preview-body p { color:var(--text-md); font-size:0.86rem; line-height:1.6; margin:0; }
+    .blog-preview-link { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--black); margin-top:0.3rem; display:inline-block; }
   </style>
 </head>
 <body>
 
-  <!-- TOP BAR -->
   <div class="topbar">
     <div class="topbar-inner">
       <span class="topbar-item">📍 Sekenani Gate, Maasai Mara, Kenya</span>
@@ -350,7 +333,6 @@
     </div>
   </div>
 
-  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a class="brand-link" href="/" aria-label="SaitotiMaraSafaris home">
@@ -394,7 +376,6 @@
     </nav>
   </header>
 
-  <!-- POST HERO -->
   <div class="post-hero">
     <img src="../images/wildbeest.jpg" alt="Wildebeest crossing the Mara River during the Great Migration">
     <div class="post-hero-overlay"></div>
@@ -415,12 +396,10 @@
     </div>
   </div>
 
-  <!-- ARTICLE -->
   <main>
     <div class="container">
       <div class="article-wrap">
 
-        <!-- BODY -->
         <article class="article-body">
 
           <p>I have lived my entire life along the Mara River. I have watched the Migration arrive every single year since I was a child — the dust cloud on the horizon before you see a single animal, the sound that builds slowly from silence to a thunder you feel in your chest, the chaos and the silence that follows when ten thousand animals have crossed and the water runs red. No photograph prepares you for it. Nothing does.</p>
@@ -520,7 +499,6 @@
           </div>
         </article>
 
-        <!-- SIDEBAR -->
         <aside class="article-sidebar">
           <div class="sidebar-card">
             <h4>Book a Migration Safari</h4>
@@ -528,7 +506,6 @@
             <a class="btn btn-primary" href="/#contact" style="width:100%;justify-content:center;">Plan My Safari →</a>
             <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener" style="width:100%;justify-content:center;margin-top:0.5rem;">💬 WhatsApp Us</a>
           </div>
-
           <div class="sidebar-card">
             <h4>More Wildlife Guides</h4>
             <ul>
@@ -539,7 +516,6 @@
               <li><a href="first-safari-tips.html">First Safari? 15 Essential Tips</a></li>
             </ul>
           </div>
-
           <div class="sidebar-card">
             <h4>Quick Facts</h4>
             <ul style="list-style:none;padding:0;gap:0.5rem;display:flex;flex-direction:column;">
@@ -555,7 +531,6 @@
       </div>
     </div>
 
-    <!-- BOOK CTA -->
     <section class="post-cta-strip">
       <div class="container">
         <span class="section-tag" style="color:rgba(255,255,255,0.5)">Ready?</span>
@@ -568,7 +543,6 @@
       </div>
     </section>
 
-    <!-- RELATED POSTS -->
     <section class="related-section">
       <div class="container">
         <header class="section-head">
@@ -614,7 +588,6 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner container">
       <div class="footer-brand">
@@ -659,27 +632,13 @@
     </div>
     <div class="footer-bottom">
       <div class="footer-bottom-inner container">
-        <p>&copy; 2025 SaitotiMaraSafaris. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> SaitotiMaraSafaris. All rights reserved.</p>
         <p class="footer-tagline">Proudly Maasai — Rooted in the Mara</p>
       </div>
     </div>
   </footer>
 
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
-
-  <style>
-    /* Blog card styles needed here too (for related posts) */
-    .blog-preview-card { display:block; background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); border:1px solid rgba(26,35,50,0.07); transition:all var(--transition); color:inherit; text-decoration:none; }
-    .blog-preview-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
-    .blog-preview-img { position:relative; overflow:hidden; }
-    .blog-preview-img img { width:100%; height:200px; object-fit:cover; display:block; transition:transform 0.5s ease; }
-    .blog-preview-card:hover .blog-preview-img img { transform:scale(1.05); }
-    .blog-preview-cat { position:absolute; top:0.75rem; left:0.75rem; color:#fff; font-size:0.63rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; padding:0.28rem 0.75rem; border-radius:50px; }
-    .blog-preview-body { padding:1.25rem 1.4rem 1.5rem; display:flex; flex-direction:column; gap:0.45rem; }
-    .blog-preview-body h3 { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--navy); margin:0; line-height:1.3; }
-    .blog-preview-body p { color:var(--text-md); font-size:0.86rem; line-height:1.6; margin:0; }
-    .blog-preview-link { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--black); margin-top:0.3rem; display:inline-block; }
-  </style>
 
   <script>
     const hamburger = document.getElementById('hamburger');
@@ -692,6 +651,7 @@
     const btt = document.getElementById('backToTop');
     window.addEventListener('scroll', () => { btt.style.display = window.scrollY > 400 ? 'grid' : 'none'; });
     btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    const y = document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
