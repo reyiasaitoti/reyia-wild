@@ -3,7 +3,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://saitotimarasafaris.top/</loc>
+    <loc>https://saitotimarasafaris.com/</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,14 +11,14 @@
 
   <!-- Main pages -->
   <url>
-    <loc>https://saitotimarasafaris.top/destinations.html</loc>
+    <loc>https://saitotimarasafaris.com/destinations.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://saitotimarasafaris.top/blog.html</loc>
+    <loc>https://saitotimarasafaris.com/blog.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -26,28 +26,28 @@
 
   <!-- Accommodation sub-pages -->
   <url>
-    <loc>https://saitotimarasafaris.top/accommodations/single-room.html</loc>
+    <loc>https://saitotimarasafaris.com/accommodations/single-room.html</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://saitotimarasafaris.top/accommodations/double-room.html</loc>
+    <loc>https://saitotimarasafaris.com/accommodations/double-room.html</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://saitotimarasafaris.top/accommodations/twin-room.html</loc>
+    <loc>https://saitotimarasafaris.com/accommodations/twin-room.html</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://saitotimarasafaris.top/accommodations/luxury-suite.html</loc>
+    <loc>https://saitotimarasafaris.com/accommodations/luxury-suite.html</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -55,42 +55,42 @@
 
   <!-- Blog posts -->
   <url>
-    <loc>https://saitotimarasafaris.top/blog/great-migration-guide.html</loc>
+    <loc>https://saitotimarasafaris.com/blog/great-migration-guide.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://saitotimarasafaris.top/blog/big-five-spotting-guide.html</loc>
+    <loc>https://saitotimarasafaris.com/blog/big-five-spotting-guide.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://saitotimarasafaris.top/blog/amboseli-guide.html</loc>
+    <loc>https://saitotimarasafaris.com/blog/amboseli-guide.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://saitotimarasafaris.top/blog/samburu-guide.html</loc>
+    <loc>https://saitotimarasafaris.com/blog/samburu-guide.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://saitotimarasafaris.top/blog/rift-valley-lakes-guide.html</loc>
+    <loc>https://saitotimarasafaris.com/blog/rift-valley-lakes-guide.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://saitotimarasafaris.top/blog/first-safari-tips.html</loc>
+    <loc>https://saitotimarasafaris.com/blog/first-safari-tips.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
