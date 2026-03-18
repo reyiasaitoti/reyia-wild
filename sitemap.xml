@@ -4,53 +4,31 @@
   <!-- Homepage -->
   <url>
     <loc>https://saitotimarasafaris.com/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Main pages -->
   <url>
+    <loc>https://saitotimarasafaris.com/packages.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
     <loc>https://saitotimarasafaris.com/destinations.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://saitotimarasafaris.com/blog.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-
-  <!-- Accommodation sub-pages -->
-  <url>
-    <loc>https://saitotimarasafaris.com/accommodations/single-room.html</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://saitotimarasafaris.com/accommodations/double-room.html</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://saitotimarasafaris.com/accommodations/twin-room.html</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://saitotimarasafaris.com/accommodations/luxury-suite.html</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <!-- Blog posts -->

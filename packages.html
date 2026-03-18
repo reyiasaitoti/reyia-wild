@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Safari Packages — SaitotiMaraSafaris</title>
+  <meta name="description" content="Browse all Maasai Mara safari packages — day drives, migration specials, luxury and budget options. Local Maasai guides, full board, all park fees included.">
+  <link rel="canonical" href="https://saitotimarasafaris.com/packages.html">
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saitotimarasafaris.com/packages.html">
+  <meta property="og:title" content="Safari Packages — SaitotiMaraSafaris">
+  <meta property="og:image" content="https://saitotimarasafaris.com/images/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+/* ══════════════════════════════════════════════════════════════
+   packages.html — inline styles
+   All base tokens come from style.css, this file only extends
+══════════════════════════════════════════════════════════════ */
+
+/* ── Page hero ── */
+.pkg-page-hero{position:relative;min-height:54vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--navy);}
+.pkg-hero-bg{position:absolute;inset:0;background-image:url('images/gamedrives.jpg');background-size:cover;background-position:center 30%;opacity:.42;transition:transform 8s ease;}
+.pkg-hero-overlay{position:absolute;inset:0;background:linear-gradient(175deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.8) 100%);}
+.pkg-hero-inner{position:relative;z-index:2;max-width:var(--max-width);margin:0 auto;padding:0 var(--pad) 2.5rem;width:100%;}
+.pkg-hero-inner h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;color:#fff;line-height:1.08;letter-spacing:-.02em;margin:0 0 .7rem;text-shadow:0 4px 24px rgba(0,0,0,.4);}
+.pkg-hero-inner p{color:rgba(255,255,255,.78);font-size:clamp(.9rem,2vw,1.08rem);max-width:560px;line-height:1.7;margin:0 0 1.4rem;}
+.pkg-hero-stats{display:flex;gap:2rem;flex-wrap:wrap;}
+.pkg-hero-stat{display:flex;flex-direction:column;}
+.pkg-hero-stat strong{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#fff;line-height:1;}
+.pkg-hero-stat span{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.45);margin-top:.2rem;}
+
+/* ── Notice ── */
+.pkg-notice{background:#111;border-bottom:1px solid rgba(255,255,255,.08);padding:.6rem 1rem;text-align:center;font-size:.78rem;color:rgba(255,255,255,.5);}
+.pkg-notice strong{color:#fff;}
+.pkg-notice a{color:rgba(255,255,255,.7);text-decoration:underline;}
+
+/* ── Filter + Sort bar: single scrollable row, all screen sizes ── */
+.pkg-toolbar{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:63px;z-index:100;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;white-space:nowrap;}
+.pkg-toolbar::-webkit-scrollbar{display:none;}
+.pkg-toolbar-inner{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem var(--pad);min-width:100%;}
+.pkg-filters{display:inline-flex;align-items:center;gap:.35rem;flex-shrink:0;}
+.pkg-filter-lbl{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0;margin-right:.1rem;}
+.pkg-filter-btn{display:inline-flex;align-items:center;flex-shrink:0;padding:.32rem .85rem;border:1px solid var(--border);border-radius:50px;font-family:'Lato',sans-serif;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--mid);background:transparent;cursor:pointer;transition:all var(--transition);white-space:nowrap;}
+.pkg-filter-btn:hover{border-color:var(--dark);color:var(--dark);}
+.pkg-filter-btn.active{background:var(--black);border-color:var(--black);color:#fff;}
+.pkg-toolbar-sep{width:1px;height:20px;background:var(--border);flex-shrink:0;margin:0 .25rem;}
+.pkg-sort{display:inline-flex;align-items:center;gap:.4rem;flex-shrink:0;}
+.pkg-sort label{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0;}
+.pkg-sort select{font-family:'Lato',sans-serif;font-size:.72rem;font-weight:700;color:var(--dark);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.3rem 1.6rem .3rem .65rem;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E") no-repeat right .5rem center;appearance:none;cursor:pointer;white-space:nowrap;}
+
+/* ── Package listing grid ── */
+.pkg-section{background:var(--off-white);}
+.pkg-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;}
+.pkg-count{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:1.5rem;}
+
+/* ── Package card ── */
+.pkg-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;transition:transform var(--transition),box-shadow var(--transition);cursor:pointer;position:relative;}
+.pkg-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(0,0,0,.13);}
+.pkg-card.pkg-card--hidden{display:none;}
+
+/* Card image */
+.pkg-card-img{position:relative;overflow:hidden;flex-shrink:0;}
+.pkg-card-img img{width:100%;height:230px;object-fit:cover;display:block;transition:transform .55s ease;}
+.pkg-card:hover .pkg-card-img img{transform:scale(1.07);}
+.pkg-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 50%);}
+
+/* Badges on image */
+.pkg-card-badges{position:absolute;top:.75rem;left:.75rem;display:flex;gap:.4rem;flex-wrap:wrap;z-index:2;}
+.pkg-badge{font-family:'Lato',sans-serif;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.25rem .7rem;border-radius:50px;}
+.pkg-badge--black{background:var(--black);color:#fff;}
+.pkg-badge--white{background:#fff;color:#000;}
+.pkg-badge--hot{background:#c0392b;color:#fff;}
+.pkg-badge--gold{background:#555;color:#fff;}
+
+/* Price on image bottom-right */
+.pkg-card-price-float{position:absolute;bottom:.8rem;right:.8rem;z-index:2;text-align:right;}
+.pkg-card-price-float .from{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);}
+.pkg-card-price-float .amount{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:#fff;line-height:1;}
+.pkg-card-price-float .per{font-size:.6rem;color:rgba(255,255,255,.6);}
+
+/* Card body */
+.pkg-card-body{padding:1.25rem 1.4rem 0;flex:1;display:flex;flex-direction:column;gap:.5rem;}
+.pkg-card-meta{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+.pkg-card-dur{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);}
+.pkg-card-dot{width:3px;height:3px;border-radius:50%;background:var(--border);flex-shrink:0;}
+.pkg-card-dest{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);}
+.pkg-card-title{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:700;color:var(--navy);line-height:1.22;margin:0;}
+.pkg-card-desc{font-size:.87rem;color:var(--text-md);line-height:1.6;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+
+/* Highlights strip */
+.pkg-card-highlights{display:flex;gap:.5rem;flex-wrap:wrap;padding-top:.1rem;}
+.pkg-highlight{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);background:var(--light);border-radius:50px;padding:.22rem .7rem;}
+
+/* Card footer */
+.pkg-card-footer{padding:.9rem 1.4rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;border-top:1px solid var(--border);margin-top:.85rem;}
+.pkg-card-accom{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;}
+.pkg-accom-pill{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.18rem .55rem;border-radius:50px;white-space:nowrap;}
+.pkg-accom-pill.b{background:var(--light);color:var(--mid);border:1px solid var(--border);}
+.pkg-accom-pill.m{background:#e6f0ee;color:#1a4040;border:1px solid #bdd4d0;}
+.pkg-accom-pill.l{background:var(--black);color:#fff;}
+.pkg-card-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;}
+.btn-view{display:inline-flex;align-items:center;gap:.35rem;padding:.48rem 1.1rem;background:var(--black);color:#fff;font-family:'Lato',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--transition);white-space:nowrap;text-decoration:none;}
+.btn-view:hover{background:#333;transform:translateY(-1px);}
+.btn-wa{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:#25d366;border-radius:var(--radius-sm);flex-shrink:0;transition:all var(--transition);text-decoration:none;}
+.btn-wa:hover{background:#1dbb5a;transform:translateY(-1px);}
+.btn-wa svg{width:16px;height:16px;fill:#fff;}
+
+/* ── Modal / Drawer ── */
+.pkg-modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:2000;opacity:0;pointer-events:none;transition:opacity .28s ease;}
+.pkg-modal-backdrop.open{opacity:1;pointer-events:auto;}
+.pkg-modal{position:fixed;top:0;right:0;bottom:0;width:min(680px,100vw);background:#fff;z-index:2001;overflow-y:auto;transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.8,.3,1);display:flex;flex-direction:column;}
+.pkg-modal.open{transform:translateX(0);}
+.pkg-modal-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;background:rgba(0,0,0,.08);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--dark);z-index:10;transition:background var(--transition);}
+.pkg-modal-close:hover{background:rgba(0,0,0,.18);}
+
+/* Modal hero */
+.pkg-modal-hero{position:relative;height:280px;flex-shrink:0;}
+.pkg-modal-hero img{width:100%;height:100%;object-fit:cover;display:block;}
+.pkg-modal-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,transparent 55%);}
+.pkg-modal-hero-content{position:absolute;bottom:0;left:0;right:0;padding:1.25rem 1.5rem;}
+.pkg-modal-hero-content .pkg-badge{margin-bottom:.4rem;}
+.pkg-modal-hero-content h2{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;color:#fff;margin:0 0 .3rem;line-height:1.15;}
+.pkg-modal-hero-meta{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;}
+.pkg-modal-hero-meta span{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.65);}
+
+/* Modal tabs */
+.pkg-modal-tabs{display:flex;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:5;flex-shrink:0;}
+.pkg-modal-tab{flex:1;padding:.75rem .5rem;font-family:'Lato',sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);background:transparent;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all var(--transition);text-align:center;}
+.pkg-modal-tab:hover{color:var(--dark);}
+.pkg-modal-tab.active{color:var(--navy);border-bottom-color:var(--navy);}
+
+/* Modal panels */
+.pkg-modal-body{padding:1.5rem;flex:1;}
+.pkg-modal-panel{display:none;}
+.pkg-modal-panel.active{display:block;}
+
+/* Overview panel */
+.pkg-overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.4rem;}
+.pkg-overview-stat{background:var(--off-white);border-radius:var(--radius-sm);padding:.8rem 1rem;}
+.pkg-overview-stat .label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:.25rem;}
+.pkg-overview-stat .value{font-family:'Lato',sans-serif;font-size:.92rem;font-weight:700;color:var(--navy);}
+
+.pkg-section-title{font-family:'Lato',sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:1.4rem 0 .75rem;padding-bottom:.45rem;border-bottom:1px solid var(--border);}
+.pkg-incl-cols{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;}
+.pkg-incl-item{display:flex;align-items:flex-start;gap:.45rem;font-size:.83rem;color:var(--text-md);line-height:1.4;}
+.pkg-incl-item::before{content:'✓';color:var(--black);font-weight:700;font-size:.7rem;flex-shrink:0;margin-top:.15rem;}
+.pkg-excl-item{display:flex;align-items:flex-start;gap:.45rem;font-size:.83rem;color:var(--text-md);line-height:1.4;}
+.pkg-excl-item::before{content:'—';color:var(--muted);font-weight:700;font-size:.7rem;flex-shrink:0;margin-top:.15rem;}
+
+.pkg-accom-list{display:flex;flex-direction:column;gap:.6rem;}
+.pkg-accom-row{display:flex;align-items:center;gap:.7rem;padding:.7rem .9rem;background:var(--off-white);border-radius:var(--radius-sm);}
+.pkg-accom-row .pkg-accom-pill{flex-shrink:0;}
+.pkg-accom-row .name{font-size:.85rem;font-weight:700;color:var(--navy);flex:1;}
+.pkg-accom-row .desc{font-size:.75rem;color:var(--muted);}
+
+/* Itinerary panel */
+.pkg-itin-day{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.6rem;}
+.pkg-itin-hdr{display:flex;align-items:center;gap:.85rem;padding:.85rem 1rem;cursor:pointer;user-select:none;transition:background var(--transition);}
+.pkg-itin-hdr:hover{background:var(--off-white);}
+.pkg-itin-num{width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pkg-itin-title{flex:1;font-family:'Lato',sans-serif;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--navy);}
+.pkg-itin-meals{display:flex;gap:.3rem;margin-right:.3rem;}
+.pkg-meal{font-size:.58rem;font-weight:700;padding:.18rem .45rem;background:var(--light);border-radius:3px;color:var(--mid);text-transform:uppercase;letter-spacing:.06em;}
+.pkg-itin-arrow{font-size:.7rem;color:var(--muted);transition:transform var(--transition);flex-shrink:0;}
+.pkg-itin-day.open .pkg-itin-arrow{transform:rotate(180deg);}
+.pkg-itin-body{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.pkg-itin-day.open .pkg-itin-body{max-height:400px;}
+.pkg-itin-content{padding:.2rem 1rem 1rem 3.45rem;font-size:.85rem;color:var(--text-md);line-height:1.72;}
+
+/* Booking panel */
+.pkg-book-price-band{background:var(--navy);border-radius:var(--radius);padding:1.25rem 1.4rem;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.pkg-book-price-band .from{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);}
+.pkg-book-price-band .amount{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;line-height:1;}
+.pkg-book-price-band .per{font-size:.68rem;color:rgba(255,255,255,.5);margin-top:.2rem;}
+.pkg-book-price-band .note{font-size:.72rem;color:rgba(255,255,255,.55);max-width:200px;line-height:1.5;}
+
+.pkg-book-form{display:flex;flex-direction:column;gap:.9rem;}
+.pkg-form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.pkg-form-group{display:flex;flex-direction:column;gap:.32rem;}
+.pkg-form-group label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--navy);}
+.pkg-form-group input,.pkg-form-group select,.pkg-form-group textarea{width:100%;padding:.65rem .85rem;border:1.5px solid rgba(0,0,0,.12);border-radius:var(--radius-sm);font-family:'Lato',sans-serif;font-size:.88rem;color:var(--text);background:#fafbfc;transition:border-color var(--transition);}
+.pkg-form-group input:focus,.pkg-form-group select:focus,.pkg-form-group textarea:focus{outline:none;border-color:var(--black);background:#fff;}
+.pkg-form-group textarea{resize:vertical;min-height:90px;}
+.pkg-book-actions{display:flex;flex-direction:column;gap:.6rem;margin-top:.4rem;}
+.btn-book-submit{width:100%;padding:.82rem;background:var(--black);color:#fff;font-family:'Lato',sans-serif;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;border:none;border-radius:var(--radius-sm);cursor:pointer;transition:all var(--transition);}
+.btn-book-submit:hover{background:#222;transform:translateY(-1px);}
+.btn-book-wa{width:100%;padding:.8rem;background:#25d366;color:#fff;font-family:'Lato',sans-serif;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;border:none;border-radius:var(--radius-sm);cursor:pointer;transition:all var(--transition);display:flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none;}
+.btn-book-wa:hover{background:#1dbb5a;}
+.pkg-book-note{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.5;}
+
+/* ── Related packages ── */
+.pkg-related{background:#fff;padding-top:0;}
+.pkg-related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
+.pkg-related-card{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:#fff;transition:all var(--transition);cursor:pointer;text-decoration:none;display:block;}
+.pkg-related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.pkg-related-card img{width:100%;height:140px;object-fit:cover;display:block;transition:transform .5s ease;}
+.pkg-related-card:hover img{transform:scale(1.06);}
+.pkg-related-body{padding:.85rem;}
+.pkg-related-dur{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.2rem;}
+.pkg-related-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--navy);margin:0 0 .4rem;line-height:1.2;}
+.pkg-related-price{font-size:.78rem;color:var(--mid);}
+.pkg-related-price strong{color:var(--navy);}
+
+/* ── CTA band ── */
+.pkg-cta-band{background:var(--navy);padding:3.5rem 0;text-align:center;}
+.pkg-cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.4rem);font-weight:700;color:#fff;margin:0 0 .75rem;letter-spacing:-.02em;}
+.pkg-cta-band h2::after{content:'';display:block;width:48px;height:3px;background:rgba(255,255,255,.25);margin:.65rem auto 0;border-radius:2px;}
+.pkg-cta-band p{color:rgba(255,255,255,.55);font-size:.98rem;max-width:480px;margin:0 auto 1.75rem;line-height:1.7;}
+.pkg-cta-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;}
+
+/* ── Responsive ── */
+@media(min-width:640px){
+  .pkg-grid{grid-template-columns:repeat(2,1fr);}
+  .pkg-related-grid{grid-template-columns:repeat(3,1fr);}
+}
+@media(min-width:1024px){
+  .pkg-grid{grid-template-columns:repeat(3,1fr);}
+  .pkg-related-grid{grid-template-columns:repeat(4,1fr);}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-item">📍 Sekenani Gate, Maasai Mara, Kenya</span>
+    <span class="topbar-sep">|</span>
+    <a href="tel:+254794928779" class="topbar-item">📞 +254 794 928 779</a>
+    <span class="topbar-sep">|</span>
+    <a href="/cdn-cgi/l/email-protection#11787f777e51627078657e65787c706370627077706378623f727e7c" class="topbar-item">✉ <span class="__cf_email__" data-cfemail="7d14131b123d0e1c1409120914101c0f1c0e1c1b1c0f140e531e1210">[email&#160;protected]</span></a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="brand-link" href="index.html" aria-label="SaitotiMaraSafaris home">
+      <img src="images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="logo-img" loading="eager">
+      <div class="brand-text-wrap">
+        <span class="brand-name">SaitotiMara</span>
+        <span class="brand-sub">SAFARIS</span>
+      </div>
+    </a>
+    <nav class="nav-primary" role="navigation" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html" aria-current="page">Safaris</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-header-cta" href="index.html#contact">Book a Safari</a>
+      <button id="hamburger" class="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu" type="button">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="mobile-nav" inert role="menu" aria-label="Mobile navigation">
+    <ul class="mobile-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="packages.html">Safaris</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="mobile-actions">
+      <a href="tel:+254794928779" class="mobile-phone">📞 +254 794 928 779</a>
+      <a class="btn btn-primary" href="index.html#contact">Book Now</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<main id="site-main">
+
+<!-- NOTICE -->
+<div class="pkg-notice">
+  <strong>Migration Season Jul–Oct:</strong> Park fees rise to $200/adult/day — all packages quoted fully inclusive. <a href="index.html#contact">Enquire early to secure your dates.</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="pkg-page-hero" aria-label="Safari packages hero">
+  <div class="pkg-hero-bg" aria-hidden="true"></div>
+  <div class="pkg-hero-overlay" aria-hidden="true"></div>
+  <div class="pkg-hero-inner">
+    <span class="hero-eyebrow" style="margin-bottom:.9rem;">Maasai Mara, Kenya</span>
+    <h1>Safari Packages</h1>
+    <p>Every safari guided by Maasai born and raised in the Mara. Choose your duration, pick your accommodation tier — we handle everything else.</p>
+    <div class="pkg-hero-stats">
+      <div class="pkg-hero-stat"><strong>9</strong><span>Packages</span></div>
+      <div class="pkg-hero-stat"><strong>Big 5</strong><span>Guaranteed Sightings</span></div>
+      <div class="pkg-hero-stat"><strong>3 Tiers</strong><span>Budget to Luxury</span></div>
+      <div class="pkg-hero-stat"><strong>24 hrs</strong><span>Response Time</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLBAR -->
+<div style="background:#fff;border-bottom:1px solid #dedede;position:sticky;top:63px;z-index:100;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;" role="navigation" aria-label="Filter and sort packages">
+  <div style="display:flex;align-items:center;gap:0.4rem;padding:0.6rem 1.25rem;min-width:max-content;">
+    <span style="font-family:'Lato',sans-serif;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:#888;white-space:nowrap;margin-right:0.2rem;">Filter:</span>
+    <button class="pkg-filter-btn active" data-filter="all">All</button>
+    <button class="pkg-filter-btn" data-filter="budget">Budget</button>
+    <button class="pkg-filter-btn" data-filter="midrange">Mid-Range</button>
+    <button class="pkg-filter-btn" data-filter="luxury">Luxury</button>
+    <button class="pkg-filter-btn" data-filter="short">1–2 Days</button>
+    <button class="pkg-filter-btn" data-filter="medium">3–4 Days</button>
+    <button class="pkg-filter-btn" data-filter="long">5+ Days</button>
+    <span style="width:1px;height:18px;background:#dedede;flex-shrink:0;margin:0 0.4rem;"></span>
+    <span style="font-family:'Lato',sans-serif;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#888;white-space:nowrap;">Sort:</span>
+    <select id="pkgSort" style="font-family:'Lato',sans-serif;font-size:0.72rem;font-weight:700;color:#2e2e2e;border:1px solid #dedede;border-radius:3px;padding:0.28rem 0.6rem;background:#fff;cursor:pointer;white-space:nowrap;">
+      <option value="default">Default</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="duration-asc">Duration: Short First</option>
+    </select>
+  </div>
+</div>
+
+<!-- PACKAGES GRID -->
+<section class="section pkg-section" aria-labelledby="pkg-heading">
+  <div class="container">
+    <header class="section-head">
+      <span class="section-tag">What We Offer</span>
+      <h2 id="pkg-heading">Kenya Safari Packages</h2>
+      <p>All prices include park fees, expert Maasai guide, 4WD vehicle, and full board meals. Accommodation options shown per package.</p>
+    </header>
+
+    <p class="pkg-count" id="pkgCount">Showing 9 packages</p>
+
+    <div class="pkg-grid" id="pkgGrid">
+
+      <!-- ①  FULL DAY -->
+      <article class="pkg-card" data-tier="budget" data-length="short" data-price="195" data-duration="1" data-id="full-day">
+        <div class="pkg-card-img">
+          <img src="images/gamedrive.jpeg" alt="Full Day Game Drive" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges">
+            <span class="pkg-badge pkg-badge--black">Popular</span>
+          </div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div>
+            <div class="amount">$195</div>
+            <div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">1 Day · No overnight</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Maasai Mara</span>
+          </div>
+          <h3 class="pkg-card-title">Full Day Game Drive</h3>
+          <p class="pkg-card-desc">Dawn to dusk in the Mara with expert guides. Picnic lunch at the river, Big Five sightings, and maximum wildlife time.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">Big Five</span>
+            <span class="pkg-highlight">Picnic Lunch</span>
+            <span class="pkg-highlight">4WD Vehicle</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Day trip only</span>
+          </div>
+          <div class="pkg-card-actions">
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Full+Day+Game+Drive+package." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+            <button class="btn-view" onclick="openModal('full-day')">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ② OVERNIGHT SUNRISE -->
+      <article class="pkg-card" data-tier="budget" data-length="short" data-price="340" data-duration="2" data-id="sunrise">
+        <div class="pkg-card-img">
+          <img src="images/sunset1.jpg" alt="Overnight Sunrise Safari" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges">
+            <span class="pkg-badge pkg-badge--black">Great Value</span>
+          </div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div>
+            <div class="amount">$340</div>
+            <div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">2 Days · 1 Night</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Maasai Mara</span>
+          </div>
+          <h3 class="pkg-card-title">Overnight Sunrise Safari</h3>
+          <p class="pkg-card-desc">Arrive afternoon, watch a blazing Mara sunset, wake before dawn for the finest light. Two drives, one unforgettable morning.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">Sunset Drive</span>
+            <span class="pkg-highlight">Dawn Drive</span>
+            <span class="pkg-highlight">Full Board</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+          </div>
+          <div class="pkg-card-actions">
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Overnight+Sunrise+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+            <button class="btn-view" onclick="openModal('sunrise')">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ③ 3-DAY WILDERNESS -->
+      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="480" data-duration="3" data-id="wilderness">
+        <div class="pkg-card-img">
+          <img src="images/adventure.jpeg" alt="3-Day Wilderness Adventure" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges">
+            <span class="pkg-badge pkg-badge--gold">Best Value</span>
+          </div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div>
+            <div class="amount">$480</div>
+            <div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">3 Days · 2 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Maasai Mara</span>
+          </div>
+          <h3 class="pkg-card-title">3-Day Wilderness Adventure</h3>
+          <p class="pkg-card-desc">Two nights of authentic safari camping with guided morning and evening drives. The raw beauty of the Mara without compromise.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">4 Game Drives</span>
+            <span class="pkg-highlight">Nairobi Transfer</span>
+            <span class="pkg-highlight">Full Board</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
+          <div class="pkg-card-actions">
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+3-Day+Wilderness+Adventure." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+            <button class="btn-view" onclick="openModal('wilderness')">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ④ GREAT MIGRATION -->
+      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="540" data-duration="3" data-id="migration">
+        <div class="pkg-card-img">
+          <img src="images/wildbeest.jpg" alt="Great Migration Experience" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges">
+            <span class="pkg-badge pkg-badge--hot">Jul – Oct</span>
+          </div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div>
+            <div class="amount">$540</div>
+            <div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">3 Days · 2 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Mara River Crossings</span>
+          </div>
+          <h3 class="pkg-card-title">Great Migration Experience</h3>
+          <p class="pkg-card-desc">Positioned at the Mara River crossings during the July–October spectacle. Millions of wildebeest — nature's greatest drama.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">River Crossings</span>
+            <span class="pkg-highlight">4 Game Drives</span>
+            <span class="pkg-highlight">Peak Season</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
+          <div class="pkg-card-actions">
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Migration+safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+            <button class="btn-view" onclick="openModal('migration')">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ⑤ CULTURE & WILDLIFE -->
+      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="510" data-duration="3" data-id="cultural">
+        <div class="pkg-card-img">
+          <img src="images/maasaidance.jpg" alt="Maasai Culture and Wildlife Safari" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges">
+            <span class="pkg-badge pkg-badge--black">Culture + Wildlife</span>
+          </div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div>
+            <div class="amount">$510</div>
+            <div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">3 Days · 2 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Mara + Village</span>
+          </div>
+          <h3 class="pkg-card-title">Maasai Culture &amp; Wildlife Safari</h3>
+          <p class="pkg-card-desc">Village visit near Sekenani Gate, warrior traditions, beadwork demonstration — then game drives at dawn and dusk.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">Village Visit</span>
+            <span class="pkg-highlight">4 Drives</span>
+            <span class="pkg-highlight">Authentic</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+          </div>
+          <div class="pkg-card-actions">
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Maasai+Culture+%26+Wildlife+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+            <button class="btn-view" onclick="openModal('cultural')">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ⑥ CLASSIC 4-DAY -->
+      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="620" data-duration="4" data-id="classic">
+        <div class="pkg-card-img">
+          <img src="images/adventure.jpeg" alt="Classic 4-Day Maasai Mara Safari" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges">
+            <span class="pkg-badge pkg-badge--white">★ Most Popular</span>
+          </div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div>
+            <div class="amount">$620</div>
+            <div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">4 Days · 3 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Maasai Mara</span>
+          </div>
+          <h3 class="pkg-card-title">Classic Maasai Mara Safari</h3>
+          <p class="pkg-card-desc">Three full days of game drives, Mara River picnic lunch, Maasai village visit, and 6 drives total across dawn and dusk.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">6 Game Drives</span>
+            <span class="pkg-highlight">Village Visit</span>
+            <span class="pkg-highlight">Nairobi Transfer</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
+          <div class="pkg-card-actions">
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Classic+4-Day+Maasai+Mara+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+            <button class="btn-view" onclick="openModal('classic')">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ⑦ FAMILY SAFARI -->
+      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="580" data-duration="4" data-id="family">
+        <div class="pkg-card-img">
+          <img src="images/gamedrives.jpg" alt="Family Safari Adventure" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges">
+            <span class="pkg-badge pkg-badge--black">Families Welcome</span>
+          </div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div>
+            <div class="amount">$580</div>
+            <div class="per">per adult</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">4 Days · 3 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Maasai Mara</span>
+          </div>
+          <h3 class="pkg-card-title">Family Safari Adventure</h3>
+          <p class="pkg-card-desc">Flexible drive timing, child-friendly guides who make wildlife learning fun, family room accommodation. Memories for life.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">Child-Friendly</span>
+            <span class="pkg-highlight">School Visit</span>
+            <span class="pkg-highlight">Family Rooms</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
+          <div class="pkg-card-actions">
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Family+Safari+Adventure." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+            <button class="btn-view" onclick="openModal('family')">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ⑧ LUXURY PRIVATE -->
+      <article class="pkg-card" data-tier="luxury" data-length="long" data-price="1450" data-duration="5" data-id="luxury">
+        <div class="pkg-card-img">
+          <img src="images/luxurysafari.jpeg" alt="Private Luxury Safari" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges">
+            <span class="pkg-badge pkg-badge--white">Private Luxury</span>
+          </div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div>
+            <div class="amount">$1,450</div>
+            <div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">5 Days · 4 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Maasai Mara</span>
+          </div>
+          <h3 class="pkg-card-title">Private Luxury Safari</h3>
+          <p class="pkg-card-desc">Fully private vehicle, your own schedule, bush dinners under stars, sundowners on the plains, and a night drive in the conservancy.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">Fully Private</span>
+            <span class="pkg-highlight">Bush Dinner</span>
+            <span class="pkg-highlight">Night Drive</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
+          <div class="pkg-card-actions">
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Private+Luxury+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+            <button class="btn-view" onclick="openModal('luxury')">View Details</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ⑨ HONEYMOON -->
+      <article class="pkg-card" data-tier="luxury" data-length="long" data-price="1800" data-duration="6" data-id="honeymoon">
+        <div class="pkg-card-img">
+          <img src="images/hikes.jpg" alt="Honeymoon Mara Escape" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges">
+            <span class="pkg-badge pkg-badge--white">Honeymoon Special</span>
+          </div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div>
+            <div class="amount">$1,800</div>
+            <div class="per">per couple</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">6 Days · 5 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Maasai Mara</span>
+          </div>
+          <h3 class="pkg-card-title">Honeymoon Mara Escape</h3>
+          <p class="pkg-card-desc">Champagne on arrival, candle-lit bush dinners, guided morning walks — just the two of you at the edge of the wild.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">Champagne</span>
+            <span class="pkg-highlight">Bush Dinner</span>
+            <span class="pkg-highlight">Balloon Option</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill l">Angama Mara</span>
+            <span class="pkg-accom-pill l">Sala's Camp</span>
+          </div>
+          <div class="pkg-card-actions">
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Honeymoon+Mara+Escape." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+            <button class="btn-view" onclick="openModal('honeymoon')">View Details</button>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /pkgGrid -->
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="pkg-cta-band">
+  <div class="container">
+    <h2>Need a custom itinerary?</h2>
+    <p>Tell us your dates, group size, and budget. We'll design the perfect package and respond within 24 hours.</p>
+    <div class="pkg-cta-btns">
+      <a class="btn btn-primary" href="index.html#contact">Send an Enquiry</a>
+      <a class="btn btn-ghost" href="https://wa.me/254794928779?text=Hi%2C+I'd+like+to+discuss+a+custom+safari+package." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- ══════════ MODAL BACKDROP ══════════ -->
+<div class="pkg-modal-backdrop" id="modalBackdrop" onclick="closeModal()"></div>
+
+<!-- ══════════ MODAL ══════════ -->
+<div class="pkg-modal" id="pkgModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <button class="pkg-modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+
+  <div class="pkg-modal-hero">
+    <img id="modalImg" src="" alt="">
+    <div class="pkg-modal-hero-overlay"></div>
+    <div class="pkg-modal-hero-content">
+      <span class="pkg-badge pkg-badge--black" id="modalBadge"></span>
+      <h2 id="modalTitle"></h2>
+      <div class="pkg-modal-hero-meta">
+        <span id="modalDuration"></span>
+        <span>·</span>
+        <span id="modalDest"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pkg-modal-tabs">
+    <button class="pkg-modal-tab active" onclick="switchTab('overview',this)">Overview</button>
+    <button class="pkg-modal-tab" onclick="switchTab('itinerary',this)">Itinerary</button>
+    <button class="pkg-modal-tab" onclick="switchTab('booking',this)">Book This Tour</button>
+  </div>
+
+  <div class="pkg-modal-body">
+
+    <!-- OVERVIEW -->
+    <div class="pkg-modal-panel active" id="tab-overview">
+      <div class="pkg-overview-grid" id="modalStats"></div>
+      <p class="pkg-section-title">About this safari</p>
+      <p id="modalAbout" style="font-size:.9rem;color:var(--text-md);line-height:1.75;"></p>
+
+      <p class="pkg-section-title">What's included</p>
+      <div class="pkg-incl-cols" id="modalIncludes"></div>
+
+      <p class="pkg-section-title">Not included</p>
+      <div id="modalExcludes" style="display:flex;flex-direction:column;gap:.3rem;"></div>
+
+      <p class="pkg-section-title">Where you'll stay</p>
+      <div class="pkg-accom-list" id="modalAccom"></div>
+
+      <div style="margin-top:1.5rem;">
+        <a id="modalWaBtn" href="#" target="_blank" rel="noopener" class="btn-book-wa" style="display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.82rem;background:#25d366;color:#fff;font-family:'Lato',sans-serif;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;border-radius:var(--radius-sm);text-decoration:none;transition:background var(--transition);">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- ITINERARY -->
+    <div class="pkg-modal-panel" id="tab-itinerary">
+      <div id="modalItinerary"></div>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div class="pkg-modal-panel" id="tab-booking">
+      <div class="pkg-book-price-band">
+        <div>
+          <div class="from">Starting from</div>
+          <div class="amount" id="bookPrice"></div>
+          <div class="per" id="bookPer"></div>
+        </div>
+        <div class="note">Price varies by accommodation tier &amp; group size. We'll confirm exact rate within 24hrs.</div>
+      </div>
+      <form class="pkg-book-form" id="bookForm">
+        <div class="pkg-form-row">
+          <div class="pkg-form-group">
+            <label>Full Name *</label>
+            <input type="text" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="pkg-form-group">
+            <label>Email Address *</label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="pkg-form-row">
+          <div class="pkg-form-group">
+            <label>Travel Date *</label>
+            <input type="date" name="date" required>
+          </div>
+          <div class="pkg-form-group">
+            <label>Group Size *</label>
+            <select name="group">
+              <option value="">Select...</option>
+              <option>1 person</option>
+              <option>2 people</option>
+              <option>3–4 people</option>
+              <option>5–8 people</option>
+              <option>9+ people</option>
+            </select>
+          </div>
+        </div>
+        <div class="pkg-form-group">
+          <label>Accommodation Preference</label>
+          <select name="accom">
+            <option value="">Select tier...</option>
+            <option>Budget (tented camp)</option>
+            <option>Mid-Range (lodge)</option>
+            <option>Luxury (premium camp/lodge)</option>
+          </select>
+        </div>
+        <div class="pkg-form-group">
+          <label>Special Requests</label>
+          <textarea name="message" placeholder="Dietary needs, special occasions, anything else..."></textarea>
+        </div>
+        <input type="hidden" name="package" id="bookPackageName">
+        <div class="pkg-book-actions">
+          <button type="submit" class="btn-book-submit">Send Booking Enquiry</button>
+          <a id="bookWaBtn" href="#" target="_blank" rel="noopener" class="btn-book-wa">💬 Book via WhatsApp</a>
+        </div>
+        <p class="pkg-book-note">We'll respond within 24 hours. No payment required to enquire.</p>
+      </form>
+    </div>
+
+  </div><!-- /modal-body -->
+
+</div><!-- /modal -->
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner container">
+    <div class="footer-brand">
+      <img src="images/logo.jpeg" alt="SaitotiMaraSafaris logo" class="footer-logo">
+      <h3>SaitotiMara<br>Safaris</h3>
+      <p>Creating unforgettable safari experiences across Africa — where adventure meets comfort and the wild calls your name.</p>
+      <div class="socials">
+        <a href="https://www.facebook.com/olereyia.saitoti" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://www.instagram.com/its_olereyia/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://x.com/its_olereyia" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+      </div>
+    </div>
+    <nav class="footer-links" aria-label="Footer links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Safaris</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-safaris">
+      <h4>Our Packages</h4>
+      <ul>
+        <li><a href="#" onclick="openModal('full-day');return false;">Full Day Game Drive</a></li>
+        <li><a href="#" onclick="openModal('wilderness');return false;">3-Day Wilderness</a></li>
+        <li><a href="#" onclick="openModal('migration');return false;">Great Migration</a></li>
+        <li><a href="#" onclick="openModal('classic');return false;">Classic 4-Day</a></li>
+        <li><a href="#" onclick="openModal('luxury');return false;">Luxury Private</a></li>
+        <li><a href="#" onclick="openModal('honeymoon');return false;">Honeymoon Escape</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Get in Touch</h4>
+      <ul>
+        <li><a href="/cdn-cgi/l/email-protection#442d2a222b0437252d302b302d2925362537252225362d376a272b29">✉ <span class="__cf_email__" data-cfemail="2d44434b426d5e4c4459425944404c5f4c5e4c4b4c5f445e034e4240">[email&#160;protected]</span></a></li>
+        <li><a href="tel:+254794928779">📞 +254 794 928 779</a></li>
+        <li>📍 Sekenani Gate, Maasai Mara, Kenya</li>
+      </ul>
+      <a class="btn btn-footer-cta" href="index.html#contact">Book a Safari</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner container">
+      <p>&copy; <span id="year"></span> SaitotiMaraSafaris. All rights reserved.</p>
+      <p class="footer-tagline">Proudly Maasai — Rooted in the Mara</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ══════ PACKAGE DATA ══════ */
+var PACKAGES = {
+  'full-day': {
+    title:'Full Day Game Drive', badge:'Popular',
+    img:'images/gamedrive.jpeg', duration:'1 Day · No Overnight', dest:'Maasai Mara',
+    price:'$195', per:'per person', waText:'Full+Day+Game+Drive',
+    about:'Dawn to dusk in the Maasai Mara with an expert local guide. You will depart camp at first light and spend the day tracking the Big Five across the savannah, stopping at the Mara River for a picnic lunch while watching hippos and crocodiles. This is the ideal option for travellers with limited time who refuse to compromise on the quality of the experience.',
+    stats:[{label:'Duration',value:'1 Day'},{label:'Game Drives',value:'1 Full Day'},{label:'Meals',value:'Lunch Included'},{label:'Park Fees',value:'Included'}],
+    includes:['All park entry fees','Picnic lunch at Mara River','4WD pop-up roof vehicle','Expert Maasai guide','Bottled water throughout'],
+    excludes:['Accommodation','Breakfast & dinner','Gratuities','Alcoholic beverages'],
+    accom:[{tier:'b',name:'Day trip only',desc:'No overnight stay required'}],
+    itinerary:[
+      {title:'Depart & Enter the Reserve',meals:['B'],body:'Depart camp at 06:00 for an early morning drive through the reserve, targeting big cat activity in the golden hour light. Our Maasai guide will read the landscape and animal tracks to position the vehicle for the best sightings.'},
+      {title:'Midday — Mara River Picnic',meals:['L'],body:'Break at the Mara River for a packed picnic lunch. Watch hippos, crocodiles, and waterbirds from the riverbank. During migration season (Jul–Oct), this is prime crossing territory.'},
+      {title:'Afternoon Drive & Return',meals:[],body:'Resume the game drive at 14:30, covering different terrain for varied sightings — elephants, giraffes, cheetah, and the open plains herbivore herds. Depart for camp or your lodge by 18:30.'}
+    ]
+  },
+  'sunrise': {
+    title:'Overnight Sunrise Safari', badge:'Great Value',
+    img:'images/sunset1.jpg', duration:'2 Days · 1 Night', dest:'Maasai Mara',
+    price:'$340', per:'per person', waText:'Overnight+Sunrise+Safari',
+    about:'Arrive in the afternoon in time for a dramatic Mara sunset drive, then spend the night inside or beside the reserve and wake before dawn for the most extraordinary light of the day. Two game drives bookend an authentic overnight experience — perfectly compact for a weekend escape from Nairobi.',
+    stats:[{label:'Duration',value:'2 Days'},{label:'Game Drives',value:'2 Drives'},{label:'Nights',value:'1 Night'},{label:'Park Fees',value:'Included'}],
+    includes:['All park entry fees','Full board meals','Sunset + dawn game drives','Expert Maasai guide','Bottled water'],
+    excludes:['Return road transfers (bookable separately)','Gratuities','Alcoholic beverages'],
+    accom:[{tier:'b',name:'Sekenani Bush Camp',desc:'Simple tented camp near the gate, shared ablutions'},{tier:'m',name:'Mara Sopa Lodge',desc:'En-suite rooms, swimming pool, savannah views'}],
+    itinerary:[
+      {title:'Arrival & Afternoon Drive',meals:['L','D'],body:'Depart Nairobi at 07:00, arrive by lunch. After check-in, head out for a 15:30 sunset game drive — the light is extraordinary and predator activity peaks in the late afternoon.'},
+      {title:'Dawn Drive & Departure',meals:['B'],body:'Rise at 05:45 for a golden-hour drive — the single best time to be in the Mara. Watch the plains come alive with light and movement. Return for breakfast and check-out, departing for Nairobi by 10:00.'}
+    ]
+  },
+  'wilderness': {
+    title:'3-Day Wilderness Adventure', badge:'Best Value',
+    img:'images/adventure.jpeg', duration:'3 Days · 2 Nights', dest:'Maasai Mara',
+    price:'$480', per:'per person · budget camp', waText:'3-Day+Wilderness+Adventure',
+    about:'Two nights of authentic safari immersion — four game drives covering the reserve at its finest, a Mara River picnic, and enough time to genuinely connect with the landscape. This is the most popular itinerary for first-time Mara visitors who want a complete experience without overstaying.',
+    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Nights',value:'2 Nights'},{label:'Park Fees',value:'Included'}],
+    includes:['Return Nairobi road transfer','All park & conservancy fees','Full board meals','4 game drives (dawn & dusk)','Expert Maasai guide','Bottled water'],
+    excludes:['Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
+    accom:[{tier:'b',name:'Sekenani Bush Camp',desc:'Simple tented camp, shared facilities — authentic feel'},{tier:'m',name:'Mara Sopa Lodge',desc:'En-suite rooms, pool, full board, scenic views'},{tier:'l',name:'Keekorok Lodge',desc:'Historic Mara lodge, full amenities, iconic location'}],
+    itinerary:[
+      {title:'Nairobi → Maasai Mara',meals:['L','D'],body:'Depart Nairobi at 07:00, enjoy a scenic drive through the Rift Valley with a stop at the viewpoint. Arrive in time for lunch. Afternoon game drive at 15:30, followed by dinner and campfire.'},
+      {title:'Full Day in the Mara',meals:['B','L','D'],body:'Early morning drive at 06:00, tracking big cats in the golden hour. Breakfast back at camp. Afternoon drive at 15:30 exploring the Talek area and Mara Triangle. Bush sundowners at dusk, dinner under the stars.'},
+      {title:'Dawn Drive → Nairobi',meals:['B'],body:'Final sunrise game drive at 06:00 — often the best of the trip. Breakfast and checkout by 10:00. Leisurely return to Nairobi, arriving mid-afternoon.'}
+    ]
+  },
+  'migration': {
+    title:'Great Migration Experience', badge:'Jul – Oct Special',
+    img:'images/wildbeest.jpg', duration:'3 Days · 2 Nights', dest:'Mara River Crossings',
+    price:'$540', per:'per person · peak season', waText:'Great+Migration+Safari',
+    about:'Timed precisely for the July–October wildebeest migration season, this package positions you at the Mara River crossings — the most dramatic wildlife spectacle on earth. Over 1.5 million wildebeest, 350,000 zebra, and 18,000 eland make the crossing, pursued by Nile crocodiles and big cats. Our guides know the crossing points intimately.',
+    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Best Months',value:'Jul – Oct'},{label:'Park Fees',value:'Included'}],
+    includes:['All park & conservancy fees (peak rates)','River crossing positioning','Full board meals','4 game drives','Expert Maasai guide','Return Nairobi transfer'],
+    excludes:['Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
+    accom:[{tier:'b',name:'Mara Crossings Camp',desc:'Basic tented, riverside — you can hear the action at night'},{tier:'m',name:'Mara Explorer Camp',desc:'Comfortable en-suite tents, full board, great position'},{tier:'l',name:"Governors' Il Moran",desc:'Legendary riverfront camp, just 10 tents, exclusive access'}],
+    itinerary:[
+      {title:'Nairobi → Mara River Zone',meals:['L','D'],body:'Depart Nairobi early. Arrive by lunch, check in, then head directly to the river zone for an afternoon drive focused on locating crossing herds. Your guide monitors herd movements from local trackers.'},
+      {title:'Full Crossing Day',meals:['B','L','D'],body:'Positioned at the river from 06:00. Wildebeest crossings are unpredictable but your guide will keep you in position. Picnic lunch riverside — often you will not want to leave. Evening drive returning to camp.'},
+      {title:'Final River Drive → Nairobi',meals:['B'],body:'One last dawn drive before checkout. The morning light on the Mara Triangle is extraordinary even after the drama of the previous day. Depart by 10:00 for Nairobi.'}
+    ]
+  },
+  'cultural': {
+    title:'Maasai Culture & Wildlife Safari', badge:'Culture + Wildlife',
+    img:'images/maasaidance.jpg', duration:'3 Days · 2 Nights', dest:'Mara + Village',
+    price:'$510', per:'per person', waText:'Maasai+Culture+Wildlife+Safari',
+    about:'This package combines the full game drive experience with something most operators cannot offer — an authentic guided visit to a Maasai community near Sekenani Gate, led by a member of that community. You will meet elders, learn about warrior traditions, watch beadwork demonstrations, and understand how the Maasai coexist with the wildlife on their land.',
+    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Village Visit',value:'Half Day'},{label:'Park Fees',value:'Included'}],
+    includes:['Maasai village guided visit','All park & conservancy fees','Full board meals','4 game drives','Expert Maasai guide','Beadwork demonstration'],
+    excludes:['Return transfer (bookable add-on)','Gratuities','Alcoholic beverages','Souvenirs'],
+    accom:[{tier:'b',name:'Sekenani Camp',desc:'Simple tented camp close to the village and gate'},{tier:'m',name:'Mara Simba Lodge',desc:'Comfortable lodge with good Mara views, full board'}],
+    itinerary:[
+      {title:'Arrival & Maasai Village Visit',meals:['L','D'],body:'Arrive mid-morning. Before checking in, your guide takes you to the community — meet elders, see the manyatta homesteads, and learn about the warrior lifestyle and the role cattle play in Maasai identity. Afternoon game drive.'},
+      {title:'Full Day Game Drives',meals:['B','L','D'],body:'Dawn drive at 06:00 in the reserve. Breakfast at camp. Afternoon drive at 15:30 through the conservancy areas bordering the reserve — often less crowded with outstanding predator sightings.'},
+      {title:'Dawn Drive → Departure',meals:['B'],body:'Final sunrise game drive at 06:00. Checkout and departure by 10:00.'}
+    ]
+  },
+  'classic': {
+    title:'Classic Maasai Mara Safari', badge:'★ Most Popular',
+    img:'images/adventure.jpeg', duration:'4 Days · 3 Nights', dest:'Maasai Mara',
+    price:'$620', per:'per person · group of 4', waText:'Classic+4-Day+Maasai+Mara+Safari',
+    about:'The definitive Mara experience. Three full days gives you enough time to cover all the key zones — the Mara Triangle, the Talek River area, the open plains, and the Mara River crossings — without feeling rushed. Six drives across dawn and dusk means you will experience the reserve in every kind of light. The most complete introduction to the Mara.',
+    stats:[{label:'Duration',value:'4 Days'},{label:'Game Drives',value:'6 Drives'},{label:'Nights',value:'3 Nights'},{label:'Park Fees',value:'Included'}],
+    includes:['Return Nairobi road transfer','All park & conservancy fees','Full board meals','6 game drives (dawn & dusk)','Maasai guide throughout','Mara River picnic lunch','Village visit included'],
+    excludes:['Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
+    accom:[{tier:'b',name:'Sekenani Bush Camp',desc:'Tented camp, shared facilities, great value'},{tier:'m',name:'Mara Serena Safari Lodge',desc:'Clifftop position, sweeping Mara views, pool'},{tier:'l',name:'Angama Mara',desc:'Suspended above the Great Rift Valley, world-class'}],
+    itinerary:[
+      {title:'Nairobi → Camp Arrival',meals:['L','D'],body:'Depart 07:00. Rift Valley viewpoint stopover. Arrive for lunch. Afternoon briefing, then 15:30 sunset drive. Dinner and campfire.'},
+      {title:'Dawn-to-Dusk Game Drive',meals:['B','L','D'],body:'06:00 golden-hour drive targeting big cats. Breakfast. Afternoon 15:30 drive covering the Mara Triangle and river zone. Picnic lunch at the Mara River.'},
+      {title:'Village Visit + Afternoon Drive',meals:['B','L','D'],body:'Morning visit to a Maasai community near Sekenani — meet elders, learn traditions. Lunch at camp. Afternoon drive through the conservancy bordering the reserve.'},
+      {title:'Final Dawn Drive → Nairobi',meals:['B'],body:'Last sunrise drive at 06:00 — often the trip highlight. Breakfast, checkout by 10:00. Return to Nairobi mid-afternoon.'}
+    ]
+  },
+  'family': {
+    title:'Family Safari Adventure', badge:'Families Welcome',
+    img:'images/gamedrives.jpg', duration:'4 Days · 3 Nights', dest:'Maasai Mara',
+    price:'$580', per:'per adult · children discounted', waText:'Family+Safari+Adventure',
+    about:'Designed for families with children of all ages. Game drive timing is flexible — later morning starts suit younger children. Our family-specialist guides have a gift for making wildlife tracking feel like an adventure, with spoor identification, bird spotting games, and age-appropriate wildlife stories. Children under 6 go free.',
+    stats:[{label:'Duration',value:'4 Days'},{label:'Min Age',value:'All ages'},{label:'Children',value:'U6 Free'},{label:'Park Fees',value:'Included'}],
+    includes:['Child-friendly Maasai guide','All park fees','Full board meals & snacks','Village school visit','Family room accommodation','All road transfers'],
+    excludes:['Gratuities','Alcoholic beverages','Travel insurance'],
+    accom:[{tier:'m',name:'Mara Sopa Lodge',desc:'Family rooms, swimming pool, child-safe environment'},{tier:'l',name:'Ol Seki Hemingways',desc:'Private conservancy, family suites, outstanding wildlife'}],
+    itinerary:[
+      {title:'Arrival & Orientation Drive',meals:['L','D'],body:'Arrive after lunch. Your guide introduces the family to the Mara ecosystem on an afternoon drive — learning tracks, identifying birds, and spotting the first wildlife. Later start suitable for young children.'},
+      {title:'Big Five Morning + Village School',meals:['B','L','D'],body:'Morning drive with a focus on the Big Five. Afternoon visit to a local school near the reserve — children can interact, learn, and draw alongside Kenyan students.'},
+      {title:'Full Day Game Drive',meals:['B','L','D'],body:'All-day game drive with a riverside picnic. Kids spot wildlife on a checklist and earn a "junior ranger" badge from the guide. Evening campfire storytelling.'},
+      {title:'Final Drive → Nairobi',meals:['B'],body:'Morning drive, breakfast, checkout. Return to Nairobi.'}
+    ]
+  },
+  'luxury': {
+    title:'Private Luxury Safari', badge:'Private Luxury',
+    img:'images/luxurysafari.jpeg', duration:'5 Days · 4 Nights', dest:'Maasai Mara',
+    price:'$1,450', per:'per person · 2 guests', waText:'Private+Luxury+Safari',
+    about:'Fully private — your own vehicle, your own guide, your own schedule. No shared drives, no waiting for other guests. The itinerary is shaped entirely around your interests and pace. Includes a bush dinner under the stars, sundowners on a kopje, and a night game drive through the private conservancy bordering the main reserve.',
+    stats:[{label:'Duration',value:'5 Days'},{label:'Game Drives',value:'8 Drives'},{label:'Private',value:'Exclusive Use'},{label:'Night Drive',value:'Included'}],
+    includes:['Fully private vehicle & Maasai guide','All park & conservancy fees','Full board meals','Bush dinner & sundowners','Night game drive (conservancy)','All transfers'],
+    excludes:['International flights','Gratuities','Alcoholic beverages beyond wine at dinner','Hot air balloon (bookable add-on)'],
+    accom:[{tier:'m',name:'Mara Serena Safari Lodge',desc:'Clifftop views, full amenities, excellent food'},{tier:'l',name:'Mahali Mzuri',desc:"Richard Branson's camp — 12 tents, supreme service"},{tier:'l',name:'Angama Mara',desc:'Suspended above the Valley — arguably the world\'s best view'}],
+    itinerary:[
+      {title:'Arrival & Private Welcome Drive',meals:['L','D'],body:'Private vehicle meets you in Nairobi. Arrive for lunch, briefing with your dedicated guide, then a private 15:30 drive to set your rhythms.'},
+      {title:'Golden Hour & Bush Sundowners',meals:['B','L','D'],body:'06:00 dawn drive. Breakfast. Afternoon drive culminating in sundowners on a kopje at golden hour — champagne and the Mara plains to yourselves.'},
+      {title:'Full Mara Triangle Day',meals:['B','L','D'],body:'Private vehicle crosses into the Mara Triangle — less visited, superlative wildlife. Picnic lunch in the bush. Return for dinner.'},
+      {title:'Night Drive + Bush Dinner',meals:['B','L','D'],body:'Afternoon drive into the private conservancy for the night drive — leopard, aardvark, and nocturnal species come alive. Return to an outdoor bush dinner under a canopy of stars.'},
+      {title:'Final Dawn Drive → Nairobi',meals:['B'],body:'Last sunrise drive at your pace. Private transfer back to Nairobi.'}
+    ]
+  },
+  'honeymoon': {
+    title:'Honeymoon Mara Escape', badge:'Honeymoon Special',
+    img:'images/hikes.jpg', duration:'6 Days · 5 Nights', dest:'Maasai Mara',
+    price:'$1,800', per:'per couple total', waText:'Honeymoon+Mara+Escape',
+    about:'Romance at the edge of the wild. A private tent with panoramic views, champagne on arrival, candle-lit bush dinners, guided morning walks, and afternoon drives — just the two of you and the Mara at its most intimate. Every detail is arranged in advance. You arrive and the Mara does the rest.',
+    stats:[{label:'Duration',value:'6 Days'},{label:'For',value:'Couples Only'},{label:'Champagne',value:'On Arrival'},{label:'Bush Dinner',value:'Included'}],
+    includes:['Champagne on arrival','Candle-lit bush dinner for two','Guided morning bush walks','All drives, transfers & park fees','Full board meals','Optional hot air balloon'],
+    excludes:['International flights','Hot air balloon (optional add-on $450pp)','Gratuities','Additional alcohol'],
+    accom:[{tier:'l',name:'Angama Mara',desc:'Private tent, floor-to-ceiling views of the Rift Valley'},{tier:'l',name:"Sala's Camp",desc:'Ultra-remote, exclusive-use, unspoiled Mara south'}],
+    itinerary:[
+      {title:'Arrival — Champagne Welcome',meals:['L','D'],body:'Your guide meets you in Nairobi. Champagne and fresh flowers waiting at the tent on arrival. Evening sundowner drive followed by a private candle-lit dinner in the bush.'},
+      {title:'Dawn Walk + Game Drive',meals:['B','L','D'],body:'Morning bush walk with your guide — an intimate way to read the landscape on foot. Afternoon game drive. Dinner under the stars.'},
+      {title:'Full Mara Day',meals:['B','L','D'],body:'Full day game drive with a picnic breakfast in the bush, a riverside lunch, and an afternoon targeting the big cats in the golden light.'},
+      {title:'Optional Balloon Morning',meals:['B','L','D'],body:'Pre-dawn hot air balloon over the Mara (optional, bookable in advance). Champagne bush breakfast on landing. Afternoon at leisure or game drive.'},
+      {title:'Private Bush Day',meals:['B','L','D'],body:'A slower, private day — morning walk, afternoon picnic at a scenic kopje, evening campfire. No itinerary pressure.'},
+      {title:'Final Drive → Departure',meals:['B'],body:'Sunrise drive at your own pace. Breakfast, pack up, and private transfer back to Nairobi.'}
+    ]
+  }
+};
+
+/* ══════ MODAL FUNCTIONS ══════ */
+function openModal(id) {
+  var pkg = PACKAGES[id];
+  if (!pkg) return;
+
+  document.getElementById('modalImg').src = pkg.img;
+  document.getElementById('modalImg').alt = pkg.title;
+  document.getElementById('modalBadge').textContent = pkg.badge;
+  document.getElementById('modalTitle').textContent = pkg.title;
+  document.getElementById('modalDuration').textContent = pkg.duration;
+  document.getElementById('modalDest').textContent = pkg.dest;
+
+  // Stats
+  var statsHtml = pkg.stats.map(function(s){
+    return '<div class="pkg-overview-stat"><div class="label">'+s.label+'</div><div class="value">'+s.value+'</div></div>';
+  }).join('');
+  document.getElementById('modalStats').innerHTML = statsHtml;
+
+  document.getElementById('modalAbout').textContent = pkg.about;
+
+  // Includes
+  var inclHtml = pkg.includes.map(function(i){
+    return '<div class="pkg-incl-item">'+i+'</div>';
+  }).join('');
+  document.getElementById('modalIncludes').innerHTML = inclHtml;
+
+  // Excludes
+  var exclHtml = pkg.excludes.map(function(e){
+    return '<div class="pkg-excl-item">'+e+'</div>';
+  }).join('');
+  document.getElementById('modalExcludes').innerHTML = exclHtml;
+
+  // Accommodation
+  var tierLabel = {b:'Budget',m:'Mid-Range',l:'Luxury'};
+  var tierClass = {b:'b',m:'m',l:'l'};
+  var accomHtml = pkg.accom.map(function(a){
+    return '<div class="pkg-accom-row"><span class="pkg-accom-pill '+tierClass[a.tier]+'">'+tierLabel[a.tier]+'</span><span class="name">'+a.name+'</span><span class="desc">'+a.desc+'</span></div>';
+  }).join('');
+  document.getElementById('modalAccom').innerHTML = accomHtml;
+
+  // WhatsApp btn
+  var waUrl = 'https://wa.me/254794928779?text=Hi%2C+I%27m+interested+in+the+'+pkg.waText+'+package.';
+  document.getElementById('modalWaBtn').href = waUrl;
+
+  // Itinerary
+  var itinHtml = pkg.itinerary.map(function(day, i){
+    var meals = day.meals.map(function(m){ return '<span class="pkg-meal">'+m+'</span>'; }).join('');
+    return '<div class="pkg-itin-day" onclick="this.classList.toggle(\'open\')">'
+      +'<div class="pkg-itin-hdr">'
+      +'<div class="pkg-itin-num">'+(i+1)+'</div>'
+      +'<div class="pkg-itin-title">'+day.title+'</div>'
+      +'<div class="pkg-itin-meals">'+meals+'</div>'
+      +'<span class="pkg-itin-arrow">▼</span>'
+      +'</div>'
+      +'<div class="pkg-itin-body"><p class="pkg-itin-content">'+day.body+'</p></div>'
+      +'</div>';
+  }).join('');
+  document.getElementById('modalItinerary').innerHTML = itinHtml;
+
+  // Booking panel
+  document.getElementById('bookPrice').textContent = pkg.price;
+  document.getElementById('bookPer').textContent = pkg.per;
+  document.getElementById('bookPackageName').value = pkg.title;
+  document.getElementById('bookWaBtn').href = waUrl;
+
+  // Reset tabs
+  switchTab('overview', document.querySelector('.pkg-modal-tab'));
+
+  // Open
+  document.getElementById('modalBackdrop').classList.add('open');
+  document.getElementById('pkgModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalBackdrop').classList.remove('open');
+  document.getElementById('pkgModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function switchTab(name, el) {
+  document.querySelectorAll('.pkg-modal-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.pkg-modal-panel').forEach(function(p){ p.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  var panel = document.getElementById('tab-'+name);
+  if (panel) panel.classList.add('active');
+}
+
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+
+/* ══════ FILTER ══════ */
+document.querySelectorAll('.pkg-filter-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.pkg-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    filterAndSort();
+  });
+});
+
+document.getElementById('pkgSort').addEventListener('change', filterAndSort);
+
+function filterAndSort() {
+  var f = document.querySelector('.pkg-filter-btn.active').dataset.filter;
+  var s = document.getElementById('pkgSort').value;
+  var cards = Array.from(document.querySelectorAll('#pkgGrid .pkg-card'));
+
+  cards.forEach(function(card){
+    var show = f === 'all' || card.dataset.tier === f || card.dataset.length === f;
+    card.classList.toggle('pkg-card--hidden', !show);
+  });
+
+  // Sort visible cards
+  var grid = document.getElementById('pkgGrid');
+  var visible = cards.filter(function(c){ return !c.classList.contains('pkg-card--hidden'); });
+  visible.sort(function(a,b){
+    if (s === 'price-asc')  return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+    if (s === 'price-desc') return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+    if (s === 'duration-asc') return parseInt(a.dataset.duration) - parseInt(b.dataset.duration);
+    return 0;
+  });
+  visible.forEach(function(c){ grid.appendChild(c); });
+
+  document.getElementById('pkgCount').textContent = 'Showing '+visible.length+' package'+(visible.length!==1?'s':'');
+}
+
+/* ══════ BOOKING FORM ══════ */
+document.getElementById('bookForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = this.name.value;
+  var pkg = document.getElementById('bookPackageName').value;
+  var msg = 'Hi%2C+my+name+is+'+encodeURIComponent(name)+'%2C+I\'d+like+to+book+the+'+encodeURIComponent(pkg)+'+package.';
+  window.open('https://wa.me/254794928779?text='+msg, '_blank');
+});
+
+/* ══════ HAMBURGER ══════ */
+(function(){
+  var btn=document.getElementById('hamburger'),nav=document.getElementById('mobileNav');
+  if(!btn||!nav)return;
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+    nav.toggleAttribute('inert',!open);
+  });
+})();
+
+/* ══════ UTILS ══════ */
