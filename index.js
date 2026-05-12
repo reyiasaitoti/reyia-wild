@@ -8,11 +8,7 @@ const mobileNav        = $('#mobileNav');
 const backToTop        = $('#backToTop');
 const form             = $('#contact-form');
 const formStatus       = $('#form-status');
-const yearEl           = $('#year');
 const testimonialCards = $$('.testimonial-card');
-
-// ── Year ──────────────────────────────────────────────────
-if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ── Mobile Nav ────────────────────────────────────────────
 function openMobileNav() {
@@ -79,18 +75,10 @@ if (successClose) successClose.addEventListener('click', closePopup);
 if (successPopup) successPopup.addEventListener('click', (e) => { if (e.target === successPopup) closePopup(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePopup(); });
 
-// ── EmailJS Contact Form ──────────────────────────────────
-window.addEventListener('load', function () {
+// ── Contact Form — Google Apps Script ────────────────────
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbwu3dWRIcwc7h1wzzavGduaUMiWS6z2z6z6tXiOIAek3MpaXMgRXnZKNCm8E5XCqiM/exec';
 
-  if (typeof emailjs === 'undefined') {
-    console.warn('EmailJS did not load.');
-    return;
-  }
-
-  emailjs.init('ofP57XknSVvsvoCf2');
-
-  if (!form) return;
-
+if (form) {
   const timeInput = document.getElementById('time');
   if (timeInput) timeInput.value = new Date().toLocaleString();
 
@@ -101,7 +89,6 @@ window.addEventListener('load', function () {
     const bot = form.querySelector('input[name="botfield"]');
     if (bot && bot.value) return;
 
-    // Disable button while sending
     const submitBtn = form.querySelector('button[type="submit"]');
     if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
     if (formStatus) {
@@ -109,8 +96,7 @@ window.addEventListener('load', function () {
       formStatus.textContent = 'Sending…';
     }
 
-    // Collect form data
-    const templateParams = {
+    const payload = {
       name:    form.querySelector('[name="name"]').value,
       email:   form.querySelector('[name="email"]').value,
       subject: form.querySelector('[name="subject"]').value || 'Safari Enquiry',
@@ -118,13 +104,14 @@ window.addEventListener('load', function () {
       time:    new Date().toLocaleString()
     };
 
-    // Send both templates simultaneously
-    Promise.all([
-      // Template 1 — notification to you
-      emailjs.send('service_h3qbmx9', 'template_s4l5gle', templateParams),
-      // Template 2 — branded auto-reply to guest
-      emailjs.send('service_h3qbmx9', 'template_zott6n7', templateParams)
-    ])
+    fetch(GAS_URL, {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error('Server error: ' + r.status);
+        return r.json();
+      })
       .then(function () {
         form.reset();
         if (timeInput) timeInput.value = new Date().toLocaleString();
@@ -133,7 +120,7 @@ window.addEventListener('load', function () {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; }
       })
       .catch(function (err) {
-        console.error('EmailJS error:', err);
+        console.error('Form error:', err);
         if (formStatus) {
           formStatus.style.color = 'red';
           formStatus.textContent = 'Something went wrong. Please WhatsApp or email us directly.';
@@ -141,4 +128,4 @@ window.addEventListener('load', function () {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; }
       });
   });
-});
+}
