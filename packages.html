@@ -16,12 +16,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-/* ══════════════════════════════════════════════════════════════
-   packages.html — inline styles
-   All base tokens come from style.css, this file only extends
-══════════════════════════════════════════════════════════════ */
-
-/* ── Page hero ── */
 .pkg-page-hero{position:relative;min-height:54vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--navy);}
 .pkg-hero-bg{position:absolute;inset:0;background-image:url('images/gamedrives.jpg');background-size:cover;background-position:center 30%;opacity:.42;transition:transform 8s ease;}
 .pkg-hero-overlay{position:absolute;inset:0;background:linear-gradient(175deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.8) 100%);}
@@ -33,42 +27,23 @@
 .pkg-hero-stat strong{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#fff;line-height:1;}
 .pkg-hero-stat span{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.45);margin-top:.2rem;}
 
-/* ── Notice ── */
 .pkg-notice{background:#111;border-bottom:1px solid rgba(255,255,255,.08);padding:.6rem 1rem;text-align:center;font-size:.78rem;color:rgba(255,255,255,.5);}
 .pkg-notice strong{color:#fff;}
 .pkg-notice a{color:rgba(255,255,255,.7);text-decoration:underline;}
 
-/* ── Filter + Sort bar: single scrollable row, all screen sizes ── */
-.pkg-toolbar{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:63px;z-index:100;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;white-space:nowrap;}
-.pkg-toolbar::-webkit-scrollbar{display:none;}
-.pkg-toolbar-inner{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem var(--pad);min-width:100%;}
-.pkg-filters{display:inline-flex;align-items:center;gap:.35rem;flex-shrink:0;}
-.pkg-filter-lbl{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0;margin-right:.1rem;}
-.pkg-filter-btn{display:inline-flex;align-items:center;flex-shrink:0;padding:.32rem .85rem;border:1px solid var(--border);border-radius:50px;font-family:'Lato',sans-serif;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--mid);background:transparent;cursor:pointer;transition:all var(--transition);white-space:nowrap;}
-.pkg-filter-btn:hover{border-color:var(--dark);color:var(--dark);}
-.pkg-filter-btn.active{background:var(--black);border-color:var(--black);color:#fff;}
-.pkg-toolbar-sep{width:1px;height:20px;background:var(--border);flex-shrink:0;margin:0 .25rem;}
-.pkg-sort{display:inline-flex;align-items:center;gap:.4rem;flex-shrink:0;}
-.pkg-sort label{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex-shrink:0;}
-.pkg-sort select{font-family:'Lato',sans-serif;font-size:.72rem;font-weight:700;color:var(--dark);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.3rem 1.6rem .3rem .65rem;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E") no-repeat right .5rem center;appearance:none;cursor:pointer;white-space:nowrap;}
-
-/* ── Package listing grid ── */
 .pkg-section{background:var(--off-white);}
 .pkg-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;}
 .pkg-count{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:1.5rem;}
 
-/* ── Package card ── */
-.pkg-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;transition:transform var(--transition),box-shadow var(--transition);cursor:pointer;position:relative;}
+.pkg-card{background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;transition:transform var(--transition),box-shadow var(--transition);position:relative;}
 .pkg-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(0,0,0,.13);}
 .pkg-card.pkg-card--hidden{display:none;}
 
-/* Card image */
 .pkg-card-img{position:relative;overflow:hidden;flex-shrink:0;}
 .pkg-card-img img{width:100%;height:230px;object-fit:cover;display:block;transition:transform .55s ease;}
 .pkg-card:hover .pkg-card-img img{transform:scale(1.07);}
 .pkg-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 50%);}
 
-/* Badges on image */
 .pkg-card-badges{position:absolute;top:.75rem;left:.75rem;display:flex;gap:.4rem;flex-wrap:wrap;z-index:2;}
 .pkg-badge{font-family:'Lato',sans-serif;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.25rem .7rem;border-radius:50px;}
 .pkg-badge--black{background:var(--black);color:#fff;}
@@ -76,13 +51,11 @@
 .pkg-badge--hot{background:#c0392b;color:#fff;}
 .pkg-badge--gold{background:#555;color:#fff;}
 
-/* Price on image bottom-right */
 .pkg-card-price-float{position:absolute;bottom:.8rem;right:.8rem;z-index:2;text-align:right;}
 .pkg-card-price-float .from{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);}
 .pkg-card-price-float .amount{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:#fff;line-height:1;}
 .pkg-card-price-float .per{font-size:.6rem;color:rgba(255,255,255,.6);}
 
-/* Card body */
 .pkg-card-body{padding:1.25rem 1.4rem 0;flex:1;display:flex;flex-direction:column;gap:.5rem;}
 .pkg-card-meta{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
 .pkg-card-dur{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);}
@@ -91,11 +64,9 @@
 .pkg-card-title{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:700;color:var(--navy);line-height:1.22;margin:0;}
 .pkg-card-desc{font-size:.87rem;color:var(--text-md);line-height:1.6;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 
-/* Highlights strip */
 .pkg-card-highlights{display:flex;gap:.5rem;flex-wrap:wrap;padding-top:.1rem;}
 .pkg-highlight{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);background:var(--light);border-radius:50px;padding:.22rem .7rem;}
 
-/* Card footer */
 .pkg-card-footer{padding:.9rem 1.4rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;border-top:1px solid var(--border);margin-top:.85rem;}
 .pkg-card-accom{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;}
 .pkg-accom-pill{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.18rem .55rem;border-radius:50px;white-space:nowrap;}
@@ -109,7 +80,6 @@
 .btn-wa:hover{background:#1dbb5a;transform:translateY(-1px);}
 .btn-wa svg{width:16px;height:16px;fill:#fff;}
 
-/* ── Modal / Drawer ── */
 .pkg-modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:2000;opacity:0;pointer-events:none;transition:opacity .28s ease;}
 .pkg-modal-backdrop.open{opacity:1;pointer-events:auto;}
 .pkg-modal{position:fixed;top:0;right:0;bottom:0;width:min(680px,100vw);background:#fff;z-index:2001;overflow-y:auto;transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.8,.3,1);display:flex;flex-direction:column;}
@@ -117,7 +87,6 @@
 .pkg-modal-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;background:rgba(0,0,0,.08);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--dark);z-index:10;transition:background var(--transition);}
 .pkg-modal-close:hover{background:rgba(0,0,0,.18);}
 
-/* Modal hero */
 .pkg-modal-hero{position:relative;height:280px;flex-shrink:0;}
 .pkg-modal-hero img{width:100%;height:100%;object-fit:cover;display:block;}
 .pkg-modal-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,transparent 55%);}
@@ -127,18 +96,15 @@
 .pkg-modal-hero-meta{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;}
 .pkg-modal-hero-meta span{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.65);}
 
-/* Modal tabs */
 .pkg-modal-tabs{display:flex;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:5;flex-shrink:0;}
 .pkg-modal-tab{flex:1;padding:.75rem .5rem;font-family:'Lato',sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);background:transparent;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all var(--transition);text-align:center;}
 .pkg-modal-tab:hover{color:var(--dark);}
 .pkg-modal-tab.active{color:var(--navy);border-bottom-color:var(--navy);}
 
-/* Modal panels */
 .pkg-modal-body{padding:1.5rem;flex:1;}
 .pkg-modal-panel{display:none;}
 .pkg-modal-panel.active{display:block;}
 
-/* Overview panel */
 .pkg-overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.4rem;}
 .pkg-overview-stat{background:var(--off-white);border-radius:var(--radius-sm);padding:.8rem 1rem;}
 .pkg-overview-stat .label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:.25rem;}
@@ -157,7 +123,6 @@
 .pkg-accom-row .name{font-size:.85rem;font-weight:700;color:var(--navy);flex:1;}
 .pkg-accom-row .desc{font-size:.75rem;color:var(--muted);}
 
-/* Itinerary panel */
 .pkg-itin-day{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.6rem;}
 .pkg-itin-hdr{display:flex;align-items:center;gap:.85rem;padding:.85rem 1rem;cursor:pointer;user-select:none;transition:background var(--transition);}
 .pkg-itin-hdr:hover{background:var(--off-white);}
@@ -171,7 +136,6 @@
 .pkg-itin-day.open .pkg-itin-body{max-height:400px;}
 .pkg-itin-content{padding:.2rem 1rem 1rem 3.45rem;font-size:.85rem;color:var(--text-md);line-height:1.72;}
 
-/* Booking panel */
 .pkg-book-price-band{background:var(--navy);border-radius:var(--radius);padding:1.25rem 1.4rem;margin-bottom:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
 .pkg-book-price-band .from{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);}
 .pkg-book-price-band .amount{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;line-height:1;}
@@ -182,7 +146,7 @@
 .pkg-form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
 .pkg-form-group{display:flex;flex-direction:column;gap:.32rem;}
 .pkg-form-group label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--navy);}
-.pkg-form-group input,.pkg-form-group select,.pkg-form-group textarea{width:100%;padding:.65rem .85rem;border:1.5px solid rgba(0,0,0,.12);border-radius:var(--radius-sm);font-family:'Lato',sans-serif;font-size:.88rem;color:var(--text);background:#fafbfc;transition:border-color var(--transition);}
+.pkg-form-group input,.pkg-form-group select,.pkg-form-group textarea{width:100%;padding:.65rem .85rem;border:1.5px solid rgba(0,0,0,.12);border-radius:var(--radius-sm);font-family:'Lato',sans-serif;font-size:.88rem;color:var(--text);background:#fafbfc;transition:border-color var(--transition);box-sizing:border-box;}
 .pkg-form-group input:focus,.pkg-form-group select:focus,.pkg-form-group textarea:focus{outline:none;border-color:var(--black);background:#fff;}
 .pkg-form-group textarea{resize:vertical;min-height:90px;}
 .pkg-book-actions{display:flex;flex-direction:column;gap:.6rem;margin-top:.4rem;}
@@ -192,35 +156,14 @@
 .btn-book-wa:hover{background:#1dbb5a;}
 .pkg-book-note{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.5;}
 
-/* ── Related packages ── */
-.pkg-related{background:#fff;padding-top:0;}
-.pkg-related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
-.pkg-related-card{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:#fff;transition:all var(--transition);cursor:pointer;text-decoration:none;display:block;}
-.pkg-related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
-.pkg-related-card img{width:100%;height:140px;object-fit:cover;display:block;transition:transform .5s ease;}
-.pkg-related-card:hover img{transform:scale(1.06);}
-.pkg-related-body{padding:.85rem;}
-.pkg-related-dur{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:.2rem;}
-.pkg-related-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--navy);margin:0 0 .4rem;line-height:1.2;}
-.pkg-related-price{font-size:.78rem;color:var(--mid);}
-.pkg-related-price strong{color:var(--navy);}
-
-/* ── CTA band ── */
 .pkg-cta-band{background:var(--navy);padding:3.5rem 0;text-align:center;}
 .pkg-cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.4rem);font-weight:700;color:#fff;margin:0 0 .75rem;letter-spacing:-.02em;}
 .pkg-cta-band h2::after{content:'';display:block;width:48px;height:3px;background:rgba(255,255,255,.25);margin:.65rem auto 0;border-radius:2px;}
 .pkg-cta-band p{color:rgba(255,255,255,.55);font-size:.98rem;max-width:480px;margin:0 auto 1.75rem;line-height:1.7;}
 .pkg-cta-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;}
 
-/* ── Responsive ── */
-@media(min-width:640px){
-  .pkg-grid{grid-template-columns:repeat(2,1fr);}
-  .pkg-related-grid{grid-template-columns:repeat(3,1fr);}
-}
-@media(min-width:1024px){
-  .pkg-grid{grid-template-columns:repeat(3,1fr);}
-  .pkg-related-grid{grid-template-columns:repeat(4,1fr);}
-}
+@media(min-width:640px){.pkg-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:1024px){.pkg-grid{grid-template-columns:repeat(3,1fr);}}
 </style>
 </head>
 <body>
@@ -232,7 +175,7 @@
     <span class="topbar-sep">|</span>
     <a href="tel:+254794928779" class="topbar-item">📞 +254 794 928 779</a>
     <span class="topbar-sep">|</span>
-    <a href="/cdn-cgi/l/email-protection#11787f777e51627078657e65787c706370627077706378623f727e7c" class="topbar-item">✉ <span class="__cf_email__" data-cfemail="7d14131b123d0e1c1409120914101c0f1c0e1c1b1c0f140e531e1210">[email&#160;protected]</span></a>
+    <a href="mailto:info@saitotimarasafaris.com" class="topbar-item">✉ info@saitotimarasafaris.com</a>
   </div>
 </div>
 
@@ -339,18 +282,16 @@
 
     <div class="pkg-grid" id="pkgGrid">
 
-      <!-- ①  FULL DAY -->
+      <!-- WA SVG reusable snippet (inline for each card) -->
+
+      <!-- ① FULL DAY -->
       <article class="pkg-card" data-tier="budget" data-length="short" data-price="195" data-duration="1" data-id="full-day">
         <div class="pkg-card-img">
           <img src="images/gamedrive.jpeg" alt="Full Day Game Drive" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges">
-            <span class="pkg-badge pkg-badge--black">Popular</span>
-          </div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Popular</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div>
-            <div class="amount">$195</div>
-            <div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$200</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -368,14 +309,10 @@
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom">
-            <span class="pkg-accom-pill b">Day trip only</span>
-          </div>
+          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Day trip only</span></div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Full+Day+Game+Drive+package." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
-            </a>
-            <button class="btn-view" onclick="openModal('full-day')">View Details</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Full+Day+Game+Drive+package." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
+            <button class="btn-view" data-pkg="full-day">View Details</button>
           </div>
         </div>
       </article>
@@ -385,13 +322,9 @@
         <div class="pkg-card-img">
           <img src="images/sunset1.jpg" alt="Overnight Sunrise Safari" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges">
-            <span class="pkg-badge pkg-badge--black">Great Value</span>
-          </div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Great Value</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div>
-            <div class="amount">$340</div>
-            <div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$340</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -409,15 +342,10 @@
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom">
-            <span class="pkg-accom-pill b">Budget</span>
-            <span class="pkg-accom-pill m">Mid</span>
-          </div>
+          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span></div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Overnight+Sunrise+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
-            </a>
-            <button class="btn-view" onclick="openModal('sunrise')">View Details</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Overnight+Sunrise+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
+            <button class="btn-view" data-pkg="sunrise">View Details</button>
           </div>
         </div>
       </article>
@@ -427,13 +355,9 @@
         <div class="pkg-card-img">
           <img src="images/adventure.jpeg" alt="3-Day Wilderness Adventure" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges">
-            <span class="pkg-badge pkg-badge--gold">Best Value</span>
-          </div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">Best Value</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div>
-            <div class="amount">$480</div>
-            <div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$480</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -451,16 +375,10 @@
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom">
-            <span class="pkg-accom-pill b">Budget</span>
-            <span class="pkg-accom-pill m">Mid</span>
-            <span class="pkg-accom-pill l">Luxury</span>
-          </div>
+          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+3-Day+Wilderness+Adventure." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
-            </a>
-            <button class="btn-view" onclick="openModal('wilderness')">View Details</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+3-Day+Wilderness+Adventure." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
+            <button class="btn-view" data-pkg="wilderness">View Details</button>
           </div>
         </div>
       </article>
@@ -470,13 +388,9 @@
         <div class="pkg-card-img">
           <img src="images/wildbeest.jpg" alt="Great Migration Experience" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges">
-            <span class="pkg-badge pkg-badge--hot">Jul – Oct</span>
-          </div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--hot">Jul – Oct</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div>
-            <div class="amount">$540</div>
-            <div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$540</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -494,16 +408,10 @@
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom">
-            <span class="pkg-accom-pill b">Budget</span>
-            <span class="pkg-accom-pill m">Mid</span>
-            <span class="pkg-accom-pill l">Luxury</span>
-          </div>
+          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Migration+safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
-            </a>
-            <button class="btn-view" onclick="openModal('migration')">View Details</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Migration+safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
+            <button class="btn-view" data-pkg="migration">View Details</button>
           </div>
         </div>
       </article>
@@ -513,13 +421,9 @@
         <div class="pkg-card-img">
           <img src="images/maasaidance.jpg" alt="Maasai Culture and Wildlife Safari" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges">
-            <span class="pkg-badge pkg-badge--black">Culture + Wildlife</span>
-          </div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Culture + Wildlife</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div>
-            <div class="amount">$510</div>
-            <div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$510</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -537,15 +441,10 @@
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom">
-            <span class="pkg-accom-pill b">Budget</span>
-            <span class="pkg-accom-pill m">Mid</span>
-          </div>
+          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span></div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Maasai+Culture+%26+Wildlife+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
-            </a>
-            <button class="btn-view" onclick="openModal('cultural')">View Details</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Maasai+Culture+%26+Wildlife+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
+            <button class="btn-view" data-pkg="cultural">View Details</button>
           </div>
         </div>
       </article>
@@ -555,13 +454,9 @@
         <div class="pkg-card-img">
           <img src="images/adventure.jpeg" alt="Classic 4-Day Maasai Mara Safari" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges">
-            <span class="pkg-badge pkg-badge--white">★ Most Popular</span>
-          </div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--white">★ Most Popular</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div>
-            <div class="amount">$620</div>
-            <div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$620</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -579,16 +474,10 @@
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom">
-            <span class="pkg-accom-pill b">Budget</span>
-            <span class="pkg-accom-pill m">Mid</span>
-            <span class="pkg-accom-pill l">Luxury</span>
-          </div>
+          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Classic+4-Day+Maasai+Mara+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
-            </a>
-            <button class="btn-view" onclick="openModal('classic')">View Details</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Classic+4-Day+Maasai+Mara+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
+            <button class="btn-view" data-pkg="classic">View Details</button>
           </div>
         </div>
       </article>
@@ -598,13 +487,9 @@
         <div class="pkg-card-img">
           <img src="images/gamedrives.jpg" alt="Family Safari Adventure" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges">
-            <span class="pkg-badge pkg-badge--black">Families Welcome</span>
-          </div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Families Welcome</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div>
-            <div class="amount">$580</div>
-            <div class="per">per adult</div>
+            <div class="from">From</div><div class="amount">$580</div><div class="per">per adult</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -622,15 +507,10 @@
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom">
-            <span class="pkg-accom-pill m">Mid</span>
-            <span class="pkg-accom-pill l">Luxury</span>
-          </div>
+          <div class="pkg-card-accom"><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Family+Safari+Adventure." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
-            </a>
-            <button class="btn-view" onclick="openModal('family')">View Details</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Family+Safari+Adventure." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
+            <button class="btn-view" data-pkg="family">View Details</button>
           </div>
         </div>
       </article>
@@ -640,13 +520,9 @@
         <div class="pkg-card-img">
           <img src="images/luxurysafari.jpeg" alt="Private Luxury Safari" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges">
-            <span class="pkg-badge pkg-badge--white">Private Luxury</span>
-          </div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--white">Private Luxury</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div>
-            <div class="amount">$1,450</div>
-            <div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$1,450</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -664,15 +540,10 @@
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom">
-            <span class="pkg-accom-pill m">Mid</span>
-            <span class="pkg-accom-pill l">Luxury</span>
-          </div>
+          <div class="pkg-card-accom"><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Private+Luxury+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
-            </a>
-            <button class="btn-view" onclick="openModal('luxury')">View Details</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Private+Luxury+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
+            <button class="btn-view" data-pkg="luxury">View Details</button>
           </div>
         </div>
       </article>
@@ -682,13 +553,9 @@
         <div class="pkg-card-img">
           <img src="images/hikes.jpg" alt="Honeymoon Mara Escape" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges">
-            <span class="pkg-badge pkg-badge--white">Honeymoon Special</span>
-          </div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--white">Honeymoon Special</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div>
-            <div class="amount">$1,800</div>
-            <div class="per">per couple</div>
+            <div class="from">From</div><div class="amount">$1,800</div><div class="per">per couple</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -706,15 +573,10 @@
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom">
-            <span class="pkg-accom-pill l">Angama Mara</span>
-            <span class="pkg-accom-pill l">Sala's Camp</span>
-          </div>
+          <div class="pkg-card-accom"><span class="pkg-accom-pill l">Angama Mara</span><span class="pkg-accom-pill l">Sala's Camp</span></div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Honeymoon+Mara+Escape." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
-            </a>
-            <button class="btn-view" onclick="openModal('honeymoon')">View Details</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Honeymoon+Mara+Escape." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
+            <button class="btn-view" data-pkg="honeymoon">View Details</button>
           </div>
         </div>
       </article>
@@ -737,12 +599,12 @@
 
 </main>
 
-<!-- ══════════ MODAL BACKDROP ══════════ -->
-<div class="pkg-modal-backdrop" id="modalBackdrop" onclick="closeModal()"></div>
+<!-- MODAL BACKDROP -->
+<div class="pkg-modal-backdrop" id="modalBackdrop"></div>
 
-<!-- ══════════ MODAL ══════════ -->
+<!-- MODAL -->
 <div class="pkg-modal" id="pkgModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <button class="pkg-modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+  <button class="pkg-modal-close" id="modalCloseBtn" aria-label="Close">✕</button>
 
   <div class="pkg-modal-hero">
     <img id="modalImg" src="" alt="">
@@ -759,9 +621,9 @@
   </div>
 
   <div class="pkg-modal-tabs">
-    <button class="pkg-modal-tab active" onclick="switchTab('overview',this)">Overview</button>
-    <button class="pkg-modal-tab" onclick="switchTab('itinerary',this)">Itinerary</button>
-    <button class="pkg-modal-tab" onclick="switchTab('booking',this)">Book This Tour</button>
+    <button class="pkg-modal-tab active" data-tab="overview">Overview</button>
+    <button class="pkg-modal-tab" data-tab="itinerary">Itinerary</button>
+    <button class="pkg-modal-tab" data-tab="booking">Book This Tour</button>
   </div>
 
   <div class="pkg-modal-body">
@@ -771,20 +633,14 @@
       <div class="pkg-overview-grid" id="modalStats"></div>
       <p class="pkg-section-title">About this safari</p>
       <p id="modalAbout" style="font-size:.9rem;color:var(--text-md);line-height:1.75;"></p>
-
       <p class="pkg-section-title">What's included</p>
       <div class="pkg-incl-cols" id="modalIncludes"></div>
-
       <p class="pkg-section-title">Not included</p>
       <div id="modalExcludes" style="display:flex;flex-direction:column;gap:.3rem;"></div>
-
       <p class="pkg-section-title">Where you'll stay</p>
       <div class="pkg-accom-list" id="modalAccom"></div>
-
       <div style="margin-top:1.5rem;">
-        <a id="modalWaBtn" href="#" target="_blank" rel="noopener" class="btn-book-wa" style="display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.82rem;background:#25d366;color:#fff;font-family:'Lato',sans-serif;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;border-radius:var(--radius-sm);text-decoration:none;transition:background var(--transition);">
-          💬 Chat on WhatsApp
-        </a>
+        <a id="modalWaBtn" href="#" target="_blank" rel="noopener" class="btn-book-wa">💬 Chat on WhatsApp</a>
       </div>
     </div>
 
@@ -803,25 +659,25 @@
         </div>
         <div class="note">Price varies by accommodation tier &amp; group size. We'll confirm exact rate within 24hrs.</div>
       </div>
-      <form class="pkg-book-form" id="bookForm">
+      <div class="pkg-book-form" id="bookForm">
         <div class="pkg-form-row">
           <div class="pkg-form-group">
             <label>Full Name *</label>
-            <input type="text" name="name" placeholder="Your full name" required>
+            <input type="text" id="bookName" placeholder="Your full name">
           </div>
           <div class="pkg-form-group">
             <label>Email Address *</label>
-            <input type="email" name="email" placeholder="your@email.com" required>
+            <input type="email" id="bookEmail" placeholder="your@email.com">
           </div>
         </div>
         <div class="pkg-form-row">
           <div class="pkg-form-group">
             <label>Travel Date *</label>
-            <input type="date" name="date" required>
+            <input type="date" id="bookDate">
           </div>
           <div class="pkg-form-group">
             <label>Group Size *</label>
-            <select name="group">
+            <select id="bookGroup">
               <option value="">Select...</option>
               <option>1 person</option>
               <option>2 people</option>
@@ -833,7 +689,7 @@
         </div>
         <div class="pkg-form-group">
           <label>Accommodation Preference</label>
-          <select name="accom">
+          <select id="bookAccom">
             <option value="">Select tier...</option>
             <option>Budget (tented camp)</option>
             <option>Mid-Range (lodge)</option>
@@ -842,19 +698,17 @@
         </div>
         <div class="pkg-form-group">
           <label>Special Requests</label>
-          <textarea name="message" placeholder="Dietary needs, special occasions, anything else..."></textarea>
+          <textarea id="bookMessage" placeholder="Dietary needs, special occasions, anything else..."></textarea>
         </div>
-        <input type="hidden" name="package" id="bookPackageName">
         <div class="pkg-book-actions">
-          <button type="submit" class="btn-book-submit">Send Booking Enquiry</button>
+          <button type="button" id="bookSubmitBtn" class="btn-book-submit">Send Booking Enquiry</button>
           <a id="bookWaBtn" href="#" target="_blank" rel="noopener" class="btn-book-wa">💬 Book via WhatsApp</a>
         </div>
         <p class="pkg-book-note">We'll respond within 24 hours. No payment required to enquire.</p>
-      </form>
+      </div>
     </div>
 
   </div><!-- /modal-body -->
-
 </div><!-- /modal -->
 
 <!-- FOOTER -->
@@ -884,18 +738,18 @@
     <div class="footer-safaris">
       <h4>Our Packages</h4>
       <ul>
-        <li><a href="#" onclick="openModal('full-day');return false;">Full Day Game Drive</a></li>
-        <li><a href="#" onclick="openModal('wilderness');return false;">3-Day Wilderness</a></li>
-        <li><a href="#" onclick="openModal('migration');return false;">Great Migration</a></li>
-        <li><a href="#" onclick="openModal('classic');return false;">Classic 4-Day</a></li>
-        <li><a href="#" onclick="openModal('luxury');return false;">Luxury Private</a></li>
-        <li><a href="#" onclick="openModal('honeymoon');return false;">Honeymoon Escape</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="full-day">Full Day Game Drive</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="wilderness">3-Day Wilderness</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="migration">Great Migration</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="classic">Classic 4-Day</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="luxury">Luxury Private</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="honeymoon">Honeymoon Escape</a></li>
       </ul>
     </div>
     <div class="footer-contact">
       <h4>Get in Touch</h4>
       <ul>
-        <li><a href="/cdn-cgi/l/email-protection#442d2a222b0437252d302b302d2925362537252225362d376a272b29">✉ <span class="__cf_email__" data-cfemail="2d44434b426d5e4c4459425944404c5f4c5e4c4b4c5f445e034e4240">[email&#160;protected]</span></a></li>
+        <li><a href="mailto:info@saitotimarasafaris.com">✉ info@saitotimarasafaris.com</a></li>
         <li><a href="tel:+254794928779">📞 +254 794 928 779</a></li>
         <li>📍 Sekenani Gate, Maasai Mara, Kenya</li>
       </ul>
@@ -912,13 +766,21 @@
 
 <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-/* ══════ PACKAGE DATA ══════ */
+<script>
+/* ══════════════════════════════════════════════
+   packages.html — main script
+   FIX: All inline onclick removed. Functions
+   attached via addEventListener after DOM ready.
+   openModal / closeModal / switchTab exposed on
+   window for any legacy anchor href="#" calls.
+══════════════════════════════════════════════ */
+
+/* ── PACKAGE DATA ── */
 var PACKAGES = {
   'full-day': {
     title:'Full Day Game Drive', badge:'Popular',
     img:'images/gamedrive.jpeg', duration:'1 Day · No Overnight', dest:'Maasai Mara',
-    price:'$195', per:'per person', waText:'Full+Day+Game+Drive',
+    price:'$200', per:'per person', waText:'Full+Day+Game+Drive',
     about:'Dawn to dusk in the Maasai Mara with an expert local guide. You will depart camp at first light and spend the day tracking the Big Five across the savannah, stopping at the Mara River for a picnic lunch while watching hippos and crocodiles. This is the ideal option for travellers with limited time who refuse to compromise on the quality of the experience.',
     stats:[{label:'Duration',value:'1 Day'},{label:'Game Drives',value:'1 Full Day'},{label:'Meals',value:'Lunch Included'},{label:'Park Fees',value:'Included'}],
     includes:['All park entry fees','Picnic lunch at Mara River','4WD pop-up roof vehicle','Expert Maasai guide','Bottled water throughout'],
@@ -933,7 +795,7 @@ var PACKAGES = {
   'sunrise': {
     title:'Overnight Sunrise Safari', badge:'Great Value',
     img:'images/sunset1.jpg', duration:'2 Days · 1 Night', dest:'Maasai Mara',
-    price:'$340', per:'per person', waText:'Overnight+Sunrise+Safari',
+    price:'$390', per:'per person', waText:'Overnight+Sunrise+Safari',
     about:'Arrive in the afternoon in time for a dramatic Mara sunset drive, then spend the night inside or beside the reserve and wake before dawn for the most extraordinary light of the day. Two game drives bookend an authentic overnight experience — perfectly compact for a weekend escape from Nairobi.',
     stats:[{label:'Duration',value:'2 Days'},{label:'Game Drives',value:'2 Drives'},{label:'Nights',value:'1 Night'},{label:'Park Fees',value:'Included'}],
     includes:['All park entry fees','Full board meals','Sunset + dawn game drives','Expert Maasai guide','Bottled water'],
@@ -1029,7 +891,7 @@ var PACKAGES = {
     stats:[{label:'Duration',value:'5 Days'},{label:'Game Drives',value:'8 Drives'},{label:'Private',value:'Exclusive Use'},{label:'Night Drive',value:'Included'}],
     includes:['Fully private vehicle & Maasai guide','All park & conservancy fees','Full board meals','Bush dinner & sundowners','Night game drive (conservancy)','All transfers'],
     excludes:['International flights','Gratuities','Alcoholic beverages beyond wine at dinner','Hot air balloon (bookable add-on)'],
-    accom:[{tier:'m',name:'Mara Serena Safari Lodge',desc:'Clifftop views, full amenities, excellent food'},{tier:'l',name:'Mahali Mzuri',desc:"Richard Branson's camp — 12 tents, supreme service"},{tier:'l',name:'Angama Mara',desc:'Suspended above the Valley — arguably the world\'s best view'}],
+    accom:[{tier:'m',name:'Mara Serena Safari Lodge',desc:'Clifftop views, full amenities, excellent food'},{tier:'l',name:'Mahali Mzuri',desc:"Richard Branson's camp — 12 tents, supreme service"},{tier:'l',name:'Angama Mara',desc:"Suspended above the Valley — arguably the world's best view"}],
     itinerary:[
       {title:'Arrival & Private Welcome Drive',meals:['L','D'],body:'Private vehicle meets you in Nairobi. Arrive for lunch, briefing with your dedicated guide, then a private 15:30 drive to set your rhythms.'},
       {title:'Golden Hour & Bush Sundowners',meals:['B','L','D'],body:'06:00 dawn drive. Breakfast. Afternoon drive culminating in sundowners on a kopje at golden hour — champagne and the Mara plains to yourselves.'},
@@ -1058,7 +920,7 @@ var PACKAGES = {
   }
 };
 
-/* ══════ MODAL FUNCTIONS ══════ */
+/* ── MODAL FUNCTIONS ── */
 function openModal(id) {
   var pkg = PACKAGES[id];
   if (!pkg) return;
@@ -1071,62 +933,59 @@ function openModal(id) {
   document.getElementById('modalDest').textContent = pkg.dest;
 
   // Stats
-  var statsHtml = pkg.stats.map(function(s){
-    return '<div class="pkg-overview-stat"><div class="label">'+s.label+'</div><div class="value">'+s.value+'</div></div>';
+  document.getElementById('modalStats').innerHTML = pkg.stats.map(function(s) {
+    return '<div class="pkg-overview-stat"><div class="label">' + s.label + '</div><div class="value">' + s.value + '</div></div>';
   }).join('');
-  document.getElementById('modalStats').innerHTML = statsHtml;
 
   document.getElementById('modalAbout').textContent = pkg.about;
 
   // Includes
-  var inclHtml = pkg.includes.map(function(i){
-    return '<div class="pkg-incl-item">'+i+'</div>';
+  document.getElementById('modalIncludes').innerHTML = pkg.includes.map(function(i) {
+    return '<div class="pkg-incl-item">' + i + '</div>';
   }).join('');
-  document.getElementById('modalIncludes').innerHTML = inclHtml;
 
   // Excludes
-  var exclHtml = pkg.excludes.map(function(e){
-    return '<div class="pkg-excl-item">'+e+'</div>';
+  document.getElementById('modalExcludes').innerHTML = pkg.excludes.map(function(e) {
+    return '<div class="pkg-excl-item">' + e + '</div>';
   }).join('');
-  document.getElementById('modalExcludes').innerHTML = exclHtml;
 
   // Accommodation
-  var tierLabel = {b:'Budget',m:'Mid-Range',l:'Luxury'};
-  var tierClass = {b:'b',m:'m',l:'l'};
-  var accomHtml = pkg.accom.map(function(a){
-    return '<div class="pkg-accom-row"><span class="pkg-accom-pill '+tierClass[a.tier]+'">'+tierLabel[a.tier]+'</span><span class="name">'+a.name+'</span><span class="desc">'+a.desc+'</span></div>';
+  var tierLabel = {b:'Budget', m:'Mid-Range', l:'Luxury'};
+  document.getElementById('modalAccom').innerHTML = pkg.accom.map(function(a) {
+    return '<div class="pkg-accom-row">'
+      + '<span class="pkg-accom-pill ' + a.tier + '">' + tierLabel[a.tier] + '</span>'
+      + '<span class="name">' + a.name + '</span>'
+      + '<span class="desc">' + a.desc + '</span>'
+      + '</div>';
   }).join('');
-  document.getElementById('modalAccom').innerHTML = accomHtml;
 
-  // WhatsApp btn
-  var waUrl = 'https://wa.me/254794928779?text=Hi%2C+I%27m+interested+in+the+'+pkg.waText+'+package.';
+  // WA link
+  var waUrl = 'https://wa.me/254794928779?text=Hi%2C+I%27m+interested+in+the+' + pkg.waText + '+package.';
   document.getElementById('modalWaBtn').href = waUrl;
+  document.getElementById('bookWaBtn').href = waUrl;
 
   // Itinerary
-  var itinHtml = pkg.itinerary.map(function(day, i){
-    var meals = day.meals.map(function(m){ return '<span class="pkg-meal">'+m+'</span>'; }).join('');
-    return '<div class="pkg-itin-day" onclick="this.classList.toggle(\'open\')">'
-      +'<div class="pkg-itin-hdr">'
-      +'<div class="pkg-itin-num">'+(i+1)+'</div>'
-      +'<div class="pkg-itin-title">'+day.title+'</div>'
-      +'<div class="pkg-itin-meals">'+meals+'</div>'
-      +'<span class="pkg-itin-arrow">▼</span>'
-      +'</div>'
-      +'<div class="pkg-itin-body"><p class="pkg-itin-content">'+day.body+'</p></div>'
-      +'</div>';
+  document.getElementById('modalItinerary').innerHTML = pkg.itinerary.map(function(day, i) {
+    var meals = day.meals.map(function(m) { return '<span class="pkg-meal">' + m + '</span>'; }).join('');
+    return '<div class="pkg-itin-day">'
+      + '<div class="pkg-itin-hdr">'
+      + '<div class="pkg-itin-num">' + (i + 1) + '</div>'
+      + '<div class="pkg-itin-title">' + day.title + '</div>'
+      + '<div class="pkg-itin-meals">' + meals + '</div>'
+      + '<span class="pkg-itin-arrow">▼</span>'
+      + '</div>'
+      + '<div class="pkg-itin-body"><p class="pkg-itin-content">' + day.body + '</p></div>'
+      + '</div>';
   }).join('');
-  document.getElementById('modalItinerary').innerHTML = itinHtml;
 
   // Booking panel
   document.getElementById('bookPrice').textContent = pkg.price;
   document.getElementById('bookPer').textContent = pkg.per;
-  document.getElementById('bookPackageName').value = pkg.title;
-  document.getElementById('bookWaBtn').href = waUrl;
 
-  // Reset tabs
-  switchTab('overview', document.querySelector('.pkg-modal-tab'));
+  // Reset to overview tab
+  switchTab('overview');
 
-  // Open
+  // Open modal
   document.getElementById('modalBackdrop').classList.add('open');
   document.getElementById('pkgModal').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1138,69 +997,135 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-function switchTab(name, el) {
-  document.querySelectorAll('.pkg-modal-tab').forEach(function(t){ t.classList.remove('active'); });
-  document.querySelectorAll('.pkg-modal-panel').forEach(function(p){ p.classList.remove('active'); });
-  if (el) el.classList.add('active');
-  var panel = document.getElementById('tab-'+name);
-  if (panel) panel.classList.add('active');
+function switchTab(name) {
+  document.querySelectorAll('.pkg-modal-tab').forEach(function(t) {
+    t.classList.toggle('active', t.dataset.tab === name);
+  });
+  document.querySelectorAll('.pkg-modal-panel').forEach(function(p) {
+    p.classList.toggle('active', p.id === 'tab-' + name);
+  });
 }
 
-document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+/* Expose globally for any direct href calls */
+window.openModal  = openModal;
+window.closeModal = closeModal;
+window.switchTab  = switchTab;
 
-/* ══════ FILTER ══════ */
-document.querySelectorAll('.pkg-filter-btn').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    document.querySelectorAll('.pkg-filter-btn').forEach(function(b){ b.classList.remove('active'); });
-    btn.classList.add('active');
-    filterAndSort();
+/* ── EVENT LISTENERS (replaces all inline onclick) ── */
+document.addEventListener('DOMContentLoaded', function() {
+
+  /* "View Details" buttons on cards */
+  document.querySelectorAll('.btn-view[data-pkg]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      openModal(btn.dataset.pkg);
+    });
   });
+
+  /* Footer package links */
+  document.querySelectorAll('.footer-pkg-link[data-pkg]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal(link.dataset.pkg);
+    });
+  });
+
+  /* Modal backdrop click → close */
+  document.getElementById('modalBackdrop').addEventListener('click', closeModal);
+
+  /* Modal close button */
+  document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+
+  /* Modal tabs */
+  document.querySelectorAll('.pkg-modal-tab[data-tab]').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      switchTab(tab.dataset.tab);
+    });
+  });
+
+  /* Itinerary accordion (delegated — content is dynamic) */
+  document.getElementById('modalItinerary').addEventListener('click', function(e) {
+    var hdr = e.target.closest('.pkg-itin-hdr');
+    if (hdr) hdr.closest('.pkg-itin-day').classList.toggle('open');
+  });
+
+  /* Booking form submit → WhatsApp */
+  document.getElementById('bookSubmitBtn').addEventListener('click', function() {
+    var name   = document.getElementById('bookName').value.trim();
+    var pkgEl  = document.getElementById('modalTitle');
+    var pkgName = pkgEl ? pkgEl.textContent : 'a safari package';
+    if (!name) { alert('Please enter your name before sending.'); return; }
+    var msg = 'Hi%2C+my+name+is+' + encodeURIComponent(name) + '%2C+I%27d+like+to+book+the+' + encodeURIComponent(pkgName) + '+package.';
+    window.open('https://wa.me/254794928779?text=' + msg, '_blank');
+  });
+
+  /* Filter buttons */
+  document.querySelectorAll('.pkg-filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.pkg-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      filterAndSort();
+    });
+  });
+
+  /* Sort select */
+  document.getElementById('pkgSort').addEventListener('change', filterAndSort);
+
+  /* Hamburger */
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobileNav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function() {
+      var isOpen = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      mobileNav.toggleAttribute('inert', !isOpen);
+    });
+  }
+
+  /* Footer year */
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* Back to top */
+  var topBtn = document.getElementById('backToTop');
+  if (topBtn) {
+    window.addEventListener('scroll', function() {
+      topBtn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    });
+    topBtn.addEventListener('click', function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  }
 });
 
-document.getElementById('pkgSort').addEventListener('change', filterAndSort);
+/* Escape key closes modal */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
 
+/* ── FILTER & SORT ── */
 function filterAndSort() {
   var f = document.querySelector('.pkg-filter-btn.active').dataset.filter;
   var s = document.getElementById('pkgSort').value;
   var cards = Array.from(document.querySelectorAll('#pkgGrid .pkg-card'));
 
-  cards.forEach(function(card){
+  cards.forEach(function(card) {
     var show = f === 'all' || card.dataset.tier === f || card.dataset.length === f;
     card.classList.toggle('pkg-card--hidden', !show);
   });
 
-  // Sort visible cards
   var grid = document.getElementById('pkgGrid');
-  var visible = cards.filter(function(c){ return !c.classList.contains('pkg-card--hidden'); });
-  visible.sort(function(a,b){
-    if (s === 'price-asc')  return parseInt(a.dataset.price) - parseInt(b.dataset.price);
-    if (s === 'price-desc') return parseInt(b.dataset.price) - parseInt(a.dataset.price);
-    if (s === 'duration-asc') return parseInt(a.dataset.duration) - parseInt(b.dataset.duration);
+  var visible = cards.filter(function(c) { return !c.classList.contains('pkg-card--hidden'); });
+  visible.sort(function(a, b) {
+    if (s === 'price-asc')     return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+    if (s === 'price-desc')    return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+    if (s === 'duration-asc')  return parseInt(a.dataset.duration) - parseInt(b.dataset.duration);
     return 0;
   });
-  visible.forEach(function(c){ grid.appendChild(c); });
+  visible.forEach(function(c) { grid.appendChild(c); });
 
-  document.getElementById('pkgCount').textContent = 'Showing '+visible.length+' package'+(visible.length!==1?'s':'');
+  var count = document.getElementById('pkgCount');
+  if (count) count.textContent = 'Showing ' + visible.length + ' package' + (visible.length !== 1 ? 's' : '');
 }
-
-/* ══════ BOOKING FORM ══════ */
-document.getElementById('bookForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  var name = this.name.value;
-  var pkg = document.getElementById('bookPackageName').value;
-  var msg = 'Hi%2C+my+name+is+'+encodeURIComponent(name)+'%2C+I\'d+like+to+book+the+'+encodeURIComponent(pkg)+'+package.';
-  window.open('https://wa.me/254794928779?text='+msg, '_blank');
-});
-
-/* ══════ HAMBURGER ══════ */
-(function(){
-  var btn=document.getElementById('hamburger'),nav=document.getElementById('mobileNav');
-  if(!btn||!nav)return;
-  btn.addEventListener('click',function(){
-    var open=nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded',open);
-    nav.toggleAttribute('inert',!open);
-  });
-})();
-
-/* ══════ UTILS ══════ */
+</script>
+</body>
+</html>
