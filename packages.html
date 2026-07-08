@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Safari Packages — SaitotiMaraSafaris</title>
-  <meta name="description" content="Browse all Maasai Mara safari packages — day drives, migration specials, luxury and budget options. Local Maasai guides, full board, all park fees included.">
+  <meta name="description" content="Browse all Kenya safari packages — Maasai Mara, Nakuru, Naivasha, Amboseli, Samburu, Tsavo. Local Maasai guides, full board, all park fees included.">
   <link rel="canonical" href="https://saitotimarasafaris.com/packages.html">
   <link rel="icon" href="images/mylogo.jpeg" type="image/jpeg">
   <meta property="og:type" content="website">
@@ -49,7 +49,9 @@
 .pkg-badge--black{background:var(--black);color:#fff;}
 .pkg-badge--white{background:#fff;color:#000;}
 .pkg-badge--hot{background:#c0392b;color:#fff;}
-.pkg-badge--gold{background:#555;color:#fff;}
+.pkg-badge--gold{background:#d4a017;color:#fff;}
+.pkg-badge--green{background:#1a7a5a;color:#fff;}
+.pkg-badge--blue{background:#1a4a7a;color:#fff;}
 
 .pkg-card-price-float{position:absolute;bottom:.8rem;right:.8rem;z-index:2;text-align:right;}
 .pkg-card-price-float .from{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);}
@@ -67,19 +69,23 @@
 .pkg-card-highlights{display:flex;gap:.5rem;flex-wrap:wrap;padding-top:.1rem;}
 .pkg-highlight{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);background:var(--light);border-radius:50px;padding:.22rem .7rem;}
 
-.pkg-card-footer{padding:.9rem 1.4rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;border-top:1px solid var(--border);margin-top:.85rem;}
+.pkg-card-footer{padding:.9rem 1.4rem 1.25rem;display:flex;flex-direction:column;gap:.6rem;border-top:1px solid var(--border);margin-top:.85rem;}
 .pkg-card-accom{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;}
 .pkg-accom-pill{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.18rem .55rem;border-radius:50px;white-space:nowrap;}
 .pkg-accom-pill.b{background:var(--light);color:var(--mid);border:1px solid var(--border);}
 .pkg-accom-pill.m{background:#e6f0ee;color:#1a4040;border:1px solid #bdd4d0;}
 .pkg-accom-pill.l{background:var(--black);color:#fff;}
-.pkg-card-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;}
-.btn-view{display:inline-flex;align-items:center;gap:.35rem;padding:.48rem 1.1rem;background:var(--black);color:#fff;font-family:'Lato',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--transition);white-space:nowrap;text-decoration:none;}
-.btn-view:hover{background:#333;transform:translateY(-1px);}
-.btn-wa{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:#25d366;border-radius:var(--radius-sm);flex-shrink:0;transition:all var(--transition);text-decoration:none;}
-.btn-wa:hover{background:#1dbb5a;transform:translateY(-1px);}
-.btn-wa svg{width:16px;height:16px;fill:#fff;}
 
+.pkg-card-actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;}
+.pkg-card-actions .btn-view{display:inline-flex;align-items:center;gap:.35rem;padding:.48rem 1.1rem;background:var(--black);color:#fff;font-family:'Lato',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--transition);white-space:nowrap;text-decoration:none;}
+.pkg-card-actions .btn-view:hover{background:#333;transform:translateY(-1px);}
+.pkg-card-actions .btn-view-camps{display:inline-flex;align-items:center;gap:.35rem;padding:.48rem 1.1rem;background:#1a7a5a;color:#fff;font-family:'Lato',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--transition);white-space:nowrap;text-decoration:none;}
+.pkg-card-actions .btn-view-camps:hover{background:#0f5a42;transform:translateY(-1px);}
+.pkg-card-actions .btn-wa{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:#25d366;border-radius:var(--radius-sm);flex-shrink:0;transition:all var(--transition);text-decoration:none;}
+.pkg-card-actions .btn-wa:hover{background:#1dbb5a;transform:translateY(-1px);}
+.pkg-card-actions .btn-wa svg{width:16px;height:16px;fill:#fff;}
+
+/* Modal Styles */
 .pkg-modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:2000;opacity:0;pointer-events:none;transition:opacity .28s ease;}
 .pkg-modal-backdrop.open{opacity:1;pointer-events:auto;}
 .pkg-modal{position:fixed;top:0;right:0;bottom:0;width:min(680px,100vw);background:#fff;z-index:2001;overflow-y:auto;transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.8,.3,1);display:flex;flex-direction:column;}
@@ -101,7 +107,7 @@
 .pkg-modal-tab:hover{color:var(--dark);}
 .pkg-modal-tab.active{color:var(--navy);border-bottom-color:var(--navy);}
 
-.pkg-modal-body{padding:1.5rem;flex:1;}
+.pkg-modal-body{padding:1.5rem;flex:1;overflow-y:auto;}
 .pkg-modal-panel{display:none;}
 .pkg-modal-panel.active{display:block;}
 
@@ -110,18 +116,26 @@
 .pkg-overview-stat .label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:.25rem;}
 .pkg-overview-stat .value{font-family:'Lato',sans-serif;font-size:.92rem;font-weight:700;color:var(--navy);}
 
-.pkg-section-title{font-family:'Lato',sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:1.4rem 0 .75rem;padding-bottom:.45rem;border-bottom:1px solid var(--border);}
+.pkg-section-title{font-family:'Lato',sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:1.4rem 0 .75rem;padding-bottom:.45rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
+.pkg-section-title .btn-view-camps{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem 1rem;background:var(--navy);color:#fff;font-family:'Lato',sans-serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;border:none;border-radius:50px;cursor:pointer;transition:all var(--transition);}
+.pkg-section-title .btn-view-camps:hover{background:#1a3a5a;transform:translateY(-1px);}
+
 .pkg-incl-cols{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;}
 .pkg-incl-item{display:flex;align-items:flex-start;gap:.45rem;font-size:.83rem;color:var(--text-md);line-height:1.4;}
 .pkg-incl-item::before{content:'✓';color:var(--black);font-weight:700;font-size:.7rem;flex-shrink:0;margin-top:.15rem;}
 .pkg-excl-item{display:flex;align-items:flex-start;gap:.45rem;font-size:.83rem;color:var(--text-md);line-height:1.4;}
 .pkg-excl-item::before{content:'—';color:var(--muted);font-weight:700;font-size:.7rem;flex-shrink:0;margin-top:.15rem;}
 
+.pkg-accom-note{background:#fff8ec;border:1px solid #f0dfb8;border-radius:var(--radius-sm);padding:.75rem .9rem;font-size:.78rem;color:#6b5730;line-height:1.55;margin-bottom:.85rem;}
+.pkg-accom-note strong{color:#4a3c1f;}
+
 .pkg-accom-list{display:flex;flex-direction:column;gap:.6rem;}
-.pkg-accom-row{display:flex;align-items:center;gap:.7rem;padding:.7rem .9rem;background:var(--off-white);border-radius:var(--radius-sm);}
+.pkg-accom-row{display:flex;align-items:center;gap:.7rem;padding:.7rem .9rem;background:var(--off-white);border-radius:var(--radius-sm);flex-wrap:wrap;}
 .pkg-accom-row .pkg-accom-pill{flex-shrink:0;}
-.pkg-accom-row .name{font-size:.85rem;font-weight:700;color:var(--navy);flex:1;}
-.pkg-accom-row .desc{font-size:.75rem;color:var(--muted);}
+.pkg-accom-row .name{font-size:.85rem;font-weight:700;color:var(--navy);flex:1;min-width:120px;}
+.pkg-accom-row .desc{font-size:.75rem;color:var(--muted);flex:2;min-width:140px;}
+.pkg-accom-row .book-link{font-size:.7rem;font-weight:700;color:#1a7a5a;text-decoration:none;padding:.2rem .6rem;border:1px solid #1a7a5a;border-radius:20px;transition:all var(--transition);white-space:nowrap;}
+.pkg-accom-row .book-link:hover{background:#1a7a5a;color:#fff;}
 
 .pkg-itin-day{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.6rem;}
 .pkg-itin-hdr{display:flex;align-items:center;gap:.85rem;padding:.85rem 1rem;cursor:pointer;user-select:none;transition:background var(--transition);}
@@ -164,6 +178,7 @@
 
 @media(min-width:640px){.pkg-grid{grid-template-columns:repeat(2,1fr);}}
 @media(min-width:1024px){.pkg-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:480px){.pkg-card-actions .btn-view,.pkg-card-actions .btn-view-camps{font-size:.6rem;padding:.35rem .7rem;}}
 </style>
 </head>
 <body>
@@ -227,7 +242,7 @@
 
 <!-- NOTICE -->
 <div class="pkg-notice">
-  <strong>Migration Season Jul–Oct:</strong> Park fees rise to $200/adult/day — all packages quoted fully inclusive. <a href="index.html#contact">Enquire early to secure your dates.</a>
+  <strong>Land-Only Packages:</strong> Prices cover guiding, transport &amp; park fees — accommodation is booked separately (see suggested camps/lodges in each package). <a href="index.html#contact">Need help booking a camp? Ask us.</a>
 </div>
 
 <!-- PAGE HERO -->
@@ -235,13 +250,13 @@
   <div class="pkg-hero-bg" aria-hidden="true"></div>
   <div class="pkg-hero-overlay" aria-hidden="true"></div>
   <div class="pkg-hero-inner">
-    <span class="hero-eyebrow" style="margin-bottom:.9rem;">Maasai Mara, Kenya</span>
-    <h1>Safari Packages</h1>
-    <p>Every safari guided by Maasai born and raised in the Mara. Choose your duration, pick your accommodation tier — we handle everything else.</p>
+    <span class="hero-eyebrow" style="margin-bottom:.9rem;">Explore Kenya's Finest Parks</span>
+    <h1>Kenya Safari Packages</h1>
+    <p>Land-only pricing across Maasai Mara, Nakuru, Naivasha, Amboseli, Samburu &amp; Tsavo. Expert Maasai guides, 4WD vehicles, and all park fees included.</p>
     <div class="pkg-hero-stats">
-      <div class="pkg-hero-stat"><strong>9</strong><span>Packages</span></div>
-      <div class="pkg-hero-stat"><strong>Big 5</strong><span>Guaranteed Sightings</span></div>
-      <div class="pkg-hero-stat"><strong>3 Tiers</strong><span>Budget to Luxury</span></div>
+      <div class="pkg-hero-stat"><strong>12</strong><span>Packages</span></div>
+      <div class="pkg-hero-stat"><strong>6</strong><span>Destinations</span></div>
+      <div class="pkg-hero-stat"><strong>Land-Only</strong><span>Excl. Accommodation</span></div>
       <div class="pkg-hero-stat"><strong>24 hrs</strong><span>Response Time</span></div>
     </div>
   </div>
@@ -252,12 +267,12 @@
   <div style="display:flex;align-items:center;gap:0.4rem;padding:0.6rem 1.25rem;min-width:max-content;">
     <span style="font-family:'Lato',sans-serif;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:#888;white-space:nowrap;margin-right:0.2rem;">Filter:</span>
     <button class="pkg-filter-btn active" data-filter="all">All</button>
-    <button class="pkg-filter-btn" data-filter="budget">Budget</button>
-    <button class="pkg-filter-btn" data-filter="midrange">Mid-Range</button>
-    <button class="pkg-filter-btn" data-filter="luxury">Luxury</button>
-    <button class="pkg-filter-btn" data-filter="short">1–2 Days</button>
-    <button class="pkg-filter-btn" data-filter="medium">3–4 Days</button>
-    <button class="pkg-filter-btn" data-filter="long">5+ Days</button>
+    <button class="pkg-filter-btn" data-filter="mara">Maasai Mara</button>
+    <button class="pkg-filter-btn" data-filter="nakuru">Nakuru/Naivasha</button>
+    <button class="pkg-filter-btn" data-filter="amboseli">Amboseli</button>
+    <button class="pkg-filter-btn" data-filter="samburu">Samburu</button>
+    <button class="pkg-filter-btn" data-filter="tsavo">Tsavo</button>
+    <button class="pkg-filter-btn" data-filter="combination">Combination</button>
     <span style="width:1px;height:18px;background:#dedede;flex-shrink:0;margin:0 0.4rem;"></span>
     <span style="font-family:'Lato',sans-serif;font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#888;white-space:nowrap;">Sort:</span>
     <select id="pkgSort" style="font-family:'Lato',sans-serif;font-size:0.72rem;font-weight:700;color:#2e2e2e;border:1px solid #dedede;border-radius:3px;padding:0.28rem 0.6rem;background:#fff;cursor:pointer;white-space:nowrap;">
@@ -275,86 +290,23 @@
     <header class="section-head">
       <span class="section-tag">What We Offer</span>
       <h2 id="pkg-heading">Kenya Safari Packages</h2>
-      <p>All prices include park fees, expert Maasai guide, 4WD vehicle.</p>
+      <p>Land-only pricing: park fees, expert Maasai guide, 4WD vehicle &amp; game-drive picnics. Accommodation is booked separately — see suggested camps for each package.</p>
     </header>
 
-    <p class="pkg-count" id="pkgCount">Showing 9 packages</p>
+    <p class="pkg-count" id="pkgCount">Showing 12 packages</p>
 
     <div class="pkg-grid" id="pkgGrid">
 
-      <!-- WA SVG reusable snippet (inline for each card) -->
-
-      <!-- ① FULL DAY -->
-      <article class="pkg-card" data-tier="budget" data-length="short" data-price="195" data-duration="1" data-id="full-day">
+      <!-- ============================================================ -->
+      <!-- 1. MARA BIG FIVE SAFARI -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="midrange" data-dest="mara" data-price="350" data-duration="3" data-id="mara-bigfive">
         <div class="pkg-card-img">
-          <img src="images/gamedrive.jpeg" alt="Full Day Game Drive" loading="lazy">
+          <img src="images/gamedrive.jpeg" alt="Mara Big Five Safari" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Popular</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">★ Most Popular</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div><div class="amount">$200</div><div class="per">per person</div>
-          </div>
-        </div>
-        <div class="pkg-card-body">
-          <div class="pkg-card-meta">
-            <span class="pkg-card-dur">1 Day · No overnight</span>
-            <span class="pkg-card-dot"></span>
-            <span class="pkg-card-dest">Maasai Mara</span>
-          </div>
-          <h3 class="pkg-card-title">Full Day Game Drive</h3>
-          <p class="pkg-card-desc">Dawn to dusk in the Mara with expert guides. Picnic lunch at the river, Big Five sightings, and maximum wildlife time.</p>
-          <div class="pkg-card-highlights">
-            <span class="pkg-highlight">Big Five</span>
-            <span class="pkg-highlight">4WD Vehicle</span>
-          </div>
-        </div>
-        <div class="pkg-card-footer">
-          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Day trip only</span></div>
-          <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Full+Day+Game+Drive+package." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- ② OVERNIGHT SUNRISE -->
-      <article class="pkg-card" data-tier="budget" data-length="short" data-price="340" data-duration="2" data-id="sunrise">
-        <div class="pkg-card-img">
-          <img src="images/sunset1.jpg" alt="Overnight Sunrise Safari" loading="lazy">
-          <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Great Value</span></div>
-          <div class="pkg-card-price-float">
-            <div class="from">From</div><div class="amount">$340</div><div class="per">per person</div>
-          </div>
-        </div>
-        <div class="pkg-card-body">
-          <div class="pkg-card-meta">
-            <span class="pkg-card-dur">2 Days · 1 Night</span>
-            <span class="pkg-card-dot"></span>
-            <span class="pkg-card-dest">Maasai Mara</span>
-          </div>
-          <h3 class="pkg-card-title">Overnight Sunrise Safari</h3>
-          <p class="pkg-card-desc">Arrive afternoon, watch a blazing Mara sunset, wake before dawn for the finest light. Two drives, one unforgettable morning.</p>
-          <div class="pkg-card-highlights">
-            <span class="pkg-highlight">Sunset Drive</span>
-            <span class="pkg-highlight">Dawn Drive</span>
-          </div>
-        </div>
-        <div class="pkg-card-footer">
-          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span></div>
-          <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Overnight+Sunrise+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
-            
-          </div>
-        </div>
-      </article>
-
-      <!-- ③ 3-DAY WILDERNESS -->
-      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="480" data-duration="3" data-id="wilderness">
-        <div class="pkg-card-img">
-          <img src="images/adventure.jpeg" alt="3-Day Wilderness Adventure" loading="lazy">
-          <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">Best Value</span></div>
-          <div class="pkg-card-price-float">
-            <div class="from">From</div><div class="amount">$480</div><div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$350</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -363,62 +315,119 @@
             <span class="pkg-card-dot"></span>
             <span class="pkg-card-dest">Maasai Mara</span>
           </div>
-          <h3 class="pkg-card-title">3-Day Wilderness Adventure</h3>
-          <p class="pkg-card-desc">Two nights of authentic safari camping with guided morning and evening drives. The raw beauty of the Mara without compromise.</p>
+          <h3 class="pkg-card-title">Mara Big Five Safari</h3>
+          <p class="pkg-card-desc">Four game drives across the Mara plains. Track lions, leopards, elephants, buffalo, and rhino with our expert Maasai guides.</p>
           <div class="pkg-card-highlights">
-            <span class="pkg-highlight">3 Game Drives</span>
+            <span class="pkg-highlight">Big Five</span>
+            <span class="pkg-highlight">4 Drives</span>
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+3-Day+Wilderness+Adventure." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
-          
+            <button class="btn-view" data-pkg="mara-bigfive">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="mara-bigfive">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Mara+Big+Five+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
           </div>
         </div>
       </article>
 
-      <!-- ④ GREAT MIGRATION -->
-      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="540" data-duration="3" data-id="migration">
+      <!-- ============================================================ -->
+      <!-- 2. GREAT MIGRATION RIVER CROSSING -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="midrange" data-dest="mara" data-price="450" data-duration="4" data-id="mara-migration">
         <div class="pkg-card-img">
-          <img src="images/wildbeest.jpg" alt="Great Migration Experience" loading="lazy">
+          <img src="images/wildbeest.jpg" alt="Great Migration River Crossing" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
           <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--hot">Jul – Oct</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div><div class="amount">$540</div><div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$450</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
           <div class="pkg-card-meta">
-            <span class="pkg-card-dur">3 Days · 2 Nights</span>
+            <span class="pkg-card-dur">4 Days · 3 Nights</span>
             <span class="pkg-card-dot"></span>
-            <span class="pkg-card-dest">Mara River Crossings</span>
+            <span class="pkg-card-dest">Mara River</span>
           </div>
-          <h3 class="pkg-card-title">Great Migration Experience</h3>
-          <p class="pkg-card-desc">Positioned at the Mara River crossings during the July–October spectacle. Millions of wildebeest — nature's greatest drama.</p>
+          <h3 class="pkg-card-title">Great Migration River Crossing</h3>
+          <p class="pkg-card-desc">Positioned at the Mara River during peak migration. Witness the dramatic crossings of wildebeest and zebra.</p>
           <div class="pkg-card-highlights">
             <span class="pkg-highlight">River Crossings</span>
-            <span class="pkg-highlight">3 Game Drives</span>
-            <span class="pkg-highlight">Peak Season</span>
+            <span class="pkg-highlight">5 Drives</span>
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Migration+safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
-          
+            <button class="btn-view" data-pkg="mara-migration">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="mara-migration">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Migration+River+Crossing." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
           </div>
         </div>
       </article>
 
-      <!-- ⑤ CULTURE & WILDLIFE -->
-      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="510" data-duration="3" data-id="cultural">
+      <!-- ============================================================ -->
+      <!-- 3. MARA LUXURY FLY-IN SAFARI -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="luxury" data-dest="mara" data-price="980" data-duration="4" data-id="mara-luxury">
         <div class="pkg-card-img">
-          <img src="images/maasaidance.jpg" alt="Maasai Culture and Wildlife Safari" loading="lazy">
+          <img src="images/luxurysafari.jpeg" alt="Mara Luxury Fly-In Safari" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Culture + Wildlife</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--white">Fly-In</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div><div class="amount">$510</div><div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$980</div><div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">4 Days · 3 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Maasai Mara</span>
+          </div>
+          <h3 class="pkg-card-title">Mara Luxury Fly-In Safari</h3>
+          <p class="pkg-card-desc">Fly from Nairobi to the Mara. Private vehicle, exclusive game drives, bush dinners, and premium service throughout.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">Private Vehicle</span>
+            <span class="pkg-highlight">Fly-In</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill l">Luxury Camps</span>
+          </div>
+          <div class="pkg-card-actions">
+            <button class="btn-view" data-pkg="mara-luxury">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="mara-luxury">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Mara+Luxury+Fly-In+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============================================================ -->
+      <!-- 4. MARA & CULTURE SAFARI -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="midrange" data-dest="mara" data-price="370" data-duration="3" data-id="mara-culture">
+        <div class="pkg-card-img">
+          <img src="images/maasaidance.jpg" alt="Mara & Culture Safari" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Culture</span></div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div><div class="amount">$370</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
@@ -427,149 +436,349 @@
             <span class="pkg-card-dot"></span>
             <span class="pkg-card-dest">Mara + Village</span>
           </div>
-          <h3 class="pkg-card-title">Maasai Culture &amp; Wildlife Safari</h3>
-          <p class="pkg-card-desc">Village visit near Sekenani Gate, warrior traditions, beadwork demonstration — then game drives at dawn and dusk.</p>
+          <h3 class="pkg-card-title">Mara &amp; Culture Safari</h3>
+          <p class="pkg-card-desc">Game drives plus an authentic Maasai village visit. Meet elders, learn traditions, and witness warrior dances.</p>
           <div class="pkg-card-highlights">
             <span class="pkg-highlight">Village Visit</span>
             <span class="pkg-highlight">3 Drives</span>
-            <span class="pkg-highlight">Authentic</span>
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span></div>
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+          </div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Maasai+Culture+%26+Wildlife+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
-        
+            <button class="btn-view" data-pkg="mara-culture">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="mara-culture">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Mara+%26+Culture+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
           </div>
         </div>
       </article>
 
-      <!-- ⑥ CLASSIC 4-DAY -->
-      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="620" data-duration="4" data-id="classic">
+      <!-- ============================================================ -->
+      <!-- 5. LAKE NAKURU & NAIVASHA -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="budget" data-dest="nakuru" data-price="280" data-duration="3" data-id="nakuru-naivasha">
         <div class="pkg-card-img">
-          <img src="images/adventure.jpeg" alt="Classic 4-Day Maasai Mara Safari" loading="lazy">
+          <img src="images/gamedrives.jpg" alt="Lake Nakuru & Naivasha" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--white">★ Most Popular</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--green">Great Value</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div><div class="amount">$620</div><div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$280</div><div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">3 Days · 2 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Nakuru &amp; Naivasha</span>
+          </div>
+          <h3 class="pkg-card-title">Lake Nakuru &amp; Naivasha</h3>
+          <p class="pkg-card-desc">Flamingos at Lake Nakuru, rhino sanctuary, and a boat ride on Lake Naivasha with hippos and birdlife.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">Flamingos</span>
+            <span class="pkg-highlight">Boat Ride</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+          </div>
+          <div class="pkg-card-actions">
+            <button class="btn-view" data-pkg="nakuru-naivasha">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="nakuru-naivasha">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Lake+Nakuru+%26+Naivasha." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============================================================ -->
+      <!-- 6. GREAT RIFT VALLEY LAKES -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="midrange" data-dest="nakuru" data-price="420" data-duration="4" data-id="rift-valley">
+        <div class="pkg-card-img">
+          <img src="images/adventure.jpeg" alt="Great Rift Valley Lakes" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--blue">Scenic</span></div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div><div class="amount">$420</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
           <div class="pkg-card-meta">
             <span class="pkg-card-dur">4 Days · 3 Nights</span>
             <span class="pkg-card-dot"></span>
-            <span class="pkg-card-dest">Maasai Mara</span>
+            <span class="pkg-card-dest">Nakuru · Naivasha · Baringo</span>
           </div>
-          <h3 class="pkg-card-title">Classic Maasai Mara Safari</h3>
-          <p class="pkg-card-desc">Two full days of game drives and one evening and morning game drive, Mara River picnic lunch, Maasai village visit, and 4 drives total across dawn and dusk.</p>
+          <h3 class="pkg-card-title">Great Rift Valley Lakes</h3>
+          <p class="pkg-card-desc">Explore three lakes — Nakuru, Naivasha, and Baringo. Flamingos, pelicans, hippos, and the famous Giraffe Manor nearby.</p>
           <div class="pkg-card-highlights">
-            <span class="pkg-highlight">4 Game Drives</span>
-            <span class="pkg-highlight">Village Visit</span>
+            <span class="pkg-highlight">3 Lakes</span>
+            <span class="pkg-highlight">Boat Safari</span>
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom"><span class="pkg-accom-pill b">Budget</span><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Classic+4-Day+Maasai+Mara+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
-      
+            <button class="btn-view" data-pkg="rift-valley">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="rift-valley">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Rift+Valley+Lakes." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
           </div>
         </div>
       </article>
 
-      <!-- ⑦ FAMILY SAFARI -->
-      <article class="pkg-card" data-tier="midrange" data-length="medium" data-price="580" data-duration="4" data-id="family">
+      <!-- ============================================================ -->
+      <!-- 7. AMBOSELI ELEPHANTS & KILIMANJARO -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="midrange" data-dest="amboseli" data-price="320" data-duration="3" data-id="amboseli-elephants">
         <div class="pkg-card-img">
-          <img src="images/gamedrives.jpg" alt="Family Safari Adventure" loading="lazy">
+          <img src="images/sunset1.jpg" alt="Amboseli Elephants & Kilimanjaro" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Families Welcome</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">★ Scenic</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div><div class="amount">$580</div><div class="per">per adult</div>
+            <div class="from">From</div><div class="amount">$320</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
           <div class="pkg-card-meta">
-            <span class="pkg-card-dur">4 Days · 3 Nights</span>
+            <span class="pkg-card-dur">3 Days · 2 Nights</span>
             <span class="pkg-card-dot"></span>
-            <span class="pkg-card-dest">Maasai Mara</span>
+            <span class="pkg-card-dest">Amboseli</span>
           </div>
-          <h3 class="pkg-card-title">Family Safari Adventure</h3>
-          <p class="pkg-card-desc">Flexible drive timing, child-friendly guides who make wildlife learning fun,Memories for life.</p>
+          <h3 class="pkg-card-title">Amboseli Elephants &amp; Kilimanjaro</h3>
+          <p class="pkg-card-desc">Elephant herds against the backdrop of Mount Kilimanjaro. Game drives, swamp views, and Maasai community visit.</p>
           <div class="pkg-card-highlights">
-            <span class="pkg-highlight">Child-Friendly</span>
-            <span class="pkg-highlight">School Visit</span>
+            <span class="pkg-highlight">Big Tuskers</span>
+            <span class="pkg-highlight">Kili Views</span>
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom"><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Family+Safari+Adventure." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
-      
+            <button class="btn-view" data-pkg="amboseli-elephants">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="amboseli-elephants">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Amboseli+Elephants+%26+Kilimanjaro." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
           </div>
         </div>
       </article>
 
-      <!-- ⑧ LUXURY PRIVATE -->
-      <article class="pkg-card" data-tier="luxury" data-length="long" data-price="1450" data-duration="5" data-id="luxury">
+      <!-- ============================================================ -->
+      <!-- 8. AMBOSELI & TSAVO WEST -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="midrange" data-dest="amboseli" data-price="540" data-duration="5" data-id="amboseli-tsavo">
         <div class="pkg-card-img">
-          <img src="images/luxurysafari.jpeg" alt="Private Luxury Safari" loading="lazy">
+          <img src="images/wildbeest.jpg" alt="Amboseli & Tsavo West" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--white">Private Luxury</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Classic</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div><div class="amount">$1,450</div><div class="per">per person</div>
+            <div class="from">From</div><div class="amount">$540</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
           <div class="pkg-card-meta">
             <span class="pkg-card-dur">5 Days · 4 Nights</span>
             <span class="pkg-card-dot"></span>
-            <span class="pkg-card-dest">Maasai Mara</span>
+            <span class="pkg-card-dest">Amboseli · Tsavo West</span>
           </div>
-          <h3 class="pkg-card-title">Private Luxury Safari</h3>
-          <p class="pkg-card-desc">Fully private vehicle, your own schedule, bush dinners under stars, sundowners on the plains, and a night drive in the conservancy.</p>
+          <h3 class="pkg-card-title">Amboseli &amp; Tsavo West</h3>
+          <p class="pkg-card-desc">Combine the elephant paradise of Amboseli with the volcanic landscapes and Mzima Springs of Tsavo West.</p>
           <div class="pkg-card-highlights">
-            <span class="pkg-highlight">Fully Private</span>
-            <span class="pkg-highlight">Bush Dinner</span>
-            <span class="pkg-highlight">Night Drive</span>
+            <span class="pkg-highlight">Mzima Springs</span>
+            <span class="pkg-highlight">5 Drives</span>
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom"><span class="pkg-accom-pill m">Mid</span><span class="pkg-accom-pill l">Luxury</span></div>
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Private+Luxury+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
-          
+            <button class="btn-view" data-pkg="amboseli-tsavo">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="amboseli-tsavo">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Amboseli+%26+Tsavo+West." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
           </div>
         </div>
       </article>
 
-      <!-- ⑨ HONEYMOON -->
-      <article class="pkg-card" data-tier="luxury" data-length="long" data-price="1800" data-duration="6" data-id="honeymoon">
+      <!-- ============================================================ -->
+      <!-- 9. SAMBURU SPECIAL FIVE SAFARI -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="midrange" data-dest="samburu" data-price="460" data-duration="4" data-id="samburu-special">
         <div class="pkg-card-img">
-          <img src="images/hikes.jpg" alt="Honeymoon Mara Escape" loading="lazy">
+          <img src="images/adventure.jpeg" alt="Samburu Special Five Safari" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--white">Honeymoon Special</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--green">★ Unique</span></div>
           <div class="pkg-card-price-float">
-            <div class="from">From</div><div class="amount">$1,800</div><div class="per">per couple</div>
+            <div class="from">From</div><div class="amount">$460</div><div class="per">per person</div>
           </div>
         </div>
         <div class="pkg-card-body">
           <div class="pkg-card-meta">
-            <span class="pkg-card-dur">6 Days · 5 Nights</span>
+            <span class="pkg-card-dur">4 Days · 3 Nights</span>
             <span class="pkg-card-dot"></span>
-            <span class="pkg-card-dest">Maasai Mara</span>
+            <span class="pkg-card-dest">Samburu</span>
           </div>
-          <h3 class="pkg-card-title">Honeymoon Mara Escape</h3>
-          <p class="pkg-card-desc">Champagne on arrival, candle-lit bush dinners, guided morning walks — just the two of you at the edge of the wild.</p>
+          <h3 class="pkg-card-title">Samburu Special Five Safari</h3>
+          <p class="pkg-card-desc">Home of the 'Special Five' — Grevy's zebra, reticulated giraffe, Somali ostrich, gerenuk, and beisa oryx. A northern Kenya gem.</p>
           <div class="pkg-card-highlights">
-            <span class="pkg-highlight">Champagne</span>
-            <span class="pkg-highlight">Bush Dinner</span>
-            <span class="pkg-highlight">Balloon Option</span>
+            <span class="pkg-highlight">Special Five</span>
+            <span class="pkg-highlight">Ewaso River</span>
           </div>
         </div>
         <div class="pkg-card-footer">
-          <div class="pkg-card-accom"><span class="pkg-accom-pill l">Angama Mara</span><span class="pkg-accom-pill l">Sala's Camp</span></div>
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
           <div class="pkg-card-actions">
-            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Honeymoon+Mara+Escape." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
-          
+            <button class="btn-view" data-pkg="samburu-special">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="samburu-special">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Samburu+Special+Five+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============================================================ -->
+      <!-- 10. TSAVO EAST & WEST EXPLORER -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="budget" data-dest="tsavo" data-price="390" data-duration="4" data-id="tsavo-explorer">
+        <div class="pkg-card-img">
+          <img src="images/gamedrives.jpg" alt="Tsavo East & West Explorer" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--black">Adventure</span></div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div><div class="amount">$390</div><div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">4 Days · 3 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Tsavo East &amp; West</span>
+          </div>
+          <h3 class="pkg-card-title">Tsavo East &amp; West Explorer</h3>
+          <p class="pkg-card-desc">Kenya's largest park — red elephants of Tsavo East, Mzima Springs hippos, and the volcanic landscape of Tsavo West.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">Red Elephants</span>
+            <span class="pkg-highlight">Mzima Springs</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+          </div>
+          <div class="pkg-card-actions">
+            <button class="btn-view" data-pkg="tsavo-explorer">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="tsavo-explorer">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Tsavo+East+%26+West+Explorer." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============================================================ -->
+      <!-- 11. KENYA CLASSIC CIRCUIT -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="midrange" data-dest="combination" data-price="950" data-duration="7" data-id="kenya-classic">
+        <div class="pkg-card-img">
+          <img src="images/luxurysafari.jpeg" alt="Kenya Classic Circuit" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">★ Best Seller</span></div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div><div class="amount">$950</div><div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">7 Days · 6 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Mara · Nakuru · Amboseli</span>
+          </div>
+          <h3 class="pkg-card-title">Kenya Classic Circuit</h3>
+          <p class="pkg-card-desc">The ultimate Kenya introduction — Maasai Mara's big cats, Nakuru's flamingos, and Amboseli's elephants with Kilimanjaro.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">3 Parks</span>
+            <span class="pkg-highlight">12 Drives</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill b">Budget</span>
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
+          <div class="pkg-card-actions">
+            <button class="btn-view" data-pkg="kenya-classic">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="kenya-classic">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Kenya+Classic+Circuit." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============================================================ -->
+      <!-- 12. ULTIMATE KENYA SAFARI -->
+      <!-- ============================================================ -->
+      <article class="pkg-card" data-tier="luxury" data-dest="combination" data-price="1650" data-duration="10" data-id="ultimate-kenya">
+        <div class="pkg-card-img">
+          <img src="images/hikes.jpg" alt="Ultimate Kenya Safari" loading="lazy">
+          <div class="pkg-card-img-overlay"></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--white">Premium</span></div>
+          <div class="pkg-card-price-float">
+            <div class="from">From</div><div class="amount">$1,650</div><div class="per">per person</div>
+          </div>
+        </div>
+        <div class="pkg-card-body">
+          <div class="pkg-card-meta">
+            <span class="pkg-card-dur">10 Days · 9 Nights</span>
+            <span class="pkg-card-dot"></span>
+            <span class="pkg-card-dest">Mara · Nakuru · Amboseli · Samburu · Tsavo</span>
+          </div>
+          <h3 class="pkg-card-title">Ultimate Kenya Safari</h3>
+          <p class="pkg-card-desc">Five parks in one journey — the complete Kenyan safari experience. Private vehicle, expert guides, and premium land services.</p>
+          <div class="pkg-card-highlights">
+            <span class="pkg-highlight">5 Parks</span>
+            <span class="pkg-highlight">Private Vehicle</span>
+          </div>
+        </div>
+        <div class="pkg-card-footer">
+          <div class="pkg-card-accom">
+            <span class="pkg-accom-pill m">Mid</span>
+            <span class="pkg-accom-pill l">Luxury</span>
+          </div>
+          <div class="pkg-card-actions">
+            <button class="btn-view" data-pkg="ultimate-kenya">📋 View Details</button>
+            <button class="btn-view-camps" data-pkg="ultimate-kenya">🏕️ View Camps</button>
+            <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Ultimate+Kenya+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
+            </a>
           </div>
         </div>
       </article>
@@ -582,7 +791,7 @@
 <div class="pkg-cta-band">
   <div class="container">
     <h2>Need a custom itinerary?</h2>
-    <p>Tell us your dates, group size, and budget. We'll design the perfect package and respond within 24 hours.</p>
+    <p>Tell us your dates, group size, and budget. We'll design the perfect land-only package, recommend camps, and respond within 24 hours.</p>
     <div class="pkg-cta-btns">
       <a class="btn btn-primary" href="index.html#contact">Send an Enquiry</a>
       <a class="btn btn-ghost" href="https://wa.me/254794928779?text=Hi%2C+I'd+like+to+discuss+a+custom+safari+package." target="_blank" rel="noopener">💬 WhatsApp Us</a>
@@ -611,6 +820,7 @@
         <span id="modalDest"></span>
       </div>
     </div>
+    <a href="#" id="modalWaBtn" target="_blank" rel="noopener" class="btn-wa" style="position:absolute;top:1rem;right:4rem;" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg></a>
   </div>
 
   <div class="pkg-modal-tabs">
@@ -618,6 +828,86 @@
     <button class="pkg-modal-tab" data-tab="itinerary">Itinerary</button>
     <button class="pkg-modal-tab" data-tab="booking">Book This Tour</button>
   </div>
+
+  <div class="pkg-modal-body">
+
+    <!-- OVERVIEW TAB -->
+    <div class="pkg-modal-panel active" id="tab-overview">
+      <div class="pkg-overview-grid" id="modalStats"></div>
+      <p id="modalAbout" style="font-size:.9rem;line-height:1.7;color:var(--text-md);margin:0 0 .5rem;"></p>
+
+      <h4 class="pkg-section-title">What's Included (Land Services)</h4>
+      <div class="pkg-incl-cols" id="modalIncludes"></div>
+
+      <h4 class="pkg-section-title">What's Not Included</h4>
+      <div id="modalExcludes"></div>
+
+      <h4 class="pkg-section-title">
+        <span>Suggested Camps &amp; Lodges — Book Directly</span>
+        <button class="btn-view-camps" onclick="document.getElementById('modalAccom').scrollIntoView({behavior:'smooth',block:'center'})">
+          🏕️ Jump to Camps
+        </button>
+      </h4>
+      <div class="pkg-accom-note"><strong>Accommodation is not included in this price.</strong> These are camps/lodges we recommend for this itinerary — book your preferred one directly with the property, via booking.com, or ask us and we'll help you arrange it.</div>
+      <div class="pkg-accom-list" id="modalAccom"></div>
+    </div>
+
+    <!-- ITINERARY TAB -->
+    <div class="pkg-modal-panel" id="tab-itinerary">
+      <div id="modalItinerary"></div>
+    </div>
+
+    <!-- BOOKING TAB -->
+    <div class="pkg-modal-panel" id="tab-booking">
+      <div class="pkg-book-price-band">
+        <div>
+          <div class="from">Land-Only Price From</div>
+          <div class="amount" id="bookPrice"></div>
+          <div class="per" id="bookPer"></div>
+        </div>
+        <div class="note">Excludes accommodation. See the Overview tab for suggested camps to book directly.</div>
+      </div>
+
+      <form class="pkg-book-form" onsubmit="return false;">
+        <div class="pkg-form-row">
+          <div class="pkg-form-group">
+            <label for="bookName">Full Name</label>
+            <input type="text" id="bookName" placeholder="Your name">
+          </div>
+          <div class="pkg-form-group">
+            <label for="bookGuests">Number of Guests</label>
+            <input type="number" id="bookGuests" min="1" placeholder="2">
+          </div>
+        </div>
+        <div class="pkg-form-row">
+          <div class="pkg-form-group">
+            <label for="bookDate">Preferred Start Date</label>
+            <input type="date" id="bookDate">
+          </div>
+          <div class="pkg-form-group">
+            <label for="bookAccom">Accommodation Tier</label>
+            <select id="bookAccom">
+              <option value="">Not sure yet — advise me</option>
+              <option value="budget">Budget</option>
+              <option value="midrange">Mid-Range</option>
+              <option value="luxury">Luxury</option>
+            </select>
+          </div>
+        </div>
+        <div class="pkg-form-group">
+          <label for="bookNotes">Notes</label>
+          <textarea id="bookNotes" placeholder="Tell us anything else — e.g. which camp you'd like help booking"></textarea>
+        </div>
+        <div class="pkg-book-actions">
+          <button type="button" class="btn-book-submit" id="bookSubmitBtn">Send Enquiry via WhatsApp</button>
+          <a href="#" id="bookWaBtn" target="_blank" rel="noopener" class="btn-book-wa">💬 Chat With Us on WhatsApp</a>
+        </div>
+        <p class="pkg-book-note">This price covers guiding, transport &amp; park fees only. We'll confirm your accommodation choice and total cost together before you pay anything.</p>
+      </form>
+    </div>
+
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
@@ -646,12 +936,12 @@
     <div class="footer-safaris">
       <h4>Our Packages</h4>
       <ul>
-        <li><a href="#" class="footer-pkg-link" data-pkg="full-day">Full Day Game Drive</a></li>
-        <li><a href="#" class="footer-pkg-link" data-pkg="wilderness">3-Day Wilderness</a></li>
-        <li><a href="#" class="footer-pkg-link" data-pkg="migration">Great Migration</a></li>
-        <li><a href="#" class="footer-pkg-link" data-pkg="classic">Classic 4-Day</a></li>
-        <li><a href="#" class="footer-pkg-link" data-pkg="luxury">Luxury Private</a></li>
-        <li><a href="#" class="footer-pkg-link" data-pkg="honeymoon">Honeymoon Escape</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="mara-bigfive">Mara Big Five</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="mara-migration">Great Migration</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="nakuru-naivasha">Nakuru &amp; Naivasha</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="amboseli-elephants">Amboseli Elephants</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="samburu-special">Samburu Special</a></li>
+        <li><a href="#" class="footer-pkg-link" data-pkg="kenya-classic">Kenya Classic</a></li>
       </ul>
     </div>
     <div class="footer-contact">
@@ -676,160 +966,274 @@
 
 <script>
 /* ══════════════════════════════════════════════
-   packages.html — main script
-   FIX: All inline onclick removed. Functions
-   attached via addEventListener after DOM ready.
-   openModal / closeModal / switchTab exposed on
-   window for any legacy anchor href="#" calls.
+   packages.html — main script (12 packages)
 ══════════════════════════════════════════════ */
 
-/* ── PACKAGE DATA ── */
+/* ── PACKAGE DATA (12 packages) ── */
 var PACKAGES = {
-  'full-day': {
-    title:'Full Day Game Drive', badge:'Popular',
-    img:'images/gamedrive.jpeg', duration:'1 Day · No Overnight', dest:'Maasai Mara',
-    price:'$200', per:'per person', waText:'Full+Day+Game+Drive',
-    about:'Dawn to dusk in the Maasai Mara with an expert local guide. You will depart camp at first light and spend the day tracking the Big Five across the savannah, stopping at the Mara River for a picnic lunch while watching hippos and crocodiles. This is the ideal option for travellers with limited time who refuse to compromise on the quality of the experience.',
-    stats:[{label:'Duration',value:'1 Day'},{label:'Game Drives',value:'1 Full Day'},{label:'Meals',value:'Lunch Included'},{label:'Park Fees',value:'Included'}],
-    includes:['All park entry fees','Picnic lunch at Mara River','4WD pop-up roof vehicle','Expert Maasai guide','Bottled water throughout'],
-    excludes:['Accommodation','Breakfast & dinner','Gratuities','Alcoholic beverages'],
-    accom:[{tier:'b',name:'Day trip only',desc:'No overnight stay required'}],
-    itinerary:[
-      {title:'Depart & Enter the Reserve',meals:['B'],body:'Depart camp at 06:00 for an early morning drive through the reserve, targeting big cat activity in the golden hour light. Our Maasai guide will read the landscape and animal tracks to position the vehicle for the best sightings.'},
-      {title:'Midday — Mara River Picnic',meals:['L'],body:'Break at the Mara River for a packed picnic lunch. Watch hippos, crocodiles, and waterbirds from the riverbank. During migration season (Jul–Oct), this is prime crossing territory.'},
-      {title:'Afternoon Drive & Return',meals:[],body:'Resume the game drive at 14:30, covering different terrain for varied sightings — elephants, giraffes, cheetah, and the open plains herbivore herds. Depart for camp or your lodge by 18:30.'}
-    ]
-  },
-  'sunrise': {
-    title:'Overnight Sunrise Safari', badge:'Great Value',
-    img:'images/sunset1.jpg', duration:'2 Days · 1 Night', dest:'Maasai Mara',
-    price:'$390', per:'per person', waText:'Overnight+Sunrise+Safari',
-    about:'Arrive in the afternoon in time for a dramatic Mara sunset drive, then spend the night inside or beside the reserve and wake before dawn for the most extraordinary light of the day. Two game drives bookend an authentic overnight experience — perfectly compact for a weekend escape from Nairobi.',
-    stats:[{label:'Duration',value:'2 Days'},{label:'Game Drives',value:'2 Drives'},{label:'Nights',value:'1 Night'},{label:'Park Fees',value:'Included'}],
-    includes:['All park entry fees','Full board meals','Sunset + dawn game drives','Expert Maasai guide','Bottled water'],
-    excludes:['Return road transfers (bookable separately)','Gratuities','Alcoholic beverages'],
-    accom:[{tier:'b',name:'Sekenani Bush Camp',desc:'Simple tented camp near the gate, shared ablutions'},{tier:'m',name:'Mara Sopa Lodge',desc:'En-suite rooms, swimming pool, savannah views'}],
-    itinerary:[
-      {title:'Arrival & Afternoon Drive',meals:['L','D'],body:'Depart Nairobi at 07:00, arrive by lunch. After check-in, head out for a 15:30 sunset game drive — the light is extraordinary and predator activity peaks in the late afternoon.'},
-      {title:'Dawn Drive & Departure',meals:['B'],body:'Rise at 05:45 for a golden-hour drive — the single best time to be in the Mara. Watch the plains come alive with light and movement. Return for breakfast and check-out, departing for Nairobi by 10:00.'}
-    ]
-  },
-  'wilderness': {
-    title:'3-Day Wilderness Adventure', badge:'Best Value',
-    img:'images/adventure.jpeg', duration:'3 Days · 2 Nights', dest:'Maasai Mara',
-    price:'$480', per:'per person · budget camp', waText:'3-Day+Wilderness+Adventure',
-    about:'Two nights of authentic safari immersion — four game drives covering the reserve at its finest, a Mara River picnic, and enough time to genuinely connect with the landscape. This is the most popular itinerary for first-time Mara visitors who want a complete experience without overstaying.',
+
+  /* -- MARA -- */
+  'mara-bigfive': {
+    title:'Mara Big Five Safari', badge:'★ Most Popular',
+    img:'images/gamedrive.jpeg', duration:'3 Days · 2 Nights', dest:'Maasai Mara',
+    price:'$350', per:'per person · excl. accommodation', waText:'Mara+Big+Five+Safari',
+    about:'Four game drives across the Maasai Mara plains with expert Maasai guides. Track lions, leopards, elephants, buffalo, and rhino — the iconic Big Five. This land-only package includes all park fees, transport, and expert guiding. Choose your preferred camp from our suggestions below.',
     stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Nights',value:'2 Nights'},{label:'Park Fees',value:'Included'}],
-    includes:['Return Nairobi road transfer','All park & conservancy fees','Full board meals','4 game drives (dawn & dusk)','Expert Maasai guide','Bottled water'],
-    excludes:['Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
-    accom:[{tier:'b',name:'Sekenani Bush Camp',desc:'Simple tented camp, shared facilities — authentic feel'},{tier:'m',name:'Mara Sopa Lodge',desc:'En-suite rooms, pool, full board, scenic views'},{tier:'l',name:'Keekorok Lodge',desc:'Historic Mara lodge, full amenities, iconic location'}],
+    includes:['All park entry fees','4 game drives (dawn & dusk)','4WD pop-up roof vehicle','Expert Maasai guide','Bottled water','Mara River picnic lunch'],
+    excludes:['Accommodation — book directly (see suggested camps)','Breakfast & dinner (provided by your camp)','Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
+    accom:[
+      {tier:'b',name:'Sekenani Bush Camp',desc:'Simple tented camp near the gate, shared facilities',bookUrl:'https://www.booking.com/searchresults.html?ss=Sekenani+Bush+Camp'},
+      {tier:'m',name:'Mara Sopa Lodge',desc:'En-suite rooms, swimming pool, savannah views',bookUrl:'https://www.booking.com/hotel/ke/mara-sopa-lodge.en.html'},
+      {tier:'l',name:'Keekorok Lodge',desc:'Historic Mara lodge, full amenities, iconic location',bookUrl:'https://www.booking.com/hotel/ke/keekorok-lodge.en.html'}
+    ],
     itinerary:[
-      {title:'Nairobi → Maasai Mara',meals:['L','D'],body:'Depart Nairobi at 07:00, enjoy a scenic drive through the Rift Valley with a stop at the viewpoint. Arrive in time for lunch. Afternoon game drive at 15:30, followed by dinner and campfire.'},
-      {title:'Full Day in the Mara',meals:['B','L','D'],body:'Early morning drive at 06:00, tracking big cats in the golden hour. Breakfast back at camp. Afternoon drive at 15:30 exploring the Talek area and Mara Triangle. Bush sundowners at dusk, dinner under the stars.'},
-      {title:'Dawn Drive → Nairobi',meals:['B'],body:'Final sunrise game drive at 06:00 — often the best of the trip. Breakfast and checkout by 10:00. Leisurely return to Nairobi, arriving mid-afternoon.'}
+      {title:'Nairobi → Maasai Mara',meals:[],body:'Depart Nairobi at 07:00, scenic drive through the Rift Valley. Arrive, check into your own booked camp, then afternoon game drive at 15:30.'},
+      {title:'Full Day Game Drive',meals:['L'],body:'Dawn drive at 06:00 tracking big cats. Breakfast at camp. Afternoon drive at 15:30 exploring the Mara Triangle and river zone. Picnic lunch included.'},
+      {title:'Final Dawn Drive → Nairobi',meals:[],body:'Sunrise game drive at 06:00 — often the best of the trip. Breakfast at camp, checkout by 10:00. Return to Nairobi mid-afternoon.'}
     ]
   },
-  'migration': {
-    title:'Great Migration Experience', badge:'Jul – Oct Special',
-    img:'images/wildbeest.jpg', duration:'3 Days · 2 Nights', dest:'Mara River Crossings',
-    price:'$540', per:'per person · peak season', waText:'Great+Migration+Safari',
-    about:'Timed precisely for the July–October wildebeest migration season, this package positions you at the Mara River crossings — the most dramatic wildlife spectacle on earth. Over 1.5 million wildebeest, 350,000 zebra, and 18,000 eland make the crossing, pursued by Nile crocodiles and big cats. Our guides know the crossing points intimately.',
-    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Best Months',value:'Jul – Oct'},{label:'Park Fees',value:'Included'}],
-    includes:['All park & conservancy fees (peak rates)','River crossing positioning','Full board meals','4 game drives','Expert Maasai guide','Return Nairobi transfer'],
-    excludes:['Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
-    accom:[{tier:'b',name:'Mara Crossings Camp',desc:'Basic tented, riverside — you can hear the action at night'},{tier:'m',name:'Mara Explorer Camp',desc:'Comfortable en-suite tents, full board, great position'},{tier:'l',name:"Governors' Il Moran",desc:'Legendary riverfront camp, just 10 tents, exclusive access'}],
+
+  'mara-migration': {
+    title:'Great Migration River Crossing', badge:'Jul – Oct',
+    img:'images/wildbeest.jpg', duration:'4 Days · 3 Nights', dest:'Mara River',
+    price:'$450', per:'per person · excl. accommodation', waText:'Great+Migration+River+Crossing',
+    about:'Positioned at the Mara River during peak migration season (July–October). Witness the dramatic crossings of wildebeest and zebra — nature\'s greatest spectacle. Our guides know the best crossing points and monitor herd movements closely.',
+    stats:[{label:'Duration',value:'4 Days'},{label:'Game Drives',value:'5 Drives'},{label:'Best Months',value:'Jul – Oct'},{label:'Park Fees',value:'Included'}],
+    includes:['All park & conservancy fees','River crossing positioning','5 game drives','Expert Maasai guide','Return Nairobi transfer','Picnic lunch on crossing days'],
+    excludes:['Accommodation — book directly (see suggested camps)','Breakfast & dinner (provided by your camp)','Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
+    accom:[
+      {tier:'b',name:'Mara Crossings Camp',desc:'Basic tented camp, riverside — you can hear the action at night',bookUrl:'https://www.booking.com/searchresults.html?ss=Mara+Crossings+Camp'},
+      {tier:'m',name:'Mara Explorer Camp',desc:'Comfortable en-suite tents, great river views',bookUrl:'https://www.booking.com/searchresults.html?ss=Mara+Explorer+Camp'},
+      {tier:'l',name:"Governors' Il Moran",desc:'Legendary riverfront camp, 10 exclusive tents',bookUrl:'https://www.governorscamp.com/il-moran-camp/'}
+    ],
     itinerary:[
-      {title:'Nairobi → Mara River Zone',meals:['L','D'],body:'Depart Nairobi early. Arrive by lunch, check in, then head directly to the river zone for an afternoon drive focused on locating crossing herds. Your guide monitors herd movements from local trackers.'},
-      {title:'Full Crossing Day',meals:['B','L','D'],body:'Positioned at the river from 06:00. Wildebeest crossings are unpredictable but your guide will keep you in position. Picnic lunch riverside — often you will not want to leave. Evening drive returning to camp.'},
-      {title:'Final River Drive → Nairobi',meals:['B'],body:'One last dawn drive before checkout. The morning light on the Mara Triangle is extraordinary even after the drama of the previous day. Depart by 10:00 for Nairobi.'}
+      {title:'Nairobi → Mara River Zone',meals:[],body:'Depart Nairobi early. Arrive by lunch, check into your camp, then afternoon river-focused drive.'},
+      {title:'Full Crossing Day',meals:['L'],body:'Positioned at the river from 06:00. Monitor crossing herds. Picnic lunch riverside. Evening drive back to camp.'},
+      {title:'Second Crossing Day',meals:['L'],body:'Another full day at the river. Crossings are unpredictable — your guide keeps you in position. Bush picnic lunch.'},
+      {title:'Final River Drive → Nairobi',meals:[],body:'One last dawn drive. Checkout by 10:00, return to Nairobi.'}
     ]
   },
-  'cultural': {
-    title:'Maasai Culture & Wildlife Safari', badge:'Culture + Wildlife',
+
+  'mara-luxury': {
+    title:'Mara Luxury Fly-In Safari', badge:'Fly-In',
+    img:'images/luxurysafari.jpeg', duration:'4 Days · 3 Nights', dest:'Maasai Mara',
+    price:'$980', per:'per person · excl. accommodation', waText:'Mara+Luxury+Fly-In+Safari',
+    about:'Fly from Nairobi to the Mara in under an hour. Private vehicle, exclusive game drives, bush dinners, and premium service throughout. This land-only package includes the flight, private guiding, and park fees — choose a luxury camp from our suggestions.',
+    stats:[{label:'Duration',value:'4 Days'},{label:'Nights',value:'3 Nights'},{label:'Private',value:'Exclusive Use'},{label:'Fly-In',value:'Included'}],
+    includes:['Nairobi → Mara return flights','All park & conservancy fees','Private 4WD vehicle','Private Maasai guide','Bush dinner & sundowners','All transfers'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages','Travel insurance'],
+    accom:[
+      {tier:'l',name:'Angama Mara',desc:'Suspended above the Great Rift Valley, world-class views',bookUrl:'https://angama.com/'},
+      {tier:'l',name:'Mahali Mzuri',desc:"Richard Branson's camp — 12 tents, supreme service",bookUrl:'https://www.virginlimitededition.com/africa/kenya/mahali-mzuri/'}
+    ],
+    itinerary:[
+      {title:'Nairobi → Mara (Fly-In)',meals:[],body:'Morning flight from Wilson Airport to Mara. Private welcome and afternoon game drive.'},
+      {title:'Private Game Drives',meals:['L'],body:'Full day in a private vehicle. Bush picnic and sundowners on a kopje.'},
+      {title:'Full Day Safari',meals:['D'],body:'Game drives across the reserve. Bush dinner under the stars.'},
+      {title:'Final Drive → Fly-Out',meals:[],body:'Morning drive, fly back to Nairobi.'}
+    ]
+  },
+
+  'mara-culture': {
+    title:'Mara & Culture Safari', badge:'Culture',
     img:'images/maasaidance.jpg', duration:'3 Days · 2 Nights', dest:'Mara + Village',
-    price:'$510', per:'per person', waText:'Maasai+Culture+Wildlife+Safari',
-    about:'This package combines the full game drive experience with something most operators cannot offer — an authentic guided visit to a Maasai community near Sekenani Gate, led by a member of that community. You will meet elders, learn about warrior traditions, watch beadwork demonstrations, and understand how the Maasai coexist with the wildlife on their land.',
-    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Village Visit',value:'Half Day'},{label:'Park Fees',value:'Included'}],
-    includes:['Maasai village guided visit','All park & conservancy fees','Full board meals','4 game drives','Expert Maasai guide','Beadwork demonstration'],
-    excludes:['Return transfer (bookable add-on)','Gratuities','Alcoholic beverages','Souvenirs'],
-    accom:[{tier:'b',name:'Sekenani Camp',desc:'Simple tented camp close to the village and gate'},{tier:'m',name:'Mara Simba Lodge',desc:'Comfortable lodge with good Mara views, full board'}],
+    price:'$370', per:'per person · excl. accommodation', waText:'Mara+%26+Culture+Safari',
+    about:'Game drives combined with an authentic Maasai village visit near Sekenani Gate. Meet elders, learn warrior traditions, witness beadwork demonstrations, and understand how the Maasai coexist with wildlife.',
+    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'3 Drives'},{label:'Village Visit',value:'Half Day'},{label:'Park Fees',value:'Included'}],
+    includes:['Maasai village guided visit','All park & conservancy fees','3 game drives','Expert Maasai guide','Beadwork demonstration'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
+    accom:[
+      {tier:'b',name:'Sekenani Camp',desc:'Simple tented camp close to the village and gate',bookUrl:'https://www.booking.com/searchresults.html?ss=Sekenani+Camp'},
+      {tier:'m',name:'Mara Simba Lodge',desc:'Comfortable lodge with good Mara views',bookUrl:'https://www.booking.com/hotel/ke/mara-simba-lodge.en.html'}
+    ],
     itinerary:[
-      {title:'Arrival & Maasai Village Visit',meals:['L','D'],body:'Arrive mid-morning. Before checking in, your guide takes you to the community — meet elders, see the manyatta homesteads, and learn about the warrior lifestyle and the role cattle play in Maasai identity. Afternoon game drive.'},
-      {title:'Full Day Game Drives',meals:['B','L','D'],body:'Dawn drive at 06:00 in the reserve. Breakfast at camp. Afternoon drive at 15:30 through the conservancy areas bordering the reserve — often less crowded with outstanding predator sightings.'},
-      {title:'Dawn Drive → Departure',meals:['B'],body:'Final sunrise game drive at 06:00. Checkout and departure by 10:00.'}
+      {title:'Arrival & Village Visit',meals:[],body:'Arrive, visit Maasai community. Afternoon game drive.'},
+      {title:'Full Day Game Drive',meals:['L'],body:'Dawn and afternoon drives. Picnic lunch.'},
+      {title:'Final Drive → Nairobi',meals:[],body:'Sunrise drive, checkout, return.'}
     ]
   },
-  'classic': {
-    title:'Classic Maasai Mara Safari', badge:'★ Most Popular',
-    img:'images/adventure.jpeg', duration:'4 Days · 3 Nights', dest:'Maasai Mara',
-    price:'$620', per:'per person · group of 4', waText:'Classic+4-Day+Maasai+Mara+Safari',
-    about:'The definitive Mara experience. Three full days gives you enough time to cover all the key zones — the Mara Triangle, the Talek River area, the open plains, and the Mara River crossings — without feeling rushed. Six drives across dawn and dusk means you will experience the reserve in every kind of light. The most complete introduction to the Mara.',
-    stats:[{label:'Duration',value:'4 Days'},{label:'Game Drives',value:'6 Drives'},{label:'Nights',value:'3 Nights'},{label:'Park Fees',value:'Included'}],
-    includes:['Return Nairobi road transfer','All park & conservancy fees','Full board meals','6 game drives (dawn & dusk)','Maasai guide throughout','Mara River picnic lunch','Village visit included'],
-    excludes:['Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
-    accom:[{tier:'b',name:'Sekenani Bush Camp',desc:'Tented camp, shared facilities, great value'},{tier:'m',name:'Mara Serena Safari Lodge',desc:'Clifftop position, sweeping Mara views, pool'},{tier:'l',name:'Angama Mara',desc:'Suspended above the Great Rift Valley, world-class'}],
+
+  /* -- NAKURU / NAIVASHA -- */
+  'nakuru-naivasha': {
+    title:'Lake Nakuru & Naivasha', badge:'Great Value',
+    img:'images/gamedrives.jpg', duration:'3 Days · 2 Nights', dest:'Nakuru & Naivasha',
+    price:'$280', per:'per person · excl. accommodation', waText:'Lake+Nakuru+%26+Naivasha',
+    about:'Flamingos at Lake Nakuru, rhino sanctuary, and a boat ride on Lake Naivasha with hippos and diverse birdlife. This land-only package covers two of Kenya\'s most scenic Rift Valley lakes.',
+    stats:[{label:'Duration',value:'3 Days'},{label:'Nights',value:'2 Nights'},{label:'Boat Safari',value:'Included'},{label:'Park Fees',value:'Included'}],
+    includes:['All park entry fees','Lake Nakuru game drive','Lake Naivasha boat ride','Expert guide','Return Nairobi transfer'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
+    accom:[
+      {tier:'b',name:'Lake Nakuru Lodge',desc:'Budget lodge inside the park, great wildlife views',bookUrl:'https://www.booking.com/hotel/ke/lake-nakuru-lodge.en.html'},
+      {tier:'m',name:'Sarova Lion Hill',desc:'Mid-range lodge with panoramic lake views',bookUrl:'https://www.booking.com/hotel/ke/sarova-lion-hill-game-lodge.en.html'}
+    ],
     itinerary:[
-      {title:'Nairobi → Camp Arrival',meals:['L','D'],body:'Depart 07:00. Rift Valley viewpoint stopover. Arrive for lunch. Afternoon briefing, then 15:30 sunset drive. Dinner and campfire.'},
-      {title:'Dawn-to-Dusk Game Drive',meals:['B','L','D'],body:'06:00 golden-hour drive targeting big cats. Breakfast. Afternoon 15:30 drive covering the Mara Triangle and river zone. Picnic lunch at the Mara River.'},
-      {title:'Village Visit + Afternoon Drive',meals:['B','L','D'],body:'Morning visit to a Maasai community near Sekenani — meet elders, learn traditions. Lunch at camp. Afternoon drive through the conservancy bordering the reserve.'},
-      {title:'Final Dawn Drive → Nairobi',meals:['B'],body:'Last sunrise drive at 06:00 — often the trip highlight. Breakfast, checkout by 10:00. Return to Nairobi mid-afternoon.'}
+      {title:'Nairobi → Nakuru',meals:[],body:'Depart 07:00. Arrive and game drive at Lake Nakuru. Flamingos, rhinos, and the iconic baboon cliff.'},
+      {title:'Naivasha Boat Safari',meals:['L'],body:'Morning at Lake Naivasha. Boat safari to Crescent Island, walking with giraffes and zebras. Afternoon at leisure.'},
+      {title:'Return to Nairobi',meals:[],body:'Morning drive back to Nairobi.'}
     ]
   },
-  'family': {
-    title:'Family Safari Adventure', badge:'Families Welcome',
-    img:'images/gamedrives.jpg', duration:'4 Days · 3 Nights', dest:'Maasai Mara',
-    price:'$580', per:'per adult · children discounted', waText:'Family+Safari+Adventure',
-    about:'Designed for families with children of all ages. Game drive timing is flexible — later morning starts suit younger children. Our family-specialist guides have a gift for making wildlife tracking feel like an adventure, with spoor identification, bird spotting games, and age-appropriate wildlife stories. Children under 6 go free.',
-    stats:[{label:'Duration',value:'4 Days'},{label:'Min Age',value:'All ages'},{label:'Children',value:'U6 Free'},{label:'Park Fees',value:'Included'}],
-    includes:['Child-friendly Maasai guide','All park fees','Full board meals & snacks','Village school visit','Family room accommodation','All road transfers'],
-    excludes:['Gratuities','Alcoholic beverages','Travel insurance'],
-    accom:[{tier:'m',name:'Mara Sopa Lodge',desc:'Family rooms, swimming pool, child-safe environment'},{tier:'l',name:'Ol Seki Hemingways',desc:'Private conservancy, family suites, outstanding wildlife'}],
+
+  'rift-valley': {
+    title:'Great Rift Valley Lakes', badge:'Scenic',
+    img:'images/adventure.jpeg', duration:'4 Days · 3 Nights', dest:'Nakuru · Naivasha · Baringo',
+    price:'$420', per:'per person · excl. accommodation', waText:'Great+Rift+Valley+Lakes',
+    about:'Explore three lakes — Nakuru, Naivasha, and Baringo. Flamingos, pelicans, hippos, and the famous Giraffe Manor nearby. A comprehensive Rift Valley experience.',
+    stats:[{label:'Duration',value:'4 Days'},{label:'Lakes Visited',value:'3 Lakes'},{label:'Boat Safaris',value:'2'},{label:'Park Fees',value:'Included'}],
+    includes:['All park fees','Boat safaris on Naivasha & Baringo','Expert guide','Return Nairobi transfer'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
+    accom:[
+      {tier:'b',name:'Lake Baringo Club',desc:'Budget-friendly lakeside accommodation',bookUrl:'https://www.booking.com/hotel/ke/lake-baringo-club.en.html'},
+      {tier:'m',name:'Naivasha Kongoni Lodge',desc:'Mid-range lodge with lake views',bookUrl:'https://www.booking.com/hotel/ke/kongoni-lodge-naivasha.en.html'}
+    ],
     itinerary:[
-      {title:'Arrival & Orientation Drive',meals:['L','D'],body:'Arrive after lunch. Your guide introduces the family to the Mara ecosystem on an afternoon drive — learning tracks, identifying birds, and spotting the first wildlife. Later start suitable for young children.'},
-      {title:'Big Five Morning + Village School',meals:['B','L','D'],body:'Morning drive with a focus on the Big Five. Afternoon visit to a local school near the reserve — children can interact, learn, and draw alongside Kenyan students.'},
-      {title:'Full Day Game Drive',meals:['B','L','D'],body:'All-day game drive with a riverside picnic. Kids spot wildlife on a checklist and earn a "junior ranger" badge from the guide. Evening campfire storytelling.'},
-      {title:'Final Drive → Nairobi',meals:['B'],body:'Morning drive, breakfast, checkout. Return to Nairobi.'}
+      {title:'Nairobi → Nakuru',meals:[],body:'Lake Nakuru game drive.'},
+      {title:'Nakuru → Naivasha',meals:['L'],body:'Morning at Nakuru, afternoon boat safari on Naivasha.'},
+      {title:'Naivasha → Baringo',meals:['L'],body:'Boat safari at Lake Baringo — pelicans, hippos, and the famous Giraffe Manor.'},
+      {title:'Return to Nairobi',meals:[],body:'Drive back to Nairobi.'}
     ]
   },
-  'luxury': {
-    title:'Private Luxury Safari', badge:'Private Luxury',
-    img:'images/luxurysafari.jpeg', duration:'5 Days · 4 Nights', dest:'Maasai Mara',
-    price:'$1,450', per:'per person · 2 guests', waText:'Private+Luxury+Safari',
-    about:'Fully private — your own vehicle, your own guide, your own schedule. No shared drives, no waiting for other guests. The itinerary is shaped entirely around your interests and pace. Includes a bush dinner under the stars, sundowners on a kopje, and a night game drive through the private conservancy bordering the main reserve.',
-    stats:[{label:'Duration',value:'5 Days'},{label:'Game Drives',value:'8 Drives'},{label:'Private',value:'Exclusive Use'},{label:'Night Drive',value:'Included'}],
-    includes:['Fully private vehicle & Maasai guide','All park & conservancy fees','Full board meals','Bush dinner & sundowners','Night game drive (conservancy)','All transfers'],
-    excludes:['International flights','Gratuities','Alcoholic beverages beyond wine at dinner','Hot air balloon (bookable add-on)'],
-    accom:[{tier:'m',name:'Mara Serena Safari Lodge',desc:'Clifftop views, full amenities, excellent food'},{tier:'l',name:'Mahali Mzuri',desc:"Richard Branson's camp — 12 tents, supreme service"},{tier:'l',name:'Angama Mara',desc:"Suspended above the Valley — arguably the world's best view"}],
+
+  /* -- AMBOSELI -- */
+  'amboseli-elephants': {
+    title:'Amboseli Elephants & Kilimanjaro', badge:'★ Scenic',
+    img:'images/sunset1.jpg', duration:'3 Days · 2 Nights', dest:'Amboseli',
+    price:'$320', per:'per person · excl. accommodation', waText:'Amboseli+Elephants+%26+Kilimanjaro',
+    about:'Elephant herds against the backdrop of Mount Kilimanjaro. Game drives through swamps, open plains, and a Maasai community visit. Amboseli is famous for its big tuskers and year-round wildlife.',
+    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Kili Views',value:'Guaranteed'},{label:'Park Fees',value:'Included'}],
+    includes:['All park entry fees','4 game drives','Expert Maasai guide','Return Nairobi transfer','Bottled water'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
+    accom:[
+      {tier:'b',name:'Amboseli Serena',desc:'Budget-friendly safari lodge',bookUrl:'https://www.booking.com/hotel/ke/amboseli-serena-safari-lodge.en.html'},
+      {tier:'m',name:'Kibo Safari Camp',desc:'Comfortable camp with Kilimanjaro views',bookUrl:'https://www.booking.com/hotel/ke/kibo-safari-camp.en.html'},
+      {tier:'l',name:'Tortilis Camp',desc:'Luxury camp, exclusive position with Kili views',bookUrl:'https://www.tortiliscamp.com/'}
+    ],
     itinerary:[
-      {title:'Arrival & Private Welcome Drive',meals:['L','D'],body:'Private vehicle meets you in Nairobi. Arrive for lunch, briefing with your dedicated guide, then a private 15:30 drive to set your rhythms.'},
-      {title:'Golden Hour & Bush Sundowners',meals:['B','L','D'],body:'06:00 dawn drive. Breakfast. Afternoon drive culminating in sundowners on a kopje at golden hour — champagne and the Mara plains to yourselves.'},
-      {title:'Full Mara Triangle Day',meals:['B','L','D'],body:'Private vehicle crosses into the Mara Triangle — less visited, superlative wildlife. Picnic lunch in the bush. Return for dinner.'},
-      {title:'Night Drive + Bush Dinner',meals:['B','L','D'],body:'Afternoon drive into the private conservancy for the night drive — leopard, aardvark, and nocturnal species come alive. Return to an outdoor bush dinner under a canopy of stars.'},
-      {title:'Final Dawn Drive → Nairobi',meals:['B'],body:'Last sunrise drive at your pace. Private transfer back to Nairobi.'}
+      {title:'Nairobi → Amboseli',meals:[],body:'Arrive, afternoon game drive. View of Kilimanjaro at sunset.'},
+      {title:'Full Day in Amboseli',meals:['L'],body:'Dawn and afternoon drives. Elephant herds around the swamps.'},
+      {title:'Final Drive → Nairobi',meals:[],body:'Morning drive, checkout, return.'}
     ]
   },
-  'honeymoon': {
-    title:'Honeymoon Mara Escape', badge:'Honeymoon Special',
-    img:'images/hikes.jpg', duration:'6 Days · 5 Nights', dest:'Maasai Mara',
-    price:'$1,800', per:'per couple total', waText:'Honeymoon+Mara+Escape',
-    about:'Romance at the edge of the wild. A private tent with panoramic views, champagne on arrival, candle-lit bush dinners, guided morning walks, and afternoon drives — just the two of you and the Mara at its most intimate. Every detail is arranged in advance. You arrive and the Mara does the rest.',
-    stats:[{label:'Duration',value:'6 Days'},{label:'For',value:'Couples Only'},{label:'Champagne',value:'On Arrival'},{label:'Bush Dinner',value:'Included'}],
-    includes:['Champagne on arrival','Candle-lit bush dinner for two','Guided morning bush walks','All drives, transfers & park fees','Full board meals','Optional hot air balloon'],
-    excludes:['International flights','Hot air balloon (optional add-on $450pp)','Gratuities','Additional alcohol'],
-    accom:[{tier:'l',name:'Angama Mara',desc:'Private tent, floor-to-ceiling views of the Rift Valley'},{tier:'l',name:"Sala's Camp",desc:'Ultra-remote, exclusive-use, unspoiled Mara south'}],
+
+  'amboseli-tsavo': {
+    title:'Amboseli & Tsavo West', badge:'Classic',
+    img:'images/wildbeest.jpg', duration:'5 Days · 4 Nights', dest:'Amboseli · Tsavo West',
+    price:'$540', per:'per person · excl. accommodation', waText:'Amboseli+%26+Tsavo+West',
+    about:'Combine Amboseli\'s elephant herds with Tsavo West\'s volcanic landscapes and Mzima Springs. This land-only package delivers two distinct ecosystems in one journey.',
+    stats:[{label:'Duration',value:'5 Days'},{label:'Game Drives',value:'5 Drives'},{label:'Parks Visited',value:'2'},{label:'Park Fees',value:'Included'}],
+    includes:['All park fees','5 game drives','Mzima Springs visit','Expert guide','Return Nairobi transfer'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
+    accom:[
+      {tier:'b',name:'Tsavo West Camps',desc:'Budget camping options in Tsavo West',bookUrl:'https://www.booking.com/searchresults.html?ss=Tsavo+West'},
+      {tier:'m',name:'Ngulia Safari Lodge',desc:'Mid-range lodge in Tsavo West',bookUrl:'https://www.booking.com/hotel/ke/ngulia-safari-lodge.en.html'},
+      {tier:'l',name:'Severin Safari Camp',desc:'Luxury camp in Tsavo West, great amenities',bookUrl:'https://www.booking.com/hotel/ke/severin-safari-camp.en.html'}
+    ],
     itinerary:[
-      {title:'Arrival — Champagne Welcome',meals:['L','D'],body:'Your guide meets you in Nairobi. Champagne and fresh flowers waiting at the tent on arrival. Evening sundowner drive followed by a private candle-lit dinner in the bush.'},
-      {title:'Dawn Walk + Game Drive',meals:['B','L','D'],body:'Morning bush walk with your guide — an intimate way to read the landscape on foot. Afternoon game drive. Dinner under the stars.'},
-      {title:'Full Mara Day',meals:['B','L','D'],body:'Full day game drive with a picnic breakfast in the bush, a riverside lunch, and an afternoon targeting the big cats in the golden light.'},
-      {title:'Optional Balloon Morning',meals:['B','L','D'],body:'Pre-dawn hot air balloon over the Mara (optional, bookable in advance). Champagne bush breakfast on landing. Afternoon at leisure or game drive.'},
-      {title:'Private Bush Day',meals:['B','L','D'],body:'A slower, private day — morning walk, afternoon picnic at a scenic kopje, evening campfire. No itinerary pressure.'},
-      {title:'Final Drive → Departure',meals:['B'],body:'Sunrise drive at your own pace. Breakfast, pack up, and private transfer back to Nairobi.'}
+      {title:'Nairobi → Amboseli',meals:[],body:'Afternoon game drive.'},
+      {title:'Amboseli Full Day',meals:['L'],body:'Elephant herds and Kili views.'},
+      {title:'Amboseli → Tsavo West',meals:['L'],body:'Drive to Tsavo, afternoon game drive.'},
+      {title:'Tsavo West Full Day',meals:['L'],body:'Mzima Springs, volcanic landscapes, game drives.'},
+      {title:'Return to Nairobi',meals:[],body:'Drive back to Nairobi.'}
+    ]
+  },
+
+  /* -- SAMBURU -- */
+  'samburu-special': {
+    title:'Samburu Special Five Safari', badge:'★ Unique',
+    img:'images/adventure.jpeg', duration:'4 Days · 3 Nights', dest:'Samburu',
+    price:'$460', per:'per person · excl. accommodation', waText:'Samburu+Special+Five+Safari',
+    about:'Home of the \'Special Five\' — Grevy\'s zebra, reticulated giraffe, Somali ostrich, gerenuk, and beisa oryx. This northern Kenya gem offers wildlife you won\'t find in the southern parks.',
+    stats:[{label:'Duration',value:'4 Days'},{label:'Special Five',value:'100% Sightings'},{label:'Ewaso River',value:'Scenic'},{label:'Park Fees',value:'Included'}],
+    includes:['All park fees','4 game drives','Expert guide','Return Nairobi transfer'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
+    accom:[
+      {tier:'b',name:'Samburu Camps',desc:'Budget tented camps along the Ewaso River',bookUrl:'https://www.booking.com/searchresults.html?ss=Samburu'},
+      {tier:'m',name:'Samburu Sopa Lodge',desc:'Comfortable lodge with river views',bookUrl:'https://www.booking.com/hotel/ke/samburu-sopa-lodge.en.html'},
+      {tier:'l',name:'Elephant Watch Camp',desc:'Luxury eco-camp with exclusive access',bookUrl:'https://www.elephantwatchcamp.com/'}
+    ],
+    itinerary:[
+      {title:'Nairobi → Samburu',meals:[],body:'Arrive, afternoon game drive along the Ewaso River.'},
+      {title:'Full Day Game Drive',meals:['L'],body:'Search for the Special Five. Bush picnic.'},
+      {title:'Second Full Day',meals:['L'],body:'Explore the drier northern areas, sightings of the reticulated giraffe and gerenuk.'},
+      {title:'Return to Nairobi',meals:[],body:'Morning drive back to Nairobi.'}
+    ]
+  },
+
+  /* -- TSAVO -- */
+  'tsavo-explorer': {
+    title:'Tsavo East & West Explorer', badge:'Adventure',
+    img:'images/gamedrives.jpg', duration:'4 Days · 3 Nights', dest:'Tsavo East & West',
+    price:'$390', per:'per person · excl. accommodation', waText:'Tsavo+East+%26+West+Explorer',
+    about:'Kenya\'s largest park — red elephants of Tsavo East, Mzima Springs hippos, and the volcanic landscape of Tsavo West. A true safari adventure.',
+    stats:[{label:'Duration',value:'4 Days'},{label:'Parks Visited',value:'2'},{label:'Red Elephants',value:'Guaranteed'},{label:'Park Fees',value:'Included'}],
+    includes:['All park fees','4 game drives','Mzima Springs visit','Expert guide','Return Nairobi transfer'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
+    accom:[
+      {tier:'b',name:'Tsavo East Camps',desc:'Budget camping options in Tsavo East',bookUrl:'https://www.booking.com/searchresults.html?ss=Tsavo+East'},
+      {tier:'m',name:'Voi Safari Lodge',desc:'Mid-range lodge overlooking a waterhole',bookUrl:'https://www.booking.com/hotel/ke/voi-safari-lodge.en.html'}
+    ],
+    itinerary:[
+      {title:'Nairobi → Tsavo East',meals:[],body:'Afternoon game drive. Red elephants of Tsavo.'},
+      {title:'Tsavo East Full Day',meals:['L'],body:'Search for wildlife along the Galana River.'},
+      {title:'Tsavo East → Tsavo West',meals:['L'],body:'Drive to Tsavo West. Mzima Springs afternoon.'},
+      {title:'Return to Nairobi',meals:[],body:'Morning drive back to Nairobi.'}
+    ]
+  },
+
+  /* -- COMBINATION -- */
+  'kenya-classic': {
+    title:'Kenya Classic Circuit', badge:'★ Best Seller',
+    img:'images/luxurysafari.jpeg', duration:'7 Days · 6 Nights', dest:'Mara · Nakuru · Amboseli',
+    price:'$950', per:'per person · excl. accommodation', waText:'Kenya+Classic+Circuit',
+    about:'The ultimate Kenya introduction — Maasai Mara\'s big cats, Nakuru\'s flamingos, and Amboseli\'s elephants with Kilimanjaro. The perfect first safari for new visitors.',
+    stats:[{label:'Duration',value:'7 Days'},{label:'Parks Visited',value:'3'},{label:'Game Drives',value:'12'},{label:'Park Fees',value:'Included'}],
+    includes:['All park fees','12 game drives','Expert Maasai guide','Return Nairobi transfer','Bottled water'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
+    accom:[
+      {tier:'b',name:'Budget Safari Camps',desc:'Range of budget options in each park',bookUrl:'https://www.booking.com/searchresults.html?ss=Maasai+Mara+Budget'},
+      {tier:'m',name:'Mid-Range Lodges',desc:'Comfortable lodges in each park',bookUrl:'https://www.booking.com/searchresults.html?ss=Maasai+Mara+Mid-Range'},
+      {tier:'l',name:'Luxury Camps',desc:'Premium accommodations in each park',bookUrl:'https://www.booking.com/searchresults.html?ss=Maasai+Mara+Luxury'}
+    ],
+    itinerary:[
+      {title:'Nairobi → Maasai Mara',meals:[],body:'Afternoon game drive.'},
+      {title:'Mara Full Day',meals:['L'],body:'Big Five safari.'},
+      {title:'Mara → Lake Nakuru',meals:[],body:'Drive to Nakuru. Afternoon game drive.'},
+      {title:'Nakuru → Amboseli',meals:[],body:'Morning at Nakuru, drive to Amboseli.'},
+      {title:'Amboseli Full Day',meals:['L'],body:'Elephants and Kilimanjaro.'},
+      {title:'Amboseli Full Day',meals:['L'],body:'Second day in Amboseli.'},
+      {title:'Return to Nairobi',meals:[],body:'Drive back to Nairobi.'}
+    ]
+  },
+
+  'ultimate-kenya': {
+    title:'Ultimate Kenya Safari', badge:'Premium',
+    img:'images/hikes.jpg', duration:'10 Days · 9 Nights', dest:'5 Parks',
+    price:'$1,650', per:'per person · excl. accommodation', waText:'Ultimate+Kenya+Safari',
+    about:'Five parks in one journey — the complete Kenyan safari experience. Maasai Mara, Nakuru, Amboseli, Samburu, and Tsavo. Private vehicle, expert guides, and premium land services.',
+    stats:[{label:'Duration',value:'10 Days'},{label:'Parks Visited',value:'5'},{label:'Private Vehicle',value:'Yes'},{label:'Park Fees',value:'Included'}],
+    includes:['All park fees','15+ game drives','Private 4WD vehicle','Expert Maasai guide','All transfers','Bottled water'],
+    excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages','International flights'],
+    accom:[
+      {tier:'m',name:'Mid-Range Lodges',desc:'Comfortable lodges in each park',bookUrl:'https://www.booking.com/searchresults.html?ss=Kenya+Safari+Lodges'},
+      {tier:'l',name:'Luxury Camps',desc:'Premium accommodations in each park',bookUrl:'https://www.booking.com/searchresults.html?ss=Kenya+Luxury+Safari'}
+    ],
+    itinerary:[
+      {title:'Nairobi → Maasai Mara',meals:[],body:'Afternoon game drive.'},
+      {title:'Mara Full Day',meals:['L'],body:'Big Five safari.'},
+      {title:'Mara → Lake Nakuru',meals:[],body:'Drive to Nakuru. Afternoon game drive.'},
+      {title:'Nakuru → Amboseli',meals:[],body:'Morning at Nakuru, drive to Amboseli.'},
+      {title:'Amboseli Full Day',meals:['L'],body:'Elephants and Kilimanjaro.'},
+      {title:'Amboseli → Samburu',meals:[],body:'Drive to Samburu. Afternoon game drive.'},
+      {title:'Samburu Full Day',meals:['L'],body:'Special Five sightings.'},
+      {title:'Samburu → Tsavo',meals:[],body:'Drive to Tsavo East. Afternoon game drive.'},
+      {title:'Tsavo Full Day',meals:['L'],body:'Red elephants and Mzima Springs.'},
+      {title:'Return to Nairobi',meals:[],body:'Drive back to Nairobi.'}
     ]
   }
-};
+
+}; /* end PACKAGES */
 
 /* ── MODAL FUNCTIONS ── */
-function openModal(id) {
+function openModal(id, scrollToCamps) {
   var pkg = PACKAGES[id];
   if (!pkg) return;
 
@@ -840,39 +1244,35 @@ function openModal(id) {
   document.getElementById('modalDuration').textContent = pkg.duration;
   document.getElementById('modalDest').textContent = pkg.dest;
 
-  // Stats
   document.getElementById('modalStats').innerHTML = pkg.stats.map(function(s) {
     return '<div class="pkg-overview-stat"><div class="label">' + s.label + '</div><div class="value">' + s.value + '</div></div>';
   }).join('');
 
   document.getElementById('modalAbout').textContent = pkg.about;
 
-  // Includes
   document.getElementById('modalIncludes').innerHTML = pkg.includes.map(function(i) {
     return '<div class="pkg-incl-item">' + i + '</div>';
   }).join('');
 
-  // Excludes
   document.getElementById('modalExcludes').innerHTML = pkg.excludes.map(function(e) {
     return '<div class="pkg-excl-item">' + e + '</div>';
   }).join('');
 
-  // Accommodation
   var tierLabel = {b:'Budget', m:'Mid-Range', l:'Luxury'};
   document.getElementById('modalAccom').innerHTML = pkg.accom.map(function(a) {
+    var bookLink = a.bookUrl ? '<a href="' + a.bookUrl + '" target="_blank" rel="noopener" class="book-link">📖 Book Now</a>' : '';
     return '<div class="pkg-accom-row">'
       + '<span class="pkg-accom-pill ' + a.tier + '">' + tierLabel[a.tier] + '</span>'
       + '<span class="name">' + a.name + '</span>'
       + '<span class="desc">' + a.desc + '</span>'
+      + bookLink
       + '</div>';
   }).join('');
 
-  // WA link
   var waUrl = 'https://wa.me/254794928779?text=Hi%2C+I%27m+interested+in+the+' + pkg.waText + '+package.';
   document.getElementById('modalWaBtn').href = waUrl;
   document.getElementById('bookWaBtn').href = waUrl;
 
-  // Itinerary
   document.getElementById('modalItinerary').innerHTML = pkg.itinerary.map(function(day, i) {
     var meals = day.meals.map(function(m) { return '<span class="pkg-meal">' + m + '</span>'; }).join('');
     return '<div class="pkg-itin-day">'
@@ -886,17 +1286,22 @@ function openModal(id) {
       + '</div>';
   }).join('');
 
-  // Booking panel
   document.getElementById('bookPrice').textContent = pkg.price;
   document.getElementById('bookPer').textContent = pkg.per;
 
-  // Reset to overview tab
   switchTab('overview');
 
-  // Open modal
   document.getElementById('modalBackdrop').classList.add('open');
   document.getElementById('pkgModal').classList.add('open');
   document.body.style.overflow = 'hidden';
+
+  // Scroll to camps if requested
+  if (scrollToCamps) {
+    setTimeout(function() {
+      var accomEl = document.getElementById('modalAccom');
+      if (accomEl) accomEl.scrollIntoView({behavior:'smooth',block:'center'});
+    }, 400);
+  }
 }
 
 function closeModal() {
@@ -914,59 +1319,58 @@ function switchTab(name) {
   });
 }
 
-/* Expose globally for any direct href calls */
 window.openModal  = openModal;
 window.closeModal = closeModal;
 window.switchTab  = switchTab;
 
-/* ── EVENT LISTENERS (replaces all inline onclick) ── */
+/* ── EVENT LISTENERS ── */
 document.addEventListener('DOMContentLoaded', function() {
 
-  /* "View Details" buttons on cards */
+  // "View Details" buttons
   document.querySelectorAll('.btn-view[data-pkg]').forEach(function(btn) {
     btn.addEventListener('click', function() {
-      openModal(btn.dataset.pkg);
+      openModal(btn.dataset.pkg, false);
     });
   });
 
-  /* Footer package links */
+  // "View Camps" buttons - opens modal and scrolls to camps
+  document.querySelectorAll('.btn-view-camps[data-pkg]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      openModal(btn.dataset.pkg, true);
+    });
+  });
+
+  // Footer package links
   document.querySelectorAll('.footer-pkg-link[data-pkg]').forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.preventDefault();
-      openModal(link.dataset.pkg);
+      openModal(link.dataset.pkg, false);
     });
   });
 
-  /* Modal backdrop click → close */
   document.getElementById('modalBackdrop').addEventListener('click', closeModal);
-
-  /* Modal close button */
   document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
 
-  /* Modal tabs */
   document.querySelectorAll('.pkg-modal-tab[data-tab]').forEach(function(tab) {
     tab.addEventListener('click', function() {
       switchTab(tab.dataset.tab);
     });
   });
 
-  /* Itinerary accordion (delegated — content is dynamic) */
   document.getElementById('modalItinerary').addEventListener('click', function(e) {
     var hdr = e.target.closest('.pkg-itin-hdr');
     if (hdr) hdr.closest('.pkg-itin-day').classList.toggle('open');
   });
 
-  /* Booking form submit → WhatsApp */
   document.getElementById('bookSubmitBtn').addEventListener('click', function() {
-    var name   = document.getElementById('bookName').value.trim();
-    var pkgEl  = document.getElementById('modalTitle');
+    var name = document.getElementById('bookName').value.trim();
+    var pkgEl = document.getElementById('modalTitle');
     var pkgName = pkgEl ? pkgEl.textContent : 'a safari package';
     if (!name) { alert('Please enter your name before sending.'); return; }
     var msg = 'Hi%2C+my+name+is+' + encodeURIComponent(name) + '%2C+I%27d+like+to+book+the+' + encodeURIComponent(pkgName) + '+package.';
     window.open('https://wa.me/254794928779?text=' + msg, '_blank');
   });
 
-  /* Filter buttons */
   document.querySelectorAll('.pkg-filter-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       document.querySelectorAll('.pkg-filter-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -975,10 +1379,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  /* Sort select */
   document.getElementById('pkgSort').addEventListener('change', filterAndSort);
 
-  /* Hamburger */
   var hamburger = document.getElementById('hamburger');
   var mobileNav = document.getElementById('mobileNav');
   if (hamburger && mobileNav) {
@@ -989,11 +1391,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* Footer year */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* Back to top */
   var topBtn = document.getElementById('backToTop');
   if (topBtn) {
     window.addEventListener('scroll', function() {
@@ -1005,7 +1405,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-/* Escape key closes modal */
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeModal();
 });
@@ -1017,7 +1416,7 @@ function filterAndSort() {
   var cards = Array.from(document.querySelectorAll('#pkgGrid .pkg-card'));
 
   cards.forEach(function(card) {
-    var show = f === 'all' || card.dataset.tier === f || card.dataset.length === f;
+    var show = f === 'all' || card.dataset.dest === f;
     card.classList.toggle('pkg-card--hidden', !show);
   });
 
