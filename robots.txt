@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Link to your sitemap
-Sitemap: https://saitotimarasafaris.com/sitemap.xml
+Sitemap: https://samarawild.com/sitemap.xml
