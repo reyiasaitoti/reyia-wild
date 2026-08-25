@@ -80,6 +80,52 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
 .mobile-list a:hover { color: var(--navy); background: rgba(17,24,39,0.04); padding-left: 1.9rem; }
 .mobile-actions { padding: 1rem 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; border-top: 1px solid rgba(17,24,39,0.08); background: rgba(17,24,39,0.02); }
 .mobile-phone { color: rgba(17,24,39,0.75); font-size: 0.88rem; }
+
+/* ── HEADER RESPONSIVENESS ── */
+@media (max-width: 900px) {
+  .nav-primary,
+  .btn-header-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: grid;
+  }
+
+  .header-inner {
+    padding: 0.6rem var(--pad);
+  }
+
+  .logo-img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .brand-sub {
+    font-size: 0.58rem;
+  }
+}
+
+@media (min-width: 901px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand-sub {
+    display: none; /* saves horizontal space on very narrow screens */
+  }
+
+  .logo-img {
+    height: 36px;
+    width: 36px;
+  }
+}
 /* ── HERO ── */
 .hero { position: relative; min-height: 72vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
 .hero-slides { position: absolute; inset: 0; z-index: 0; }
