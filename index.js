@@ -10,6 +10,39 @@ const form             = $('#contact-form');
 const formStatus       = $('#form-status');
 const testimonialCards = $$('.testimonial-card');
 
+// ── Hero Slideshow ────────────────────────────────────────
+const heroSlides = $$('.hero-slide');
+const heroDots   = $$('.hero-dot');
+let currentSlide = 0;
+let slideTimer;
+
+function showSlide(index) {
+  heroSlides.forEach(s => s.classList.remove('active'));
+  heroDots.forEach(d => d.classList.remove('active'));
+  heroSlides[index].classList.add('active');
+  if (heroDots[index]) heroDots[index].classList.add('active');
+  currentSlide = index;
+}
+
+function nextSlide() {
+  showSlide((currentSlide + 1) % heroSlides.length);
+}
+
+function startSlideshow() {
+  slideTimer = setInterval(nextSlide, 5000);
+}
+
+if (heroSlides.length) {
+  heroDots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      showSlide(i);
+      clearInterval(slideTimer);
+      startSlideshow(); // reset timer so it doesn't jump right after a manual click
+    });
+  });
+  startSlideshow();
+}
+
 // ── Mobile Nav ────────────────────────────────────────────
 function openMobileNav() {
   if (!mobileNav) return;
