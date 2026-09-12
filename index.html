@@ -73,7 +73,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
   <link rel="stylesheet" href="style.css">
@@ -104,6 +104,7 @@
       <nav class="nav-primary" role="navigation" aria-label="Primary navigation">
         <ul class="nav-list">
           <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="packages.html">Safaris</a></li>
           <li><a href="destinations.html">Destinations</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -121,6 +122,7 @@
     <nav id="mobileNav" class="mobile-nav" inert role="menu" aria-label="Mobile navigation">
       <ul class="mobile-list">
         <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="packages.html">Safaris</a></li>
         <li><a href="destinations.html">Destinations</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -136,45 +138,87 @@
   </header>
 
   <main id="site-main">
-<!-- ═══════════════ HERO ═══════════════ -->
-<section id="home" class="hero" aria-label="Hero section">
+   <!-- ═══════════════ HERO ═══════════════ -->
+<section id="home" class="hero" aria-label="Samara Wild Kenya Safaris">
+
   <div class="hero-slides" aria-hidden="true">
-    <div class="hero-slide active" style="background-image:url('images/sunset1.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('images/wildbeest.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('images/baloon.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('images/maasaidance.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('images/hikes.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('images/gamedrives.jpg')"></div>
+    <div class="hero-slide active"
+         style="background-image:url('images/sunset1.jpg')"></div>
+
+    <div class="hero-slide"
+         style="background-image:url('images/wildbeest.jpg')"></div>
+
+    <div class="hero-slide"
+         style="background-image:url('images/baloon.jpg')"></div>
+
+    <div class="hero-slide"
+         style="background-image:url('images/maasaidance.jpg')"></div>
+
+    <div class="hero-slide"
+         style="background-image:url('images/hikes.jpg')"></div>
+
+    <div class="hero-slide"
+         style="background-image:url('images/gamedrives.jpg')"></div>
   </div>
+
   <div class="hero-overlay" aria-hidden="true"></div>
 
   <div class="hero-content">
-    <span class="hero-eyebrow">Maasai Mara, Kenya</span>
-    <h1>Where the Mara <br><em>Still Runs Wild</em></h1>
-    <p>Small-group safaris led by guides raised on this land — game drives, luxury camps, and cultural encounters, planned around you.</p>
+
+    <span class="hero-eyebrow">
+      SAMARA WILD · MAASAI MARA, KENYA
+    </span>
+
+    <h1>
+      Where the Mara
+      <br>
+      <em>Still Runs Wild</em>
+    </h1>
+
+    <p>
+      Authentic Kenya safaris led by experienced local guides,
+      with carefully planned game drives, comfortable stays,
+      and unforgettable experiences in the wild.
+    </p>
+
     <div class="hero-cta">
-      <a class="btn btn-primary" href="packages.html">View Safaris</a>
-      <a class="btn btn-ghost" href="#contact">Plan Your Trip</a>
+      <a class="btn btn-primary" href="packages.html">
+        Explore Our Safaris
+      </a>
+
+      <a class="btn btn-ghost" href="#contact">
+        Plan Your Safari
+      </a>
     </div>
-    <div class="hero-dots" aria-label="Slideshow navigation">
-      <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
-      <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
-      <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
-      <button class="hero-dot" data-index="3" aria-label="Slide 4"></button>
-      <button class="hero-dot" data-index="4" aria-label="Slide 5"></button>
-      <button class="hero-dot" data-index="5" aria-label="Slide 6"></button>
+
+    <div class="hero-dots" aria-label="Hero image navigation">
+      <button class="hero-dot active"
+              data-index="0"
+              aria-label="Show safari image 1"></button>
+
+      <button class="hero-dot"
+              data-index="1"
+              aria-label="Show safari image 2"></button>
+
+      <button class="hero-dot"
+              data-index="2"
+              aria-label="Show safari image 3"></button>
+
+      <button class="hero-dot"
+              data-index="3"
+              aria-label="Show safari image 4"></button>
+
+      <button class="hero-dot"
+              data-index="4"
+              aria-label="Show safari image 5"></button>
+
+      <button class="hero-dot"
+              data-index="5"
+              aria-label="Show safari image 6"></button>
     </div>
+
   </div>
 
-  <div class="hero-trust">
-    <div class="trust-item"><span class="trust-num">500+</span><span class="trust-label">Guests Hosted</span></div>
-    <div class="trust-divider"></div>
-    <div class="trust-item"><span class="trust-num">10+</span><span class="trust-label">Years Guiding</span></div>
-    <div class="trust-divider"></div>
-    <div class="trust-item"><span class="trust-num">5.0</span><span class="trust-label">Average Rating</span></div>
-    <div class="trust-divider"></div>
-    <div class="trust-item"><span class="trust-num">24/7</span><span class="trust-label">Trip Support</span></div>
-  </div>
 </section>
 <!-- ═══════════════ SAFARI PACKAGES PREVIEW ═══════════════ -->
 <section id="safaris" class="section safaris" aria-labelledby="safaris-heading">
@@ -258,6 +302,40 @@
     </div>
   </div>
 </section>
+    <!-- ═══════════════ ABOUT SAMARA WILD ═══════════════ -->
+    <section id="about" class="section about-section" aria-labelledby="about-heading">
+      <div class="container about-layout">
+        <div class="about-image-wrap">
+          <img src="images/maasaidance.jpg" alt="Maasai cultural experience in Kenya" class="about-image" loading="lazy">
+          <div class="about-image-note">
+            <strong>Rooted in the Mara</strong>
+            <span>Local knowledge. Honest guidance.</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-tag">About Samara Wild</span>
+          <h2 id="about-heading">Kenya, known from the inside.</h2>
+          <p class="about-lead">Samara Wild creates thoughtful safari experiences shaped by local knowledge, genuine Maasai hospitality, and a deep respect for Kenya's wild places.</p>
+          <p>From the first conversation to the final game drive, we make the journey feel considered and personal. Our team helps you choose the right parks, pace, guide, and camp for the way you want to travel.</p>
+          <div class="about-points">
+            <div class="about-point">
+              <strong>Local perspective</strong>
+              <span>Guides who know the land, seasons, and wildlife rhythms.</span>
+            </div>
+            <div class="about-point">
+              <strong>Thoughtful planning</strong>
+              <span>Clear advice, flexible itineraries, and no unnecessary surprises.</span>
+            </div>
+            <div class="about-point">
+              <strong>Personal care</strong>
+              <span>A warm, attentive experience from arrival to departure.</span>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="#contact">Meet Your Safari Team <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══════════════ FOUNDER MESSAGE ═══════════════ -->
     <section id="ceo" class="section ceo">
       <div class="container">
@@ -497,34 +575,67 @@
       </div>
     </section>
 
-    <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
-    <section id="testimonials" class="section testimonials">
-      <div class="container">
-        <header class="section-head">
-          <span class="section-tag">Guest Reviews</span>
-          <h2>What Our Guests Say</h2>
-          <p>Memories that last a lifetime — hear from those who've experienced the wild with us.</p>
-        </header>
-        <div class="testimonial-grid">
-          <article class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote class="testimonial-text">"Samara Wild exceeded our expectations! The guides were knowledgeable, the accommodations luxurious, and every day felt like a new adventure."</blockquote>
-            <footer class="testimonial-footer"><strong>James K.</strong><span>United Kingdom</span></footer>
-          </article>
-          <article class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote class="testimonial-text">"The best safari experience we've ever had. From the airport pickup to the game drives — everything was perfectly organised and stress-free."</blockquote>
-            <footer class="testimonial-footer"><strong>Sarah M.</strong><span>Canada</span></footer>
-          </article>
-          <article class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote class="testimonial-text">"An unforgettable journey through Kenya's stunning landscapes. The team truly made us feel at home in the wild."</blockquote>
-            <footer class="testimonial-footer"><strong>Linda W.</strong><span>Germany</span></footer>
-          </article>
-        </div>
-      </div>
-    </section>
+<!-- ═══════════════ WHY SAMARA WILD ═══════════════ -->
+<section id="why-samara-wild" class="section testimonials">
 
+  <div class="container">
+
+    <header class="section-head">
+      <span class="section-tag">Why Samara Wild</span>
+
+      <h2>Safari Experiences Made Personal</h2>
+
+      <p>
+        From your first enquiry to your final game drive,
+        we focus on creating a safari that feels personal,
+        seamless and unforgettable.
+      </p>
+    </header>
+
+    <div class="testimonial-grid">
+
+      <article class="testimonial-card">
+        <div class="stars" aria-hidden="true">◆</div>
+
+        <h3>Local Knowledge</h3>
+
+        <p class="testimonial-text">
+          Explore the Maasai Mara with guides who understand
+          the landscape, wildlife and rhythms of the reserve.
+        </p>
+      </article>
+
+
+      <article class="testimonial-card">
+        <div class="stars" aria-hidden="true">◆</div>
+
+        <h3>Tailored Safaris</h3>
+
+        <p class="testimonial-text">
+          Choose an experience built around your interests,
+          schedule and travel style — from wildlife adventures
+          to authentic cultural experiences.
+        </p>
+      </article>
+
+
+      <article class="testimonial-card">
+        <div class="stars" aria-hidden="true">◆</div>
+
+        <h3>Personal Service</h3>
+
+        <p class="testimonial-text">
+          We keep communication simple and personal, helping
+          you plan your journey from arrival in Kenya to your
+          final day in the wild.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
     <!-- ═══════════════ BLOG PREVIEW ═══════════════ -->
     <section id="blog" class="section blog-preview" aria-labelledby="blog-heading">
       <div class="container">

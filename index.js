@@ -1,4 +1,4 @@
-/* index.js — SaitotiMaraSafaris */
+/* index.js — Samara Wild */
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => Array.from(document.querySelectorAll(sel));
