@@ -398,6 +398,23 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
 .gallery-arrow { background: none; border: 1px solid var(--border); border-radius: var(--radius-sm); width: 30px; height: 30px; display: grid; place-items: center; cursor: pointer; font-size: 0.85rem; color: var(--dark); transition: all var(--transition); }
 .gallery-arrow:hover { background: var(--black); border-color: var(--black); color: #fff; }
 
+/* ── FAQS ── */
+.faq-section { background: var(--white); }
+.faq-layout { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: start; }
+.faq-intro { text-align: left; margin: 0; max-width: 520px; }
+.faq-intro .section-tag::after { left: 0; transform: none; }
+.faq-intro h2 { margin-top: 0.9rem; }
+.faq-intro p { margin-bottom: 1.5rem; }
+.faq-list { border-top: 1px solid var(--border); }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.2rem 0; color: var(--navy); cursor: pointer; list-style: none; font-family: 'Josefin Sans', sans-serif; font-size: 0.92rem; font-weight: 500; letter-spacing: 0.02em; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; color: #B98A2E; font-family: Arial, sans-serif; font-size: 1.35rem; font-weight: 300; line-height: 1; flex-shrink: 0; transition: transform var(--transition); }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:focus-visible { outline: 3px solid rgba(185,138,46,0.35); outline-offset: 4px; }
+.faq-answer { padding: 0 2.25rem 1.25rem 0; }
+.faq-answer p { max-width: 680px; margin: 0; color: var(--text-md); font-size: 0.92rem; line-height: 1.75; }
+
 /* ── CONTACT ── */
 .contact { background: var(--off-white); }
 .contact-container { display: flex; flex-direction: column; gap: 2.5rem; }
@@ -1284,6 +1301,7 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
   .pickup-image img { height: 400px; }
   .pickup-text { flex: 1; }
   .contact-container { flex-direction: row; gap: 2.5rem; align-items: flex-start; }
+  .faq-layout { grid-template-columns: minmax(250px, 0.75fr) minmax(0, 1.25fr); gap: 5rem; }
   .contact-info { flex: 0 0 340px; }
   .contact-form { flex: 1; padding: 2.5rem; }
   .form-row { flex-direction: row; gap: 1rem; }
