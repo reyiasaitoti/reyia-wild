@@ -458,6 +458,9 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
 .testimonial-footer { display: flex; flex-direction: column; gap: 0.25rem; }
 .testimonial-footer strong { color: #ffffff; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; }
 .testimonial-footer span { color: rgba(255,255,255,0.45); font-size: 0.82rem; }
+.booking-process .testimonial-card { min-height: 210px; }
+.booking-process .stars { color: #f4b942; font-family: 'Josefin Sans', sans-serif; font-size: .85rem; font-weight: 700; }
+.booking-step-image { display: block; width: calc(100% + 4rem); height: 140px; margin: -2rem -2rem 1.5rem; object-fit: cover; object-position: center; filter: brightness(.62) saturate(.82); }
 
 /* ── FOOTER ── */
 .site-footer { background: var(--navy-dk); color: #fff; padding: 4rem 0 0; border-top: 1px solid rgba(255,255,255,0.1); }

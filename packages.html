@@ -4,9 +4,9 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Safari Packages | Samara Wild</title>
-  <meta name="description" content="Browse all Kenya safari packages — Maasai Mara, Nakuru, Naivasha, Amboseli, Samburu, Tsavo. Local Maasai guides, full board, all park fees included.">
+  <meta name="description" content="Browse Kenya safari packages across Maasai Mara, Nakuru, Naivasha, Amboseli, Samburu and Tsavo. Local Maasai guides, transport and park fees included; accommodation arranged separately.">
   <link rel="canonical" href="https://samarawild.com/packages.html">
-  <link rel="icon" href="images/mylogo.jpeg" type="image/jpeg">
+  <link rel="icon" href="images/mylogo.jpg" type="image/jpeg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://samarawild.com/packages.html">
   <meta property="og:site_name" content="Samara Wild">
@@ -83,20 +83,14 @@
 .pkg-highlight{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);background:var(--light);border-radius:50px;padding:.22rem .7rem;}
 
 .pkg-card-footer{padding:.9rem 1.4rem 1.25rem;display:flex;flex-direction:column;gap:.6rem;border-top:1px solid var(--border);margin-top:.85rem;}
-.pkg-card-accom{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;}
-.pkg-accom-pill{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:.18rem .55rem;border-radius:50px;white-space:nowrap;}
-.pkg-accom-pill.b{background:var(--light);color:var(--mid);border:1px solid var(--border);}
-.pkg-accom-pill.m{background:#e6f0ee;color:#1a4040;border:1px solid #bdd4d0;}
-.pkg-accom-pill.l{background:var(--black);color:#fff;}
-
 .pkg-card-actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;}
-.pkg-card-actions .btn-view{display:inline-flex;align-items:center;gap:.35rem;padding:.48rem 1.1rem;background:var(--black);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--transition);white-space:nowrap;text-decoration:none;}
-.pkg-card-actions .btn-view:hover{background:#333;transform:translateY(-1px);}
-.pkg-card-actions .btn-view-camps{display:inline-flex;align-items:center;gap:.35rem;padding:.48rem 1.1rem;background:#1a7a5a;color:#fff;font-family:'Josefin Sans',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--transition);white-space:nowrap;text-decoration:none;}
-.pkg-card-actions .btn-view-camps:hover{background:#0f5a42;transform:translateY(-1px);}
-.pkg-card-actions .btn-wa{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;background:#25d366;border-radius:var(--radius-sm);flex-shrink:0;transition:all var(--transition);text-decoration:none;}
-.pkg-card-actions .btn-wa:hover{background:#1dbb5a;transform:translateY(-1px);}
-.pkg-card-actions .btn-wa svg{width:16px;height:16px;fill:#fff;}
+.pkg-card-accom{display:none;}
+.pkg-card-actions .btn-view{display:inline-flex;align-items:center;gap:.35rem;padding:.48rem 1.1rem;background:#f4b942;color:#21170a;font-family:'Josefin Sans',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--transition);white-space:nowrap;text-decoration:none;}
+.pkg-card-actions .btn-view:hover{background:#ffd166;transform:translateY(-1px);}
+.btn-wa{display:inline-flex;align-items:center;justify-content:center;min-width:6.5rem;padding:.55rem .9rem;background:#25d366;color:#fff;font-family:'Josefin Sans',sans-serif;font-size:.72rem;font-weight:700;line-height:1.2;text-transform:uppercase;letter-spacing:.08em;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--transition);white-space:nowrap;text-decoration:none;overflow:hidden;}
+.btn-wa:hover{background:#1dbb5a;transform:translateY(-1px);}
+.btn-wa svg{display:none;}
+.btn-wa::after{content:'WhatsApp';display:block;}
 
 /* Modal Styles */
 .pkg-modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:2000;opacity:0;pointer-events:none;transition:opacity .28s ease;}
@@ -130,8 +124,6 @@
 .pkg-overview-stat .value{font-family:'Josefin Sans',sans-serif;font-size:.92rem;font-weight:700;color:var(--navy);}
 
 .pkg-section-title{font-family:'Josefin Sans',sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:1.4rem 0 .75rem;padding-bottom:.45rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
-.pkg-section-title .btn-view-camps{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem 1rem;background:var(--navy);color:#fff;font-family:'Josefin Sans',sans-serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;border:none;border-radius:50px;cursor:pointer;transition:all var(--transition);}
-.pkg-section-title .btn-view-camps:hover{background:#1a3a5a;transform:translateY(-1px);}
 
 .pkg-incl-cols{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;}
 .pkg-incl-item{display:flex;align-items:flex-start;gap:.45rem;font-size:.83rem;color:var(--text-md);line-height:1.4;}
@@ -199,7 +191,7 @@
 
 @media(min-width:640px){.pkg-grid{grid-template-columns:repeat(2,1fr);}}
 @media(min-width:1024px){.pkg-grid{grid-template-columns:repeat(3,1fr);}}
-@media(max-width:480px){.pkg-card-actions .btn-view,.pkg-card-actions .btn-view-camps{font-size:.6rem;padding:.35rem .7rem;}}
+@media(max-width:480px){.pkg-card-actions .btn-view{font-size:.6rem;padding:.35rem .7rem;}}
 </style>
 <script type="application/ld+json">
 {
@@ -208,7 +200,7 @@
   "name": "Samara Wild",
   "alternateName": "Samara Wild",
   "url": "https://samarawild.com",
-  "logo": "https://samarawild.com/images/mylogo.jpeg",
+  "logo": "https://samarawild.com/images/mylogo.jpg",
   "image": "https://samarawild.com/images/hero.jpg",
   "description": "Maasai Mara safari tours in Kenya. Expert Maasai guides, land-only packages, Big Five sightings, and authentic cultural experiences.",
   "founder": {
@@ -258,7 +250,7 @@
 <header class="site-header" role="banner">
   <div class="header-inner">
     <a class="brand-link" href="/" aria-label="Samara Wild home">
-      <img src="images/mylogo.jpeg" alt="Samara Wild logo" class="logo-img" loading="eager">
+      <img src="images/mylogo.jpg" alt="Samara Wild logo" class="logo-img" loading="eager">
       <div class="brand-text-wrap">
         <span class="brand-name">Samara</span>
         <span class="brand-sub">WILD</span>
@@ -293,7 +285,7 @@
     <div class="mobile-actions">
       <a href="tel:+254794928779" class="mobile-phone">📞 +254 794 928 779</a>
       <a class="btn btn-primary" href="/#contact">Book Now</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/254794928779" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </nav>
 </header>
@@ -364,7 +356,7 @@
         <div class="pkg-card-img">
           <img src="images/gamedrive.jpeg" alt="Mara Big Five Safari" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">★ Most Popular</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">Most Popular</span></div>
           <div class="pkg-card-price-float">
             <div class="from">From</div><div class="amount">$450</div><div class="per">per person</div>
           </div>
@@ -389,8 +381,7 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="mara-bigfive">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="mara-bigfive">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="mara-bigfive">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Mara+Big+Five+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -430,8 +421,7 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="mara-migration">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="mara-migration">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="mara-migration">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Migration+River+Crossing." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -469,8 +459,7 @@
             <span class="pkg-accom-pill l">Luxury Camps</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="mara-luxury">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="mara-luxury">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="mara-luxury">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Mara+Luxury+Fly-In+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -509,8 +498,7 @@
             <span class="pkg-accom-pill m">Mid</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="mara-culture">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="mara-culture">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="mara-culture">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Mara+%26+Culture+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -549,8 +537,7 @@
             <span class="pkg-accom-pill m">Mid</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="nakuru-naivasha">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="nakuru-naivasha">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="nakuru-naivasha">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Lake+Nakuru+%26+Naivasha." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -590,8 +577,7 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="rift-valley">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="rift-valley">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="rift-valley">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Rift+Valley+Lakes." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -606,7 +592,7 @@
         <div class="pkg-card-img">
           <img src="images/sunset1.jpg" alt="Amboseli Elephants & Kilimanjaro" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">★ Scenic</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">Scenic</span></div>
           <div class="pkg-card-price-float">
             <div class="from">From</div><div class="amount">$425</div><div class="per">per person</div>
           </div>
@@ -631,8 +617,7 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="amboseli-elephants">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="amboseli-elephants">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="amboseli-elephants">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Amboseli+Elephants+%26+Kilimanjaro." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -672,8 +657,7 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="amboseli-tsavo">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="amboseli-tsavo">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="amboseli-tsavo">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Amboseli+%26+Tsavo+West." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -688,7 +672,7 @@
         <div class="pkg-card-img">
           <img src="images/adventure.jpeg" alt="Samburu Special Five Safari" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--green">★ Unique</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--green">Unique</span></div>
           <div class="pkg-card-price-float">
             <div class="from">From</div><div class="amount">$575</div><div class="per">per person</div>
           </div>
@@ -713,8 +697,7 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="samburu-special">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="samburu-special">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="samburu-special">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Samburu+Special+Five+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -753,8 +736,7 @@
             <span class="pkg-accom-pill m">Mid</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="tsavo-explorer">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="tsavo-explorer">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="tsavo-explorer">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Tsavo+East+%26+West+Explorer." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -769,7 +751,7 @@
         <div class="pkg-card-img">
           <img src="images/luxurysafari.jpeg" alt="Kenya Classic Circuit" loading="lazy">
           <div class="pkg-card-img-overlay"></div>
-          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">★ Best Seller</span></div>
+          <div class="pkg-card-badges"><span class="pkg-badge pkg-badge--gold">Best Seller</span></div>
           <div class="pkg-card-price-float">
             <div class="from">From</div><div class="amount">$1,250</div><div class="per">per person</div>
           </div>
@@ -794,8 +776,7 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="kenya-classic">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="kenya-classic">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="kenya-classic">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Kenya+Classic+Circuit." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -834,8 +815,7 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="ultimate-kenya">📋 View Details</button>
-            <button class="btn-view-camps" data-pkg="ultimate-kenya">🏕️ View Camps</button>
+            <button class="btn-view" data-pkg="ultimate-kenya">View Details</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Ultimate+Kenya+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -854,7 +834,7 @@
     <p>Tell us your dates, group size, and budget. We'll design the perfect land-only package, recommend camps, and respond within 24 hours.</p>
     <div class="pkg-cta-btns">
       <a class="btn btn-primary" href="/#contact">Send an Enquiry</a>
-      <a class="btn btn-ghost" href="https://wa.me/254794928779?text=Hi%2C+I'd+like+to+discuss+a+custom+safari+package." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      <a class="btn btn-ghost" href="https://wa.me/254794928779?text=Hi%2C+I'd+like+to+discuss+a+custom+safari+package." target="_blank" rel="noopener">WhatsApp Us</a>
     </div>
   </div>
 </div>
@@ -902,14 +882,6 @@
       <h4 class="pkg-section-title">What's Not Included</h4>
       <div id="modalExcludes"></div>
 
-      <h4 class="pkg-section-title">
-        <span>Suggested Camps &amp; Lodges — Book Directly</span>
-        <button class="btn-view-camps" onclick="document.getElementById('modalAccom').scrollIntoView({behavior:'smooth',block:'center'})">
-          🏕️ Jump to Camps
-        </button>
-      </h4>
-      <div class="pkg-accom-note"><strong>Accommodation is not included in this price.</strong> These are camps/lodges we recommend for this itinerary — book your preferred one directly with the property, via booking.com, or ask us and we'll help you arrange it.</div>
-      <div class="pkg-accom-list" id="modalAccom"></div>
     </div>
 
     <!-- ITINERARY TAB -->
@@ -925,7 +897,7 @@
           <div class="amount" id="bookPrice"></div>
           <div class="per" id="bookPer"></div>
         </div>
-        <div class="note">Excludes accommodation. See the Overview tab for suggested camps to book directly.</div>
+        <div class="note">Excludes accommodation.</div>
       </div>
 
       <form class="pkg-book-form" onsubmit="return false;">
@@ -960,7 +932,7 @@
         </div>
         <div class="pkg-book-actions">
           <button type="button" class="btn-book-submit" id="bookSubmitBtn">Send Enquiry via WhatsApp</button>
-          <a href="#" id="bookWaBtn" target="_blank" rel="noopener" class="btn-book-wa">💬 Chat With Us on WhatsApp</a>
+          <a href="#" id="bookWaBtn" target="_blank" rel="noopener" class="btn-book-wa">Chat With Us on WhatsApp</a>
         </div>
         <p class="pkg-book-note">This price covers guiding, transport &amp; park fees only. We'll confirm your accommodation choice and total cost together before you pay anything.</p>
       </form>
@@ -973,7 +945,7 @@
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner container">
     <div class="footer-brand">
-      <img src="images/mylogo.jpeg" alt="Samara Wild logo" class="footer-logo">
+      <img src="images/mylogo.jpg" alt="Samara Wild logo" class="footer-logo">
       <h3>Samara<br>Wild</h3>
       <p>Creating unforgettable safari experiences across Africa — where adventure meets comfort and the wild calls your name.</p>
       <div class="socials">
@@ -1034,7 +1006,7 @@ var PACKAGES = {
 
   /* -- MARA -- */
   'mara-bigfive': {
-    title:'Mara Big Five Safari', badge:'★ Most Popular',
+    title:'Mara Big Five Safari', badge:'Most Popular',
     img:'images/gamedrive.jpeg', duration:'3 Days · 2 Nights', dest:'Maasai Mara',
     price:'$450', per:'per person · excl. accommodation', waText:'Mara+Big+Five+Safari',
     about:'Four game drives across the Maasai Mara plains with expert Maasai guides. Track lions, leopards, elephants, buffalo, and rhino — the iconic Big Five. This land-only package includes all park fees, transport, and expert guiding. Choose your preferred camp from our suggestions below.',
@@ -1155,11 +1127,11 @@ var PACKAGES = {
 
   /* -- AMBOSELI -- */
   'amboseli-elephants': {
-    title:'Amboseli Elephants & Kilimanjaro', badge:'★ Scenic',
+    title:'Amboseli Elephants & Kilimanjaro', badge:'Scenic',
     img:'images/sunset1.jpg', duration:'3 Days · 2 Nights', dest:'Amboseli',
     price:'$425', per:'per person · excl. accommodation', waText:'Amboseli+Elephants+%26+Kilimanjaro',
     about:'Elephant herds against the backdrop of Mount Kilimanjaro. Game drives through swamps, open plains, and a Maasai community visit. Amboseli is famous for its big tuskers and year-round wildlife.',
-    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Kili Views',value:'Guaranteed'},{label:'Park Fees',value:'Included'}],
+    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Kili Views',value:'Seasonal'},{label:'Park Fees',value:'Included'}],
     includes:['All park entry fees','4 game drives','Expert Maasai guide','Return Nairobi transfer','Bottled water'],
     excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
@@ -1198,11 +1170,11 @@ var PACKAGES = {
 
   /* -- SAMBURU -- */
   'samburu-special': {
-    title:'Samburu Special Five Safari', badge:'★ Unique',
+    title:'Samburu Special Five Safari', badge:'Unique',
     img:'images/adventure.jpeg', duration:'4 Days · 3 Nights', dest:'Samburu',
     price:'$575', per:'per person · excl. accommodation', waText:'Samburu+Special+Five+Safari',
     about:'Home of the \'Special Five\' — Grevy\'s zebra, reticulated giraffe, Somali ostrich, gerenuk, and beisa oryx. This northern Kenya gem offers wildlife you won\'t find in the southern parks.',
-    stats:[{label:'Duration',value:'4 Days'},{label:'Special Five',value:'100% Sightings'},{label:'Ewaso River',value:'Scenic'},{label:'Park Fees',value:'Included'}],
+    stats:[{label:'Duration',value:'4 Days'},{label:'Special Five',value:'Strong Chances'},{label:'Ewaso River',value:'Scenic'},{label:'Park Fees',value:'Included'}],
     includes:['All park fees','4 game drives','Expert guide','Return Nairobi transfer'],
     excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
@@ -1224,7 +1196,7 @@ var PACKAGES = {
     img:'images/gamedrives.jpg', duration:'4 Days · 3 Nights', dest:'Tsavo East & West',
     price:'$500', per:'per person · excl. accommodation', waText:'Tsavo+East+%26+West+Explorer',
     about:'Kenya\'s largest park — red elephants of Tsavo East, Mzima Springs hippos, and the volcanic landscape of Tsavo West. A true safari adventure.',
-    stats:[{label:'Duration',value:'4 Days'},{label:'Parks Visited',value:'2'},{label:'Red Elephants',value:'Guaranteed'},{label:'Park Fees',value:'Included'}],
+    stats:[{label:'Duration',value:'4 Days'},{label:'Parks Visited',value:'2'},{label:'Red Elephants',value:'Seasonal'},{label:'Park Fees',value:'Included'}],
     includes:['All park fees','4 game drives','Mzima Springs visit','Expert guide','Return Nairobi transfer'],
     excludes:['Accommodation — book directly (see suggested camps)','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
@@ -1241,7 +1213,7 @@ var PACKAGES = {
 
   /* -- COMBINATION -- */
   'kenya-classic': {
-    title:'Kenya Classic Circuit', badge:'★ Best Seller',
+    title:'Kenya Classic Circuit', badge:'Best Seller',
     img:'images/luxurysafari.jpeg', duration:'7 Days · 6 Nights', dest:'Mara · Nakuru · Amboseli',
     price:'$1,250', per:'per person · excl. accommodation', waText:'Kenya+Classic+Circuit',
     about:'The ultimate Kenya introduction — Maasai Mara\'s big cats, Nakuru\'s flamingos, and Amboseli\'s elephants with Kilimanjaro. The perfect first safari for new visitors.',
@@ -1293,7 +1265,7 @@ var PACKAGES = {
 }; /* end PACKAGES */
 
 /* ── MODAL FUNCTIONS ── */
-function openModal(id, scrollToCamps) {
+function openModal(id) {
   var pkg = PACKAGES[id];
   if (!pkg) return;
 
@@ -1316,17 +1288,6 @@ function openModal(id, scrollToCamps) {
 
   document.getElementById('modalExcludes').innerHTML = pkg.excludes.map(function(e) {
     return '<div class="pkg-excl-item">' + e + '</div>';
-  }).join('');
-
-  var tierLabel = {b:'Budget', m:'Mid-Range', l:'Luxury'};
-  document.getElementById('modalAccom').innerHTML = pkg.accom.map(function(a) {
-    var bookLink = a.bookUrl ? '<a href="' + a.bookUrl + '" target="_blank" rel="noopener" class="book-link">📖 Book Now</a>' : '';
-    return '<div class="pkg-accom-row">'
-      + '<span class="pkg-accom-pill ' + a.tier + '">' + tierLabel[a.tier] + '</span>'
-      + '<span class="name">' + a.name + '</span>'
-      + '<span class="desc">' + a.desc + '</span>'
-      + bookLink
-      + '</div>';
   }).join('');
 
   var waUrl = 'https://wa.me/254794928779?text=Hi%2C+I%27m+interested+in+the+' + pkg.waText + '+package.';
@@ -1355,13 +1316,6 @@ function openModal(id, scrollToCamps) {
   document.getElementById('pkgModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 
-  // Scroll to camps if requested
-  if (scrollToCamps) {
-    setTimeout(function() {
-      var accomEl = document.getElementById('modalAccom');
-      if (accomEl) accomEl.scrollIntoView({behavior:'smooth',block:'center'});
-    }, 400);
-  }
 }
 
 function closeModal() {
@@ -1393,13 +1347,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // "View Camps" buttons - opens modal and scrolls to camps
-  document.querySelectorAll('.btn-view-camps[data-pkg]').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      openModal(btn.dataset.pkg, true);
-    });
-  });
-
   // Footer package links
   document.querySelectorAll('.footer-pkg-link[data-pkg]').forEach(function(link) {
     link.addEventListener('click', function(e) {
@@ -1424,11 +1371,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.getElementById('bookSubmitBtn').addEventListener('click', function() {
     var name = document.getElementById('bookName').value.trim();
+    var guests = document.getElementById('bookGuests').value.trim();
+    var date = document.getElementById('bookDate').value;
+    var accommodation = document.getElementById('bookAccom').value;
+    var notes = document.getElementById('bookNotes').value.trim();
     var pkgEl = document.getElementById('modalTitle');
     var pkgName = pkgEl ? pkgEl.textContent : 'a safari package';
     if (!name) { alert('Please enter your name before sending.'); return; }
-    var msg = 'Hi%2C+my+name+is+' + encodeURIComponent(name) + '%2C+I%27d+like+to+book+the+' + encodeURIComponent(pkgName) + '+package.';
-    window.open('https://wa.me/254794928779?text=' + msg, '_blank');
+    var message = [
+      'Hi, my name is ' + name + '.',
+      'I would like to book the ' + pkgName + ' package.',
+      'Number of guests: ' + (guests || 'Not provided'),
+      'Preferred start date: ' + (date || 'Not provided'),
+      'Accommodation: ' + (accommodation || 'Not sure yet'),
+      'Notes: ' + (notes || 'None')
+    ].join('\n');
+    window.open('https://wa.me/254794928779?text=' + encodeURIComponent(message), '_blank');
   });
 
   document.querySelectorAll('.pkg-filter-btn').forEach(function(btn) {
