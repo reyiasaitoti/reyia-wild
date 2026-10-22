@@ -115,6 +115,31 @@ if (form) {
   const timeInput = document.getElementById('time');
   if (timeInput) timeInput.value = new Date().toLocaleString();
 
+  const arrivalDateInput = form.querySelector('[name="arrivalDate"]');
+  const departureDateInput = form.querySelector('[name="departureDate"]');
+  function localDateValue(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return year + '-' + month + '-' + day;
+  }
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  arrivalDateInput.min = localDateValue(today);
+
+  function updateDepartureDateMin() {
+    const earliestDeparture = arrivalDateInput.value
+      ? new Date(arrivalDateInput.value + 'T00:00:00')
+      : today;
+    earliestDeparture.setDate(earliestDeparture.getDate() + 1);
+    departureDateInput.min = localDateValue(earliestDeparture);
+    if (departureDateInput.value && departureDateInput.value < departureDateInput.min) {
+      departureDateInput.value = '';
+    }
+  }
+  arrivalDateInput.addEventListener('change', updateDepartureDateMin);
+  updateDepartureDateMin();
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -129,11 +154,24 @@ if (form) {
       formStatus.textContent = 'Sending…';
     }
 
+    const tripDetails = [
+      ['Phone / WhatsApp', form.querySelector('[name="phone"]').value.trim()],
+      ['Number of guests', form.querySelector('[name="guests"]').value.trim()],
+      ['Arrival date', form.querySelector('[name="arrivalDate"]').value],
+      ['Departure date', form.querySelector('[name="departureDate"]').value],
+      ['Destination', form.querySelector('[name="destination"]').value],
+      ['Accommodation preference', form.querySelector('[name="accommodation"]').value]
+    ].filter(function (detail) {
+      return detail[1];
+    }).map(function (detail) {
+      return detail[0] + ': ' + detail[1];
+    });
+    const guestMessage = form.querySelector('[name="message"]').value.trim();
     const payload = {
       name:    form.querySelector('[name="name"]').value,
       email:   form.querySelector('[name="email"]').value,
       subject: form.querySelector('[name="subject"]').value || 'Safari Enquiry',
-      message: form.querySelector('[name="message"]').value,
+      message: guestMessage + (tripDetails.length ? '\n\nTrip details:\n' + tripDetails.join('\n') : ''),
       time:    new Date().toLocaleString()
     };
 

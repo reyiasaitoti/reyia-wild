@@ -244,25 +244,6 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
   transform: scale(1.06);
 }
 
-.pkg-card-badge {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 0.64rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #fff;
-  padding: 0.3rem 0.7rem;
-  border-radius: 50px;
-  z-index: 1;
-}
-
-.pkg-card-badge--star { background: #B98A2E; }
-.pkg-card-badge--season { background: #c0392b; }
-.pkg-card-badge--scenic { background: #2f6b4f; }
-
 .pkg-card-body {
   padding: 1.25rem 1.3rem 1.4rem;
   display: flex;
@@ -307,6 +288,7 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
 .pkg-card-price {
   font-size: 0.82rem;
   color: var(--text-md);
+  text-decoration: none;
 }
 
 .pkg-card-price strong {
@@ -317,11 +299,11 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
 .pkg-card-cta {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--navy);
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 .pkg-card:hover .pkg-card-cta {
@@ -427,9 +409,10 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
 .form-row { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1rem; }
 .form-row label, .contact-form label { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
 .form-row label > span, .contact-form label > span { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--navy); }
-.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea { width: 100%; padding: 0.8rem 1rem; border: 2px solid rgba(26,35,50,0.1); border-radius: var(--radius-sm); font-family: 'Josefin Sans', sans-serif; font-size: 0.95rem; background: #fafbfc; transition: all var(--transition); color: var(--text); }
-.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--black); background: #fff; box-shadow: 0 0 0 3px rgba(0,0,0,0.08); }
+.contact-form input:not([type="hidden"]), .contact-form select, .contact-form textarea { width: 100%; min-height: 46px; padding: 0.8rem 1rem; border: 2px solid rgba(26,35,50,0.1); border-radius: var(--radius-sm); font-family: 'Josefin Sans', sans-serif; font-size: 0.95rem; background: #fafbfc; transition: all var(--transition); color: var(--text); }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: var(--black); background: #fff; box-shadow: 0 0 0 3px rgba(0,0,0,0.08); }
 .contact-form textarea { resize: vertical; min-height: 130px; font-family: 'Josefin Sans', sans-serif; }
+.contact-form select { cursor: pointer; }
 .form-actions { display: flex; gap: 1rem; align-items: center; margin-top: 1.25rem; }
 .form-status { font-size: 0.9rem; padding: 0.6rem 0.9rem; border-radius: var(--radius-sm); display: none; }
 .form-status.success { display: block; background: rgba(26,35,50,0.06); color: var(--navy); }
@@ -439,12 +422,13 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
 .testimonials { background: var(--navy); }
 .testimonials .section-head h2 { color: var(--white); }
 .testimonials .section-head h2::after { background: rgba(255,255,255,0.3); }
-.testimonials .section-head p { color: rgba(255,255,255,0.6); }
+.testimonials .section-head p { color: rgba(255,255,255,0.82); }
 .testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
 .testimonial-card { background: rgba(255,255,255,0.05); padding: 2rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.08); transition: all var(--transition); }
+.testimonial-card h3 { color: var(--white); }
 .testimonial-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-4px); }
 .stars { color: #ffffff; font-size: 1.1rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
-.testimonial-text { font-family: 'Josefin Sans', serif; font-style: italic; font-size: 0.98rem; color: rgba(255,255,255,0.85); line-height: 1.75; margin: 0 0 1.5rem; }
+.testimonial-text { font-family: 'Josefin Sans', serif; font-style: italic; font-size: 0.98rem; color: rgba(255,255,255,0.9); line-height: 1.75; margin: 0 0 1.5rem; }
 .testimonial-footer { display: flex; flex-direction: column; gap: 0.25rem; }
 .testimonial-footer strong { color: #ffffff; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; }
 .testimonial-footer span { color: rgba(255,255,255,0.45); font-size: 0.82rem; }
@@ -827,27 +811,7 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
   background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%);
 }
 
-/* Badges */
-.pkg-card-badges { position: absolute; top: 0.75rem; left: 0.75rem; display: flex; gap: 0.4rem; flex-wrap: wrap; z-index: 2; }
-.pkg-badge {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.25rem 0.7rem;
-  border-radius: 50px;
-}
-.pkg-badge--black { background: var(--black); color: #fff; }
-.pkg-badge--white { background: #fff; color: #000; }
-.pkg-badge--hot   { background: #c0392b; color: #fff; }
-.pkg-badge--gold  { background: #555; color: #fff; }
 
-/* Price float */
-.pkg-card-price-float { position: absolute; bottom: 0.8rem; right: 0.8rem; z-index: 2; text-align: right; }
-.pkg-card-price-float .from { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.65); }
-.pkg-card-price-float .amount { font-family: 'Josefin Sans', serif; font-size: 1.35rem; font-weight: 700; color: #fff; line-height: 1; }
-.pkg-card-price-float .per { font-size: 0.6rem; color: rgba(255,255,255,0.6); }
 
 /* Card body */
 .pkg-card-body { padding: 1.25rem 1.4rem 0; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
@@ -867,18 +831,6 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.pkg-card-highlights { display: flex; gap: 0.5rem; flex-wrap: wrap; padding-top: 0.1rem; }
-.pkg-highlight {
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--mid);
-  background: var(--light);
-  border-radius: 50px;
-  padding: 0.22rem 0.7rem;
-}
-
 /* Card footer */
 .pkg-card-footer {
   padding: 0.9rem 1.4rem 1.25rem;
@@ -999,7 +951,6 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
   background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%);
 }
 .pkg-modal-hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem 1.5rem; }
-.pkg-modal-hero-content .pkg-badge { margin-bottom: 0.4rem; display: inline-block; }
 .pkg-modal-hero-content h2 {
   font-family: 'Josefin Sans', serif;
   font-size: 1.55rem;
