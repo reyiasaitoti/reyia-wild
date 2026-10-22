@@ -429,6 +429,8 @@ a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(0,0
 .testimonial-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-4px); }
 .stars { color: #ffffff; font-size: 1.1rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
 .testimonial-text { font-family: 'Josefin Sans', serif; font-style: italic; font-size: 0.98rem; color: rgba(255,255,255,0.9); line-height: 1.75; margin: 0 0 1.5rem; }
+#why-samara-wild .testimonial-card { min-width: 0; }
+#why-samara-wild .testimonial-text { color: #ffffff; font-style: normal; font-weight: 500; }
 .testimonial-footer { display: flex; flex-direction: column; gap: 0.25rem; }
 .testimonial-footer strong { color: #ffffff; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; }
 .testimonial-footer span { color: rgba(255,255,255,0.45); font-size: 0.82rem; }

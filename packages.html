@@ -350,7 +350,7 @@
             <span class="pkg-card-dest">Maasai Mara</span>
           </div>
           <h3 class="pkg-card-title">Mara Big Five Safari</h3>
-          <p class="pkg-card-desc">Four game drives across the Mara plains. Track lions, leopards, elephants, buffalo, and rhino with our expert Maasai guides.</p>
+          <p class="pkg-card-desc">Two game drives across the Mara plains: one evening and one full-day drive. Track the Big Five with expert Maasai guides.</p>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -416,7 +416,7 @@
             <span class="pkg-card-dest">Maasai Mara</span>
           </div>
           <h3 class="pkg-card-title">Mara Luxury Fly-In Safari</h3>
-          <p class="pkg-card-desc">Fly from Nairobi to the Mara. Private vehicle, exclusive game drives, bush dinners, and premium service throughout.</p>
+          <p class="pkg-card-desc">Fly from Nairobi to the Mara for one evening and two full-day game drives, with a private vehicle and premium service.</p>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -911,9 +911,9 @@ var PACKAGES = {
     title:'Mara Big Five Safari',
     img:'images/gamedrive.jpeg', duration:'3 Days · 2 Nights', dest:'Maasai Mara',
     waText:'Mara+Big+Five+Safari',
-    about:'Four game drives across the Maasai Mara plains with expert Maasai guides. Track lions, leopards, elephants, buffalo, and rhino — the iconic Big Five. Request a personalized quote for your dates and preferred accommodation.',
-    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Nights',value:'2 Nights'},{label:'Park Fees',value:'Included'}],
-    includes:['All park entry fees','4 game drives (dawn & dusk)','4WD pop-up roof vehicle','Expert Maasai guide','Bottled water','Mara River picnic lunch'],
+    about:'Two game drives across the Maasai Mara plains with expert Maasai guides: one evening drive and one full-day drive. Track lions, leopards, elephants, buffalo, and rhino — the iconic Big Five. Request a personalized quote for your dates and preferred accommodation.',
+    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'2 Drives'},{label:'Nights',value:'2 Nights'},{label:'Park Fees',value:'Included'}],
+    includes:['All park entry fees','2 game drives: 1 evening and 1 full-day','4WD pop-up roof vehicle','Expert Maasai guide','Bottled water','Mara River picnic lunch'],
     excludes:['Accommodation — quoted separately based on your preference','Breakfast & dinner (provided by your camp)','Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
     accom:[
       {tier:'b',name:'Sekenani Bush Camp',desc:'Simple tented camp near the gate, shared facilities',bookUrl:'https://www.booking.com/searchresults.html?ss=Sekenani+Bush+Camp'},
@@ -922,9 +922,9 @@ var PACKAGES = {
       {tier:'l',name:'Keekorok Lodge',desc:'Historic Mara lodge, full amenities, iconic location',bookUrl:'https://www.booking.com/hotel/ke/keekorok-lodge.en.html'}
     ],
     itinerary:[
-      {title:'Nairobi → Maasai Mara',meals:[],body:'Depart Nairobi at 07:00 for a scenic drive through the Rift Valley. Arrive at camp, then head out for an afternoon game drive at 15:30.'},
-      {title:'Full Day Game Drive',meals:['L'],body:'Dawn drive at 06:00 tracking big cats. Breakfast at camp. Afternoon drive at 15:30 exploring the Mara Triangle and river zone. Picnic lunch included.'},
-      {title:'Final Dawn Drive → Nairobi',meals:[],body:'Sunrise game drive at 06:00 — often the best of the trip. Breakfast at camp, checkout by 10:00. Return to Nairobi mid-afternoon.'}
+      {title:'Nairobi → Maasai Mara',meals:[],body:'Depart Nairobi at 07:00 for a scenic drive through the Rift Valley. Arrive at camp, then enjoy an evening game drive.'},
+      {title:'Full Day Game Drive',meals:['L'],body:'Spend the day exploring the Mara Triangle and river zone on a full-day game drive. Picnic lunch included.'},
+      {title:'Return to Nairobi',meals:[],body:'Breakfast at camp, checkout by 10:00, then return to Nairobi mid-afternoon.'}
     ]
   },
 
@@ -933,8 +933,8 @@ var PACKAGES = {
     img:'images/wildbeest.jpg', duration:'4 Days · 3 Nights', dest:'Mara River',
     waText:'Great+Migration+River+Crossing',
     about:'Positioned at the Mara River during peak migration season (July–October). Witness the dramatic crossings of wildebeest and zebra — nature\'s greatest spectacle. Our guides know the best crossing points and monitor herd movements closely.',
-    stats:[{label:'Duration',value:'4 Days'},{label:'Game Drives',value:'5 Drives'},{label:'Best Months',value:'Jul – Oct'},{label:'Park Fees',value:'Included'}],
-    includes:['All park & conservancy fees','River crossing positioning','5 game drives','Expert Maasai guide','Return Nairobi transfer','Picnic lunch on crossing days'],
+    stats:[{label:'Duration',value:'4 Days'},{label:'Game Drives',value:'3 Drives'},{label:'Best Months',value:'Jul – Oct'},{label:'Park Fees',value:'Included'}],
+    includes:['All park & conservancy fees','River crossing positioning','3 game drives: 1 evening and 2 full-day','Expert Maasai guide','Return Nairobi transfer','Picnic lunch on crossing days'],
     excludes:['Accommodation — quoted separately based on your preference','Breakfast & dinner (provided by your camp)','Gratuities','Alcoholic beverages','Hot air balloon','Travel insurance'],
     accom:[
       {tier:'b',name:'Mara Crossings Camp',desc:'Basic tented camp, riverside — you can hear the action at night',bookUrl:'https://www.booking.com/searchresults.html?ss=Mara+Crossings+Camp'},
@@ -943,10 +943,10 @@ var PACKAGES = {
       {tier:'l',name:"Governors' Il Moran",desc:'Legendary riverfront camp, 10 exclusive tents',bookUrl:'https://www.governorscamp.com/il-moran-camp/'}
     ],
     itinerary:[
-      {title:'Nairobi → Mara River Zone',meals:[],body:'Depart Nairobi early. Arrive by lunch, check into your camp, then afternoon river-focused drive.'},
-      {title:'Full Crossing Day',meals:['L'],body:'Positioned at the river from 06:00. Monitor crossing herds. Picnic lunch riverside. Evening drive back to camp.'},
-      {title:'Second Crossing Day',meals:['L'],body:'Another full day at the river. Crossings are unpredictable — your guide keeps you in position. Bush picnic lunch.'},
-      {title:'Final River Drive → Nairobi',meals:[],body:'One last dawn drive. Checkout by 10:00, return to Nairobi.'}
+      {title:'Nairobi → Mara River Zone',meals:[],body:'Depart Nairobi early. Arrive by lunch, check into your camp, then enjoy an evening game drive focused on the river.'},
+      {title:'Full Day Game Drive',meals:['L'],body:'Spend the day monitoring crossing herds from the river. Picnic lunch included.'},
+      {title:'Second Full Day Game Drive',meals:['L'],body:'Spend another full day at the river. Crossings are unpredictable, so your guide will monitor herd movements. Bush picnic lunch included.'},
+      {title:'Return to Nairobi',meals:[],body:'Breakfast at camp, checkout by 10:00, then return to Nairobi.'}
     ]
   },
 
@@ -955,8 +955,8 @@ var PACKAGES = {
     img:'images/luxurysafari.jpeg', duration:'4 Days · 3 Nights', dest:'Maasai Mara',
     waText:'Mara+Luxury+Fly-In+Safari',
     about:'Fly from Nairobi to the Mara in under an hour. Private vehicle, exclusive game drives, bush dinners, and premium service throughout. Request a personalized quote for your dates and preferred accommodation.',
-    stats:[{label:'Duration',value:'4 Days'},{label:'Nights',value:'3 Nights'},{label:'Private',value:'Exclusive Use'},{label:'Fly-In',value:'Included'}],
-    includes:['Nairobi → Mara return flights','All park & conservancy fees','Private 4WD vehicle','Private Maasai guide','Bush dinner & sundowners','All transfers'],
+    stats:[{label:'Duration',value:'4 Days'},{label:'Game Drives',value:'3 Drives'},{label:'Nights',value:'3 Nights'},{label:'Fly-In',value:'Included'}],
+    includes:['Nairobi → Mara return flights','All park & conservancy fees','3 game drives: 1 evening and 2 full-day','Private 4WD vehicle','Private Maasai guide','Bush dinner & sundowners','All transfers'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages','Travel insurance'],
     accom:[
       {tier:'l',name:'Angama Mara',desc:'Suspended above the Great Rift Valley, world-class views',bookUrl:'https://angama.com/'},
@@ -964,10 +964,10 @@ var PACKAGES = {
       {tier:'m',name:'Mara Hilltop Camp',desc:'Accommodation option available on request'}
     ],
     itinerary:[
-      {title:'Nairobi → Mara (Fly-In)',meals:[],body:'Morning flight from Wilson Airport to Mara. Private welcome and afternoon game drive.'},
-      {title:'Private Game Drives',meals:['L'],body:'Full day in a private vehicle. Bush picnic and sundowners on a kopje.'},
-      {title:'Full Day Safari',meals:['D'],body:'Game drives across the reserve. Bush dinner under the stars.'},
-      {title:'Final Drive → Fly-Out',meals:[],body:'Morning drive, fly back to Nairobi.'}
+      {title:'Nairobi → Mara (Fly-In)',meals:[],body:'Fly from Wilson Airport to the Mara. Private welcome and an evening game drive.'},
+      {title:'Full Day Game Drive',meals:['L'],body:'Explore the reserve on a full-day game drive in your private vehicle. Bush picnic and sundowners on a kopje.'},
+      {title:'Second Full Day Game Drive',meals:['D'],body:'Enjoy another full-day game drive across the reserve, followed by a bush dinner under the stars.'},
+      {title:'Fly-Out to Nairobi',meals:[],body:'Breakfast at camp, then fly back to Nairobi.'}
     ]
   },
 
@@ -976,8 +976,8 @@ var PACKAGES = {
     img:'images/maasaidance.jpg', duration:'3 Days · 2 Nights', dest:'Mara + Village',
     waText:'Mara+%26+Culture+Safari',
     about:'Game drives combined with an authentic Maasai village visit near Sekenani Gate. Meet elders, learn warrior traditions, witness beadwork demonstrations, and understand how the Maasai coexist with wildlife.',
-    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'3 Drives'},{label:'Village Visit',value:'Half Day'},{label:'Park Fees',value:'Included'}],
-    includes:['Maasai village guided visit','All park & conservancy fees','3 game drives','Expert Maasai guide','Beadwork demonstration'],
+    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'2 Drives'},{label:'Village Visit',value:'Half Day'},{label:'Park Fees',value:'Included'}],
+    includes:['Maasai village guided visit','All park & conservancy fees','2 game drives: 1 evening and 1 full-day','Expert Maasai guide','Beadwork demonstration'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
       {tier:'b',name:'Sekenani Camp',desc:'Simple tented camp close to the village and gate',bookUrl:'https://www.booking.com/searchresults.html?ss=Sekenani+Camp'},
@@ -985,9 +985,9 @@ var PACKAGES = {
       {tier:'m',name:'Mara Hilltop Camp',desc:'Accommodation option available on request'}
     ],
     itinerary:[
-      {title:'Arrival & Village Visit',meals:[],body:'Arrive, visit Maasai community. Afternoon game drive.'},
-      {title:'Full Day Game Drive',meals:['L'],body:'Dawn and afternoon drives. Picnic lunch.'},
-      {title:'Final Drive → Nairobi',meals:[],body:'Sunrise drive, checkout, return.'}
+      {title:'Arrival & Village Visit',meals:[],body:'Arrive and visit the Maasai community, followed by an evening game drive.'},
+      {title:'Full Day Game Drive',meals:['L'],body:'Explore the reserve on a full-day game drive. Picnic lunch included.'},
+      {title:'Return to Nairobi',meals:[],body:'Breakfast at camp, checkout, then return to Nairobi.'}
     ]
   },
 
@@ -998,16 +998,16 @@ var PACKAGES = {
     waText:'Lake+Nakuru+%26+Naivasha',
     about:'Flamingos at Lake Nakuru, rhino sanctuary, and a boat ride on Lake Naivasha with hippos and diverse birdlife. Request a personalized proposal for this scenic Rift Valley lakes itinerary.',
     stats:[{label:'Duration',value:'3 Days'},{label:'Nights',value:'2 Nights'},{label:'Boat Safari',value:'Included'},{label:'Park Fees',value:'Included'}],
-    includes:['All park entry fees','Lake Nakuru game drive','Lake Naivasha boat ride','Expert guide','Return Nairobi transfer'],
+    includes:['All park entry fees','1 evening game drive at Lake Nakuru','Lake Naivasha boat ride','Expert guide','Return Nairobi transfer'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
       {tier:'b',name:'Lake Nakuru Lodge',desc:'Budget lodge inside the park, great wildlife views',bookUrl:'https://www.booking.com/hotel/ke/lake-nakuru-lodge.en.html'},
       {tier:'m',name:'Sarova Lion Hill',desc:'Mid-range lodge with panoramic lake views',bookUrl:'https://www.booking.com/hotel/ke/sarova-lion-hill-game-lodge.en.html'}
     ],
     itinerary:[
-      {title:'Nairobi → Nakuru',meals:[],body:'Depart 07:00. Arrive and game drive at Lake Nakuru. Flamingos, rhinos, and the iconic baboon cliff.'},
+      {title:'Nairobi → Nakuru',meals:[],body:'Depart at 07:00, then enjoy an evening game drive at Lake Nakuru to look for flamingos, rhinos, and the iconic baboon cliff.'},
       {title:'Naivasha Boat Safari',meals:['L'],body:'Morning at Lake Naivasha. Boat safari to Crescent Island, walking with giraffes and zebras. Afternoon at leisure.'},
-      {title:'Return to Nairobi',meals:[],body:'Morning drive back to Nairobi.'}
+      {title:'Return to Nairobi',meals:[],body:'After breakfast, return to Nairobi.'}
     ]
   },
 
@@ -1016,7 +1016,7 @@ var PACKAGES = {
     img:'images/adventure.jpeg', duration:'4 Days · 3 Nights', dest:'Nakuru · Naivasha · Baringo',
     waText:'Great+Rift+Valley+Lakes',
     about:'Explore three lakes — Nakuru, Naivasha, and Baringo. Flamingos, pelicans, hippos, and the famous Giraffe Manor nearby. A comprehensive Rift Valley experience.',
-    stats:[{label:'Duration',value:'4 Days'},{label:'Lakes Visited',value:'3 Lakes'},{label:'Boat Safaris',value:'2'},{label:'Park Fees',value:'Included'}],
+    stats:[{label:'Duration',value:'4 Days'},{label:'Game Drives',value:'1 Evening'},{label:'Lakes Visited',value:'3 Lakes'},{label:'Boat Safaris',value:'2'}],
     includes:['All park fees','Boat safaris on Naivasha & Baringo','Expert guide','Return Nairobi transfer'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
@@ -1024,8 +1024,8 @@ var PACKAGES = {
       {tier:'m',name:'Naivasha Kongoni Lodge',desc:'Mid-range lodge with lake views',bookUrl:'https://www.booking.com/hotel/ke/kongoni-lodge-naivasha.en.html'}
     ],
     itinerary:[
-      {title:'Nairobi → Nakuru',meals:[],body:'Lake Nakuru game drive.'},
-      {title:'Nakuru → Naivasha',meals:['L'],body:'Morning at Nakuru, afternoon boat safari on Naivasha.'},
+      {title:'Nairobi → Nakuru',meals:[],body:'Arrive in Nakuru and enjoy an evening game drive at the lake.'},
+      {title:'Nakuru → Naivasha',meals:['L'],body:'Breakfast in Nakuru, then travel to Naivasha for an afternoon boat safari.'},
       {title:'Naivasha → Baringo',meals:['L'],body:'Boat safari at Lake Baringo — pelicans, hippos, and the famous Giraffe Manor.'},
       {title:'Return to Nairobi',meals:[],body:'Drive back to Nairobi.'}
     ]
@@ -1037,8 +1037,8 @@ var PACKAGES = {
     img:'images/sunset1.jpg', duration:'3 Days · 2 Nights', dest:'Amboseli',
     waText:'Amboseli+Elephants+%26+Kilimanjaro',
     about:'Elephant herds against the backdrop of Mount Kilimanjaro. Game drives through swamps, open plains, and a Maasai community visit. Amboseli is famous for its big tuskers and year-round wildlife.',
-    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Kili Views',value:'Seasonal'},{label:'Park Fees',value:'Included'}],
-    includes:['All park entry fees','4 game drives','Expert Maasai guide','Return Nairobi transfer','Bottled water'],
+    stats:[{label:'Duration',value:'3 Days'},{label:'Game Drives',value:'2 Drives'},{label:'Kili Views',value:'Seasonal'},{label:'Park Fees',value:'Included'}],
+    includes:['All park entry fees','2 game drives: 1 evening and 1 full-day','Expert Maasai guide','Return Nairobi transfer','Bottled water'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
       {tier:'b',name:'Amboseli Serena',desc:'Budget-friendly safari lodge',bookUrl:'https://www.booking.com/hotel/ke/amboseli-serena-safari-lodge.en.html'},
@@ -1046,9 +1046,9 @@ var PACKAGES = {
       {tier:'l',name:'Tortilis Camp',desc:'Luxury camp, exclusive position with Kili views',bookUrl:'https://www.tortiliscamp.com/'}
     ],
     itinerary:[
-      {title:'Nairobi → Amboseli',meals:[],body:'Arrive, afternoon game drive. View of Kilimanjaro at sunset.'},
-      {title:'Full Day in Amboseli',meals:['L'],body:'Dawn and afternoon drives. Elephant herds around the swamps.'},
-      {title:'Final Drive → Nairobi',meals:[],body:'Morning drive, checkout, return.'}
+      {title:'Nairobi → Amboseli',meals:[],body:'Arrive and enjoy an evening game drive, with a chance to see Kilimanjaro at sunset.'},
+      {title:'Full Day Game Drive in Amboseli',meals:['L'],body:'Explore Amboseli on a full-day game drive, including the swamps where elephant herds gather.'},
+      {title:'Return to Nairobi',meals:[],body:'Breakfast at camp, checkout, then return to Nairobi.'}
     ]
   },
 
@@ -1057,8 +1057,8 @@ var PACKAGES = {
     img:'images/wildbeest.jpg', duration:'5 Days · 4 Nights', dest:'Amboseli · Tsavo West',
     waText:'Amboseli+%26+Tsavo+West',
     about:'Combine Amboseli\'s elephant herds with Tsavo West\'s volcanic landscapes and Mzima Springs for two distinct ecosystems in one journey. Request a personalized proposal for your dates and group.',
-    stats:[{label:'Duration',value:'5 Days'},{label:'Game Drives',value:'5 Drives'},{label:'Parks Visited',value:'2'},{label:'Park Fees',value:'Included'}],
-    includes:['All park fees','5 game drives','Mzima Springs visit','Expert guide','Return Nairobi transfer'],
+    stats:[{label:'Duration',value:'5 Days'},{label:'Game Drives',value:'4 Drives'},{label:'Parks Visited',value:'2'},{label:'Park Fees',value:'Included'}],
+    includes:['All park fees','4 game drives: 2 evening and 2 full-day','Mzima Springs visit','Expert guide','Return Nairobi transfer'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
       {tier:'b',name:'Tsavo West Camps',desc:'Budget camping options in Tsavo West',bookUrl:'https://www.booking.com/searchresults.html?ss=Tsavo+West'},
@@ -1066,11 +1066,11 @@ var PACKAGES = {
       {tier:'l',name:'Severin Safari Camp',desc:'Luxury camp in Tsavo West, great amenities',bookUrl:'https://www.booking.com/hotel/ke/severin-safari-camp.en.html'}
     ],
     itinerary:[
-      {title:'Nairobi → Amboseli',meals:[],body:'Afternoon game drive.'},
-      {title:'Amboseli Full Day',meals:['L'],body:'Elephant herds and Kili views.'},
-      {title:'Amboseli → Tsavo West',meals:['L'],body:'Drive to Tsavo, afternoon game drive.'},
-      {title:'Tsavo West Full Day',meals:['L'],body:'Mzima Springs, volcanic landscapes, game drives.'},
-      {title:'Return to Nairobi',meals:[],body:'Drive back to Nairobi.'}
+      {title:'Nairobi → Amboseli',meals:[],body:'Arrive in Amboseli and enjoy an evening game drive.'},
+      {title:'Full Day Game Drive in Amboseli',meals:['L'],body:'Explore the park on a full-day game drive, looking for elephant herds and views of Kilimanjaro.'},
+      {title:'Amboseli → Tsavo West',meals:['L'],body:'Travel to Tsavo West, then enjoy an evening game drive.'},
+      {title:'Full Day Game Drive in Tsavo West',meals:['L'],body:'Spend the day exploring Mzima Springs, volcanic landscapes, and wildlife on a full-day game drive.'},
+      {title:'Return to Nairobi',meals:[],body:'After breakfast, return to Nairobi.'}
     ]
   },
 
@@ -1081,7 +1081,7 @@ var PACKAGES = {
     waText:'Samburu+Special+Five+Safari',
     about:'Home of the \'Special Five\' — Grevy\'s zebra, reticulated giraffe, Somali ostrich, gerenuk, and beisa oryx. This northern Kenya gem offers wildlife you won\'t find in the southern parks.',
     stats:[{label:'Duration',value:'4 Days'},{label:'Special Five',value:'Strong Chances'},{label:'Ewaso River',value:'Scenic'},{label:'Park Fees',value:'Included'}],
-    includes:['All park fees','4 game drives','Expert guide','Return Nairobi transfer'],
+    includes:['All park fees','3 game drives: 1 evening and 2 full-day','Expert guide','Return Nairobi transfer'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
       {tier:'b',name:'Samburu Camps',desc:'Budget tented camps along the Ewaso River',bookUrl:'https://www.booking.com/searchresults.html?ss=Samburu'},
@@ -1089,10 +1089,10 @@ var PACKAGES = {
       {tier:'l',name:'Elephant Watch Camp',desc:'Luxury eco-camp with exclusive access',bookUrl:'https://www.elephantwatchcamp.com/'}
     ],
     itinerary:[
-      {title:'Nairobi → Samburu',meals:[],body:'Arrive, afternoon game drive along the Ewaso River.'},
+      {title:'Nairobi → Samburu',meals:[],body:'Arrive and enjoy an evening game drive along the Ewaso River.'},
       {title:'Full Day Game Drive',meals:['L'],body:'Search for the Special Five. Bush picnic.'},
-      {title:'Second Full Day',meals:['L'],body:'Explore the drier northern areas, sightings of the reticulated giraffe and gerenuk.'},
-      {title:'Return to Nairobi',meals:[],body:'Morning drive back to Nairobi.'}
+      {title:'Second Full Day Game Drive',meals:['L'],body:'Explore the drier northern areas on a full-day game drive, looking for reticulated giraffes and gerenuks.'},
+      {title:'Return to Nairobi',meals:[],body:'After breakfast, return to Nairobi.'}
     ]
   },
 
@@ -1103,17 +1103,17 @@ var PACKAGES = {
     waText:'Tsavo+East+%26+West+Explorer',
     about:'Kenya\'s largest park — red elephants of Tsavo East, Mzima Springs hippos, and the volcanic landscape of Tsavo West. A true safari adventure.',
     stats:[{label:'Duration',value:'4 Days'},{label:'Parks Visited',value:'2'},{label:'Red Elephants',value:'Seasonal'},{label:'Park Fees',value:'Included'}],
-    includes:['All park fees','4 game drives','Mzima Springs visit','Expert guide','Return Nairobi transfer'],
+    includes:['All park fees','2 game drives: 1 evening and 1 full-day','Mzima Springs visit','Expert guide','Return Nairobi transfer'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
       {tier:'b',name:'Tsavo East Camps',desc:'Budget camping options in Tsavo East',bookUrl:'https://www.booking.com/searchresults.html?ss=Tsavo+East'},
       {tier:'m',name:'Voi Safari Lodge',desc:'Mid-range lodge overlooking a waterhole',bookUrl:'https://www.booking.com/hotel/ke/voi-safari-lodge.en.html'}
     ],
     itinerary:[
-      {title:'Nairobi → Tsavo East',meals:[],body:'Afternoon game drive. Red elephants of Tsavo.'},
-      {title:'Tsavo East Full Day',meals:['L'],body:'Search for wildlife along the Galana River.'},
-      {title:'Tsavo East → Tsavo West',meals:['L'],body:'Drive to Tsavo West. Mzima Springs afternoon.'},
-      {title:'Return to Nairobi',meals:[],body:'Morning drive back to Nairobi.'}
+      {title:'Nairobi → Tsavo East',meals:[],body:'Arrive in Tsavo East and enjoy an evening game drive to look for its red elephants.'},
+      {title:'Full Day Game Drive in Tsavo East',meals:['L'],body:'Spend the day searching for wildlife along the Galana River on a full-day game drive.'},
+      {title:'Tsavo East → Tsavo West',meals:['L'],body:'Travel to Tsavo West and visit Mzima Springs.'},
+      {title:'Return to Nairobi',meals:[],body:'After breakfast, return to Nairobi.'}
     ]
   },
 
@@ -1123,8 +1123,8 @@ var PACKAGES = {
     img:'images/luxurysafari.jpeg', duration:'7 Days · 6 Nights', dest:'Mara · Nakuru · Amboseli',
     waText:'Kenya+Classic+Circuit',
     about:'The ultimate Kenya introduction — Maasai Mara\'s big cats, Nakuru\'s flamingos, and Amboseli\'s elephants with Kilimanjaro. The perfect first safari for new visitors.',
-    stats:[{label:'Duration',value:'7 Days'},{label:'Parks Visited',value:'3'},{label:'Game Drives',value:'12'},{label:'Park Fees',value:'Included'}],
-    includes:['All park fees','12 game drives','Expert Maasai guide','Return Nairobi transfer','Bottled water'],
+    stats:[{label:'Duration',value:'7 Days'},{label:'Parks Visited',value:'3'},{label:'Game Drives',value:'5'},{label:'Park Fees',value:'Included'}],
+    includes:['All park fees','5 game drives: 2 evening and 3 full-day','Expert Maasai guide','Return Nairobi transfer','Bottled water'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages'],
     accom:[
       {tier:'b',name:'Budget Safari Camps',desc:'Range of budget options in each park',bookUrl:'https://www.booking.com/searchresults.html?ss=Maasai+Mara+Budget'},
@@ -1132,12 +1132,12 @@ var PACKAGES = {
       {tier:'l',name:'Luxury Camps',desc:'Premium accommodations in each park',bookUrl:'https://www.booking.com/searchresults.html?ss=Maasai+Mara+Luxury'}
     ],
     itinerary:[
-      {title:'Nairobi → Maasai Mara',meals:[],body:'Afternoon game drive.'},
-      {title:'Mara Full Day',meals:['L'],body:'Big Five safari.'},
-      {title:'Mara → Lake Nakuru',meals:[],body:'Drive to Nakuru. Afternoon game drive.'},
-      {title:'Nakuru → Amboseli',meals:[],body:'Morning at Nakuru, drive to Amboseli.'},
-      {title:'Amboseli Full Day',meals:['L'],body:'Elephants and Kilimanjaro.'},
-      {title:'Amboseli Full Day',meals:['L'],body:'Second day in Amboseli.'},
+      {title:'Nairobi → Maasai Mara',meals:[],body:'Arrive in the Mara and enjoy an evening game drive.'},
+      {title:'Full Day Game Drive in the Mara',meals:['L'],body:'Explore the Mara on a full-day game drive in search of the Big Five.'},
+      {title:'Mara → Lake Nakuru',meals:[],body:'Travel to Nakuru, then enjoy an evening game drive at the lake.'},
+      {title:'Nakuru → Amboseli',meals:[],body:'Breakfast in Nakuru, then transfer to Amboseli.'},
+      {title:'Full Day Game Drive in Amboseli',meals:['L'],body:'Spend the day exploring Amboseli and looking for its elephants and Kilimanjaro views.'},
+      {title:'Second Full Day Game Drive in Amboseli',meals:['L'],body:'Spend another full day exploring Amboseli and looking for its elephants and Kilimanjaro views.'},
       {title:'Return to Nairobi',meals:[],body:'Drive back to Nairobi.'}
     ]
   },
@@ -1148,23 +1148,23 @@ var PACKAGES = {
     waText:'Ultimate+Kenya+Safari',
     about:'Five parks in one journey — the complete Kenyan safari experience. Maasai Mara, Nakuru, Amboseli, Samburu, and Tsavo. Request a tailored proposal for your route, dates, and accommodation.',
     stats:[{label:'Duration',value:'10 Days'},{label:'Parks Visited',value:'5'},{label:'Private Vehicle',value:'Yes'},{label:'Park Fees',value:'Included'}],
-    includes:['All park fees','15+ game drives','Private 4WD vehicle','Expert Maasai guide','All transfers','Bottled water'],
+    includes:['All park fees','8 game drives: 4 evening and 4 full-day','Private 4WD vehicle','Expert Maasai guide','All transfers','Bottled water'],
     excludes:['Accommodation — quoted separately based on your preference','All meals (provided by your camp)','Gratuities','Alcoholic beverages','International flights'],
     accom:[
       {tier:'m',name:'Mid-Range Lodges',desc:'Comfortable lodges in each park',bookUrl:'https://www.booking.com/searchresults.html?ss=Kenya+Safari+Lodges'},
       {tier:'l',name:'Luxury Camps',desc:'Premium accommodations in each park',bookUrl:'https://www.booking.com/searchresults.html?ss=Kenya+Luxury+Safari'}
     ],
     itinerary:[
-      {title:'Nairobi → Maasai Mara',meals:[],body:'Afternoon game drive.'},
-      {title:'Mara Full Day',meals:['L'],body:'Big Five safari.'},
-      {title:'Mara → Lake Nakuru',meals:[],body:'Drive to Nakuru. Afternoon game drive.'},
-      {title:'Nakuru → Amboseli',meals:[],body:'Morning at Nakuru, drive to Amboseli.'},
-      {title:'Amboseli Full Day',meals:['L'],body:'Elephants and Kilimanjaro.'},
-      {title:'Amboseli → Samburu',meals:[],body:'Drive to Samburu. Afternoon game drive.'},
-      {title:'Samburu Full Day',meals:['L'],body:'Special Five sightings.'},
-      {title:'Samburu → Tsavo',meals:[],body:'Drive to Tsavo East. Afternoon game drive.'},
-      {title:'Tsavo Full Day',meals:['L'],body:'Red elephants and Mzima Springs.'},
-      {title:'Return to Nairobi',meals:[],body:'Drive back to Nairobi.'}
+      {title:'Nairobi → Maasai Mara',meals:[],body:'Arrive in the Mara and enjoy an evening game drive.'},
+      {title:'Full Day Game Drive in the Mara',meals:['L'],body:'Explore the Mara on a full-day game drive in search of the Big Five.'},
+      {title:'Mara → Lake Nakuru',meals:[],body:'Travel to Nakuru, then enjoy an evening game drive at the lake.'},
+      {title:'Nakuru → Amboseli',meals:[],body:'Breakfast in Nakuru, then transfer to Amboseli.'},
+      {title:'Full Day Game Drive in Amboseli',meals:['L'],body:'Spend the day exploring Amboseli and looking for its elephants and Kilimanjaro views.'},
+      {title:'Amboseli → Samburu',meals:[],body:'Travel to Samburu, then enjoy an evening game drive.'},
+      {title:'Full Day Game Drive in Samburu',meals:['L'],body:'Spend the day exploring Samburu in search of the Special Five.'},
+      {title:'Samburu → Tsavo',meals:[],body:'Travel to Tsavo East, then enjoy an evening game drive.'},
+      {title:'Full Day Game Drive in Tsavo',meals:['L'],body:'Spend the day exploring Tsavo East and looking for its red elephants and Mzima Springs.'},
+      {title:'Return to Nairobi',meals:[],body:'After breakfast, return to Nairobi.'}
     ]
   }
 
