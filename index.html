@@ -125,6 +125,7 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
   <link rel="stylesheet" href="style.css">
+  <script src="/dark-mode.js" defer></script>
 </head>
 <body>
 
@@ -164,6 +165,10 @@
       <div class="header-actions">
         <button id="hamburger" class="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu" type="button">
           <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false" data-theme-toggle>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.6 8.6 0 1 0 20.2 15.1Z"/></svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
         </button>
       </div>
     </div>
@@ -913,6 +918,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script src="index.js" defer></script>
-  <script src="/language-selector.js" defer></script>
 </body>
 </html>
