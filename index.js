@@ -9,6 +9,15 @@ const backToTop        = $('#backToTop');
 const form             = $('#contact-form');
 const formStatus       = $('#form-status');
 const testimonialCards = $$('.testimonial-card');
+const heroHeader       = $('.site-header--hero');
+
+if (heroHeader) {
+  const updateHeroHeader = () => {
+    heroHeader.classList.toggle('is-scrolled', window.scrollY > 20);
+  };
+  updateHeroHeader();
+  window.addEventListener('scroll', updateHeroHeader, { passive: true });
+}
 
 // ── Hero Slideshow ────────────────────────────────────────
 const heroSlides = $$('.hero-slide');

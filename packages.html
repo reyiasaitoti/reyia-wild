@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="/dark-mode.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=2">
+  <script src="/dark-mode.js?v=2" defer></script>
   <style>
 .pkg-page-hero{position:relative;min-height:54vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--navy);}
 .pkg-hero-bg{position:absolute;inset:0;background-image:url('images/gamedrives.jpg');background-size:cover;background-position:center 30%;opacity:.42;transition:transform 8s ease;}
@@ -72,13 +72,14 @@
 .pkg-card-dot{width:3px;height:3px;border-radius:50%;background:var(--border);flex-shrink:0;}
 .pkg-card-dest{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);}
 .pkg-card-title{font-family:'Josefin Sans',serif;font-size:1.22rem;font-weight:700;color:var(--navy);line-height:1.22;margin:0;min-height:2.95rem;}
-.pkg-card-desc{font-size:.87rem;color:var(--text-md);line-height:1.6;margin:0;display:-webkit-box;line-clamp:3;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:4.15rem;}
+.pkg-card-desc{display:block;font-size:.87rem;color:var(--text-md);line-height:1.6;margin:0;line-clamp:unset;-webkit-line-clamp:unset;-webkit-box-orient:initial;overflow:visible;min-height:0;}
+.pkg-more-link{align-self:flex-start;padding:0;border:0;background:none;color:var(--navy);font:600 .78rem 'Josefin Sans',sans-serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer;}
+.pkg-more-link:hover{color:#8a6419;}
+.pkg-more-link:focus-visible{outline:2px solid #8a6419;outline-offset:3px;}
 
 .pkg-card-footer{padding:.9rem 1.4rem 1.25rem;display:flex;flex-direction:column;gap:.6rem;border-top:1px solid var(--border);margin-top:.85rem;}
 .pkg-card-actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;}
 .pkg-card-accom{display:none;}
-.pkg-card-actions .btn-view{display:inline-flex;align-items:center;padding:0;background:none;color:var(--navy);font-family:'Josefin Sans',sans-serif;font-size:.82rem;font-weight:600;border:0;cursor:pointer;transition:color var(--transition);white-space:nowrap;text-decoration:none;}
-.pkg-card-actions .btn-view:hover{color:#8a6419;text-decoration:underline;}
 .pkg-card-actions .btn-wa{display:inline-flex;align-items:center;justify-content:center;width:34px;min-width:34px;height:34px;padding:0;background:#25d366;color:#fff;border-radius:var(--radius-sm);border:none;cursor:pointer;transition:all var(--transition);text-decoration:none;overflow:hidden;}
 .pkg-card-actions .btn-wa:hover{background:#1dbb5a;transform:translateY(-1px);}
 .pkg-card-actions .btn-wa svg{display:block;width:16px;height:16px;fill:#fff;}
@@ -247,7 +248,7 @@
     <nav class="nav-primary" role="navigation" aria-label="Primary navigation">
       <ul class="nav-list">
         <li><a href="/">Home</a></li>
-        <li><a href="/packages" aria-current="page">Safaris</a></li>
+        <li><a href="/packages.html" aria-current="page">Safaris</a></li>
         <li><a href="/destinations">Destinations</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/#gallery">Gallery</a></li>
@@ -267,7 +268,7 @@
   <nav id="mobileNav" class="mobile-nav" inert role="menu" aria-label="Mobile navigation">
     <ul class="mobile-list">
       <li><a href="/">Home</a></li>
-      <li><a href="/packages">Safaris</a></li>
+      <li><a href="/packages.html">Safaris</a></li>
       <li><a href="/destinations">Destinations</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/#gallery">Gallery</a></li>
@@ -353,7 +354,8 @@
             <span class="pkg-card-dest">Maasai Mara</span>
           </div>
           <h3 class="pkg-card-title">Mara Big Five Safari</h3>
-          <p class="pkg-card-desc">Two game drives across the Mara plains: one evening and one full-day drive. Track the Big Five with expert Maasai guides.</p>
+          <p class="pkg-card-desc">Spend three days exploring the Maasai Mara with a local Maasai guide. The itinerary includes an evening game drive and a full day in the reserve, with time to look for lions, leopards, elephants, buffalo and rhinos. Choose budget, mid-range or luxury accommodation to suit your trip.</p>
+          <button class="pkg-more-link" type="button" data-pkg="mara-bigfive">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -362,7 +364,6 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="mara-bigfive">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Mara+Big+Five+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -386,7 +387,8 @@
             <span class="pkg-card-dest">Mara River</span>
           </div>
           <h3 class="pkg-card-title">Great Migration River Crossing</h3>
-          <p class="pkg-card-desc">Positioned at the Mara River during peak migration. Witness the dramatic crossings of wildebeest and zebra.</p>
+          <p class="pkg-card-desc">Spend four days in the Maasai Mara during the July–October migration season, with game drives focused on the Mara River and moving herds. Crossings are unpredictable, so your guide follows wildlife activity and adjusts the day’s plans to give you the best opportunities. Accommodation can be selected to match your comfort and budget.</p>
+          <button class="pkg-more-link" type="button" data-pkg="mara-migration">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -395,7 +397,6 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="mara-migration">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Migration+River+Crossing." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -419,14 +420,14 @@
             <span class="pkg-card-dest">Maasai Mara</span>
           </div>
           <h3 class="pkg-card-title">Mara Luxury Fly-In Safari</h3>
-          <p class="pkg-card-desc">Fly from Nairobi to the Mara for one evening and two full-day game drives, with a private vehicle and premium service.</p>
+          <p class="pkg-card-desc">Trade the long road transfer for a flight from Nairobi to the Mara and spend four days on a private safari. Enjoy an evening drive and two full-day drives with your own vehicle and Maasai guide, plus time for bush dining and a relaxed camp stay. Flights, park fees and transfers are planned as part of your tailored quote.</p>
+          <button class="pkg-more-link" type="button" data-pkg="mara-luxury">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
             <span class="pkg-accom-pill l">Luxury Camps</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="mara-luxury">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Mara+Luxury+Fly-In+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -450,7 +451,8 @@
             <span class="pkg-card-dest">Mara + Village</span>
           </div>
           <h3 class="pkg-card-title">Mara &amp; Culture Safari</h3>
-          <p class="pkg-card-desc">Game drives plus an authentic Maasai village visit. Meet elders, learn traditions, and witness warrior dances.</p>
+          <p class="pkg-card-desc">Combine wildlife viewing in the Maasai Mara with a respectful, locally guided visit to a Maasai community. Alongside game drives, learn about daily life, traditions and the relationship between people and the land. The pace and accommodation can be adjusted for your group and travel dates.</p>
+          <button class="pkg-more-link" type="button" data-pkg="mara-culture">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -458,7 +460,6 @@
             <span class="pkg-accom-pill m">Mid</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="mara-culture">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Mara+%26+Culture+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -482,7 +483,8 @@
             <span class="pkg-card-dest">Nakuru &amp; Naivasha</span>
           </div>
           <h3 class="pkg-card-title">Lake Nakuru &amp; Naivasha</h3>
-          <p class="pkg-card-desc">Flamingos at Lake Nakuru, rhino sanctuary, and a boat ride on Lake Naivasha with hippos and birdlife.</p>
+          <p class="pkg-card-desc">Explore the Rift Valley over three days, from Lake Nakuru’s birdlife and rhino sanctuary to a boat trip on Lake Naivasha. Look out for hippos and fish eagles on the water, with time to enjoy the lakeside scenery between park visits. Choose budget or mid-range stays for your two nights.</p>
+          <button class="pkg-more-link" type="button" data-pkg="nakuru-naivasha">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -490,7 +492,6 @@
             <span class="pkg-accom-pill m">Mid</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="nakuru-naivasha">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Lake+Nakuru+%26+Naivasha." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -514,7 +515,8 @@
             <span class="pkg-card-dest">Nakuru · Naivasha · Baringo</span>
           </div>
           <h3 class="pkg-card-title">Great Rift Valley Lakes</h3>
-          <p class="pkg-card-desc">Explore three lakes — Nakuru, Naivasha, and Baringo. Flamingos, pelicans, hippos, and the famous Giraffe Manor nearby.</p>
+          <p class="pkg-card-desc">Follow a four-day route through Lake Nakuru, Lake Naivasha and Lake Baringo, each with its own landscapes and birdlife. Enjoy time for a game drive, a Naivasha boat excursion and lakeside scenery, with the route tailored around your interests. Budget, mid-range and luxury accommodation options are available.</p>
+          <button class="pkg-more-link" type="button" data-pkg="rift-valley">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -523,7 +525,6 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="rift-valley">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Great+Rift+Valley+Lakes." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -547,7 +548,8 @@
             <span class="pkg-card-dest">Amboseli</span>
           </div>
           <h3 class="pkg-card-title">Amboseli Elephants &amp; Kilimanjaro</h3>
-          <p class="pkg-card-desc">Elephant herds against the backdrop of Mount Kilimanjaro. Game drives, swamp views, and Maasai community visit.</p>
+          <p class="pkg-card-desc">Spend three days in Amboseli, known for large elephant herds and open views toward Mount Kilimanjaro when the skies are clear. Game drives explore the park’s swamps and wildlife-rich plains, with an optional Maasai community visit. Pick from budget, mid-range or luxury accommodation for your stay.</p>
+          <button class="pkg-more-link" type="button" data-pkg="amboseli-elephants">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -556,7 +558,6 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="amboseli-elephants">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Amboseli+Elephants+%26+Kilimanjaro." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -580,7 +581,8 @@
             <span class="pkg-card-dest">Amboseli · Tsavo West</span>
           </div>
           <h3 class="pkg-card-title">Amboseli &amp; Tsavo West</h3>
-          <p class="pkg-card-desc">Combine the elephant paradise of Amboseli with the volcanic landscapes and Mzima Springs of Tsavo West.</p>
+          <p class="pkg-card-desc">Connect two distinctive parks on this five-day southern Kenya safari. Look for Amboseli’s elephants and mountain views, then continue to Tsavo West for volcanic scenery and the clear waters of Mzima Springs. Your route includes game drives in both parks and accommodation chosen to match your preferred comfort level.</p>
+          <button class="pkg-more-link" type="button" data-pkg="amboseli-tsavo">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -589,7 +591,6 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="amboseli-tsavo">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Amboseli+%26+Tsavo+West." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -613,7 +614,8 @@
             <span class="pkg-card-dest">Samburu</span>
           </div>
           <h3 class="pkg-card-title">Samburu Special Five Safari</h3>
-          <p class="pkg-card-desc">Home of the 'Special Five' — Grevy's zebra, reticulated giraffe, Somali ostrich, gerenuk, and beisa oryx. A northern Kenya gem.</p>
+          <p class="pkg-card-desc">Discover northern Kenya over four days, with game drives along Samburu’s riverine landscapes in search of the Special Five: Grevy’s zebra, reticulated giraffe, Somali ostrich, gerenuk and beisa oryx. Your Maasai guide will help you spot wildlife and understand this region’s distinctive dry-country ecosystem. Accommodation options range from budget to luxury.</p>
+          <button class="pkg-more-link" type="button" data-pkg="samburu-special">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -622,7 +624,6 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="samburu-special">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Samburu+Special+Five+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -646,7 +647,8 @@
             <span class="pkg-card-dest">Tsavo East &amp; West</span>
           </div>
           <h3 class="pkg-card-title">Tsavo East &amp; West Explorer</h3>
-          <p class="pkg-card-desc">Kenya's largest park — red elephants of Tsavo East, Mzima Springs hippos, and the volcanic landscape of Tsavo West.</p>
+          <p class="pkg-card-desc">Explore Kenya’s vast Tsavo landscape over four days, combining the open plains and red-dust elephants of Tsavo East with the volcanic scenery of Tsavo West. Visit Mzima Springs and enjoy game drives across both parks with a local guide. Budget and mid-range accommodation can be arranged along the route.</p>
+          <button class="pkg-more-link" type="button" data-pkg="tsavo-explorer">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -654,7 +656,6 @@
             <span class="pkg-accom-pill m">Mid</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="tsavo-explorer">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+Tsavo+East+%26+West+Explorer." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -678,7 +679,8 @@
             <span class="pkg-card-dest">Mara · Nakuru · Amboseli</span>
           </div>
           <h3 class="pkg-card-title">Kenya Classic Circuit</h3>
-          <p class="pkg-card-desc">The ultimate Kenya introduction — Maasai Mara's big cats, Nakuru's flamingos, and Amboseli's elephants with Kilimanjaro.</p>
+          <p class="pkg-card-desc">Take a week to experience three of Kenya’s best-known safari destinations: track wildlife in the Maasai Mara, visit Lake Nakuru’s rhino sanctuary and birdlife, then finish among Amboseli’s elephants with views of Kilimanjaro. The circuit includes guided game drives and can be tailored with budget, mid-range or luxury stays.</p>
+          <button class="pkg-more-link" type="button" data-pkg="kenya-classic">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -687,7 +689,6 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="kenya-classic">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Kenya+Classic+Circuit." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -711,7 +712,8 @@
             <span class="pkg-card-dest">Mara · Nakuru · Amboseli · Samburu · Tsavo</span>
           </div>
           <h3 class="pkg-card-title">Ultimate Kenya Safari</h3>
-          <p class="pkg-card-desc">Five parks in one journey — the complete Kenyan safari experience. Private vehicle, expert guides, and premium land services.</p>
+          <p class="pkg-card-desc">A ten-day journey linking the Maasai Mara, Lake Nakuru, Amboseli, Samburu and Tsavo for a wide-ranging look at Kenya’s wildlife and landscapes. Travel with a private vehicle and expert local guides, with game drives planned in each destination. Choose mid-range or luxury accommodation and tailor the route to your dates and interests.</p>
+          <button class="pkg-more-link" type="button" data-pkg="ultimate-kenya">More details →</button>
         </div>
         <div class="pkg-card-footer">
           <div class="pkg-card-accom">
@@ -719,7 +721,6 @@
             <span class="pkg-accom-pill l">Luxury</span>
           </div>
           <div class="pkg-card-actions">
-            <button class="btn-view" data-pkg="ultimate-kenya">View</button>
             <a href="https://wa.me/254794928779?text=Hi%2C+I'm+interested+in+the+Ultimate+Kenya+Safari." target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.122 1.529 5.855L0 24l6.335-1.51A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.213-3.76.897.941-3.665-.234-.375A9.818 9.818 0 1112 21.818z"/></svg>
             </a>
@@ -862,7 +863,7 @@
       <h4>Quick Links</h4>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/packages">Safaris</a></li>
+        <li><a href="/packages.html">Safaris</a></li>
         <li><a href="/destinations">Destinations</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/#gallery">Gallery</a></li>
@@ -1252,8 +1253,8 @@ window.switchTab  = switchTab;
 /* ── EVENT LISTENERS ── */
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Package detail buttons
-  document.querySelectorAll('.btn-view[data-pkg]').forEach(function(btn) {
+  // Package detail links
+  document.querySelectorAll('.pkg-more-link[data-pkg]').forEach(function(btn) {
     btn.addEventListener('click', function() {
       openModal(btn.dataset.pkg, false);
     });
